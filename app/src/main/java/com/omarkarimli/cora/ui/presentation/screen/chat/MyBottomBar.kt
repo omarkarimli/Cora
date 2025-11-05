@@ -1,12 +1,6 @@
 package com.omarkarimli.cora.ui.presentation.screen.chat
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateContentSize
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.slideInVertically
-import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.Row
@@ -57,9 +51,7 @@ fun MyBottomBar(
     creditConditions: CreditConditions,
     expanded: Boolean,
     isLoading: Boolean,
-    isSelecting: Boolean,
     images: SnapshotStateList<ImageModel>,
-    onDisableSelecting: () -> Unit,
     onToggleImageGeneration: () -> Unit,
     onSend: (MessageModel) -> Unit,
     onDismissDropDown: () -> Unit,
@@ -105,133 +97,113 @@ fun MyBottomBar(
         )
     )
 
-    Box(
+    Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = Dimens.PaddingMedium)
-            .animateContentSize(),
-    ) {
-        AnimatedVisibility(
-            visible = !isSelecting,
-            enter = slideInVertically(
-                initialOffsetY = { fullHeight -> fullHeight },
-                animationSpec = tween(durationMillis = 300)
+            .padding(
+                start = Dimens.PaddingMedium,
+                end = Dimens.PaddingMedium,
+                bottom = Dimens.PaddingMedium
             ),
-            exit = slideOutVertically(
-                targetOffsetY = { fullHeight -> fullHeight },
-                animationSpec = tween(durationMillis = 300)
-            )
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = onDismissDropDown,
+            shape = RoundedCornerShape(Dimens.CornerRadiusLarge)
         ) {
-            Row(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .padding(bottom = Dimens.PaddingMedium),
-                verticalAlignment = Alignment.Bottom,
-                horizontalArrangement = Arrangement.Center
-            ) {
-                DropdownMenu(
-                    expanded = expanded,
-                    onDismissRequest = onDismissDropDown,
-                    shape = RoundedCornerShape(Dimens.CornerRadiusLarge)
-                ) {
-                    topOptions.forEach { item ->
-                        DropdownMenuItem(
-                            text = { item.title?.let { Text(it) } },
-                            leadingIcon = {
-                                item.leadingIcon?.let {
-                                    Icon(it, contentDescription = item.title)
-                                }
-                            },
-                            onClick = {
-                                item.onClick()
-                                onDismissDropDown()
-                            }.performHaptic()
-                        )
-                    }
-                    HorizontalDivider(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = Dimens.PaddingSmall)
-                    )
-                    bottomOptions.forEach { item ->
-                        DropdownMenuItem(
-                            text = { item.title?.let { Text(it) } },
-                            leadingIcon = {
-                                item.leadingIcon?.let {
-                                    Icon(it, contentDescription = item.title)
-                                }
-                            },
-                            trailingIcon = {
-                                item.endingIcon?.let {
-                                    Icon(it, contentDescription = item.title)
-                                }
-                            },
-                            onClick = {
-                                item.onClick()
-                                onDismissDropDown()
-                            }.performHaptic()
-                        )
-                    }
-                }
-
-                FilledTonalIconButton(
-                    modifier = Modifier.padding(bottom = Dimens.PaddingExtraSmall),
-                    onClick = onAttach.performHaptic(),
-                    shape = MaterialShapes.Pill.toShape()
-                ) {
-                    Icon(
-                        imageVector = Icons.Rounded.Add,
-                        contentDescription = stringResource(R.string.attach)
-                    )
-                }
-                Spacer(Modifier.width(Dimens.PaddingExtraSmall))
-                Column(
-                    modifier = Modifier.weight(1f)
-                ) {
-                    AttachWidget(images, onRemove = onRemoveAttach)
-                    TagContents(
-                        items = bottomOptions.filter { it.endingIcon != null }
-                    )
-                    MyFilledTextField(
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(Dimens.CornerRadiusExtraLarge),
-                        containerColor = MaterialTheme.colorScheme.surfaceContainer,
-                        label = null,
-                        helper = stringResource(R.string.ask_voux),
-                        field = ValidatableField(messageModel.text),
-                        validationResult = ValidationResult(true),
-                        onValueChange = onTextChange
-                    )
-                }
-                Spacer(Modifier.width(Dimens.PaddingSmall))
-                FilledTonalIconButton(
-                    modifier = Modifier.padding(bottom = Dimens.PaddingExtraSmall),
-                    enabled = sendEnable,
+            topOptions.forEach { item ->
+                DropdownMenuItem(
+                    text = { item.title?.let { Text(it) } },
+                    leadingIcon = {
+                        item.leadingIcon?.let {
+                            Icon(it, contentDescription = item.title)
+                        }
+                    },
                     onClick = {
-                        val newMessageModel = messageModel.copy(images = images.toList())
-                        onSend(newMessageModel)
-                    }.performHaptic(),
-                    shape = MaterialShapes.Clover4Leaf.toShape(),
-                    colors = IconButtonDefaults.filledIconButtonColors(
-                        containerColor = MaterialTheme.colorScheme.onSurface,
-                        contentColor = MaterialTheme.colorScheme.surface
-                    )
-                ) {
-                    if (isLoading) {
-                        LoadingIndicator()
-                    } else {
-                        Icon(
-                            imageVector = Icons.Rounded.ArrowUpward,
-                            contentDescription = stringResource(R.string.send)
-                        )
-                    }
-                }
+                        item.onClick()
+                        onDismissDropDown()
+                    }.performHaptic()
+                )
+            }
+            HorizontalDivider(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = Dimens.PaddingSmall)
+            )
+            bottomOptions.forEach { item ->
+                DropdownMenuItem(
+                    text = { item.title?.let { Text(it) } },
+                    leadingIcon = {
+                        item.leadingIcon?.let {
+                            Icon(it, contentDescription = item.title)
+                        }
+                    },
+                    trailingIcon = {
+                        item.endingIcon?.let {
+                            Icon(it, contentDescription = item.title)
+                        }
+                    },
+                    onClick = {
+                        item.onClick()
+                        onDismissDropDown()
+                    }.performHaptic()
+                )
             }
         }
-        SelectionBar(
-            modifier = Modifier.align(Alignment.BottomCenter),
-            isSelecting = isSelecting,
-            onToggle = onDisableSelecting
-        )
+
+        FilledTonalIconButton(
+            modifier = Modifier.padding(bottom = Dimens.PaddingExtraSmall),
+            onClick = onAttach.performHaptic(),
+            shape = MaterialShapes.Pill.toShape()
+        ) {
+            Icon(
+                imageVector = Icons.Rounded.Add,
+                contentDescription = stringResource(R.string.attach)
+            )
+        }
+        Spacer(Modifier.width(Dimens.PaddingExtraSmall))
+        Column(
+            modifier = Modifier.weight(1f)
+        ) {
+            AttachWidget(images, onRemove = onRemoveAttach)
+            TagContents(
+                items = bottomOptions.filter { it.endingIcon != null }
+            )
+            MyFilledTextField(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(Dimens.CornerRadiusExtraLarge),
+                containerColor = MaterialTheme.colorScheme.surfaceContainer,
+                label = null,
+                helper = stringResource(R.string.ask_voux),
+                field = ValidatableField(messageModel.text),
+                validationResult = ValidationResult(true),
+                onValueChange = onTextChange
+            )
+        }
+        Spacer(Modifier.width(Dimens.PaddingSmall))
+        FilledTonalIconButton(
+            modifier = Modifier.padding(bottom = Dimens.PaddingExtraSmall),
+            enabled = sendEnable,
+            onClick = {
+                val newMessageModel = messageModel.copy(images = images.toList())
+                onSend(newMessageModel)
+            }.performHaptic(),
+            shape = MaterialShapes.Clover4Leaf.toShape(),
+            colors = IconButtonDefaults.filledIconButtonColors(
+                containerColor = MaterialTheme.colorScheme.onSurface,
+                contentColor = MaterialTheme.colorScheme.surface
+            )
+        ) {
+            if (isLoading) {
+                LoadingIndicator()
+            } else {
+                Icon(
+                    imageVector = Icons.Rounded.ArrowUpward,
+                    contentDescription = stringResource(R.string.send)
+                )
+            }
+        }
     }
 }

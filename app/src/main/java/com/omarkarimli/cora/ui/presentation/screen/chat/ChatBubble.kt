@@ -40,14 +40,11 @@ import com.omarkarimli.cora.ui.presentation.common.widget.component.IconWithBg
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.utils.isWebUrl
-import com.omarkarimli.cora.utils.shimmer
 import com.omarkarimli.cora.utils.toAnnotatedString
 
 @Composable
 fun ChatBubble(
-    message: MessageModel,
-    isSelecting: Boolean,
-    passStringToHome: (String) -> Unit
+    message: MessageModel
 ) {
     val navController = LocalNavController.current
     val isUserMe = message.isFromMe
@@ -88,14 +85,10 @@ fun ChatBubble(
                                 modifier = Modifier
                                     .fillMaxSize()
                                     .clickable {
-                                        if (isSelecting) {
-                                            passStringToHome(imageModel.imageUrl)
-                                        } else {
-                                            val initialPage = message.images.indexOf(imageModel)
-                                            navController.navigate(
-                                                "${Screen.FullScreenImageViewer.route}/${Converters().fromImageModels(message.images)}?initialPage=$initialPage"
-                                            )
-                                        }
+                                        val initialPage = message.images.indexOf(imageModel)
+                                        navController.navigate(
+                                            "${Screen.FullScreenImageViewer.route}/${Converters().fromImageModels(message.images)}?initialPage=$initialPage"
+                                        )
                                     },
                                 model = imageModel.imageUrl,
                                 contentDescription = null,
@@ -126,20 +119,17 @@ fun ChatBubble(
                 }
             }
 
-            val modifier =
-                if (isSelecting) Modifier.shimmer(Dimens.CornerRadiusLarge)
-                else Modifier.background(
-                    color = if (isUserMe) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
-                    shape = RoundedCornerShape(
-                        topStart = Dimens.CornerRadiusLarge,
-                        topEnd = Dimens.CornerRadiusLarge,
-                        bottomStart = if (isUserMe) Dimens.CornerRadiusLarge else Dimens.CornerRadiusSmall,
-                        bottomEnd = if (isUserMe) Dimens.CornerRadiusSmall else Dimens.CornerRadiusLarge
-                    )
-                )
-
             Box(
-                modifier = modifier
+                modifier = Modifier
+                    .background(
+                        color = if (isUserMe) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
+                        shape = RoundedCornerShape(
+                            topStart = Dimens.CornerRadiusLarge,
+                            topEnd = Dimens.CornerRadiusLarge,
+                            bottomStart = if (isUserMe) Dimens.CornerRadiusLarge else Dimens.CornerRadiusSmall,
+                            bottomEnd = if (isUserMe) Dimens.CornerRadiusSmall else Dimens.CornerRadiusLarge
+                        )
+                    )
                     .widthIn(max = Dimens.MaxBubbleWidth)
                     .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
                 contentAlignment = Alignment.CenterStart
@@ -147,11 +137,7 @@ fun ChatBubble(
                 Text(
                     text = message.text.toAnnotatedString(),
                     style = AppTypography.bodyMedium,
-                    color = if (isUserMe && !isSelecting) {
-                        MaterialTheme.colorScheme.onPrimary
-                    } else {
-                        MaterialTheme.colorScheme.onSurfaceVariant
-                    }
+                    color = if (isUserMe) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }

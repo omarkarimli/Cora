@@ -5,7 +5,6 @@ import android.net.Uri
 import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -46,7 +45,6 @@ import com.omarkarimli.cora.ui.presentation.common.widget.component.LoadingConte
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
 import com.omarkarimli.cora.ui.theme.Dimens
-import com.omarkarimli.cora.utils.animatedGradientBorder
 import com.omarkarimli.cora.utils.showToast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -69,7 +67,6 @@ fun ChatScreen(
     val messages by viewModel.messages.collectAsState()
 
     var expanded by remember { mutableStateOf(false) }
-    var isSelecting by remember { mutableStateOf(false) }
     var sendMessageModel by remember { mutableStateOf(MessageModel(text = "", isFromMe = true)) }
 
     val hasStoragePermission by viewModel.hasStoragePermission.collectAsState()
@@ -291,106 +288,92 @@ fun ChatScreen(
     }
 
     ObserveData()
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .animatedGradientBorder(enabled = isSelecting)
-    ) {
-        Scaffold(
-            containerColor = Color.Transparent,
-            topBar = {
-                MyTopAppBar(
-                    navController,
-                    isSelecting = isSelecting,
-                    onShowSheet = { content -> showSheet(content) },
-                    onFabEnabling = { isSelecting = true },
-                    onNewChat = { viewModel.onNewChat() }
-                )
-            },
-            bottomBar = {
-                MyBottomBar(
-                    messageModel = sendMessageModel,
-                    creditConditions = creditConditions,
-                    expanded = expanded,
-                    isLoading = uiState is UiState.Loading,
-                    isSelecting = isSelecting,
-                    images = images,
-                    onDisableSelecting = { isSelecting = false },
-                    onToggleImageGeneration = {
-                        sendMessageModel = sendMessageModel.copy(imageGeneration = !sendMessageModel.imageGeneration)
-                    },
-                    onSend = { messageModel ->
-                        viewModel.onSend(messageModel)
-                        images.clear()
-                        onTextChange("")
-                    },
-                    onDismissDropDown = { expanded = false },
-                    onTextChange = { onTextChange(it) },
-                    onAttach = { onAttach() },
-                    onRemoveAttach = { images.remove(it) },
-                    onLaunchCamera = { onLaunchCamera() },
-                    onLaunchImagePicker = { onLaunchImagePicker() },
-                    onPickVoux = { showSheet(SheetContent.Parts) }
-                )
-            }
-        ) { innerPadding ->
-            if (messages.isEmpty() && uiState !is UiState.Loading) {
-                EmptyWidget(
-                    imageVector = Icons.Rounded.Bolt,
-                    text = stringResource(R.string.ask_voux)
-                )
-            } else {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize().padding(
-                        top = innerPadding.calculateTopPadding()
-                    ),
-                    state = rememberLazyListState(),
-                    contentPadding = PaddingValues(
-                        bottom = innerPadding.calculateBottomPadding() + Dimens.PaddingLarge * 2
-                    )
-                ) {
-                    items(messages) { message ->
-                        ChatBubble(
-                            message = message,
-                            isSelecting = isSelecting,
-                            passStringToHome = { }
-                        )
-                    }
-                }
-            }
-
-            if (sheetContent != SheetContent.None) {
-                ModalBottomSheet(
-                    onDismissRequest = { hideSheet() },
-                    sheetState = sheetState
-                ) {
-                    when (sheetContent) {
-                        is SheetContent.ReportIssue -> ReportIssueSheetContent(
-                            onConfirm = { description ->
-                                userModel?.let {
-                                    viewModel.onReportIssue(
-                                        ReportIssueModel(
-                                            idToken = it.idToken,
-                                            personalInfo = it.personalInfo,
-                                            description = description
-                                        )
-                                    )
-                                    hideSheet()
-                                } ?: run {
-                                    viewModel.setError(
-                                        R.string.error_something_went_wrong,
-                                        "Profile not found when reporting issue."
-                                    )
-                                }
-                            }
-                        )
-
-                        else -> {}
-                    }
-                }
-            }
-
-            if (uiState is UiState.Loading) LoadingContent()
+    Scaffold(
+        containerColor = Color.Transparent,
+        topBar = {
+            MyTopAppBar(
+                navController = navController,
+                onShowSheet = { content -> showSheet(content) },
+                onNewChat = { viewModel.onNewChat() }
+            )
+        },
+        bottomBar = {
+            MyBottomBar(
+                messageModel = sendMessageModel,
+                creditConditions = creditConditions,
+                expanded = expanded,
+                isLoading = uiState is UiState.Loading,
+                images = images,
+                onToggleImageGeneration = {
+                    sendMessageModel = sendMessageModel.copy(imageGeneration = !sendMessageModel.imageGeneration)
+                },
+                onSend = { messageModel ->
+                    viewModel.onSend(messageModel)
+                    images.clear()
+                    onTextChange("")
+                },
+                onDismissDropDown = { expanded = false },
+                onTextChange = { onTextChange(it) },
+                onAttach = { onAttach() },
+                onRemoveAttach = { images.remove(it) },
+                onLaunchCamera = { onLaunchCamera() },
+                onLaunchImagePicker = { onLaunchImagePicker() },
+                onPickVoux = { showSheet(SheetContent.Parts) }
+            )
         }
+    ) { innerPadding ->
+        if (messages.isEmpty() && uiState !is UiState.Loading) {
+            EmptyWidget(
+                imageVector = Icons.Rounded.Bolt,
+                text = stringResource(R.string.ask_voux)
+            )
+        } else {
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(
+                    top = innerPadding.calculateTopPadding()
+                ),
+                state = rememberLazyListState(),
+                contentPadding = PaddingValues(
+                    bottom = innerPadding.calculateBottomPadding() + Dimens.PaddingLarge * 2
+                )
+            ) {
+                items(messages) { message ->
+                    ChatBubble(message = message)
+                }
+            }
+        }
+
+        if (sheetContent != SheetContent.None) {
+            ModalBottomSheet(
+                onDismissRequest = { hideSheet() },
+                sheetState = sheetState
+            ) {
+                when (sheetContent) {
+                    is SheetContent.ReportIssue -> ReportIssueSheetContent(
+                        onConfirm = { description ->
+                            userModel?.let {
+                                viewModel.onReportIssue(
+                                    ReportIssueModel(
+                                        idToken = it.idToken,
+                                        personalInfo = it.personalInfo,
+                                        description = description
+                                    )
+                                )
+                                hideSheet()
+                            } ?: run {
+                                viewModel.setError(
+                                    R.string.error_something_went_wrong,
+                                    "Profile not found when reporting issue."
+                                )
+                            }
+                        }
+                    )
+
+                    else -> {}
+                }
+            }
+        }
+
+        if (uiState is UiState.Loading) LoadingContent()
     }
 }
