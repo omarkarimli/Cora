@@ -8,11 +8,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
-import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.DarkMode
 import androidx.compose.material.icons.outlined.DataUsage
-import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.InvertColors
 import androidx.compose.material.icons.outlined.Language
@@ -20,6 +18,7 @@ import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.SaveAlt
 import androidx.compose.material.icons.outlined.SettingsBackupRestore
 import androidx.compose.material.icons.outlined.Subscriptions
+import androidx.compose.material.icons.outlined.Translate
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
@@ -56,10 +55,9 @@ import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheet
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
 import com.omarkarimli.cora.ui.presentation.main.MainViewModel
 import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.DarkModeSheetContent
-import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.DynamicColorSheetContent
 import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.LangSheetContent
-import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.NotificationsSheetContent
 import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.SavingPathSheetContent
+import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.ToggleSheetContent
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.utils.showToast
@@ -77,6 +75,7 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
 
     val uiState by viewModel.uiState.collectAsState()
     val userModel by viewModel.userModel.collectAsState()
+    val isLiveTranslationEnabled by viewModel.isLiveTranslationEnabled.collectAsState()
     val savingPath by viewModel.savingPath.collectAsState()
     val isNotificationsEnabled by viewModel.isNotificationsEnabled.collectAsStateWithLifecycle()
     val currentLang by mainViewModel.currentLang.collectAsState()
@@ -167,8 +166,16 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                             hideSheet()
                         }
                     )
-                    SheetContent.Notifications -> NotificationsSheetContent(
-                        isNotificationsEnabled = isNotificationsEnabled,
+                    SheetContent.LiveTranslation -> ToggleSheetContent(
+                        stringId = R.string.live_translation,
+                        enabled = isLiveTranslationEnabled,
+                        onToggle = { isEnabled ->
+                            viewModel.onLiveTranslationToggle(isEnabled)
+                            hideSheet()
+                        }
+                    )
+                    SheetContent.Notifications -> ToggleSheetContent(
+                        enabled = isNotificationsEnabled,
                         onToggle = { isEnabled ->
                             viewModel.onNotificationsToggle(isEnabled)
                             hideSheet()
@@ -181,8 +188,9 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                             hideSheet()
                         }
                     )
-                    SheetContent.DynamicColor -> DynamicColorSheetContent(
-                        isDynamicColorEnabled = isDynamicColorEnabled,
+                    SheetContent.DynamicColor -> ToggleSheetContent(
+                        stringId = R.string.dynamic_color,
+                        enabled = isDynamicColorEnabled,
                         onToggle = { isEnabled ->
                             mainViewModel.onDynamicColorToggle(isEnabled)
                             hideSheet()
@@ -256,7 +264,7 @@ private fun ScrollContent(
             title = stringResource(R.string.general),
             items = listOf(
                 StandardListItemModel(
-                    id = 3,
+                    id = 2,
                     leadingIcon = Icons.Outlined.SaveAlt,
                     title = stringResource(R.string.saving_path),
                     description = stringResource(R.string.desc_saving_path),
@@ -264,7 +272,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.SavingPath) }
                 ),
                 StandardListItemModel(
-                    id = 4,
+                    id = 3,
                     leadingIcon = Icons.Outlined.Notifications,
                     title = stringResource(R.string.notifications),
                     description = stringResource(R.string.desc_notifications),
@@ -272,12 +280,20 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.Notifications) }
                 ),
                 StandardListItemModel(
-                    id = 5,
+                    id = 4,
                     leadingIcon = Icons.Outlined.Language,
                     title = stringResource(R.string.languages),
                     description = stringResource(R.string.desc_lang),
                     endingIcon = Icons.AutoMirrored.Rounded.ArrowForward,
                     onClick = { onShowSheet(SheetContent.Languages) }
+                ),
+                StandardListItemModel(
+                    id = 5,
+                    leadingIcon = Icons.Outlined.Translate,
+                    title = stringResource(R.string.live_translation),
+                    description = stringResource(R.string.desc_live_translation),
+                    endingIcon = Icons.AutoMirrored.Rounded.ArrowForward,
+                    onClick = { onShowSheet(SheetContent.LiveTranslation) }
                 ),
                 StandardListItemModel(
                     id = 6,

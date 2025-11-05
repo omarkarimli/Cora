@@ -14,9 +14,11 @@ import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
 import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.domain.repository.PermissionRepository
+import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import com.omarkarimli.cora.domain.repository.TranslateRepository
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
+import com.omarkarimli.cora.utils.SpConstant
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -27,6 +29,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ChatViewModel @Inject constructor(
+    val sharedPreferenceRepository: SharedPreferenceRepository,
     val permissionRepository: PermissionRepository,
     val firestoreRepository: FirestoreRepository,
     val chatRepository: ChatRepository,
@@ -37,8 +40,9 @@ class ChatViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
+    private val _isLiveTranslationEnabled = MutableStateFlow(true)
+
     private val _chatHistoryModel = MutableStateFlow<ChatHistoryItemModel?>(null)
-    val chatHistoryModel: StateFlow<ChatHistoryItemModel?> = _chatHistoryModel.asStateFlow()
 
     private val _userModel = MutableStateFlow<UserModel?>(null)
     val userModel: StateFlow<UserModel?> = _userModel.asStateFlow()
@@ -127,7 +131,7 @@ class ChatViewModel @Inject constructor(
     fun onReportIssue(reportIssueModel: ReportIssueModel) {
         _uiState.value = UiState.Loading
 
-        _userModel.value?.let { userModel ->
+        _userModel.value?.let {
             viewModelScope.launch {
                 try {
                     firestoreRepository.addReportIssue(reportIssueModel)
@@ -153,11 +157,33 @@ class ChatViewModel @Inject constructor(
     }
 
     private suspend fun translate(text: String): String {
-        return try {
-            translateRepository.translate(text)
-        } catch (e: Exception) {
-            Log.e("ChatViewModel", "Error translating text: ${e.message}")
-            text
+        return if (_isLiveTranslationEnabled.value) {
+            try {
+                translateRepository.translate(text)
+            } catch (e: Exception) {
+                Log.e("ChatViewModel", "Error translating text: ${e.message}")
+                text
+            }
+        } else text
+    }
+
+    fun loadSettings() {
+        _uiState.value = UiState.Loading
+
+        viewModelScope.launch {
+            try {
+                _isLiveTranslationEnabled.value = sharedPreferenceRepository.getBoolean(
+                    SpConstant.LIVE_TRANSLATION_KEY,
+                    true
+                )
+
+                resetUiState()
+            } catch (e: Exception) {
+                _uiState.value = UiState.Error(
+                    toastResId = R.string.error_something_went_wrong,
+                    log = e.message ?: "Exception in loadSettings()",
+                )
+            }
         }
     }
 

@@ -40,6 +40,9 @@ class SettingsViewModel @Inject constructor(
     private val _isNotificationsEnabled = MutableStateFlow(false)
     val isNotificationsEnabled: StateFlow<Boolean> = _isNotificationsEnabled.asStateFlow()
 
+    private val _isLiveTranslationEnabled = MutableStateFlow(true)
+    val isLiveTranslationEnabled: StateFlow<Boolean> = _isLiveTranslationEnabled.asStateFlow()
+
     init {
         loadSettings()
         getUser()
@@ -75,9 +78,15 @@ class SettingsViewModel @Inject constructor(
     }
 
     private fun loadSettings() {
+        _uiState.value = UiState.Loading
+
         viewModelScope.launch {
-            _uiState.value = UiState.Loading
             try {
+                _isLiveTranslationEnabled.value = sharedPreferenceRepository.getBoolean(
+                    SpConstant.LIVE_TRANSLATION_KEY,
+                    true
+                )
+
                 _savingPath.value = sharedPreferenceRepository.getString(
                     SpConstant.SAVING_PATH_KEY,
                     "photos"
@@ -87,6 +96,8 @@ class SettingsViewModel @Inject constructor(
                     SpConstant.NOTIFICATION_KEY,
                     true
                 )
+
+                resetUiState()
             } catch (e: Exception) {
                 _uiState.value = UiState.Error(
                     toastResId = R.string.error_something_went_wrong,
@@ -106,6 +117,16 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
+    fun onLiveTranslationToggle(isEnabled: Boolean) {
+        viewModelScope.launch {
+            _isLiveTranslationEnabled.value = isEnabled
+            sharedPreferenceRepository.saveBoolean(SpConstant.LIVE_TRANSLATION_KEY, isEnabled)
+            _uiState.value = UiState.Success(
+                message = SuccessType.SETTINGS_UPDATE,
+            )
+        }
+    }
+
     fun onNotificationsToggle(isEnabled: Boolean) {
         viewModelScope.launch {
             _isNotificationsEnabled.value = isEnabled
@@ -119,7 +140,6 @@ class SettingsViewModel @Inject constructor(
     fun onResetSettings(mainViewModel: MainViewModel) {
         viewModelScope.launch {
             sharedPreferenceRepository.clearSharedPreferences()
-
             sharedPreferenceRepository.saveBoolean(SpConstant.LOGIN_KEY, true)
 
             loadSettings()
@@ -133,7 +153,7 @@ class SettingsViewModel @Inject constructor(
     fun onReportIssue(reportIssueModel: ReportIssueModel) {
         _uiState.value = UiState.Loading
 
-        _userModel.value?.let { userModel ->
+        _userModel.value?.let {
             viewModelScope.launch {
                 try {
                     firestoreRepository.addReportIssue(reportIssueModel)

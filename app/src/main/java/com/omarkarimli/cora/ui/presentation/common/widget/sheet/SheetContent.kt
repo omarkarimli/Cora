@@ -9,6 +9,7 @@ sealed class SheetContent {
     object SavingPath : SheetContent()
     object Languages : SheetContent()
     object Notifications : SheetContent()
+    object LiveTranslation : SheetContent()
     object DarkMode : SheetContent()
     object DynamicColor : SheetContent()
     object ReportIssue : SheetContent()

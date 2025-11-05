@@ -8,4 +8,5 @@ object SpConstant {
     const val THEME_KEY = "theme_key"
     const val DYNAMIC_COLOR_KEY = "dynamic_color_key"
     const val SAVING_PATH_KEY = "saving_path_key"
+    const val LIVE_TRANSLATION_KEY = "live_translation_key"
 }

@@ -233,6 +233,7 @@ fun ChatScreen(
     @Composable
     fun ObserveData() {
         LifecycleEventEffect(Lifecycle.Event.ON_START) {
+            viewModel.loadSettings()
             if (userModel == null) {
                 viewModel.getUser()
             }

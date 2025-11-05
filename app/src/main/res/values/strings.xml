@@ -142,6 +142,7 @@
     <string name="photos">Photos</string>
     <string name="downloads">Downloads</string>
     <string name="languages">Languages</string>
+    <string name="live_translation">Live Translation</string>
     <string name="report_issue">Report issue</string>
     <string name="reset_settings">Reset Settings</string>
     <string name="enable_selecting">Enable selecting</string>
@@ -154,6 +155,7 @@
     <string name="desc_saving_path">Vouxes will be saved to selected path.</string>
     <string name="desc_notifications">Manage your alerts and sounds.</string>
     <string name="desc_lang">Change the app\'s language.</string>
+    <string name="desc_live_translation">Live translation of generated contents.</string>
     <string name="desc_dark_mode">Change the app\'s appearance.</string>
     <string name="desc_dynamic_color">Make the app\'s colors dynamic.</string>
     <string name="desc_report_issue">Submit a bug report or a feature request.</string>
