@@ -187,7 +187,7 @@ fun MyBottomBar(
                 shape = RoundedCornerShape(Dimens.CornerRadiusExtraLarge),
                 containerColor = MaterialTheme.colorScheme.surfaceContainer,
                 label = null,
-                helper = stringResource(R.string.ask_voux),
+                helper = stringResource(R.string.ask_cora),
                 field = ValidatableField(messageModel.text),
                 validationResult = ValidationResult(true),
                 onValueChange = onTextChange

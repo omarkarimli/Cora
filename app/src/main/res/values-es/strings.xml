@@ -51,7 +51,7 @@
     <string name="camera">Cámara</string>
     <string name="attach">Archivos adjuntos</string>
     <string name="image_generation">Generación de imágenes</string>
-    <string name="ask_voux">Preguntar a Voux</string>
+    <string name="ask_cora">Preguntar a Voux</string>
     <string name="send">Enviar</string>
     <string name="remove_attachment">Quitar archivo adjunto</string>
     <string name="image_from_web">Imagen de la Web</string>

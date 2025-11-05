@@ -51,7 +51,7 @@
     <string name="camera">カメラ</string>
     <string name="attach">添付ファイル</string>
     <string name="image_generation">画像生成</string>
-    <string name="ask_voux">Voux に質問</string>
+    <string name="ask_cora">Voux に質問</string>
     <string name="send">送信</string>
     <string name="remove_attachment">添付ファイルを削除</string>
     <string name="image_from_web">ウェブからの画像</string>

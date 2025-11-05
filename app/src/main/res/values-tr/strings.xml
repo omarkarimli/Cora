@@ -51,7 +51,7 @@
     <string name="camera">Kamera</string>
     <string name="attach">Eklentiler</string>
     <string name="image_generation">Görüntü Oluşturma</string>
-    <string name="ask_voux">Voux’a Sor</string>
+    <string name="ask_cora">Voux’a Sor</string>
     <string name="send">Gönder</string>
     <string name="remove_attachment">Eklentiyi Kaldır</string>
     <string name="image_from_web">Web’den Görüntü</string>

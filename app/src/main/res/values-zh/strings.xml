@@ -51,7 +51,7 @@
     <string name="camera">相机</string>
     <string name="attach">附件</string>
     <string name="image_generation">图片生成</string>
-    <string name="ask_voux">询问 Voux</string>
+    <string name="ask_cora">询问 Voux</string>
     <string name="send">发送</string>
     <string name="remove_attachment">移除附件</string>
     <string name="image_from_web">来自网络的图片</string>

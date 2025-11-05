@@ -12,7 +12,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Bolt
+import androidx.compose.material.icons.outlined.ChatBubbleOutline
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
@@ -328,8 +328,8 @@ fun ChatScreen(
     ) { innerPadding ->
         if (messages.isEmpty() && uiState !is UiState.Loading) {
             EmptyWidget(
-                imageVector = Icons.Rounded.Bolt,
-                text = stringResource(R.string.ask_voux)
+                imageVector = Icons.Outlined.ChatBubbleOutline,
+                text = stringResource(R.string.ask_cora)
             )
         } else {
             LazyColumn(

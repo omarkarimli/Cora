@@ -51,7 +51,7 @@
     <string name="camera">카메라</string>
     <string name="attach">첨부 파일</string>
     <string name="image_generation">이미지 생성</string>
-    <string name="ask_voux">Voux에게 질문</string>
+    <string name="ask_cora">Voux에게 질문</string>
     <string name="send">보내기</string>
     <string name="remove_attachment">첨부 파일 제거</string>
     <string name="image_from_web">웹에서 이미지</string>

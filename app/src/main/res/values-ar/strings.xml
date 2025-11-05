@@ -51,7 +51,7 @@
     <string name="camera">الكاميرا</string>
     <string name="attach">المرفقات</string>
     <string name="image_generation">إنشاء الصور</string>
-    <string name="ask_voux">اسأل Voux</string>
+    <string name="ask_cora">اسأل Voux</string>
     <string name="send">إرسال</string>
     <string name="remove_attachment">إزالة المرفق</string>
     <string name="image_from_web">صورة من الويب</string>

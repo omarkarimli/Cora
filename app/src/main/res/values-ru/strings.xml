@@ -51,7 +51,7 @@
     <string name="camera">Камера</string>
     <string name="attach">Вложения</string>
     <string name="image_generation">Генерация изображений</string>
-    <string name="ask_voux">Спросить Voux</string>
+    <string name="ask_cora">Спросить Voux</string>
     <string name="send">Отправить</string>
     <string name="remove_attachment">Удалить вложение</string>
     <string name="image_from_web">Изображение из сети</string>

@@ -51,7 +51,7 @@
     <string name="camera">कैमरा</string>
     <string name="attach">अटैचमेंट</string>
     <string name="image_generation">छवि निर्माण</string>
-    <string name="ask_voux">Voux से पूछें</string>
+    <string name="ask_cora">Voux से पूछें</string>
     <string name="send">भेजें</string>
     <string name="remove_attachment">अटैचमेंट हटाएँ</string>
     <string name="image_from_web">वेब से छवि</string>
