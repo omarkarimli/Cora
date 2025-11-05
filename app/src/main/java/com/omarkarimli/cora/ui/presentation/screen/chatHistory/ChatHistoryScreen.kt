@@ -2,7 +2,6 @@
 package com.omarkarimli.cora.ui.presentation.screen.chatHistory
 
 import android.util.Log
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -273,7 +272,6 @@ private fun ScrollContent(
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(Dimens.PaddingMedium),
                     contentPadding = PaddingValues(
                         start = Dimens.PaddingMedium,
                         end = Dimens.PaddingMedium,

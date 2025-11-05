@@ -25,7 +25,10 @@ fun ChatHistoryItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(Dimens.PaddingMedium)
+            .padding(
+                horizontal = Dimens.PaddingMedium,
+                vertical = Dimens.PaddingSmall
+            )
             .noRippleClickable(
                 onClick = onClick,
                 onLongClick = onLongClick
