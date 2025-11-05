@@ -196,7 +196,7 @@ fun ChatScreen(
 
     fun onTextChange(text: String) {
         // Correctly updates the state, triggering recomposition
-        sendMessageModel = MessageModel(text = text, images = sendMessageModel.images, isFromMe = true)
+        sendMessageModel = sendMessageModel.copy(text = text, images = sendMessageModel.images, isFromMe = true)
     }
 
     fun onLaunchCamera() {
@@ -303,6 +303,7 @@ fun ChatScreen(
                 creditConditions = creditConditions,
                 expanded = expanded,
                 isLoading = uiState is UiState.Loading,
+                attachEnable = !(sendMessageModel.imageGeneration || sendMessageModel.webSearch),
                 images = images,
                 onToggleImageGeneration = {
                     sendMessageModel = sendMessageModel.copy(imageGeneration = !sendMessageModel.imageGeneration)

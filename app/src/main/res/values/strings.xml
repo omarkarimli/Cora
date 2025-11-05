@@ -173,6 +173,7 @@
     <string name="error_google_sign_in_failed">Google Sign-In failed. Please try again.</string>
     <string name="error_sign_out">Sign out failed.</string>
     <string name="error_something_went_wrong">Something went wrong. Please try again.</string>
+    <string name="error_empty_chat">Chat is empty.</string>
     <string name="error_create_file">Could not create a file to save the photo.</string>
     <string name="error_take_photo">Failed to take a photo.</string>
     <string name="error_url_processing">Processing the URL failed. Please check the URL and try again.</string>

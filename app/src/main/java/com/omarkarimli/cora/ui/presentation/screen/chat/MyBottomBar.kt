@@ -10,12 +10,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.AddPhotoAlternate
 import androidx.compose.material.icons.outlined.CameraAlt
 import androidx.compose.material.icons.outlined.Image
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ArrowUpward
+import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Checkroom
 import androidx.compose.material.icons.rounded.Done
 import androidx.compose.material3.DropdownMenu
@@ -52,6 +52,7 @@ fun MyBottomBar(
     creditConditions: CreditConditions,
     expanded: Boolean,
     isLoading: Boolean,
+    attachEnable: Boolean,
     images: SnapshotStateList<ImageModel>,
     onToggleImageGeneration: () -> Unit,
     onToggleWebSearch: () -> Unit,
@@ -91,14 +92,14 @@ fun MyBottomBar(
 
     val bottomOptions = listOf(
         StandardListItemModel(
-            id = 0,
+            id = 3,
             title = stringResource(R.string.image_generation),
-            leadingIcon = Icons.Outlined.AddPhotoAlternate,
+            leadingIcon = Icons.Rounded.AutoAwesome,
             endingIcon = if (messageModel.imageGeneration) Icons.Rounded.Done else null,
             onClick = onToggleImageGeneration
         ),
         StandardListItemModel(
-            id = 1,
+            id = 4,
             title = stringResource(R.string.web_searches),
             leadingIcon = Icons.Outlined.Search,
             endingIcon = if (messageModel.webSearch) Icons.Rounded.Done else null,
@@ -163,6 +164,7 @@ fun MyBottomBar(
         }
 
         FilledTonalIconButton(
+            enabled = !isLoading && attachEnable,
             modifier = Modifier.padding(bottom = Dimens.PaddingExtraSmall),
             onClick = onAttach.performHaptic(),
             shape = MaterialShapes.Pill.toShape()

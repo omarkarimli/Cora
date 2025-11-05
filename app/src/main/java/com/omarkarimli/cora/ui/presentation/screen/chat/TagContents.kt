@@ -55,12 +55,7 @@ fun TagItem(item: StandardListItemModel) {
                 color = MaterialTheme.colorScheme.onSurface,
                 shape = RoundedCornerShape(Dimens.CornerRadiusLarge)
             )
-            .padding(
-                top = Dimens.PaddingSmall,
-                bottom = Dimens.PaddingSmall,
-                start = Dimens.PaddingSmall,
-                end = Dimens.PaddingExtraSmall
-            ),
+            .padding(Dimens.PaddingSmall),
         verticalAlignment = Alignment.CenterVertically
     ) {
         item.leadingIcon?.let { imageVector ->

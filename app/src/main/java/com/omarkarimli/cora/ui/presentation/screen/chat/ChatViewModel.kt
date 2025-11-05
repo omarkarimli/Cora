@@ -210,6 +210,11 @@ class ChatViewModel @Inject constructor(
         if (_messages.value.isNotEmpty()) {
             _chatHistoryModel.value = null
             _messages.value = emptyList()
+        } else {
+            _uiState.value = UiState.Error(
+                toastResId = R.string.error_empty_chat,
+                log = "Chat is empty."
+            )
         }
     }
 }
