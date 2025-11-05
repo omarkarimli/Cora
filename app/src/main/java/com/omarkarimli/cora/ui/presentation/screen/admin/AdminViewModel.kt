@@ -3,6 +3,7 @@ package com.omarkarimli.cora.ui.presentation.screen.admin
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.omarkarimli.cora.R
+import com.omarkarimli.cora.domain.repository.AdminRepository
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -15,7 +16,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AdminViewModel @Inject constructor(
-    private val firestoreRepository: FirestoreRepository
+    private val adminRepo: AdminRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
@@ -36,7 +37,7 @@ class AdminViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             try {
-                firestoreRepository.setGuidelines()
+                adminRepo.setGuidelines()
                 _uiState.value = UiState.Success(message = SuccessType.SET_GUIDELINES)
             } catch (e: Exception) {
                 setError(e)
@@ -50,7 +51,7 @@ class AdminViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             try {
-                firestoreRepository.setSubscriptionModels()
+                adminRepo.setSubscriptionModels()
                 _uiState.value = UiState.Success(message = SuccessType.SET_SUBSCRIPTIONS)
             } catch (e: Exception) {
                 setError(e)

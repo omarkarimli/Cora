@@ -1,5 +1,6 @@
 package com.omarkarimli.cora.di
 
+import com.omarkarimli.cora.data.repository.AdminRepositoryImpl
 import com.omarkarimli.cora.data.repository.AiRepositoryImpl
 import com.omarkarimli.cora.data.repository.AuthRepositoryImpl
 import com.omarkarimli.cora.data.repository.ChatHistoryRepoImpl
@@ -17,6 +18,7 @@ import com.omarkarimli.cora.data.repository.SerperRepositoryImpl
 import com.omarkarimli.cora.data.repository.SharedPreferenceRepositoryImpl
 import com.omarkarimli.cora.data.repository.ThemeRepositoryImpl
 import com.omarkarimli.cora.data.repository.TranslateRepositoryImpl
+import com.omarkarimli.cora.domain.repository.AdminRepository
 import com.omarkarimli.cora.domain.repository.AiRepository
 import com.omarkarimli.cora.domain.repository.AuthRepository
 import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
@@ -43,6 +45,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
+
+    @Binds
+    @Singleton
+    abstract fun bindAdminRepository(
+        adminRepositoryImpl: AdminRepositoryImpl
+    ): AdminRepository
 
     @Binds
     @Singleton

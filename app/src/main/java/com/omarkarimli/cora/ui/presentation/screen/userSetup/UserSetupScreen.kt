@@ -50,8 +50,8 @@ import com.omarkarimli.cora.ui.presentation.common.widget.component.WideButton
 import com.omarkarimli.cora.ui.presentation.screen.profile.ProfilePicture
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
-import com.omarkarimli.cora.utils.Constants.MAX_FIELD_LENGTH_SMALL
-import com.omarkarimli.cora.utils.Constants.MIN_FIELD_LENGTH
+import com.omarkarimli.cora.utils.TextFieldConstants.MAX_FIELD_LENGTH_SMALL
+import com.omarkarimli.cora.utils.TextFieldConstants.MIN_FIELD_LENGTH
 import com.omarkarimli.cora.utils.sendEmail
 import com.omarkarimli.cora.utils.showToast
 import com.omarkarimli.cora.utils.validateFields

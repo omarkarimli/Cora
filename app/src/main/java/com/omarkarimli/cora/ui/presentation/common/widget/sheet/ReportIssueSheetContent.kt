@@ -20,7 +20,7 @@ import com.omarkarimli.cora.ui.presentation.common.widget.component.MyFilledText
 import com.omarkarimli.cora.ui.presentation.common.widget.component.WideButton
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
-import com.omarkarimli.cora.utils.Constants.MIN_FIELD_LENGTH
+import com.omarkarimli.cora.utils.TextFieldConstants.MIN_FIELD_LENGTH
 import com.omarkarimli.cora.utils.performHaptic
 
 @Composable

@@ -20,12 +20,8 @@ interface FirestoreRepository {
     suspend fun getSubscriptionTypes(): List<String>
     suspend fun addReportIssue(reportIssueModel: ReportIssueModel)
     suspend fun getGuidelines(): List<GuidelineModel>
-    suspend fun setGuidelines()
     suspend fun getJournals(): List<JournalModel>
-    suspend fun setJournals()
     suspend fun getCategories(gender: String): List<CategoryModel>
-    suspend fun setCategories()
-    suspend fun setSubscriptionModels()
     suspend fun updateUsageData(newUsageData: UsageDataModel)
     suspend fun getCreditConditions(userModel: UserModel?): CreditConditions
     suspend fun renewSubscription(userModel: UserModel): UserModel?

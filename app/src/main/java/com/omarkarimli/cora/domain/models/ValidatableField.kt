@@ -3,7 +3,7 @@ package com.omarkarimli.cora.domain.models
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import com.omarkarimli.cora.R
-import com.omarkarimli.cora.utils.Constants.MAX_FIELD_LENGTH_LARGE
+import com.omarkarimli.cora.utils.TextFieldConstants.MAX_FIELD_LENGTH_LARGE
 
 data class ValidatableField(
     val value: String,
