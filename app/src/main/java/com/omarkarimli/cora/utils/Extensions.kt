@@ -601,7 +601,6 @@ fun SearchTextResponse.toMessageModel(): MessageModel {
     var text = ""
     text += if (this.knowledgeGraph.title.isNotEmpty()) { "**${this.knowledgeGraph.title}**\n" } else ""
     text += if (this.knowledgeGraph.description.isNotEmpty()) { "${this.knowledgeGraph.description}\n" } else ""
-    text += if (this.knowledgeGraph.imageUrl.isNotEmpty()) { "_${this.knowledgeGraph.imageUrl}_\n" } else ""
 
     if (this.organic.isNotEmpty()) {
         text += "\n\n- Explores:\n"
@@ -636,7 +635,8 @@ fun SearchTextResponse.toMessageModel(): MessageModel {
     }
 
     val images = mutableListOf<ImageModel>()
-    if (this.knowledgeGraph.imageUrl.isNotEmpty()) images.add(ImageModel(this.knowledgeGraph.imageUrl))
+    if (this.knowledgeGraph.imageUrl.isNotEmpty())
+        images.add(ImageModel(this.knowledgeGraph.imageUrl, this.knowledgeGraph.imageUrl))
 
     return MessageModel(
         text = text,
