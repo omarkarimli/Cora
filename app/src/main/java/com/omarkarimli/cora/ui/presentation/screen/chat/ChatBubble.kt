@@ -17,17 +17,18 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Devices
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource // Added import
 import coil.compose.AsyncImage
@@ -48,6 +49,7 @@ fun ChatBubble(
 ) {
     val navController = LocalNavController.current
     val isUserMe = message.isFromMe
+    val uriHandler = LocalUriHandler.current
 
     Row(
         modifier = Modifier
@@ -134,10 +136,18 @@ fun ChatBubble(
                     .padding(horizontal = Dimens.PaddingMedium, vertical = Dimens.PaddingSmall),
                 contentAlignment = Alignment.CenterStart
             ) {
-                Text(
-                    text = message.text.toAnnotatedString(),
-                    style = AppTypography.bodyMedium,
-                    color = if (isUserMe) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
+                val annotatedString = message.text.toAnnotatedString()
+                ClickableText(
+                    text = annotatedString,
+                    style = AppTypography.bodyMedium.copy(
+                        color = if (isUserMe) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
+                    ),
+                    onClick = {
+                        annotatedString.getStringAnnotations("URL", it, it)
+                            .firstOrNull()?.let { annotation ->
+                                uriHandler.openUri(annotation.item)
+                            }
+                    }
                 )
             }
         }
