@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Rule
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.DarkMode
@@ -257,6 +258,14 @@ private fun ScrollContent(
                     description = stringResource(R.string.desc_usage),
                     endingIcon = Icons.AutoMirrored.Rounded.ArrowForward,
                     onClick = { navController.navigate(Screen.Usage.route) }
+                ),
+                StandardListItemModel(
+                    id = 2,
+                    leadingIcon = Icons.AutoMirrored.Outlined.Rule,
+                    title = stringResource(R.string.guidelines),
+                    description = stringResource(R.string.desc_guidelines),
+                    endingIcon = Icons.AutoMirrored.Rounded.ArrowForward,
+                    onClick = { navController.navigate(Screen.Guidelines.route) }
                 )
             )
         ),
@@ -264,7 +273,7 @@ private fun ScrollContent(
             title = stringResource(R.string.general),
             items = listOf(
                 StandardListItemModel(
-                    id = 2,
+                    id = 3,
                     leadingIcon = Icons.Outlined.SaveAlt,
                     title = stringResource(R.string.saving_path),
                     description = stringResource(R.string.desc_saving_path),
@@ -272,7 +281,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.SavingPath) }
                 ),
                 StandardListItemModel(
-                    id = 3,
+                    id = 4,
                     leadingIcon = Icons.Outlined.Notifications,
                     title = stringResource(R.string.notifications),
                     description = stringResource(R.string.desc_notifications),
@@ -280,7 +289,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.Notifications) }
                 ),
                 StandardListItemModel(
-                    id = 4,
+                    id = 5,
                     leadingIcon = Icons.Outlined.Language,
                     title = stringResource(R.string.languages),
                     description = stringResource(R.string.desc_lang),
@@ -288,7 +297,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.Languages) }
                 ),
                 StandardListItemModel(
-                    id = 5,
+                    id = 6,
                     leadingIcon = Icons.Outlined.Translate,
                     title = stringResource(R.string.live_translation),
                     description = stringResource(R.string.desc_live_translation),
@@ -296,7 +305,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.LiveTranslation) }
                 ),
                 StandardListItemModel(
-                    id = 6,
+                    id = 7,
                     leadingIcon = Icons.Outlined.DarkMode,
                     title = stringResource(R.string.dark_mode),
                     description = stringResource(R.string.desc_dark_mode),
@@ -304,7 +313,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.DarkMode) }
                 ),
                 StandardListItemModel(
-                    id = 7,
+                    id = 8,
                     leadingIcon = Icons.Outlined.InvertColors,
                     title = stringResource(R.string.dynamic_color),
                     description = stringResource(R.string.desc_dynamic_color),
@@ -317,7 +326,7 @@ private fun ScrollContent(
             title = stringResource(R.string.support) + " & " + stringResource(R.string.about),
             items = listOf(
                 StandardListItemModel(
-                    id = 8,
+                    id = 9,
                     leadingIcon = Icons.Outlined.BugReport,
                     title = stringResource(R.string.report_issue),
                     description = stringResource(R.string.desc_report_issue),
@@ -325,7 +334,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.ReportIssue) }
                 ),
                 StandardListItemModel(
-                    id = 9,
+                    id = 10,
                     leadingIcon = Icons.Outlined.SettingsBackupRestore,
                     title = stringResource(R.string.reset_settings),
                     description = stringResource(R.string.desc_reset_settings),
@@ -333,7 +342,7 @@ private fun ScrollContent(
                     onClick = { onShowSheet(SheetContent.ResetSettings) }
                 ),
                 StandardListItemModel(
-                    id = 10,
+                    id = 11,
                     leadingIcon = Icons.Outlined.Info,
                     title = stringResource(R.string.about),
                     description = stringResource(R.string.desc_about),

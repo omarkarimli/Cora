@@ -27,6 +27,7 @@ import com.omarkarimli.cora.ui.presentation.screen.auth.AuthScreen
 import com.omarkarimli.cora.ui.presentation.screen.chat.ChatScreen
 import com.omarkarimli.cora.ui.presentation.screen.chatHistory.ChatHistoryScreen
 import com.omarkarimli.cora.ui.presentation.screen.fullscreenImageViewer.FullScreenImageViewerScreen
+import com.omarkarimli.cora.ui.presentation.screen.guidelines.GuidelinesScreen
 import com.omarkarimli.cora.ui.presentation.screen.profile.ProfileScreen
 import com.omarkarimli.cora.ui.presentation.screen.settings.SettingsScreen
 import com.omarkarimli.cora.ui.presentation.screen.splash.SplashScreen
@@ -49,8 +50,9 @@ sealed class Screen(val route: String, @StringRes val titleResId: Int) {
     data object FullScreenImageViewer: Screen("fullScreenImageViewer", R.string.full_screen_image_viewer)
     data object Success: Screen("success", R.string.success)
     data object Upgrade: Screen("upgrade", R.string.upgrade)
-    data object SubscriptionHistory : Screen("subscriptionHistory", R.string.subscription_history)
-    data object Usage : Screen("usage", R.string.usage)
+    data object SubscriptionHistory: Screen("subscriptionHistory", R.string.subscription_history)
+    data object Usage: Screen("usage", R.string.usage)
+    data object Guidelines: Screen("guidelines", R.string.guidelines)
 }
 
 val LocalNavController = staticCompositionLocalOf<NavHostController> {
@@ -114,6 +116,9 @@ fun AppNavigation(
                 }
                 composable(Screen.Success.route) {
                     SuccessScreen()
+                }
+                composable(Screen.Guidelines.route) {
+                    GuidelinesScreen()
                 }
                 composable(Screen.Usage.route) {
                     UsageScreen()

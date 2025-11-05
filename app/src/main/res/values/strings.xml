@@ -161,6 +161,7 @@
     <string name="desc_report_issue">Submit a bug report or a feature request.</string>
     <string name="desc_reset_settings">Revert all settings to their default values.</string>
     <string name="desc_about">View info about app.</string>
+    <string name="desc_guidelines">View and follow guidelines.</string>
     <string name="about_main_text">Designed to supercharge your ideas Your passion is our purpose. We truly hope you enjoy what we\'ve created for you.</string>
     <string name="account">Account</string>
 
