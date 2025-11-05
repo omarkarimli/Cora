@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Sitelink(
     @SerializedName("link")
-    val link: String?,
+    val link: String = "",
     @SerializedName("title")
-    val title: String?
+    val title: String = ""
 )

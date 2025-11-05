@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName
 
 data class PeopleAlsoAsk(
     @SerializedName("link")
-    val link: String?,
+    val link: String = "",
     @SerializedName("question")
-    val question: String?,
+    val question: String = "",
     @SerializedName("snippet")
-    val snippet: String?,
+    val snippet: String = "",
     @SerializedName("title")
-    val title: String?
+    val title: String = ""
 )

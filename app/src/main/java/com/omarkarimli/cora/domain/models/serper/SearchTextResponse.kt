@@ -9,11 +9,11 @@ data class SearchTextResponse(
     @SerializedName("knowledgeGraph")
     val knowledgeGraph: KnowledgeGraph = KnowledgeGraph(),
     @SerializedName("organic")
-    val organic: List<Organic?> = emptyList(),
+    val organic: List<Organic> = emptyList(),
     @SerializedName("peopleAlsoAsk")
-    val peopleAlsoAsk: List<PeopleAlsoAsk?> = emptyList(),
+    val peopleAlsoAsk: List<PeopleAlsoAsk> = emptyList(),
     @SerializedName("relatedSearches")
-    val relatedSearches: List<RelatedSearche?> = emptyList(),
+    val relatedSearches: List<RelatedSearch> = emptyList(),
     @SerializedName("searchParameters")
     val searchParameters: SearchParameters = SearchParameters(),
 )

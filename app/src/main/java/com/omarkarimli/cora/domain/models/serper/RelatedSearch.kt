@@ -3,7 +3,7 @@ package com.omarkarimli.cora.domain.models.serper
 
 import com.google.gson.annotations.SerializedName
 
-data class RelatedSearche(
+data class RelatedSearch(
     @SerializedName("query")
-    val query: String?
+    val query: String = ""
 )

@@ -207,7 +207,9 @@ class ChatViewModel @Inject constructor(
     }
 
     fun onNewChat() {
-        _chatHistoryModel.value = null
-        _messages.value = emptyList()
+        if (_messages.value.isNotEmpty()) {
+            _chatHistoryModel.value = null
+            _messages.value = emptyList()
+        }
     }
 }

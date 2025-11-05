@@ -5,15 +5,15 @@ import com.google.gson.annotations.SerializedName
 
 data class Organic(
     @SerializedName("date")
-    val date: String?,
+    val date: String = "",
     @SerializedName("link")
-    val link: String?,
+    val link: String = "",
     @SerializedName("position")
-    val position: Int?,
+    val position: Int = 0,
     @SerializedName("sitelinks")
-    val sitelinks: List<Sitelink?>?,
+    val sitelinks: List<Sitelink> = emptyList(),
     @SerializedName("snippet")
-    val snippet: String?,
+    val snippet: String = "",
     @SerializedName("title")
-    val title: String?
+    val title: String = ""
 )

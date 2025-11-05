@@ -71,54 +71,72 @@ fun String.capitalize(): String {
 fun String.toAnnotatedString(): AnnotatedString {
     // **...** content is group 2 bold
     // *...* content is group 4 italic
-    // _..._ content is group 6 underline
+    // _[...](...)_ content is group 6 underline with link
     val regex = Regex("(?<BOLD>\\*\\*(.*?)\\*\\*)|(?<ITALIC>\\*(.*?)\\*)|(?<UNDERLINE>_(.*?)_)")
+    val linkRegex = Regex("\\[(.*?)]\\((.*?)\\)")
 
     return buildAnnotatedString {
         var currentIndex = 0
 
-        // Find all matches for any of the three patterns
         regex.findAll(this@toAnnotatedString).forEach { matchResult ->
-            // 1. Append the text *before* the current formatted segment
             append(this@toAnnotatedString.substring(currentIndex, matchResult.range.first))
 
-            // 2. Determine the style and content based on which named group matched
             val (formatType, content) = when {
-                matchResult.groups["BOLD"] != null ->
-                    Pair(FormatType.BOLD, matchResult.groups[2]?.value)
-                matchResult.groups["ITALIC"] != null ->
-                    Pair(FormatType.ITALIC, matchResult.groups[4]?.value)
-                matchResult.groups["UNDERLINE"] != null ->
-                    Pair(FormatType.UNDERLINE, matchResult.groups[6]?.value)
-                else ->
-                    Pair(null, null)
+                matchResult.groups["BOLD"] != null -> "BOLD" to matchResult.groups[2]?.value
+                matchResult.groups["ITALIC"] != null -> "ITALIC" to matchResult.groups[4]?.value
+                matchResult.groups["UNDERLINE"] != null -> "UNDERLINE" to matchResult.groups[6]?.value
+                else -> null to null
             }
 
-            // 3. Apply the corresponding style and append the content
             content?.let { text ->
                 when (formatType) {
-                    FormatType.BOLD -> pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
-                    FormatType.ITALIC -> pushStyle(SpanStyle(fontStyle = FontStyle.Italic, color = outlineLight))
-                    FormatType.UNDERLINE -> {
-                        pushStringAnnotation("URL", text)
-                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+                    "BOLD" -> {
+                        pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
+                        append(text)
+                        pop()
                     }
-                    null -> {} // Should not happen
+                    "ITALIC" -> {
+                        pushStyle(SpanStyle(fontStyle = FontStyle.Italic, color = outlineLight))
+                        append(text)
+                        pop()
+                    }
+                    "UNDERLINE" -> {
+                        val linkMatch = linkRegex.find(text)
+                        if (linkMatch?.groups?.size == 3) { // Markdown link: _[text](url)_
+                            val displayText = linkMatch.groups[1]?.value ?: ""
+                            val url = linkMatch.groups[2]?.value ?: ""
+                            if (url.isNotEmpty()) {
+                                pushStringAnnotation("URL", url)
+                                pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+                                append(displayText.takeIf { it.isNotEmpty() } ?: url)
+                                pop() // style
+                                pop() // annotation
+                            }
+                        } else if (text.isWebUrl()) { // Raw URL: _http://..._
+                            pushStringAnnotation("URL\n", text)
+                            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+                            append(if (text.length > 30) "Link\n" else text)
+                            pop() // style
+                            pop() // annotation
+                        } else { // Just underlined text
+                            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
+                            append(text)
+                            pop()
+                        }
+                    }
+                    else -> append(text)
                 }
-                append(text)
-                pop() // End the style
             }
 
-            // 4. Update the index to the position *after* the current full match
             currentIndex = matchResult.range.last + 1
         }
 
-        // 5. Append any remaining text *after* the last formatted segment
         if (currentIndex < this@toAnnotatedString.length) {
             append(this@toAnnotatedString.substring(currentIndex))
         }
     }
 }
+
 
 @Composable
 fun (() -> Unit).performHaptic(
@@ -255,17 +273,9 @@ fun Context.showToast(message: String) {
 }
 
 fun Context.copyToClipboard(text: String) {
-    // Get the ClipboardManager from the system service
     val clipboardManager = this.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-
-    // Create a new ClipData object.
-    // The label is a user-visible description of the clip's content.
     val clipData = ClipData.newPlainText(Constants.CLIPBOARD_LABEL, text)
-
-    // Set the clip data to the clipboard.
     clipboardManager.setPrimaryClip(clipData)
-
-    // Toast
     this.showToast("Copied to clipboard")
 }
 
@@ -281,23 +291,15 @@ fun Context.openUrl(urlText: String) {
 
 fun Long.toDateTimeString(): String {
     val dateFormat = SimpleDateFormat("h:mm a dd.MM.yyyy", Locale.getDefault())
-    val formattedTime = dateFormat.format(this)
-    return formattedTime ?: ""
+    return dateFormat.format(this)
 }
 
 fun String.convertDriveUrlToDirectDownload(): String {
     return if (this.contains("drive.google.com/file/d/")) {
-        val fileId = this
-            .split("/file/d/").getOrNull(1)
-            ?.split("/")[0]
-
-        if (fileId != null) {
-            "https://drive.google.com/uc?export=download&id=$fileId"
-        } else {
-            this
-        }
+        val fileId = this.split("/file/d/").getOrNull(1)?.split("/")?.getOrNull(0)
+        if (fileId != null) "https://drive.google.com/uc?export=download&id=$fileId" else this
     } else {
-        this // Return original if parsing fails
+        this
     }
 }
 
@@ -315,8 +317,7 @@ fun Double.formatPrice(): String {
 
 @Composable
 fun Double.toPriceString(): String {
-    return if (this > 0.01) this.formatPrice()
-        else stringResource(R.string.free)
+    return if (this > 0.01) this.formatPrice() else stringResource(R.string.free)
 }
 
 fun GuidelineModel.toStandardListItemModel(): StandardListItemModel {
@@ -363,67 +364,67 @@ fun DocumentSnapshot.toSubscriptionModelsList(): List<SubscriptionModel> {
 }
 
 fun SearchImageResponse.toImageModels(): List<ImageModel> {
-    return this.images.map { imageResult ->
-        ImageModel(
-            imageUrl = imageResult.imageUrl,
-            sourceUrl = imageResult.link
-        )
+    return this.images.mapNotNull { imageResult ->
+        if (imageResult.imageUrl.isNotBlank()) {
+            ImageModel(imageUrl = imageResult.imageUrl, sourceUrl = imageResult.link)
+        } else null
     }
 }
 
+fun String.returnIfAvailable(): String {
+    val replacedText = this
+        .replace("*", "")
+        .replace("_", "")
+        .replace("[", "")
+        .replace("]", "")
+        .replace("(", "")
+        .replace(")", "")
+
+    return if (replacedText.trim().isNotBlank()
+        && replacedText.any { it.isLetter() }) this
+    else ""
+}
+
 fun SearchTextResponse.toMessageModel(): MessageModel {
-    // **...** content is group 2 bold
-    // *...* content is group 4 italic
-    // _..._ content is group 6 underline
-    var text = ""
-    text += if (this.knowledgeGraph.title.isNotEmpty()) { "**${this.knowledgeGraph.title}**\n" } else ""
-    text += if (this.knowledgeGraph.description.isNotEmpty()) { "${this.knowledgeGraph.description}\n" } else ""
+    val text = buildString {
+        append("**${knowledgeGraph.title}**\n".returnIfAvailable())
+        append("${knowledgeGraph.description}\n".returnIfAvailable())
 
-    if (this.organic.isNotEmpty()) {
-        text += "\n\n- Explores:\n"
-        text += this.organic.forEach { item ->
-            item?.title?.let {
-                text += "**${it}**\n"
-            }
-            item?.snippet?.let {
-                text += "$it\n"
-            }
-            text += item?.link?.let { "_${it}_" }
-        }
-    }
+        if (organic.isNotEmpty()) {
+            append("\n\n**Explores:**\n")
+            organic.forEach { item ->
+                append("\n")
+                append("**${item.title}**\n".returnIfAvailable())
+                append("${item.snippet}\n".returnIfAvailable())
 
-    if (this.peopleAlsoAsk.isNotEmpty()) {
-        text += "\n\n- People also ask:\n"
-        text += this.peopleAlsoAsk.forEach { item ->
-            item?.question?.let {
-                text += "*${it}*\n"
-            }
-            item?.link?.let {
-                text += "_${it}_\n"
+                if (item.link.isNotBlank()) append("_[${item.title}](${item.link})_\n".returnIfAvailable())
             }
         }
-    }
 
-    if (this.relatedSearches.isNotEmpty()) {
-        text += "\n\n- Related searches:\n"
-        text += this.relatedSearches.forEach { item ->
-            text += item?.query.let { "*${it}*" }
+        if (peopleAlsoAsk.isNotEmpty()) {
+            append("\n\n**People also ask:**\n")
+            peopleAlsoAsk.forEach { item ->
+                append("_[${item.question}](${item.link})_\n".returnIfAvailable())
+            }
+        }
+
+        if (relatedSearches.isNotEmpty()) {
+            append("\n\n**Related searches:**\n")
+            relatedSearches.forEach { item ->
+                append("*${item.query}*\n".returnIfAvailable())
+            }
         }
     }
 
     val images = mutableListOf<ImageModel>()
-    if (this.knowledgeGraph.imageUrl.isNotEmpty())
-        images.add(ImageModel(this.knowledgeGraph.imageUrl, this.knowledgeGraph.imageUrl))
+    if (knowledgeGraph.imageUrl.isNotBlank()) images.add(ImageModel(knowledgeGraph.imageUrl, knowledgeGraph.imageUrl))
 
     return MessageModel(
-        text = text,
+        text = text.trim(),
         images = images
     )
 }
 
 fun Long?.isEarlierThan(expiredTime: Long?): Boolean {
-    // A null 'this' (the receiver) means there's no time to compare, so it can't be earlier.
-    // If 'this' is not null, the comparison can only happen if 'expiredTime' is also not null.
-    // If both are not null, we compare if 'this' is strictly less than 'expiredTime'.
     return this != null && expiredTime != null && this < expiredTime
 }
