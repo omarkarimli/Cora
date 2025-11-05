@@ -59,7 +59,7 @@ import com.omarkarimli.cora.domain.models.GuidelineModel
 import com.omarkarimli.cora.domain.models.ImageModel
 import com.omarkarimli.cora.domain.models.ItemAnalysisModel
 import com.omarkarimli.cora.domain.models.JournalModel
-import com.omarkarimli.cora.domain.models.SearchResponse
+import com.omarkarimli.cora.domain.models.SearchImageResponse
 import com.omarkarimli.cora.domain.models.StandardListItemModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.ui.theme.Dimens
@@ -67,16 +67,18 @@ import com.omarkarimli.cora.ui.theme.Durations
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.Locale
-
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import com.omarkarimli.cora.domain.models.UsageDataModel
 import com.omarkarimli.cora.domain.models.ValidatableField
-
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextDecoration
+import com.omarkarimli.cora.domain.models.MessageModel
+import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
+import com.omarkarimli.cora.ui.theme.outlineLight
+import com.omarkarimli.cora.ui.theme.primaryLight
 
 fun String.isWebUrl(): Boolean {
     return this.contains("http") || this.contains("www")
@@ -87,11 +89,9 @@ fun String.capitalize(): String {
 }
 
 fun String.toAnnotatedString(): AnnotatedString {
-    // Regex using non-greedy matching for the content and named groups for identification.
-    // The content is captured by the inner (unnamed) groups:
-    // **...** content is group 2
-    // *...* content is group 4
-    // _..._ content is group 6
+    // **...** content is group 2 bold
+    // *...* content is group 4 italic
+    // _..._ content is group 6 underline
     val regex = Regex("(?<BOLD>\\*\\*(.*?)\\*\\*)|(?<ITALIC>\\*(.*?)\\*)|(?<UNDERLINE>_(.*?)_)")
 
     return buildAnnotatedString {
@@ -118,8 +118,8 @@ fun String.toAnnotatedString(): AnnotatedString {
             content?.let { text ->
                 when (formatType) {
                     FormatType.BOLD -> pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
-                    FormatType.ITALIC -> pushStyle(SpanStyle(fontStyle = FontStyle.Italic))
-                    FormatType.UNDERLINE -> pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
+                    FormatType.ITALIC -> pushStyle(SpanStyle(fontStyle = FontStyle.Italic, color = outlineLight))
+                    FormatType.UNDERLINE -> pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
                     null -> {} // Should not happen
                 }
                 append(text)
@@ -585,13 +585,63 @@ fun DocumentSnapshot.toSubscriptionModelsList(): List<SubscriptionModel> {
     }
 }
 
-fun SearchResponse.toImageModels(): List<ImageModel> {
+fun SearchImageResponse.toImageModels(): List<ImageModel> {
     return this.images.map { imageResult ->
         ImageModel(
             imageUrl = imageResult.imageUrl,
             sourceUrl = imageResult.link
         )
     }
+}
+
+fun SearchTextResponse.toMessageModel(): MessageModel {
+    // **...** content is group 2 bold
+    // *...* content is group 4 italic
+    // _..._ content is group 6 underline
+    var text = ""
+    text += if (this.knowledgeGraph.title.isNotEmpty()) { "**${this.knowledgeGraph.title}**\n" } else ""
+    text += if (this.knowledgeGraph.description.isNotEmpty()) { "${this.knowledgeGraph.description}\n" } else ""
+    text += if (this.knowledgeGraph.imageUrl.isNotEmpty()) { "_${this.knowledgeGraph.imageUrl}_\n" } else ""
+
+    if (this.organic.isNotEmpty()) {
+        text += "\n\n- Explores:\n"
+        text += this.organic.forEach { item ->
+            item?.title?.let {
+                text += "**${it}**\n"
+            }
+            item?.snippet?.let {
+                text += "$it\n"
+            }
+            text += item?.link?.let { "_${it}_" }
+        }
+    }
+
+    if (this.peopleAlsoAsk.isNotEmpty()) {
+        text += "\n\n- People also ask:\n"
+        text += this.peopleAlsoAsk.forEach { item ->
+            item?.question?.let {
+                text += "*${it}*\n"
+            }
+            item?.link?.let {
+                text += "_${it}_\n"
+            }
+        }
+    }
+
+    if (this.relatedSearches.isNotEmpty()) {
+        text += "\n\n- Related searches:\n"
+        text += this.relatedSearches.forEach { item ->
+            text += item?.query.let { "*${it}*" }
+        }
+    }
+
+    val images = mutableListOf<ImageModel>()
+    if (this.knowledgeGraph.imageUrl.isNotEmpty()) images.add(ImageModel(this.knowledgeGraph.imageUrl))
+
+    return MessageModel(
+        text = text,
+        images = images
+    )
 }
 
 fun Long?.isEarlierThan(expiredTime: Long?): Boolean {

@@ -307,6 +307,9 @@ fun ChatScreen(
                 onToggleImageGeneration = {
                     sendMessageModel = sendMessageModel.copy(imageGeneration = !sendMessageModel.imageGeneration)
                 },
+                onToggleWebSearch = {
+                    sendMessageModel = sendMessageModel.copy(webSearch = !sendMessageModel.webSearch)
+                },
                 onSend = { messageModel ->
                     viewModel.onSend(messageModel)
                     images.clear()

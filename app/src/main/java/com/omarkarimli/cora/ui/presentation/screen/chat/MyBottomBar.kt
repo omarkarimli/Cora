@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AddPhotoAlternate
 import androidx.compose.material.icons.outlined.CameraAlt
 import androidx.compose.material.icons.outlined.Image
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ArrowUpward
 import androidx.compose.material.icons.rounded.Checkroom
@@ -53,6 +54,7 @@ fun MyBottomBar(
     isLoading: Boolean,
     images: SnapshotStateList<ImageModel>,
     onToggleImageGeneration: () -> Unit,
+    onToggleWebSearch: () -> Unit,
     onSend: (MessageModel) -> Unit,
     onDismissDropDown: () -> Unit,
     onTextChange: (String) -> Unit,
@@ -94,6 +96,13 @@ fun MyBottomBar(
             leadingIcon = Icons.Outlined.AddPhotoAlternate,
             endingIcon = if (messageModel.imageGeneration) Icons.Rounded.Done else null,
             onClick = onToggleImageGeneration
+        ),
+        StandardListItemModel(
+            id = 1,
+            title = stringResource(R.string.web_searches),
+            leadingIcon = Icons.Outlined.Search,
+            endingIcon = if (messageModel.webSearch) Icons.Rounded.Done else null,
+            onClick = onToggleWebSearch
         )
     )
 

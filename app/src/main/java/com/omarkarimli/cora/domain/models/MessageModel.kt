@@ -8,5 +8,6 @@ data class MessageModel(
     val images: List<ImageModel> = emptyList(),
     val isFromMe: Boolean = false,
     val timestamp: Long = System.currentTimeMillis(),
-    val imageGeneration: Boolean = false
+    val imageGeneration: Boolean = false,
+    val webSearch: Boolean = false
 )

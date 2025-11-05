@@ -1,21 +1,29 @@
 package com.omarkarimli.cora.data.remote
 
-import com.omarkarimli.cora.domain.models.SearchResponse
+import com.omarkarimli.cora.domain.models.SearchImageResponse
 import com.omarkarimli.cora.domain.models.WebpageResponse
+import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
 import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Body
 
 interface SerperApiService {
 
-    data class SearchRequest(val q: String)
+    data class TextRequest(val q: String)
+    data class ImageRequest(val q: String)
     data class WebpageRequest(val url: String)
+
+    @POST("/search")
+    suspend fun searchText(
+        @Header("X-API-KEY") apiKey: String,
+        @Body requestBody: TextRequest
+    ): SearchTextResponse
 
     @POST("/images")
     suspend fun searchImage(
         @Header("X-API-KEY") apiKey: String,
-        @Body requestBody: SearchRequest
-    ): SearchResponse
+        @Body requestBody: ImageRequest
+    ): SearchImageResponse
 
     @POST("/scrape")
     suspend fun searchWebpage(

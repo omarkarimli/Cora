@@ -5,17 +5,30 @@ import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.repository.AiRepository
 import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
+import com.omarkarimli.cora.domain.repository.SerperRepository
+import com.omarkarimli.cora.utils.toMessageModel
 import javax.inject.Inject
 
 class ChatRepositoryImpl @Inject constructor(
     val firestoreRepository: FirestoreRepository,
-    val aiRepository: AiRepository
+    val aiRepository: AiRepository,
+    val serperRepository: SerperRepository
 ) : ChatRepository {
 
     override suspend fun sendMessage(messageModel: MessageModel): MessageModel {
         try {
             val userModel = firestoreRepository.getUser() ?: throw IllegalStateException("User not authenticated.")
-            val result = aiRepository.generateMessage(messageModel)
+            val result = if (messageModel.webSearch) {
+                serperRepository.searchText(messageModel.text).toMessageModel()
+            } else {
+                aiRepository.generateMessage(messageModel)
+            }
+
+            Log.d(
+                "ChatRepository",
+                if (messageModel.webSearch) "Web search" else "Generated AI"
+            )
+            Log.d("ChatRepository", "Message: ${messageModel.text}")
 
             val newUsageData = userModel.usageData.copy(
                 attaches = userModel.usageData.attaches + messageModel.images.size,

@@ -1,6 +1,6 @@
 package com.omarkarimli.cora.domain.models
 
-data class SearchResponse(
+data class SearchImageResponse(
     val searchParameters: SearchParameters = SearchParameters(),
     val images: List<ImageResult> = emptyList(),
     val credits: Int = 0
