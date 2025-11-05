@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_icon">Tətbiq İkonu</string>
+    <string name="general">Ümumi</string>
+    <string name="support">Dəstək</string>
+    <string name="about">Haqqında</string>
+    <string name="help">Kömək</string>
+    <string name="more">Daha çox</string>
+    <string name="new_chat">Yeni söhbət</string>
+    <string name="chat_history">Söhbət tarixçəsi</string>
+
+    <string name="notification_text">İdeyanız var? Yeni birini sınayın.</string>
+
+    <string name="splash">Başlanğıc Ekranı</string>
+    <string name="auth">Doğrulama</string>
+    <string name="get_started">Başlayaq</string>
+    <string name="continue_title">Davam et</string>
+    <string name="auth_legal_doc_agreement_prefix">Davam edərək, </string>
+    <string name="legal_doc">Hüquqi Sənədlərimizə</string>
+    <string name="user_setup">İstifadəçi Qurulumu</string>
+    <string name="username">İstifadəçi adı</string>
+    <string name="bio">Bioqrafiya</string>
+    <string name="required">Tələb olunur</string>
+    <string name="optional">Könüllü</string>
+    <string name="sign_out">Çıxış</string>
+
+    <string name="datetime">Tarix &amp; Saat</string>
+    <string name="success">Uğurlu</string>
+    <string name="success_message">Əməliyyat uğurlu oldu.</string>
+    <string name="home">Ana Səhifə</string>
+    <string name="journals">Jurnallar</string>
+    <string name="guidelines">Təlimatlar</string>
+    <string name="settings">Ayarlar</string>
+    <string name="profile">Profil</string>
+    <string name="chat">Çat</string>
+    <string name="history">Tarixçə</string>
+    <string name="favourites">Sevimlilər</string>
+    <string name="detail">Ətraflı</string>
+    <string name="admin">Admin</string>
+    <string name="back_to_prev">Əvvəlki səhifəyə qayıt</string>
+    <string name="open_chat">Çatı aç</string>
+    <string name="open_history">Tarixçəni aç</string>
+    <string name="open_favourites">Sevimliləri aç</string>
+    <string name="open_subscriptions">Abunəlikləri aç</string>
+    <string name="search">Axtarış</string>
+    <string name="clear_all">Hamısını təmizlə</string>
+    <string name="are_you_sure">Əminsiniz?</string>
+    <string name="delete_item">Elementi sil</string>
+
+    <string name="pick_voux">Voux seç</string>
+    <string name="camera">Kamera</string>
+    <string name="attach">Əlavələr</string>
+    <string name="image_generation">Şəkil yaratma</string>
+    <string name="ask_voux">Voux-a soruş</string>
+    <string name="send">Göndər</string>
+    <string name="remove_attachment">Əlavəni sil</string>
+    <string name="image_from_web">Vebdən şəkil</string>
+    <string name="image_from_device">Cihazdan şəkil</string>
+    <string name="paste_url">URL yapışdır</string>
+    <string name="link_of_image">Şəklin linki</string>
+    <string name="describe">Təsvir et</string>
+    <string name="found_items">Tapılan elementlər</string>
+    <string name="part_attachment">%1$d nömrəli hissə əlavəsi</string>
+    <string name="choose_photo_to_voux">Voux üçün bir şəkil seç</string>
+
+    <string name="cloth_image">Paltar şəkli %1$d</string>
+    <string name="more_you_want">İstədiyiniz daha çox şey</string>
+    <string name="confirm">Təsdiqlə</string>
+    <string name="recommended_looks">Tövsiyə olunan görünüşlər</string>
+    <string name="recommended_look_item">Tövsiyə olunan görünüş elementi</string>
+    <string name="analyzed_image">Təhlil edilmiş şəkil</string>
+    <string name="web_searches">Təhlil edilmiş şəkillər</string>
+    <string name="item_analysis_parts_count">%1$d hissə</string>
+
+    <string name="discover">Kəşf et</string>
+    <string name="discover_subtitle">Dünyaya əl atın</string>
+    <string name="workflows">İş axınları</string>
+    <string name="categories">Kateqoriyalar</string>
+    <string name="category">Kateqoriya</string>
+    <string name="category_item_count">%1$d element</string>
+    <string name="category_detail_item_image">Kateqoriya Ətraflı Element Şəkli %1$d</string>
+    <string name="outfits">Geyimlər</string>
+    <string name="content_image_desc">Məzmun şəkli</string>
+    <string name="add_bookmark">Əlfəcinlərə əlavə et</string>
+    <string name="remove_bookmark">Əlfəcinlərdən sil</string>
+    <string name="share">Paylaş</string>
+    <string name="share_body">Buna baxın.</string>
+    <string name="read_more">Daha çox oxu</string>
+    <string name="show_less">Daha az göstər</string>
+    <string name="refresh_page">Səhifəni yenilə</string>
+    <string name="link_to_source">Mənbəyə keçid</string>
+    <string name="download">Yüklə</string>
+    <string name="full_screen_image_viewer">Tam ekran şəkil görüntüleyicisi</string>
+    <string name="background">Fon</string>
+    <string name="enlarged_image">Böyüdülmüş şəkil %1$d</string>
+    <string name="gender">Cins</string>
+    <string name="gender_male">Kişi</string>
+    <string name="gender_female">Qadın</string>
+    <string name="gender_unisex">Uniseks</string>
+
+    <string name="subscriptions">Abunəliklər</string>
+    <string name="subscription_history">Abunəlik tarixçəsi</string>
+    <string name="upgrade">Təkmilləşdirmə</string>
+    <string name="current_plan">Mövcud plan</string>
+    <string name="select_plan">Plan seç</string>
+    <string name="free">Pulsuz</string>
+    <string name="not_available">Mövcud deyil.</string>
+    <string name="no_vouxes_left">Daha Vouxe qalmadı.</string>
+    <string name="ads_enabled">Reklamlar aktivdir</string>
+    <string name="subscription_feature_vouxes">%1$d Vouxe</string>
+    <string name="subscription_feature_attaches">%1$d Əlavə</string>
+    <string name="subscription_feature_message_chars">%1$d mesaj simvolu</string>
+    <string name="subscription_feature_web_images">%1$d veb şəkil</string>
+    <string name="usage">İstifadə</string>
+    <string name="attaches">Əlavələr</string>
+    <string name="usage_item_attaches_desc">Çatda əlavələr</string>
+    <string name="usage_item_message_chars_title">Mesaj simvolları</string>
+    <string name="usage_item_message_chars_desc">Çatdakı cavabların simvolları</string>
+
+    <string name="save">Yadda saxla</string>
+    <string name="choose_one">Birini seç</string>
+    <string name="lets_go">Gedək</string>
+    <string name="start_animation">Animasiyaya başla</string>
+    <string name="stop_animation">Animasiyanı dayandır</string>
+    <string name="default_option_title">Seçim</string>
+    <string name="collapse">Yığışdır</string>
+    <string name="expand">Genişləndir</string>
+    <string name="dark_mode">Tünd rejim</string>
+    <string name="system">Sistem</string>
+    <string name="light">İşıqlı</string>
+    <string name="dark">Tünd</string>
+    <string name="dynamic_color">Dinamik rəng</string>
+    <string name="on">Açıq</string>
+    <string name="off">Bağlı</string>
+    <string name="notifications">Bildirişlər</string>
+    <string name="selected_title">Seçilmiş</string>
+    <string name="saving_path">Yaddaş yolu</string>
+    <string name="photos">Şəkillər</string>
+    <string name="downloads">Yükləmələr</string>
+    <string name="languages">Dillər</string>
+    <string name="report_issue">Problem barədə məlumat ver</string>
+    <string name="reset_settings">Ayarları sıfırla</string>
+    <string name="enable_selecting">Seçimi aktiv et</string>
+    <string name="disable_selecting">Seçimi deaktiv et</string>
+
+    <string name="desc_subscriptions">Abunəlik statusunuzu yoxlayın.</string>
+    <string name="desc_favourites">Bütün sevimlilərinizə baxın.</string>
+    <string name="desc_history">Bütün tarixçənizə baxın.</string>
+    <string name="desc_saving_path">Voux-lar seçilmiş yaddaş yolunda saxlanılacaq.</string>
+    <string name="desc_notifications">Bildirişləri və səsləri idarə edin.</string>
+    <string name="desc_lang">Tətbiqin dilini dəyişdirin.</string>
+    <string name="desc_dark_mode">Tətbiqin görünüşünü dəyişdirin.</string>
+    <string name="desc_dynamic_color">Tətbiqin rənglərini dinamik edin.</string>
+    <string name="desc_report_issue">Bir səhv hesabatı və ya funksiya tələbi göndərin.</string>
+    <string name="desc_reset_settings">Bütün ayarları standart dəyərlərə sıfırlayın.</string>
+    <string name="desc_about">Tətbiq haqqında məlumatlara baxın.</string>
+    <string name="about_main_text">Fikirlərinizi ruhlandırmaq üçün hazırlanmışdır. Sizin ehtirasınız bizim məqsədimizdir. Ümid edirik ki, sizin üçün yaratdığımızı bəyənəcəksiniz.</string>
+    <string name="account">Hesab</string>
+
+    <string name="error_storage_permission_denied">Şəkilləri seçmək üçün yaddaş icazəsi tələb olunur.</string>
+    <string name="error_camera_permission_denied">Şəkil çəkmək üçün kamera icazəsi tələb olunur.</string>
+    <string name="error_failed_persistent_access">Şəkilə daimi giriş uğursuz oldu.</string>
+
+    <string name="error_no_active_subscription">Aktiv abunə yoxdur.</string>
+    <string name="error_google_sign_in_failed">Google ilə daxil olma uğursuz oldu. Zəhmət olmasa yenidən cəhd edin.</string>
+    <string name="error_sign_out">Çıxış uğursuz oldu.</string>
+    <string name="error_fill_required_fields">Zəhmət olmasa tələb olunan bütün sahələri doldurun.</string>
+    <string name="error_something_went_wrong">Nəsə səhv getdi. Zəhmət olmasa yenidən cəhd edin.</string>
+    <string name="error_create_file">Şəkli saxlamaq üçün fayl yaradıla bilmədi.</string>
+    <string name="error_take_photo">Şəkil çəkmək uğursuz oldu.</string>
+    <string name="error_url_processing">URL emalı uğursuz oldu. Zəhmət olmasa URL-i yoxlayın və yenidən cəhd edin.</string>
+    <string name="error_image_analysis">Şəkil təhlili uğursuz oldu. Zəhmət olmasa başqa bir şəkillə cəhd edin və ya əlaqənizi yoxlayın.</string>
+    <string name="error_image_already_added">Şəkil artıq əlavə edilib.</string>
+    <string name="error_max_images_reached">Yalnız 3 şəkilə qədər əlavə edə bilərsiniz.</string>
+    <string name="error_attach_limit_reached">Əlavə limitinizə çatdınız.</string>
+    <string name="error_image_path_empty">Şəkil yolu boşdur. Zəhmət olmasa bir şəkil seçin.</string>
+    <string name="error_load_image">Şəklin yüklənməsi uğursuz oldu.</string>
+    <string name="error_load_journals">Jurnalların yüklənməsi uğursuz oldu.</string>
+    <string name="error_load_subscriptions">Abunəliklərin yüklənməsi uğursuz oldu.</string>
+    <string name="error_no_free_subscriptions">Pulsuz abunəliklər mövcud deyil.</string>
+    <string name="error_get_free_subscription">Pulsuz abunəliyin alınması uğursuz oldu.</string>
+    <string name="error_save_user_data">İstifadəçi məlumatlarının saxlanılması uğursuz oldu.</string>
+    <string name="error_min_length">Ən azı %1$d simvol tələb olunur</string>
+    <string name="error_max_length">Maksimum %1$d simvola icazə verilir</string>
+    <string name="error_no_gaps">Boşluqlara icazə verilmir</string>
+    <string name="error_no_special_chars">Xüsusi simvollara icazə verilmir</string>
+    <string name="error_no_capital_letters">Böyük hərflərə icazə verilmir</string>
+    <string name="error_only_english_letters">Yalnız ingilis hərflərinə icazə verilir</string>
+    <string name="no_item_found">Element tapılmadı</string>
+
+    <string-array name="onboarding_mottos">
+        <item>Fikirlərinizi ruhlandırmaq üçün hazırlanmışdır</item>
+        <item>Növbəti yaradıcı qığılcımınızı tapın</item>
+        <item>İnnovatorlar cəmiyyətinə qoşulun</item>
+    </string-array>
+    <string-array name="home_mottos">
+        <item>Salam.</item>
+        <item>Gəlin yaradıcı olaq.</item>
+    </string-array>
+    <string-array name="journal_mottos">
+        <item>Bunu oxumalısınız</item>
+        <item>Başlamazdan əvvəl.</item>
+    </string-array>
+    <string-array name="guideline_mottos">
+        <item>Diqqət</item>
+        <item>Qaydalara əməl edin.</item>
+    </string-array>
+</resources>

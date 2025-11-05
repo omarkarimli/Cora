@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_icon">Uygulama Simgesi</string>
+    <string name="general">Genel</string>
+    <string name="support">Destek</string>
+    <string name="about">Hakkında</string>
+    <string name="help">Yardım</string>
+    <string name="more">Daha Fazla</string>
+    <string name="new_chat">Yeni Sohbet</string>
+    <string name="chat_history">Sohbet Geçmişi</string>
+
+    <string name="notification_text">İdeyanmı var? Yeni bir şey deneyin.</string>
+
+    <string name="splash">Giriş Ekranı</string>
+    <string name="auth">Kimlik Doğrulama</string>
+    <string name="get_started">Başla</string>
+    <string name="continue_title">Devam Et</string>
+    <string name="auth_legal_doc_agreement_prefix">Devam ederek, şunları kabul etmiş olursunuz: </string>
+    <string name="legal_doc">Yasal Belgelerimiz</string>
+    <string name="user_setup">Kullanıcı Kurulumu</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="bio">Biyografi</string>
+    <string name="required">Gerekli</string>
+    <string name="optional">İsteğe Bağlı</string>
+    <string name="sign_out">Çıkış Yap</string>
+
+    <string name="datetime">Tarih &amp; Saat</string>
+    <string name="success">Başarılı</string>
+    <string name="success_message">İşlem başarıyla tamamlandı.</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="journals">Günlükler</string>
+    <string name="guidelines">Yönergeler</string>
+    <string name="settings">Ayarlar</string>
+    <string name="profile">Profil</string>
+    <string name="chat">Sohbet</string>
+    <string name="history">Geçmiş</string>
+    <string name="favourites">Favoriler</string>
+    <string name="detail">Detay</string>
+    <string name="admin">Yönetici</string>
+    <string name="back_to_prev">Önceki Sayfaya Geri Dön</string>
+    <string name="open_chat">Sohbeti Aç</string>
+    <string name="open_history">Geçmişi Aç</string>
+    <string name="open_favourites">Favorileri Aç</string>
+    <string name="open_subscriptions">Abonelikleri Aç</string>
+    <string name="search">Ara</string>
+    <string name="clear_all">Tümünü Temizle</string>
+    <string name="are_you_sure">Emin misiniz?</string>
+    <string name="delete_item">Öğeyi Sil</string>
+
+    <string name="pick_voux">Voux Seç</string>
+    <string name="camera">Kamera</string>
+    <string name="attach">Eklentiler</string>
+    <string name="image_generation">Görüntü Oluşturma</string>
+    <string name="ask_voux">Voux’a Sor</string>
+    <string name="send">Gönder</string>
+    <string name="remove_attachment">Eklentiyi Kaldır</string>
+    <string name="image_from_web">Web’den Görüntü</string>
+    <string name="image_from_device">Cihazdan Görüntü</string>
+    <string name="paste_url">URL Yapıştır</string>
+    <string name="link_of_image">Görüntünün Bağlantısı</string>
+    <string name="describe">Açıkla</string>
+    <string name="found_items">Bulunan Öğeler</string>
+    <string name="part_attachment">%1$d. Parça Eklentisi</string>
+    <string name="choose_photo_to_voux">Voux için bir fotoğraf seç</string>
+
+    <string name="cloth_image">Kıyafet Resmi %1$d</string>
+    <string name="more_you_want">İstediğiniz Daha Fazlası</string>
+    <string name="confirm">Onayla</string>
+    <string name="recommended_looks">Önerilen Görünümler</string>
+    <string name="recommended_look_item">Önerilen Görünüm Öğesi</string>
+    <string name="analyzed_image">Analiz Edilen Görüntü</string>
+    <string name="web_searches">Analiz Edilen Görüntüler</string>
+    <string name="item_analysis_parts_count">%1$d Parça</string>
+
+    <string name="discover">Keşfet</string>
+    <string name="discover_subtitle">Dünyaya Uzanın</string>
+    <string name="workflows">İş Akışları</string>
+    <string name="categories">Kategoriler</string>
+    <string name="category">Kategori</string>
+    <string name="category_item_count">%1$d Öğe</string>
+    <string name="category_detail_item_image">Kategori Detay Öğesi Resmi %1$d</string>
+    <string name="outfits">Kıyafetler</string>
+    <string name="content_image_desc">İçerik Resmi</string>
+    <string name="add_bookmark">Yer İmlerine Ekle</string>
+    <string name="remove_bookmark">Yer İmlerinden Kaldır</string>
+    <string name="share">Paylaş</string>
+    <string name="share_body">Buna bir göz at.</string>
+    <string name="read_more">Daha Fazla Oku</string>
+    <string name="show_less">Daha Az Göster</string>
+    <string name="refresh_page">Sayfayı Yenile</string>
+    <string name="link_to_source">Kaynağa Bağlantı</string>
+    <string name="download">İndir</string>
+    <string name="full_screen_image_viewer">Tam Ekran Görüntüleyici</string>
+    <string name="background">Arka Plan</string>
+    <string name="enlarged_image">Büyütülmüş Görüntü %1$d</string>
+    <string name="gender">Cinsiyet</string>
+    <string name="gender_male">Erkek</string>
+    <string name="gender_female">Kadın</string>
+    <string name="gender_unisex">Unisex</string>
+
+    <string name="subscriptions">Abonelikler</string>
+    <string name="subscription_history">Abonelik Geçmişi</string>
+    <string name="upgrade">Yükselt</string>
+    <string name="current_plan">Mevcut Plan</string>
+    <string name="select_plan">Plan Seç</string>
+    <string name="free">Ücretsiz</string>
+    <string name="not_available">Mevcut değil.</string>
+    <string name="no_vouxes_left">Hiç Voux kalmadı.</string>
+    <string name="ads_enabled">Reklamlar Etkin</string>
+    <string name="subscription_feature_vouxes">%1$d Voux</string>
+    <string name="subscription_feature_attaches">%1$d Eklenti</string>
+    <string name="subscription_feature_message_chars">%1$d Mesaj Karakteri</string>
+    <string name="subscription_feature_web_images">%1$d Web Görüntüsü</string>
+    <string name="usage">Kullanım</string>
+    <string name="attaches">Eklentiler</string>
+    <string name="usage_item_attaches_desc">Sohbetteki eklentiler</string>
+    <string name="usage_item_message_chars_title">Mesaj Karakterleri</string>
+    <string name="usage_item_message_chars_desc">Sohbetteki yanıt karakterleri</string>
+
+    <string name="save">Kaydet</string>
+    <string name="choose_one">Birini Seçin</string>
+    <string name="lets_go">Hadi Başlayalım</string>
+    <string name="start_animation">Animasyonu Başlat</string>
+    <string name="stop_animation">Animasyonu Durdur</string>
+    <string name="default_option_title">Seçenek</string>
+    <string name="collapse">daralt</string>
+    <string name="expand">genişlet</string>
+    <string name="dark_mode">Koyu Mod</string>
+    <string name="system">Sistem</string>
+    <string name="light">Açık</string>
+    <string name="dark">Koyu</string>
+    <string name="dynamic_color">Dinamik Renk</string>
+    <string name="on">Açık</string>
+    <string name="off">Kapalı</string>
+    <string name="notifications">Bildirimler</string>
+    <string name="selected_title">Seçili</string>
+    <string name="saving_path">Kaydetme Yolu</string>
+    <string name="photos">Fotoğraflar</string>
+    <string name="downloads">İndirilenler</string>
+    <string name="languages">Diller</string>
+    <string name="report_issue">Sorun Bildir</string>
+    <string name="reset_settings">Ayarları Sıfırla</string>
+    <string name="enable_selecting">Seçimi Etkinleştir</string>
+    <string name="disable_selecting">Seçimi Devre Dışı Bırak</string>
+
+    <string name="desc_subscriptions">Abonelik durumunuzu kontrol edin.</string>
+    <string name="desc_favourites">Tüm favorilerinizi görüntüleyin.</string>
+    <string name="desc_history">Tüm geçmişinizi görüntüleyin.</string>
+    <string name="desc_saving_path">Voux’lar seçilen yola kaydedilecektir.</string>
+    <string name="desc_notifications">Bildirimleri ve sesleri yönetin.</string>
+    <string name="desc_lang">Uygulama dilini değiştirin.</string>
+    <string name="desc_dark_mode">Uygulamanın görünümünü değiştirin.</string>
+    <string name="desc_dynamic_color">Uygulama renklerini dinamik hale getirin.</string>
+    <string name="desc_report_issue">Bir hata raporu veya özellik isteği gönderin.</string>
+    <string name="desc_reset_settings">Tüm ayarları varsayılan değerlere sıfırlayın.</string>
+    <string name="desc_about">Uygulama hakkında bilgileri görüntüleyin.</string>
+    <string name="about_main_text">Fikirlerinize ilham vermek için geliştirildi. Tutkunuz bizim hedefimiz. Sizin için yarattığımızı beğenmenizi içtenlikle umuyoruz.</string>
+    <string name="account">Hesap</string>
+
+    <string name="error_storage_permission_denied">Fotoğraf seçimi için depolama izni gereklidir.</string>
+    <string name="error_camera_permission_denied">Fotoğraf çekmek için kamera izni gereklidir.</string>
+    <string name="error_failed_persistent_access">Görüntüye kalıcı erişim başarısız oldu.</string>
+
+    <string name="error_google_sign_in_failed">Google ile oturum açma başarısız oldu. Lütfen tekrar deneyin.</string>
+    <string name="error_sign_out">Çıkış yapma başarısız oldu.</string>
+    <string name="error_fill_required_fields">Lütfen gerekli tüm alanları doldurun.</string>
+    <string name="error_something_went_wrong">Bir şeyler ters gitti. Lütfen tekrar deneyin.</string>
+    <string name="error_create_file">Fotoğrafı kaydetmek için dosya oluşturulamadı.</string>
+    <string name="error_take_photo">Fotoğraf çekme başarısız oldu.</string>
+    <string name="error_url_processing">URL işleme başarısız oldu. Lütfen URL\'yi kontrol edin ve tekrar deneyin.</string>
+    <string name="error_image_analysis">Görüntü analizi başarısız oldu. Lütfen farklı bir görsel deneyin veya bağlantınızı kontrol edin.</string>
+    <string name="error_image_already_added">Görüntü zaten eklendi.</string>
+    <string name="error_max_images_reached">Yalnızca 3 adede kadar görüntü ekleyebilirsiniz.</string>
+    <string name="error_attach_limit_reached">Eklenti sınırınıza ulaştınız.</string>
+    <string name="error_image_path_empty">Görüntü yolu boş. Lütfen bir görüntü seçin.</string>
+    <string name="error_load_image">Görüntü yükleme başarısız oldu.</string>
+    <string name="error_load_journals">Günlükleri yükleme başarısız oldu.</string>
+    <string name="error_load_subscriptions">Abonelikleri yükleme başarısız oldu.</string>
+    <string name="error_no_free_subscriptions">Hiç ücretsiz abonelik mevcut değil.</string>
+    <string name="error_get_free_subscription">Ücretsiz abonelik alma başarısız oldu.</string>
+    <string name="error_save_user_data">Kullanıcı verilerini kaydetme başarısız oldu.</string>
+    <string name="error_min_length">En az %1$d karakter gerekli</string>
+    <string name="error_max_length">Maksimum %1$d karaktere izin verilir</string>
+    <string name="error_no_gaps">Boşluklara izin verilmez</string>
+    <string name="error_no_special_chars">Özel karakterlere izin verilmez</string>
+    <string name="error_no_capital_letters">Büyük harf kullanılamaz</string>
+    <string name="error_only_english_letters">Yalnızca İngilizce harflere izin verilir</string>
+    <string name="error_no_active_subscription">Aktif abonelik yok.</string>
+    <string name="no_item_found">Öğe bulunamadı</string>
+
+    <string-array name="onboarding_mottos">
+        <item>Fikirlerinize ilham vermek için tasarlandı</item>
+        <item>Bir sonraki yaratıcı kıvılcımınızı bulun</item>
+        <item>Yenilikçilerden oluşan bir toplulukla bağlantı kurun</item>
+    </string-array>
+    <string-array name="home_mottos">
+        <item>Merhaba.</item>
+        <item>Hadi yaratıcı olalım.</item>
+    </string-array>
+    <string-array name="journal_mottos">
+        <item>Bunu okumalısınız</item>
+        <item>Başlamadan önce.</item>
+    </string-array>
+    <string-array name="guideline_mottos">
+        <item>Dikkat</item>
+        <item>Kurallara uyun.</item>
+    </string-array>
+</resources>

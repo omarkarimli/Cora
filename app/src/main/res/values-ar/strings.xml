@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_icon">أيقونة التطبيق</string>
+    <string name="general">عام</string>
+    <string name="support">الدعم</string>
+    <string name="about">حول</string>
+    <string name="help">مساعدة</string>
+    <string name="more">المزيد</string>
+    <string name="new_chat">محادثة جديدة</string>
+    <string name="chat_history">سجل الدردشة</string>
+
+    <string name="notification_text">هل تشعر بالإلهام؟ جرّب شيئاً جديداً.</string>
+
+    <string name="splash">شاشة البداية</string>
+    <string name="auth">المصادقة</string>
+    <string name="get_started">ابدأ</string>
+    <string name="continue_title">متابعة</string>
+    <string name="auth_legal_doc_agreement_prefix">بالمتابعة، فإنك توافق على </string>
+    <string name="legal_doc">وثائقنا القانونية</string>
+    <string name="user_setup">إعداد المستخدم</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="bio">السيرة الذاتية</string>
+    <string name="required">مطلوب</string>
+    <string name="optional">اختياري</string>
+    <string name="sign_out">تسجيل الخروج</string>
+
+    <string name="datetime">التاريخ والوقت</string>
+    <string name="success">نجاح</string>
+    <string name="success_message">تمت العملية بنجاح.</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="journals">اليوميات</string>
+    <string name="guidelines">الإرشادات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="chat">الدردشة</string>
+    <string name="history">السجل</string>
+    <string name="favourites">المفضلة</string>
+    <string name="detail">التفاصيل</string>
+    <string name="admin">المسؤول</string>
+    <string name="back_to_prev">العودة إلى الصفحة السابقة</string>
+    <string name="open_chat">فتح الدردشة</string>
+    <string name="open_history">فتح السجل</string>
+    <string name="open_favourites">فتح المفضلة</string>
+    <string name="open_subscriptions">فتح الاشتراكات</string>
+    <string name="search">بحث</string>
+    <string name="clear_all">مسح الكل</string>
+    <string name="are_you_sure">هل أنت متأكد؟</string>
+    <string name="delete_item">حذف العنصر</string>
+
+    <string name="pick_voux">اختر Voux</string>
+    <string name="camera">الكاميرا</string>
+    <string name="attach">المرفقات</string>
+    <string name="image_generation">إنشاء الصور</string>
+    <string name="ask_voux">اسأل Voux</string>
+    <string name="send">إرسال</string>
+    <string name="remove_attachment">إزالة المرفق</string>
+    <string name="image_from_web">صورة من الويب</string>
+    <string name="image_from_device">صورة من الجهاز</string>
+    <string name="paste_url">لصق الرابط (URL)</string>
+    <string name="link_of_image">رابط الصورة</string>
+    <string name="describe">وصف</string>
+    <string name="found_items">العناصر التي تم العثور عليها</string>
+    <string name="part_attachment">مرفق الجزء %1$d</string>
+    <string name="choose_photo_to_voux">اختر صورة لـ Voux</string>
+
+    <string name="cloth_image">صورة ملابس %1$d</string>
+    <string name="more_you_want">المزيد الذي تريده</string>
+    <string name="confirm">تأكيد</string>
+    <string name="recommended_looks">الإطلالات الموصى بها</string>
+    <string name="recommended_look_item">عنصر الإطلالة الموصى بها</string>
+    <string name="analyzed_image">الصورة التي تم تحليلها</string>
+    <string name="web_searches">الصور التي تم تحليلها</string>
+    <string name="item_analysis_parts_count">%1$d جزء</string>
+
+    <string name="discover">اكتشف</string>
+    <string name="discover_subtitle">اغتنم العالم</string>
+    <string name="workflows">سير العمل</string>
+    <string name="categories">الفئات</string>
+    <string name="category">الفئة</string>
+    <string name="category_item_count">%1$d عناصر</string>
+    <string name="category_detail_item_image">صورة عنصر تفاصيل الفئة %1$d</string>
+    <string name="outfits">الأزياء</string>
+    <string name="content_image_desc">صورة المحتوى</string>
+    <string name="add_bookmark">أضف إلى الإشارات المرجعية</string>
+    <string name="remove_bookmark">إزالة من الإشارات المرجعية</string>
+    <string name="share">مشاركة</string>
+    <string name="share_body">ألق نظرة على هذا.</string>
+    <string name="read_more">قراءة المزيد</string>
+    <string name="show_less">إظهار أقل</string>
+    <string name="refresh_page">تحديث الصفحة</string>
+    <string name="link_to_source">رابط إلى المصدر</string>
+    <string name="download">تنزيل</string>
+    <string name="full_screen_image_viewer">عارض الصور بملء الشاشة</string>
+    <string name="background">الخلفية</string>
+    <string name="enlarged_image">الصورة المكبرة %1$d</string>
+    <string name="gender">الجنس</string>
+    <string name="gender_male">ذكر</string>
+    <string name="gender_female">أنثى</string>
+    <string name="gender_unisex">لكلا الجنسين (يونيسكس)</string>
+
+    <string name="subscriptions">الاشتراكات</string>
+    <string name="subscription_history">سجل الاشتراكات</string>
+    <string name="upgrade">ترقية</string>
+    <string name="current_plan">الخطة الحالية</string>
+    <string name="select_plan">اختر خطة</string>
+    <string name="free">مجاني</string>
+    <string name="not_available">غير متوفر.</string>
+    <string name="no_vouxes_left">لم يتبق أي Vouxe.</string>
+    <string name="ads_enabled">الإعلانات مفعلة</string>
+    <string name="subscription_feature_vouxes">%1$d Vouxe</string>
+    <string name="subscription_feature_attaches">%1$d مرفقات</string>
+    <string name="subscription_feature_message_chars">%1$d حرف رسالة</string>
+    <string name="subscription_feature_web_images">%1$d صور ويب</string>
+    <string name="usage">الاستخدام</string>
+    <string name="attaches">المرفقات</string>
+    <string name="usage_item_attaches_desc">المرفقات في الدردشة</string>
+    <string name="usage_item_message_chars_title">أحرف الرسالة</string>
+    <string name="usage_item_message_chars_desc">أحرف الردود في الدردشة</string>
+
+    <string name="save">حفظ</string>
+    <string name="choose_one">اختر واحدًا</string>
+    <string name="lets_go">لننطلق</string>
+    <string name="start_animation">بدء الحركة</string>
+    <string name="stop_animation">إيقاف الحركة</string>
+    <string name="default_option_title">خيار</string>
+    <string name="collapse">طي</string>
+    <string name="expand">توسيع</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="system">النظام</string>
+    <string name="light">فاتح</string>
+    <string name="dark">داكن</string>
+    <string name="dynamic_color">اللون الديناميكي</string>
+    <string name="on">قيد التشغيل</string>
+    <string name="off">متوقف عن التشغيل</string>
+    <string name="notifications">الإشعارات</string>
+    <string name="selected_title">المحدد</string>
+    <string name="saving_path">مسار الحفظ</string>
+    <string name="photos">الصور</string>
+    <string name="downloads">التنزيلات</string>
+    <string name="languages">اللغات</string>
+    <string name="report_issue">الإبلاغ عن مشكلة</string>
+    <string name="reset_settings">إعادة تعيين الإعدادات</string>
+    <string name="enable_selecting">تمكين التحديد</string>
+    <string name="disable_selecting">تعطيل التحديد</string>
+
+    <string name="desc_subscriptions">تحقق من حالة اشتراكك.</string>
+    <string name="desc_favourites">عرض جميع مفضلاتك.</string>
+    <string name="desc_history">عرض سجلك بالكامل.</string>
+    <string name="desc_saving_path">سيتم حفظ Vouxe في المسار المحدد.</string>
+    <string name="desc_notifications">إدارة الإشعارات والأصوات.</string>
+    <string name="desc_lang">تغيير لغة التطبيق.</string>
+    <string name="desc_dark_mode">تغيير مظهر التطبيق.</string>
+    <string name="desc_dynamic_color">اجعل ألوان التطبيق ديناميكية.</string>
+    <string name="desc_report_issue">إرسال تقرير خطأ أو طلب ميزة.</string>
+    <string name="desc_reset_settings">إعادة تعيين جميع الإعدادات إلى القيم الافتراضية.</string>
+    <string name="desc_about">عرض معلومات حول التطبيق.</string>
+    <string name="about_main_text">تم إنشاؤه لإلهام أفكارك. شغفك هو هدفنا. نأمل بصدق أن تحب ما أنشأناه لك.</string>
+    <string name="account">الحساب</string>
+
+    <string name="error_storage_permission_denied">إذن التخزين مطلوب لتحديد الصور.</string>
+    <string name="error_camera_permission_denied">إذن الكاميرا مطلوب لالتقاط الصور.</string>
+    <string name="error_failed_persistent_access">فشل الوصول المستمر إلى الصورة.</string>
+
+    <string name="error_no_active_subscription">لا يوجد اشتراك نشط.</string>
+    <string name="error_google_sign_in_failed">فشل تسجيل الدخول باستخدام Google. يرجى المحاولة مرة أخرى.</string>
+    <string name="error_sign_out">فشل تسجيل الخروج.</string>
+    <string name="error_fill_required_fields">يرجى ملء جميع الحقول المطلوبة.</string>
+    <string name="error_something_went_wrong">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
+    <string name="error_create_file">تعذر إنشاء ملف لحفظ الصورة.</string>
+    <string name="error_take_photo">فشل التقاط الصورة.</string>
+    <string name="error_url_processing">فشل معالجة الرابط (URL). يرجى التحقق من الرابط والمحاولة مرة أخرى.</string>
+    <string name="error_image_analysis">فشل تحليل الصورة. يرجى تجربة صورة أخرى أو التحقق من اتصالك.</string>
+    <string name="error_image_already_added">تمت إضافة الصورة بالفعل.</string>
+    <string name="error_max_images_reached">يمكنك إضافة ما يصل إلى 3 صور فقط.</string>
+    <string name="error_attach_limit_reached">لقد وصلت إلى حد المرفقات الخاص بك.</string>
+    <string name="error_image_path_empty">مسار الصورة فارغ. يرجى تحديد صورة.</string>
+    <string name="error_load_image">فشل تحميل الصورة.</string>
+    <string name="error_load_journals">فشل تحميل اليوميات.</string>
+    <string name="error_load_subscriptions">فشل تحميل الاشتراكات.</string>
+    <string name="error_no_free_subscriptions">لا توجد اشتراكات مجانية متاحة.</string>
+    <string name="error_get_free_subscription">فشل الحصول على الاشتراك المجاني.</string>
+    <string name="error_save_user_data">فشل حفظ بيانات المستخدم.</string>
+    <string name="error_min_length">مطلوب %1$d حرفًا على الأقل</string>
+    <string name="error_max_length">الحد الأقصى المسموح به هو %1$d حرفًا</string>
+    <string name="error_no_gaps">لا يُسمح بالمسافات</string>
+    <string name="error_no_special_chars">لا يُسمح باستخدام أحرف خاصة</string>
+    <string name="error_no_capital_letters">لا يُسمح بالحروف الكبيرة</string>
+    <string name="error_only_english_letters">يُسمح فقط بالحروف الإنجليزية</string>
+    <string name="no_item_found">لم يتم العثور على أي عنصر</string>
+
+    <string-array name="onboarding_mottos">
+        <item>تم إنشاؤه لإلهام أفكارك</item>
+        <item>ابحث عن شرارتك الإبداعية التالية</item>
+        <item>تواصل مع مجتمع من المبتكرين</item>
+    </string-array>
+    <string-array name="home_mottos">
+        <item>مرحباً.</item>
+        <item>دعنا نكون مبدعين.</item>
+    </string-array>
+    <string-array name="journal_mottos">
+        <item>يجب أن تقرأ هذا</item>
+        <item>قبل أن تبدأ.</item>
+    </string-array>
+    <string-array name="guideline_mottos">
+        <item>انتباه</item>
+        <item>اتبع القواعد.</item>
+    </string-array>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1073640105099",
+    "project_id": "cora-361",
+    "storage_bucket": "cora-361.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073640105099:android:02f12abeb32be0be7b208e",
+        "android_client_info": {
+          "package_name": "com.omarkarimli.cora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073640105099-l0enffg247v83m8lnpi7rgf7t9vfpps7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omarkarimli.cora",
+            "certificate_hash": "69df586a6037fc040baca1f7919eab031c3c17bf"
+          }
+        },
+        {
+          "client_id": "1073640105099-stctu2kv5mkvq2cli79svgp2lqirlvou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYttGPzsO0oG8QbhEISjtpKJI3pLFO2eo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073640105099-stctu2kv5mkvq2cli79svgp2lqirlvou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

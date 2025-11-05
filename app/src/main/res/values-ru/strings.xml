@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_icon">Значок приложения</string>
+    <string name="general">Общие</string>
+    <string name="support">Поддержка</string>
+    <string name="about">О приложении</string>
+    <string name="help">Помощь</string>
+    <string name="more">Ещё</string>
+    <string name="new_chat">Новый чат</string>
+    <string name="chat_history">История чата</string>
+
+    <string name="notification_text">Чувствуете вдохновение? Попробуйте новый.</string>
+
+    <string name="splash">Заставка</string>
+    <string name="auth">Аутентификация</string>
+    <string name="get_started">Начать</string>
+    <string name="continue_title">Продолжить</string>
+    <string name="auth_legal_doc_agreement_prefix">Продолжая, вы соглашаетесь с нашими </string>
+    <string name="legal_doc">Юридическими документами</string>
+    <string name="user_setup">Настройка пользователя</string>
+    <string name="username">Имя пользователя</string>
+    <string name="bio">Биография</string>
+    <string name="required">Обязательно</string>
+    <string name="optional">Необязательно</string>
+    <string name="sign_out">Выйти</string>
+
+    <string name="datetime">Дата и время</string>
+    <string name="success">Успешно</string>
+    <string name="success_message">Процесс выполнен успешно.</string>
+    <string name="home">Главная</string>
+    <string name="journals">Журналы</string>
+    <string name="guidelines">Правила</string>
+    <string name="settings">Настройки</string>
+    <string name="profile">Профиль</string>
+    <string name="chat">Чат</string>
+    <string name="history">История</string>
+    <string name="favourites">Избранное</string>
+    <string name="detail">Подробности</string>
+    <string name="admin">Админ</string>
+    <string name="back_to_prev">Назад к предыдущей странице</string>
+    <string name="open_chat">Открыть чат</string>
+    <string name="open_history">Открыть историю</string>
+    <string name="open_favourites">Открыть избранное</string>
+    <string name="open_subscriptions">Открыть подписки</string>
+    <string name="search">Поиск</string>
+    <string name="clear_all">Очистить все</string>
+    <string name="are_you_sure">Вы уверены?</string>
+    <string name="delete_item">Удалить элемент</string>
+
+    <string name="pick_voux">Выбрать Voux</string>
+    <string name="camera">Камера</string>
+    <string name="attach">Вложения</string>
+    <string name="image_generation">Генерация изображений</string>
+    <string name="ask_voux">Спросить Voux</string>
+    <string name="send">Отправить</string>
+    <string name="remove_attachment">Удалить вложение</string>
+    <string name="image_from_web">Изображение из сети</string>
+    <string name="image_from_device">Изображение с устройства</string>
+    <string name="paste_url">Вставить URL</string>
+    <string name="link_of_image">Ссылка на изображение</string>
+    <string name="describe">Описать</string>
+    <string name="found_items">Найденные элементы</string>
+    <string name="part_attachment">Часть-вложение %1$d</string>
+    <string name="choose_photo_to_voux">Выберите фото для Voux</string>
+
+    <string name="cloth_image">Изображение одежды %1$d</string>
+    <string name="more_you_want">Больше, чего вы хотите</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="recommended_looks">Рекомендуемые образы</string>
+    <string name="recommended_look_item">Элемент рекомендованного образа</string>
+    <string name="analyzed_image">Проанализированное изображение</string>
+    <string name="web_searches">Проанализированные изображения</string>
+    <string name="item_analysis_parts_count">%1$d части</string>
+
+    <string name="discover">Обзор</string>
+    <string name="discover_subtitle">Охватите мир</string>
+    <string name="workflows">Рабочие процессы</string>
+    <string name="categories">Категории</string>
+    <string name="category">Категория</string>
+    <string name="category_item_count">%1$d элементов</string>
+    <string name="category_detail_item_image">Изображение элемента детали категории %1$d</string>
+    <string name="outfits">Образы</string>
+    <string name="content_image_desc">Изображение контента</string>
+    <string name="add_bookmark">Добавить в закладки</string>
+    <string name="remove_bookmark">Удалить из закладок</string>
+    <string name="share">Поделиться</string>
+    <string name="share_body">Взгляните на это.</string>
+    <string name="read_more">Читать далее</string>
+    <string name="show_less">Показать меньше</string>
+    <string name="refresh_page">Обновить страницу</string>
+    <string name="link_to_source">Ссылка на источник</string>
+    <string name="download">Скачать</string>
+    <string name="full_screen_image_viewer">Просмотр изображения на весь экран</string>
+    <string name="background">Фон</string>
+    <string name="enlarged_image">Увеличенное изображение %1$d</string>
+    <string name="gender">Пол</string>
+    <string name="gender_male">Мужской</string>
+    <string name="gender_female">Женский</string>
+    <string name="gender_unisex">Унисекс</string>
+
+    <string name="subscriptions">Подписки</string>
+    <string name="subscription_history">История подписок</string>
+    <string name="upgrade">Обновить</string>
+    <string name="current_plan">Текущий план</string>
+    <string name="select_plan">Выбрать план</string>
+    <string name="free">Бесплатно</string>
+    <string name="not_available">Недоступно.</string>
+    <string name="no_vouxes_left">Не осталось Voux.</string>
+    <string name="ads_enabled">Реклама включена</string>
+    <string name="subscription_feature_vouxes">%1$d Voux</string>
+    <string name="subscription_feature_attaches">%1$d вложений</string>
+    <string name="subscription_feature_message_chars">%1$d символов в сообщении</string>
+    <string name="subscription_feature_web_images">%1$d веб-изображений</string>
+    <string name="usage">Использование</string>
+    <string name="attaches">Вложения</string>
+    <string name="usage_item_attaches_desc">Вложения в чате</string>
+    <string name="usage_item_message_chars_title">Символы в сообщениях</string>
+    <string name="usage_item_message_chars_desc">Символы в ответах в чате</string>
+
+    <string name="save">Сохранить</string>
+    <string name="choose_one">Выберите один</string>
+    <string name="lets_go">Вперед</string>
+    <string name="start_animation">Начать анимацию</string>
+    <string name="stop_animation">Остановить анимацию</string>
+    <string name="default_option_title">Опция</string>
+    <string name="collapse">свернуть</string>
+    <string name="expand">развернуть</string>
+    <string name="dark_mode">Темный режим</string>
+    <string name="system">Система</string>
+    <string name="light">Светлый</string>
+    <string name="dark">Темный</string>
+    <string name="dynamic_color">Динамический цвет</string>
+    <string name="on">Вкл</string>
+    <string name="off">Выкл</string>
+    <string name="notifications">Уведомления</string>
+    <string name="selected_title">Выбрано</string>
+    <string name="saving_path">Путь сохранения</string>
+    <string name="photos">Фотографии</string>
+    <string name="downloads">Загрузки</string>
+    <string name="languages">Языки</string>
+    <string name="report_issue">Сообщить о проблеме</string>
+    <string name="reset_settings">Сбросить настройки</string>
+    <string name="enable_selecting">Включить выбор</string>
+    <string name="disable_selecting">Отключить выбор</string>
+
+    <string name="desc_subscriptions">Проверьте статус вашей подписки.</string>
+    <string name="desc_favourites">Посмотреть все ваши избранные элементы.</string>
+    <string name="desc_history">Просмотреть всю вашу историю.</string>
+    <string name="desc_saving_path">Voux будут сохранены по выбранному пути.</string>
+    <string name="desc_notifications">Управление уведомлениями и звуками.</string>
+    <string name="desc_lang">Изменить язык приложения.</string>
+    <string name="desc_dark_mode">Изменить внешний вид приложения.</string>
+    <string name="desc_dynamic_color">Динамическое изменение цветов приложения.</string>
+    <string name="desc_report_issue">Отправить отчет об ошибке или запрос на функцию.</string>
+    <string name="desc_reset_settings">Сбросить все настройки до значений по умолчанию.</string>
+    <string name="desc_about">Посмотреть информацию о приложении.</string>
+    <string name="about_main_text">Создано, чтобы вдохновлять ваши идеи. Ваша страсть - наша цель. Мы искренне надеемся, что вам понравится то, что мы для вас создали.</string>
+    <string name="account">Аккаунт</string>
+
+    <string name="error_storage_permission_denied">Разрешение на хранение необходимо для выбора фотографий.</string>
+    <string name="error_camera_permission_denied">Разрешение на камеру необходимо для съемки фотографий.</string>
+    <string name="error_failed_persistent_access">Не удалось получить постоянный доступ к изображению.</string>
+
+    <string name="error_google_sign_in_failed">Сбой входа через Google. Пожалуйста, попробуйте снова.</string>
+    <string name="error_sign_out">Не удалось выйти.</string>
+    <string name="error_fill_required_fields">Пожалуйста, заполните все обязательные поля.</string>
+    <string name="error_something_went_wrong">Что-то пошло не так. Пожалуйста, попробуйте снова.</string>
+    <string name="error_create_file">Не удалось создать файл для сохранения фотографии.</string>
+    <string name="error_take_photo">Не удалось сделать фотографию.</string>
+    <string name="error_url_processing">Не удалось обработать URL. Пожалуйста, проверьте URL и попробуйте снова.</string>
+    <string name="error_image_analysis">Не удалось проанализировать изображение. Попробуйте другое изображение или проверьте соединение.</string>
+    <string name="error_image_already_added">Изображение уже добавлено.</string>
+    <string name="error_max_images_reached">Вы можете добавить только до 3 изображений.</string>
+    <string name="error_attach_limit_reached">Вы достигли лимита вложений.</string>
+    <string name="error_image_path_empty">Путь к изображению пуст. Пожалуйста, выберите изображение.</string>
+    <string name="error_load_image">Не удалось загрузить изображение.</string>
+    <string name="error_load_journals">Не удалось загрузить журналы.</string>
+    <string name="error_load_subscriptions">Не удалось загрузить подписки.</string>
+    <string name="error_no_free_subscriptions">Нет доступных бесплатных подписок.</string>
+    <string name="error_get_free_subscription">Не удалось получить бесплатную подписку.</string>
+    <string name="error_save_user_data">Не удалось сохранить данные пользователя.</string>
+    <string name="error_min_length">Требуется не менее %1$d символов</string>
+    <string name="error_max_length">Допускается максимум %1$d символов</string>
+    <string name="error_no_gaps">Пробелы не допускаются</string>
+    <string name="error_no_special_chars">Специальные символы не допускаются</string>
+    <string name="error_no_capital_letters">Заглавные буквы не допускаются</string>
+    <string name="error_only_english_letters">Допускаются только английские буквы</string>
+    <string name="error_no_active_subscription">Нет активной подписки.</string>
+    <string name="no_item_found">Элемент не найден</string>
+
+    <string-array name="onboarding_mottos">
+        <item>Создано, чтобы вдохновлять ваши идеи</item>
+        <item>Найдите свою следующую творческую искру</item>
+        <item>Подключитесь к сообществу новаторов</item>
+    </string-array>
+    <string-array name="home_mottos">
+        <item>Здравствуйте.</item>
+        <item>Давайте творить.</item>
+    </string-array>
+    <string-array name="journal_mottos">
+        <item>Это стоит прочитать</item>
+        <item>Прежде чем начать.</item>
+    </string-array>
+    <string-array name="guideline_mottos">
+        <item>Внимание</item>
+        <item>Следуйте правилам.</item>
+    </string-array>
+</resources>
