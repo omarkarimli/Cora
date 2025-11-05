@@ -94,7 +94,7 @@ private fun ScrollContent(
         item {
             Text(
                 text = stringResource(id = R.string.app_name).uppercase(Locale.ROOT),
-                style = AppTypography.headlineMedium.copy(color = primaryLight),
+                style = AppTypography.headlineMedium.copy(color = onSurfaceLight),
                 textAlign = TextAlign.Center,
                 letterSpacing = 2.sp
             )
