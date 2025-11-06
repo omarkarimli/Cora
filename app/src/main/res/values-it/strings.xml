@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_icon">Icona dell\'app</string>
+
+    <string name="app_name" translatable="false">Cora</string>
+    <string name="app_icon">Icona dell'app</string>
     <string name="general">Generale</string>
-    <string name="support">Supporto</string>
-    <string name="about">Informazioni</string>
-    <string name="help">Aiuto</string>
     <string name="more">Altro</string>
-    <string name="new_chat">Nuova chat</string>
-    <string name="chat_history">Cronologia chat</string>
-
-    <string name="notification_text">Ti senti ispirato? Prova una cosa nuova.</string>
-
+    <string name="success">Successo</string>
+    <string name="success_message">Il processo è stato completato con successo.</string>
     <string name="splash">Schermata iniziale</string>
+    <string name="confirm">Conferma</string>
+    <string name="save">Salva</string>
+    <string name="selected_title">Selezionato</string>
+    <string name="no_item_found">Nessun elemento trovato</string>
+
+    <string name="settings">Impostazioni</string>
+    <string name="profile">Profilo</string>
+    <string name="chat">Chat</string>
+    <string name="admin">Amministratore</string>
+    <string name="back_to_prev">Torna alla pagina precedente</string>
+    <string name="share">Condividi</string>
+    <string name="share_body">Guarda questo.</string>
+    <string name="refresh_page">Aggiorna pagina</string>
+    <string name="download">Scarica</string>
+
     <string name="auth">Autenticazione</string>
     <string name="get_started">Inizia</string>
     <string name="continue_title">Continua</string>
@@ -19,187 +30,123 @@
     <string name="legal_doc">Documenti Legali</string>
     <string name="user_setup">Configurazione utente</string>
     <string name="username">Nome utente</string>
-    <string name="bio">Biografia</string>
+    <string name="bio">Bio</string>
     <string name="required">Obbligatorio</string>
     <string name="optional">Opzionale</string>
     <string name="sign_out">Esci</string>
+    <string name="account">Account</string>
+    <string name="gender">Genere</string>
+    <string name="gender_male">Maschio</string>
+    <string name="gender_female">Femmina</string>
 
-    <string name="datetime">Data &amp; Ora</string>
-    <string name="success">Riuscito</string>
-    <string name="success_message">Il processo è stato completato con successo.</string>
-    <string name="home">Home</string>
-    <string name="journals">Diari</string>
-    <string name="guidelines">Linee guida</string>
-    <string name="settings">Impostazioni</string>
-    <string name="profile">Profilo</string>
-    <string name="chat">Chat</string>
-    <string name="history">Cronologia</string>
-    <string name="favourites">Preferiti</string>
-    <string name="detail">Dettagli</string>
-    <string name="admin">Amministrazione</string>
-    <string name="back_to_prev">Torna alla pagina precedente</string>
-    <string name="open_chat">Apri chat</string>
+    <string name="new_chat">Nuova Chat</string>
+    <string name="chat_history">Cronologia Chat</string>
     <string name="open_history">Apri cronologia</string>
-    <string name="open_favourites">Apri preferiti</string>
-    <string name="open_subscriptions">Apri abbonamenti</string>
+    <string name="ask_cora">Chiedi a Cora</string>
+    <string name="send">Invia</string>
     <string name="search">Cerca</string>
     <string name="clear_all">Cancella tutto</string>
-    <string name="are_you_sure">Sei sicuro?</string>
+    <string name="are_you_sure">Sei sicuro di volerlo fare?</string>
     <string name="delete_item">Elimina elemento</string>
 
-    <string name="pick_voux">Scegli Voux</string>
     <string name="camera">Fotocamera</string>
-    <string name="attach">Allegati</string>
-    <string name="image_generation">Generazione immagini</string>
-    <string name="ask_cora">Chiedi a Voux</string>
-    <string name="send">Invia</string>
+    <string name="attach">Allega</string>
     <string name="remove_attachment">Rimuovi allegato</string>
-    <string name="image_from_web">Immagine dal Web</string>
+    <string name="image_generation">Generazione di Immagini</string>
+    <string name="image_from_web">Immagine dal web</string>
     <string name="image_from_device">Immagine dal dispositivo</string>
-    <string name="paste_url">Incolla URL</string>
-    <string name="link_of_image">Link dell\'immagine</string>
     <string name="describe">Descrivi</string>
-    <string name="found_items">Elementi trovati</string>
-    <string name="part_attachment">Allegato parte %1$d</string>
-    <string name="choose_photo_to_voux">Scegli una foto per Voux</string>
-
-    <string name="cloth_image">Immagine abito %1$d</string>
-    <string name="more_you_want">Altro che desideri</string>
-    <string name="confirm">Conferma</string>
-    <string name="recommended_looks">Look consigliati</string>
-    <string name="recommended_look_item">Elemento look consigliato</string>
-    <string name="analyzed_image">Immagine analizzata</string>
-    <string name="web_searches">Immagini analizzate</string>
-    <string name="item_analysis_parts_count">%1$d parti</string>
-
-    <string name="discover">Scopri</string>
-    <string name="discover_subtitle">Afferra il mondo</string>
-    <string name="workflows">Flussi di lavoro</string>
-    <string name="categories">Categorie</string>
-    <string name="category">Categoria</string>
-    <string name="category_item_count">%1$d elementi</string>
-    <string name="category_detail_item_image">Immagine dettaglio elemento categoria %1$d</string>
-    <string name="outfits">Outfit</string>
-    <string name="content_image_desc">Immagine contenuto</string>
-    <string name="add_bookmark">Aggiungi ai preferiti</string>
-    <string name="remove_bookmark">Rimuovi dai preferiti</string>
-    <string name="share">Condividi</string>
-    <string name="share_body">Dai un\'occhiata a questo.</string>
-    <string name="read_more">Leggi di più</string>
-    <string name="show_less">Mostra meno</string>
-    <string name="refresh_page">Aggiorna pagina</string>
-    <string name="link_to_source">Link alla fonte</string>
-    <string name="download">Scarica</string>
-    <string name="full_screen_image_viewer">Visualizzatore immagini a schermo intero</string>
+    <string name="full_screen_image_viewer">Visualizzatore di immagini a schermo intero</string>
     <string name="background">Sfondo</string>
     <string name="enlarged_image">Immagine ingrandita %1$d</string>
-    <string name="gender">Genere</string>
-    <string name="gender_male">Maschile</string>
-    <string name="gender_female">Femminile</string>
-    <string name="gender_unisex">Unisex</string>
+    <string name="saving_path">Percorso di salvataggio</string>
+    <string name="desc_saving_path">I Vouxes verranno salvati nel percorso selezionato.</string>
+    <string name="photos">Foto</string>
+    <string name="downloads">Download</string>
 
     <string name="subscriptions">Abbonamenti</string>
-    <string name="subscription_history">Cronologia abbonamenti</string>
+    <string name="desc_subscriptions">Verifica lo stato del tuo abbonamento.</string>
+    <string name="subscription_history">Cronologia Abbonamenti</string>
     <string name="upgrade">Aggiorna</string>
     <string name="current_plan">Piano attuale</string>
     <string name="select_plan">Seleziona piano</string>
     <string name="free">Gratuito</string>
     <string name="not_available">Non disponibile.</string>
-    <string name="no_vouxes_left">Nessun Voux rimanente.</string>
     <string name="ads_enabled">Annunci abilitati</string>
-    <string name="subscription_feature_vouxes">%1$d Voux</string>
+    <string name="subscription_feature_vouxes">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d allegati</string>
-    <string name="subscription_feature_message_chars">%1$d caratteri messaggio</string>
-    <string name="subscription_feature_web_images">%1$d immagini Web</string>
+    <string name="subscription_feature_message_chars">%1$d caratteri di messaggio</string>
+    <string name="subscription_feature_web_images">%1$d immagini web</string>
     <string name="usage">Utilizzo</string>
+    <string name="desc_usage">Verifica il tuo utilizzo.</string>
     <string name="attaches">Allegati</string>
     <string name="usage_item_attaches_desc">Allegati nella chat</string>
-    <string name="usage_item_message_chars_title">Caratteri messaggio</string>
-    <string name="usage_item_message_chars_desc">Caratteri delle risposte nella chat</string>
+    <string name="usage_item_message_chars_title">Caratteri di Messaggio</string>
+    <string name="usage_item_message_chars_desc">Caratteri delle risposte in chat</string>
+    <string name="web_searches">Ricerche web</string>
+    <string name="desc_web_searches">Ricerche totali sul web</string>
 
-    <string name="save">Salva</string>
-    <string name="choose_one">Scegli uno</string>
-    <string name="lets_go">Andiamo</string>
-    <string name="start_animation">Avvia animazione</string>
-    <string name="stop_animation">Interrompi animazione</string>
-    <string name="default_option_title">Opzione</string>
-    <string name="collapse">Riduci</string>
-    <string name="expand">Espandi</string>
     <string name="dark_mode">Modalità scura</string>
+    <string name="desc_dark_mode">Cambia l'aspetto dell'app.</string>
     <string name="system">Sistema</string>
-    <string name="light">Chiaro</string>
-    <string name="dark">Scuro</string>
+    <string name="light">Chiara</string>
+    <string name="dark">Scura</string>
     <string name="dynamic_color">Colore dinamico</string>
-    <string name="on">Attivo</string>
-    <string name="off">Disattivo</string>
+    <string name="desc_dynamic_color">Rendi i colori dell'app dinamici.</string>
+    <string name="on">Attivato</string>
+    <string name="off">Disattivato</string>
     <string name="notifications">Notifiche</string>
-    <string name="selected_title">Selezionato</string>
-    <string name="saving_path">Percorso di salvataggio</string>
-    <string name="photos">Foto</string>
-    <string name="downloads">Download</string>
+    <string name="desc_notifications">Gestisci i tuoi avvisi e suoni.</string>
     <string name="languages">Lingue</string>
+    <string name="desc_lang">Cambia la lingua dell'app.</string>
+    <string name="live_translation">Traduzione in tempo reale</string>
+    <string name="desc_live_translation">Traduzione in tempo reale dei contenuti generati.</string>
+
+    <string name="support">Supporto</string>
+    <string name="help">Aiuto</string>
+    <string name="guidelines">Linee guida</string>
+    <string name="desc_guidelines">Visualizza e segui le linee guida.</string>
     <string name="report_issue">Segnala un problema</string>
-    <string name="reset_settings">Ripristina impostazioni</string>
-    <string name="enable_selecting">Abilita selezione</string>
-    <string name="disable_selecting">Disabilita selezione</string>
-
-    <string name="desc_subscriptions">Controlla lo stato del tuo abbonamento.</string>
-    <string name="desc_favourites">Visualizza tutti i tuoi preferiti.</string>
-    <string name="desc_history">Visualizza tutta la tua cronologia.</string>
-    <string name="desc_saving_path">I Voux verranno salvati nel percorso selezionato.</string>
-    <string name="desc_notifications">Gestisci notifiche e suoni.</string>
-    <string name="desc_lang">Cambia la lingua dell\'app.</string>
-    <string name="desc_dark_mode">Cambia l\'aspetto dell\'app.</string>
-    <string name="desc_dynamic_color">Rendi i colori dell\'app dinamici.</string>
     <string name="desc_report_issue">Invia un rapporto di bug o una richiesta di funzionalità.</string>
-    <string name="desc_reset_settings">Ripristina tutte le impostazioni ai valori predefiniti.</string>
-    <string name="desc_about">Visualizza informazioni sull\'app.</string>
-    <string name="about_main_text">Sviluppato per ispirare le tue idee. La tua passione è il nostro obiettivo. Speriamo sinceramente che tu apprezza ciò che abbiamo creato per te.</string>
-    <string name="account">Account</string>
+    <string name="reset_settings">Ripristina impostazioni</string>
+    <string name="desc_reset_settings">Riporta tutte le impostazioni ai loro valori predefiniti.</string>
+    <string name="about">Informazioni su</string>
+    <string name="desc_about">Visualizza le informazioni sull'app.</string>
+    <string name="about_main_text">Progettato per potenziare le tue idee. La tua passione è il nostro obiettivo. Speriamo sinceramente che apprezzerai ciò che abbiamo creato per te.</string>
+    <string name="link_to_source">Link alla fonte</string>
 
-    <string name="error_storage_permission_denied">È necessaria l\'autorizzazione di archiviazione per selezionare le foto.</string>
-    <string name="error_camera_permission_denied">È necessaria l\'autorizzazione della fotocamera per scattare foto.</string>
-    <string name="error_failed_persistent_access">Accesso persistente all\'immagine fallito.</string>
+    <string name="notification_text">Ti senti ispirato? Prova una cosa nuova.</string>
 
-    <string name="error_google_sign_in_failed">Accesso con Google fallito. Riprova.</string>
-    <string name="error_sign_out">Uscita fallita.</string>
-    <string name="error_fill_required_fields">Compila tutti i campi obbligatori.</string>
+    <string name="error_storage_permission_denied">È richiesta l'autorizzazione di archiviazione per selezionare le foto.</string>
+    <string name="error_camera_permission_denied">È richiesta l'autorizzazione della fotocamera per scattare foto.</string>
+    <string name="error_failed_persistent_access">Impossibile ottenere l'accesso persistente all'immagine.</string>
+    <string name="error_no_active_subscription">Nessun abbonamento attivo.</string>
+    <string name="error_google_sign_in_failed">Accesso con Google non riuscito. Riprova.</string>
+    <string name="error_sign_out">Disconnessione non riuscita.</string>
     <string name="error_something_went_wrong">Qualcosa è andato storto. Riprova.</string>
-    <string name="error_create_file">Impossibile creare il file per salvare la foto.</string>
-    <string name="error_take_photo">Scatto della foto fallito.</string>
-    <string name="error_url_processing">Elaborazione dell\'URL fallita. Controlla l\'URL e riprova.</string>
-    <string name="error_image_analysis">Analisi dell\'immagine fallita. Prova con un\'altra immagine o controlla la tua connessione.</string>
+    <string name="error_empty_chat">La chat è vuota.</string>
+    <string name="error_create_file">Impossibile creare un file per salvare la foto.</string>
+    <string name="error_take_photo">Scatto della foto non riuscito.</string>
     <string name="error_image_already_added">Immagine già aggiunta.</string>
     <string name="error_max_images_reached">Puoi aggiungere solo fino a 3 immagini.</string>
-    <string name="error_attach_limit_reached">Hai raggiunto il tuo limite di allegati.</string>
-    <string name="error_image_path_empty">Il percorso dell\'immagine è vuoto. Seleziona un\'immagine.</string>
-    <string name="error_load_image">Caricamento dell\'immagine fallito.</string>
-    <string name="error_load_journals">Caricamento dei diari fallito.</string>
-    <string name="error_load_subscriptions">Caricamento degli abbonamenti fallito.</string>
+    <string name="error_attach_limit_reached">Hai raggiunto il limite di allegati.</string>
+    <string name="error_load_image">Caricamento immagine non riuscito.</string>
+    <string name="error_load_subscriptions">Caricamento abbonamenti non riuscito.</string>
     <string name="error_no_free_subscriptions">Nessun abbonamento gratuito disponibile.</string>
-    <string name="error_get_free_subscription">Ottenimento dell\'abbonamento gratuito fallito.</string>
-    <string name="error_save_user_data">Salvataggio dei dati utente fallito.</string>
+    <string name="error_get_free_subscription">Impossibile ottenere l'abbonamento gratuito.</string>
+    <string name="error_save_user_data">Impossibile salvare i dati utente.</string>
+
     <string name="error_min_length">Sono richiesti almeno %1$d caratteri</string>
     <string name="error_max_length">Massimo %1$d caratteri consentiti</string>
-    <string name="error_no_gaps">Spazi non consentiti</string>
-    <string name="error_no_special_chars">Nessun carattere speciale consentito</string>
+    <string name="error_no_gaps">Non sono ammessi spazi</string>
+    <string name="error_no_special_chars">Non sono ammessi caratteri speciali</string>
     <string name="error_no_capital_letters">Non sono ammesse lettere maiuscole</string>
     <string name="error_only_english_letters">Sono ammesse solo lettere inglesi</string>
-    <string name="error_no_active_subscription">Nessun abbonamento attivo.</string>
-    <string name="no_item_found">Nessun elemento trovato</string>
 
     <string-array name="onboarding_mottos">
-        <item>Sviluppato per ispirare le tue idee</item>
+        <item>Progettato per potenziare le tue idee</item>
         <item>Trova la tua prossima scintilla creativa</item>
         <item>Connettiti con una comunità di innovatori</item>
-    </string-array>
-    <string-array name="home_mottos">
-        <item>Ciao.</item>
-        <item>Diventiamo creativi.</item>
-    </string-array>
-    <string-array name="journal_mottos">
-        <item>Dovresti leggere questo</item>
-        <item>Prima di iniziare.</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Attenzione</item>

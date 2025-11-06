@@ -1,19 +1,27 @@
 <resources>
+
     <string name="app_name" translatable="false">Cora</string>
-    <string name="voux_vision" translatable="false">Voux Vision</string>
-
-    <string name="notification_text">Feeling inspired? Try new one.</string>
-
     <string name="app_icon">App icon</string>
     <string name="general">General</string>
-    <string name="support">Support</string>
-    <string name="about">About</string>
-    <string name="help">Help</string>
     <string name="more">More</string>
-    <string name="new_chat">New Chat</string>
-    <string name="chat_history">Chat History</string>
-
+    <string name="success">Success</string>
+    <string name="success_message">The process was successful.</string>
     <string name="splash">Splash</string>
+    <string name="confirm">Confirm</string>
+    <string name="save">Save</string>
+    <string name="selected_title">Selected</string>
+    <string name="no_item_found">No item found</string>
+
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
+    <string name="admin">Admin</string>
+    <string name="back_to_prev">Back to previous page</string>
+    <string name="share">Share</string>
+    <string name="share_body">Check this out.</string>
+    <string name="refresh_page">Refresh page</string>
+    <string name="download">Download</string>
+
     <string name="auth">Auth</string>
     <string name="get_started">Get Started</string>
     <string name="continue_title">Continue</string>
@@ -25,150 +33,92 @@
     <string name="required">Required</string>
     <string name="optional">Optional</string>
     <string name="sign_out">Sign Out</string>
+    <string name="account">Account</string>
+    <string name="gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
 
-    <string name="datetime">Date &amp; Time</string>
-    <string name="success">Success</string>
-    <string name="success_message">The process was successful.</string>
-    <string name="home">Home</string>
-    <string name="journals">Journals</string>
-    <string name="guidelines">Guidelines</string>
-    <string name="settings">Settings</string>
-    <string name="profile">Profile</string>
-    <string name="chat">Chat</string>
-    <string name="history">History</string>
-    <string name="favourites">Favourites</string>
-    <string name="detail">Detail</string>
-    <string name="admin">Admin</string>
-    <string name="back_to_prev">Back to previous page</string>
-    <string name="open_chat">Open chat</string>
+    <string name="new_chat">New Chat</string>
+    <string name="chat_history">Chat History</string>
     <string name="open_history">Open history</string>
-    <string name="open_favourites">Open favourites</string>
-    <string name="open_subscriptions">Open subscriptions</string>
+    <string name="ask_cora">Ask Cora</string>
+    <string name="send">Send</string>
     <string name="search">Search</string>
     <string name="clear_all">Clear all</string>
     <string name="are_you_sure">Are you sure to do this?</string>
     <string name="delete_item">Delete item</string>
 
-    <string name="pick_voux">Pick Voux</string>
     <string name="camera">Camera</string>
     <string name="attach">Attach</string>
-    <string name="image_generation">Image Generation</string>
-    <string name="ask_cora">Ask Cora</string>
-    <string name="send">Send</string>
     <string name="remove_attachment">Remove attachment</string>
+    <string name="image_generation">Image Generation</string>
     <string name="image_from_web">Image from web</string>
     <string name="image_from_device">Image from device</string>
-    <string name="paste_url">Paste URL</string>
-    <string name="link_of_image">Link of image</string>
     <string name="describe">Describe</string>
-    <string name="found_items">Found Items</string>
-    <string name="part_attachment">Part Attachment %1$d</string>
-    <string name="choose_photo_to_voux">Choose a photo to Voux</string>
-
-    <string name="cloth_image">Cloth Image %1$d</string>
-    <string name="more_you_want">More you want</string>
-    <string name="confirm">Confirm</string>
-    <string name="recommended_looks">Recommended Looks</string>
-    <string name="recommended_look_item">Recommended look item</string>
-    <string name="analyzed_image">Analyzed image</string>
-    <string name="web_searches">Web Searches</string>
-    <string name="desc_web_searches">Total searches in web</string>
-
-    <string name="item_analysis_parts_count">%1$d parts</string>
-
-    <string name="discover">Discover</string>
-    <string name="discover_subtitle">Reach out to the world</string>
-    <string name="workflows">Workflows</string>
-    <string name="categories">Categories</string>
-    <string name="category">Category</string>
-    <string name="category_item_count">%1$d items</string>
-    <string name="category_detail_item_image">Category Detail Item Image %1$d</string>
-    <string name="outfits">Outfits</string>
-    <string name="content_image_desc">Content image</string>
-    <string name="add_bookmark">Add to bookmarks</string>
-    <string name="remove_bookmark">Remove from bookmarks</string>
-    <string name="share">Share</string>
-    <string name="share_body">Check this out.</string>
-    <string name="read_more">Read more</string>
-    <string name="show_less">Show less</string>
-    <string name="refresh_page">Refresh page</string>
-    <string name="link_to_source">Link to source</string>
-    <string name="download">Download</string>
     <string name="full_screen_image_viewer">Full Screen Image Viewer</string>
     <string name="background">Background</string>
     <string name="enlarged_image">Enlarged image %1$d</string>
-    <string name="gender">Gender</string>
-    <string name="gender_male">Male</string>
-    <string name="gender_female">Female</string>
-    <string name="gender_unisex">Unisex</string>
+    <string name="saving_path">Saving Path</string>
+    <string name="desc_saving_path">Vouxes will be saved to selected path.</string>
+    <string name="photos">Photos</string>
+    <string name="downloads">Downloads</string>
 
     <string name="subscriptions">Subscriptions</string>
+    <string name="desc_subscriptions">Check your subscription status.</string>
     <string name="subscription_history">Subscription History</string>
     <string name="upgrade">Upgrade</string>
     <string name="current_plan">Current Plan</string>
     <string name="select_plan">Select Plan</string>
     <string name="free">Free</string>
     <string name="not_available">Not available.</string>
-    <string name="no_vouxes_left">No vouxes left.</string>
     <string name="ads_enabled">Ads enabled</string>
     <string name="subscription_feature_vouxes">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d attaches</string>
     <string name="subscription_feature_message_chars">%1$d message characters</string>
     <string name="subscription_feature_web_images">%1$d web images</string>
     <string name="usage">Usage</string>
+    <string name="desc_usage">Check your usage.</string>
     <string name="attaches">Attaches</string>
     <string name="usage_item_attaches_desc">Attaches in chat</string>
     <string name="usage_item_message_chars_title">Message Characters</string>
     <string name="usage_item_message_chars_desc">Characters of responses in chat</string>
+    <string name="web_searches">Web Searches</string>
+    <string name="desc_web_searches">Total searches in web</string>
 
-    <string name="save">Save</string>
-    <string name="choose_one">Choose one</string>
-    <string name="lets_go">Let\'s go</string>
-    <string name="start_animation">Start animation</string>
-    <string name="stop_animation">Stop animation</string>
-    <string name="default_option_title">Option</string>
-    <string name="collapse">collapse</string>
-    <string name="expand">expand</string>
     <string name="dark_mode">Dark mode</string>
+    <string name="desc_dark_mode">Change the app's appearance.</string>
     <string name="system">System</string>
     <string name="light">Light</string>
     <string name="dark">Dark</string>
     <string name="dynamic_color">Dynamic color</string>
+    <string name="desc_dynamic_color">Make the app's colors dynamic.</string>
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="notifications">Notifications</string>
-    <string name="selected_title">Selected</string>
-    <string name="saving_path">Saving Path</string>
-    <string name="photos">Photos</string>
-    <string name="downloads">Downloads</string>
-    <string name="languages">Languages</string>
-    <string name="live_translation">Live Translation</string>
-    <string name="report_issue">Report issue</string>
-    <string name="reset_settings">Reset Settings</string>
-    <string name="enable_selecting">Enable selecting</string>
-    <string name="disable_selecting">Disable selecting</string>
-
-    <string name="desc_subscriptions">Check your subscription status.</string>
-    <string name="desc_usage">Check your usage.</string>
-    <string name="desc_favourites">See all your favourites.</string>
-    <string name="desc_history">See all your history.</string>
-    <string name="desc_saving_path">Vouxes will be saved to selected path.</string>
     <string name="desc_notifications">Manage your alerts and sounds.</string>
-    <string name="desc_lang">Change the app\'s language.</string>
+    <string name="languages">Languages</string>
+    <string name="desc_lang">Change the app's language.</string>
+    <string name="live_translation">Live Translation</string>
     <string name="desc_live_translation">Live translation of generated contents.</string>
-    <string name="desc_dark_mode">Change the app\'s appearance.</string>
-    <string name="desc_dynamic_color">Make the app\'s colors dynamic.</string>
-    <string name="desc_report_issue">Submit a bug report or a feature request.</string>
-    <string name="desc_reset_settings">Revert all settings to their default values.</string>
-    <string name="desc_about">View info about app.</string>
+
+    <string name="support">Support</string>
+    <string name="help">Help</string>
+    <string name="guidelines">Guidelines</string>
     <string name="desc_guidelines">View and follow guidelines.</string>
-    <string name="about_main_text">Designed to supercharge your ideas Your passion is our purpose. We truly hope you enjoy what we\'ve created for you.</string>
-    <string name="account">Account</string>
+    <string name="report_issue">Report issue</string>
+    <string name="desc_report_issue">Submit a bug report or a feature request.</string>
+    <string name="reset_settings">Reset Settings</string>
+    <string name="desc_reset_settings">Revert all settings to their default values.</string>
+    <string name="about">About</string>
+    <string name="desc_about">View info about app.</string>
+    <string name="about_main_text">Designed to supercharge your ideas Your passion is our purpose. We truly hope you enjoy what we've created for you.</string>
+    <string name="link_to_source">Link to source</string>
+
+    <string name="notification_text">Feeling inspired? Try new one.</string>
 
     <string name="error_storage_permission_denied">Storage permission is required to pick photos.</string>
     <string name="error_camera_permission_denied">Camera permission is required to take photos.</string>
     <string name="error_failed_persistent_access">Failed to get persistent access to the image.</string>
-
     <string name="error_no_active_subscription">No active subscription.</string>
     <string name="error_google_sign_in_failed">Google Sign-In failed. Please try again.</string>
     <string name="error_sign_out">Sign out failed.</string>
@@ -176,39 +126,26 @@
     <string name="error_empty_chat">Chat is empty.</string>
     <string name="error_create_file">Could not create a file to save the photo.</string>
     <string name="error_take_photo">Failed to take a photo.</string>
-    <string name="error_url_processing">Processing the URL failed. Please check the URL and try again.</string>
-    <string name="error_image_analysis">Image analysis failed. Please try a different image or check your connection.</string>
     <string name="error_image_already_added">Image already added.</string>
     <string name="error_max_images_reached">You can only add up to 3 images.</string>
     <string name="error_attach_limit_reached">You have reached your attach limit.</string>
-    <string name="error_image_path_empty">Image path is empty. Please select an image.</string>
     <string name="error_load_image">Failed to load image.</string>
-    <string name="error_load_journals">Failed to load journals.</string>
     <string name="error_load_subscriptions">Failed to load subscriptions.</string>
     <string name="error_no_free_subscriptions">No free subscriptions available.</string>
     <string name="error_get_free_subscription">Failed to get free subscription.</string>
     <string name="error_save_user_data">Failed to save user data.</string>
-    <string name="error_fill_required_fields">Please fill all required fields.</string>
+
     <string name="error_min_length">At least %1$d characters required</string>
     <string name="error_max_length">Maximum %1$d characters allowed</string>
     <string name="error_no_gaps">No gaps allowed</string>
     <string name="error_no_special_chars">No special characters allowed</string>
     <string name="error_no_capital_letters">No capital letters allowed</string>
     <string name="error_only_english_letters">Only English letters allowed</string>
-    <string name="no_item_found">No item found</string>
 
     <string-array name="onboarding_mottos">
         <item>Designed to supercharge your ideas</item>
         <item>Find your next creative spark</item>
         <item>Connect with a community of innovators</item>
-    </string-array>
-    <string-array name="home_mottos">
-        <item>Hi, there.</item>
-        <item>Let\'s get creative.</item>
-    </string-array>
-    <string-array name="journal_mottos">
-        <item>You should read</item>
-        <item>Before you begin.</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Attention</item>

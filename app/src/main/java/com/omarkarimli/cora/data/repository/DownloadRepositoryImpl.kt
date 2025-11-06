@@ -13,6 +13,7 @@ import androidx.core.net.toUri
 import com.omarkarimli.cora.domain.repository.DownloadRepository
 import com.omarkarimli.cora.domain.repository.PermissionRepository
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
+import com.omarkarimli.cora.utils.Constants.APP_NAME
 import com.omarkarimli.cora.utils.SpConstant.SAVING_PATH_KEY
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -90,7 +91,7 @@ class DownloadRepositoryImpl @Inject constructor(
                         val contentValues = ContentValues().apply {
                             put(MediaStore.MediaColumns.DISPLAY_NAME, filename)
                             put(MediaStore.MediaColumns.MIME_TYPE, mimeType)
-                            put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/Voux")
+                            put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/" + APP_NAME)
                         }
                         val newUri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
                         newUri?.let { uri ->
@@ -103,12 +104,12 @@ class DownloadRepositoryImpl @Inject constructor(
                         // Legacy approach: Requires WRITE_EXTERNAL_STORAGE
                         if (permissionRepository.storagePermissionState.value) {
                             val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                            val vouxDir = File(downloadsDir, "Voux")
-                            if (!vouxDir.exists() && !vouxDir.mkdirs()) {
-                                throw Exception("Failed to create directory: ${vouxDir.absolutePath} (saveImageToDownloads legacy)")
+                            val saveDir = File(downloadsDir, APP_NAME)
+                            if (!saveDir.exists() && !saveDir.mkdirs()) {
+                                throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveImageToDownloads legacy)")
                             }
 
-                            val imageFile = File(vouxDir, filename)
+                            val imageFile = File(saveDir, filename)
                             FileOutputStream(imageFile).use { outputStream ->
                                 inputStream.copyTo(outputStream)
                             }
@@ -153,7 +154,7 @@ class DownloadRepositoryImpl @Inject constructor(
     override suspend fun saveBitmapToDownloads(bitmap: Bitmap): Uri? {
         return try {
             withContext(Dispatchers.IO) {
-                val filename = "Voux_${System.currentTimeMillis()}.png"
+                val filename = "${APP_NAME}_${System.currentTimeMillis()}.png"
                 val mimeType = "image/png"
                 var finalImageUri: Uri? = null
 
@@ -161,7 +162,7 @@ class DownloadRepositoryImpl @Inject constructor(
                     val contentValues = ContentValues().apply {
                         put(MediaStore.MediaColumns.DISPLAY_NAME, filename)
                         put(MediaStore.MediaColumns.MIME_TYPE, mimeType)
-                        put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/Voux")
+                        put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/" + APP_NAME)
                     }
                     val newUri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
                     newUri?.let { uri ->
@@ -173,11 +174,11 @@ class DownloadRepositoryImpl @Inject constructor(
                 } else {
                     if (permissionRepository.storagePermissionState.value) {
                         val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                        val vouxDir = File(downloadsDir, "Voux")
-                        if (!vouxDir.exists() && !vouxDir.mkdirs()) {
-                            throw Exception("Failed to create directory: ${vouxDir.absolutePath} (saveBitmapToDownloads legacy)")
+                        val saveDir = File(downloadsDir, APP_NAME)
+                        if (!saveDir.exists() && !saveDir.mkdirs()) {
+                            throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveBitmapToDownloads legacy)")
                         }
-                        val imageFile = File(vouxDir, filename)
+                        val imageFile = File(saveDir, filename)
                         FileOutputStream(imageFile).use { outputStream ->
                             bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
                         }

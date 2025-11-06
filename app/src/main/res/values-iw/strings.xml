@@ -1,208 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_icon">אייקון האפליקציה</string>
+
+    <string name="app_name" translatable="false">Cora</string>
+    <string name="app_icon">סמל האפליקציה</string>
     <string name="general">כללי</string>
-    <string name="support">תמיכה</string>
-    <string name="about">אודות</string>
-    <string name="help">עזרה</string>
     <string name="more">עוד</string>
-    <string name="new_chat">צ\'אט חדש</string>
-    <string name="chat_history">היסטוריית צ\'אט</string>
-
-    <string name="notification_text">מרגיש השראה? נסה משהו חדש.</string>
-
+    <string name="success">הצלחה</string>
+    <string name="success_message">התהליך הושלם בהצלחה.</string>
     <string name="splash">מסך פתיחה</string>
+    <string name="confirm">אישור</string>
+    <string name="save">שמירה</string>
+    <string name="selected_title">נבחר</string>
+    <string name="no_item_found">לא נמצא פריט</string>
+
+    <string name="settings">הגדרות</string>
+    <string name="profile">פרופיל</string>
+    <string name="chat">צ׳אט</string>
+    <string name="admin">מנהל</string>
+    <string name="back_to_prev">חזרה לדף הקודם</string>
+    <string name="share">שיתוף</string>
+    <string name="share_body">תבדוק את זה.</string>
+    <string name="refresh_page">רענן דף</string>
+    <string name="download">הורדה</string>
+
     <string name="auth">אימות</string>
-    <string name="get_started">להתחיל</string>
+    <string name="get_started">התחל</string>
     <string name="continue_title">המשך</string>
-    <string name="auth_legal_doc_agreement_prefix">על ידי המשך, אתה מסכים ל </string>
-    <string name="legal_doc">מסמכים המשפטיים</string>
+    <string name="auth_legal_doc_agreement_prefix">בהמשך, אתה מסכים ל </string>
+    <string name="legal_doc">המסמכים המשפטיים שלנו</string>
     <string name="user_setup">הגדרת משתמש</string>
     <string name="username">שם משתמש</string>
     <string name="bio">ביוגרפיה</string>
-    <string name="required">חובה</string>
+    <string name="required">נדרש</string>
     <string name="optional">אופציונלי</string>
     <string name="sign_out">התנתקות</string>
-
-    <string name="datetime">תאריך ושעה</string>
-    <string name="success">הצלחה</string>
-    <string name="success_message">הפעולה הושלמה בהצלחה.</string>
-    <string name="home">בית</string>
-    <string name="journals">יומנים</string>
-    <string name="guidelines">הנחיות</string>
-    <string name="settings">הגדרות</string>
-    <string name="profile">פרופיל</string>
-    <string name="chat">צ\'אט</string>
-    <string name="history">היסטוריה</string>
-    <string name="favourites">מועדפים</string>
-    <string name="detail">פרטים</string>
-    <string name="admin">מנהל מערכת</string>
-    <string name="back_to_prev">חזרה לעמוד הקודם</string>
-    <string name="open_chat">פתח צ\'אט</string>
-    <string name="open_history">פתח היסטוריה</string>
-    <string name="open_favourites">פתח מועדפים</string>
-    <string name="open_subscriptions">פתח מנויים</string>
-    <string name="search">חיפוש</string>
-    <string name="clear_all">נקה הכל</string>
-    <string name="are_you_sure">האם אתה בטוח?</string>
-    <string name="delete_item">מחק פריט</string>
-
-    <string name="pick_voux">בחר Vouxe</string>
-    <string name="camera">מצלמה</string>
-    <string name="attach">צירוף</string>
-    <string name="image_generation">יצירת תמונה</string>
-    <string name="ask_cora">שאל את Vouxe</string>
-    <string name="send">שלח</string>
-    <string name="remove_attachment">הסר צירוף</string>
-    <string name="image_from_web">תמונה מהרשת</string>
-    <string name="image_from_device">תמונה מהמכשיר</string>
-    <string name="paste_url">הדבק כתובת URL</string>
-    <string name="link_of_image">קישור לתמונה</string>
-    <string name="describe">תיאור</string>
-    <string name="found_items">פריטים שנמצאו</string>
-    <string name="part_attachment">צירוף חלק %1$d</string>
-    <string name="choose_photo_to_voux">בחר תמונה עבור Vouxe</string>
-
-    <string name="cloth_image">תמונת פריט לבוש %1$d</string>
-    <string name="more_you_want">מה עוד תרצה</string>
-    <string name="confirm">אשר</string>
-    <string name="recommended_looks">מראות מומלצים</string>
-    <string name="recommended_look_item">פריט מראה מומלץ</string>
-    <string name="analyzed_image">תמונה מנותחת</string>
-    <string name="web_searches">תמונות מנותחות</string>
-    <string name="item_analysis_parts_count">%1$d חלקים</string>
-
-    <string name="discover">גלה</string>
-    <string name="discover_subtitle">כבוש את העולם</string>
-    <string name="workflows">זרימות עבודה</string>
-    <string name="categories">קטגוריות</string>
-    <string name="category">קטגוריה</string>
-    <string name="category_item_count">%1$d פריטים</string>
-    <string name="category_detail_item_image">תמונת פריט בפרטי קטגוריה %1$d</string>
-    <string name="outfits">תלבושות</string>
-    <string name="content_image_desc">תמונת תוכן</string>
-    <string name="add_bookmark">הוסף לסימניות</string>
-    <string name="remove_bookmark">הסר מסימניות</string>
-    <string name="share">שתף</string>
-    <string name="share_body">תסתכל על זה.</string>
-    <string name="read_more">קרא עוד</string>
-    <string name="show_less">הצג פחות</string>
-    <string name="refresh_page">רענן עמוד</string>
-    <string name="link_to_source">קישור למקור</string>
-    <string name="download">הורדה</string>
-    <string name="full_screen_image_viewer">מציג תמונה במסך מלא</string>
-    <string name="background">רקע</string>
-    <string name="enlarged_image">תמונה מוגדלת %1$d</string>
+    <string name="account">חשבון</string>
     <string name="gender">מגדר</string>
     <string name="gender_male">זכר</string>
     <string name="gender_female">נקבה</string>
-    <string name="gender_unisex">יוניסקס</string>
+
+    <string name="new_chat">צ׳אט חדש</string>
+    <string name="chat_history">היסטוריית צ׳אט</string>
+    <string name="open_history">פתח היסטוריה</string>
+    <string name="ask_cora">שאל את קורה</string>
+    <string name="send">שליחה</string>
+    <string name="search">חיפוש</string>
+    <string name="clear_all">נקה הכל</string>
+    <string name="are_you_sure">האם אתה בטוח שברצונך לבצע פעולה זו?</string>
+    <string name="delete_item">מחק פריט</string>
+
+    <string name="camera">מצלמה</string>
+    <string name="attach">צרף</string>
+    <string name="remove_attachment">הסר קובץ מצורף</string>
+    <string name="image_generation">יצירת תמונה</string>
+    <string name="image_from_web">תמונה מהאינטרנט</string>
+    <string name="image_from_device">תמונה מהמכשיר</string>
+    <string name="describe">תיאור</string>
+    <string name="full_screen_image_viewer">מציג תמונות במסך מלא</string>
+    <string name="background">רקע</string>
+    <string name="enlarged_image">תמונה מוגדלת %1$d</string>
+    <string name="saving_path">נתיב שמירה</string>
+    <string name="desc_saving_path">ה-Vouxes יישמרו בנתיב הנבחר.</string>
+    <string name="photos">תמונות</string>
+    <string name="downloads">הורדות</string>
 
     <string name="subscriptions">מנויים</string>
+    <string name="desc_subscriptions">בדוק את סטטוס המנוי שלך.</string>
     <string name="subscription_history">היסטוריית מנויים</string>
-    <string name="upgrade">שדרג</string>
-    <string name="current_plan">תכנית נוכחית</string>
-    <string name="select_plan">בחר תכנית</string>
+    <string name="upgrade">שדרוג</string>
+    <string name="current_plan">תוכנית נוכחית</string>
+    <string name="select_plan">בחר תוכנית</string>
     <string name="free">חינם</string>
     <string name="not_available">לא זמין.</string>
-    <string name="no_vouxes_left">לא נותרו Vouxe.</string>
     <string name="ads_enabled">מודעות מופעלות</string>
-    <string name="subscription_feature_vouxes">%1$d Vouxe</string>
-    <string name="subscription_feature_attaches">%1$d צירופים</string>
+    <string name="subscription_feature_vouxes">%1$d vouxes</string>
+    <string name="subscription_feature_attaches">%1$d קבצים מצורפים</string>
     <string name="subscription_feature_message_chars">%1$d תווים להודעה</string>
-    <string name="subscription_feature_web_images">%1$d תמונות רשת</string>
+    <string name="subscription_feature_web_images">%1$d תמונות אינטרנט</string>
     <string name="usage">שימוש</string>
-    <string name="attaches">צירופים</string>
-    <string name="usage_item_attaches_desc">צירופים בצ\'אט</string>
+    <string name="desc_usage">בדוק את השימוש שלך.</string>
+    <string name="attaches">קבצים מצורפים</string>
+    <string name="usage_item_attaches_desc">קבצים מצורפים בצ׳אט</string>
     <string name="usage_item_message_chars_title">תווי הודעה</string>
-    <string name="usage_item_message_chars_desc">תווי תגובות בצ\'אט</string>
+    <string name="usage_item_message_chars_desc">תווים של תגובות בצ׳אט</string>
+    <string name="web_searches">חיפושי אינטרנט</string>
+    <string name="desc_web_searches">סה"כ חיפושים באינטרנט</string>
 
-    <string name="save">שמור</string>
-    <string name="choose_one">בחר אחד</string>
-    <string name="lets_go">בוא נלך</string>
-    <string name="start_animation">התחל אנימציה</string>
-    <string name="stop_animation">עצור אנימציה</string>
-    <string name="default_option_title">אפשרות</string>
-    <string name="collapse">כווץ</string>
-    <string name="expand">הרחב</string>
     <string name="dark_mode">מצב כהה</string>
+    <string name="desc_dark_mode">שנה את מראה האפליקציה.</string>
     <string name="system">מערכת</string>
     <string name="light">בהיר</string>
     <string name="dark">כהה</string>
     <string name="dynamic_color">צבע דינמי</string>
+    <string name="desc_dynamic_color">הפוך את צבעי האפליקציה לדינמיים.</string>
     <string name="on">מופעל</string>
     <string name="off">כבוי</string>
     <string name="notifications">התראות</string>
-    <string name="selected_title">נבחר</string>
-    <string name="saving_path">נתיב שמירה</string>
-    <string name="photos">תמונות</string>
-    <string name="downloads">הורדות</string>
+    <string name="desc_notifications">נהל את ההתראות והצלילים שלך.</string>
     <string name="languages">שפות</string>
-    <string name="report_issue">דווח על בעיה</string>
-    <string name="reset_settings">אפס הגדרות</string>
-    <string name="enable_selecting">אפשר בחירה</string>
-    <string name="disable_selecting">בטל בחירה</string>
-
-    <string name="desc_subscriptions">בדוק את מצב המנוי שלך.</string>
-    <string name="desc_favourites">צפה בכל המועדפים שלך.</string>
-    <string name="desc_history">צפה בכל ההיסטוריה שלך.</string>
-    <string name="desc_saving_path">Vouxe יישמר בנתיב הנבחר.</string>
-    <string name="desc_notifications">נהל התראות וצלילים.</string>
     <string name="desc_lang">שנה את שפת האפליקציה.</string>
-    <string name="desc_dark_mode">שנה את מראה האפליקציה.</string>
-    <string name="desc_dynamic_color">הפוך את צבעי האפליקציה לדינמיים.</string>
+    <string name="live_translation">תרגום חי</string>
+    <string name="desc_live_translation">תרגום חי של התכנים שנוצרו.</string>
+
+    <string name="support">תמיכה</string>
+    <string name="help">עזרה</string>
+    <string name="guidelines">הנחיות</string>
+    <string name="desc_guidelines">הצג ופעל לפי ההנחיות.</string>
+    <string name="report_issue">דווח על בעיה</string>
     <string name="desc_report_issue">שלח דיווח על באג או בקשת תכונה.</string>
-    <string name="desc_reset_settings">אפס את כל ההגדרות לערכי ברירת המחדל.</string>
-    <string name="desc_about">צפה במידע אודות האפליקציה.</string>
-    <string name="about_main_text">נוצר כדי לעורר השראה ברעיונות שלך. התשוקה שלך היא המטרה שלנו. אנו מקווים שתאהב את מה שיצרנו עבורך.</string>
-    <string name="account">חשבון</string>
+    <string name="reset_settings">אפס הגדרות</string>
+    <string name="desc_reset_settings">החזר את כל ההגדרות לערכי ברירת המחדל שלהן.</string>
+    <string name="about">אודות</string>
+    <string name="desc_about">צפה במידע על האפליקציה.</string>
+    <string name="about_main_text">תוכנן כדי להעצים את הרעיונות שלך. התשוקה שלך היא המטרה שלנו. אנו באמת מקווים שתיהנה ממה שיצרנו עבורך.</string>
+    <string name="link_to_source">קישור למקור</string>
+
+    <string name="notification_text">מרגיש השראה? נסה משהו חדש.</string>
 
     <string name="error_storage_permission_denied">נדרשת הרשאת אחסון לבחירת תמונות.</string>
     <string name="error_camera_permission_denied">נדרשת הרשאת מצלמה לצילום תמונות.</string>
-    <string name="error_failed_persistent_access">הגישה המתמשכת לתמונה נכשלה.</string>
-
-    <string name="error_google_sign_in_failed">הכניסה באמצעות Google נכשלה. אנא נסה שוב.</string>
+    <string name="error_failed_persistent_access">הגישה הקבועה לתמונה נכשלה.</string>
+    <string name="error_no_active_subscription">אין מנוי פעיל.</string>
+    <string name="error_google_sign_in_failed">הכניסה באמצעות Google נכשלה. נסה שוב.</string>
     <string name="error_sign_out">ההתנתקות נכשלה.</string>
-    <string name="error_fill_required_fields">אנא מלא את כל השדות הנדרשים.</string>
-    <string name="error_something_went_wrong">משהו השתבש. אנא נסה שוב.</string>
-    <string name="error_create_file">לא ניתן ליצור קובץ לשמירת התמונה.</string>
+    <string name="error_something_went_wrong">משהו השתבש. נסה שוב.</string>
+    <string name="error_empty_chat">הצ׳אט ריק.</string>
+    <string name="error_create_file">לא ניתן היה ליצור קובץ לשמירת התמונה.</string>
     <string name="error_take_photo">צילום התמונה נכשל.</string>
-    <string name="error_url_processing">עיבוד כתובת ה-URL נכשל. אנא בדוק את הקישור ונסה שוב.</string>
-    <string name="error_image_analysis">ניתוח התמונה נכשל. אנא נסה תמונה אחרת או בדוק את החיבור שלך.</string>
     <string name="error_image_already_added">התמונה כבר נוספה.</string>
     <string name="error_max_images_reached">ניתן להוסיף עד 3 תמונות בלבד.</string>
-    <string name="error_attach_limit_reached">הגעת למגבלת הצירופים שלך.</string>
-    <string name="error_image_path_empty">נתיב התמונה ריק. אנא בחר תמונה.</string>
+    <string name="error_attach_limit_reached">הגעת למגבלת הקבצים המצורפים שלך.</string>
     <string name="error_load_image">טעינת התמונה נכשלה.</string>
-    <string name="error_load_journals">טעינת יומנים נכשלה.</string>
-    <string name="error_load_subscriptions">טעינת מנויים נכשלה.</string>
-    <string name="error_no_free_subscriptions">אין מנויים חינמיים זמינים.</string>
-    <string name="error_get_free_subscription">השגת המנוי החינמי נכשלה.</string>
+    <string name="error_load_subscriptions">טעינת המנויים נכשלה.</string>
+    <string name="error_no_free_subscriptions">אין מנויים חינם זמינים.</string>
+    <string name="error_get_free_subscription">קבלת המנוי החינמי נכשלה.</string>
     <string name="error_save_user_data">שמירת נתוני המשתמש נכשלה.</string>
+
     <string name="error_min_length">נדרשים לפחות %1$d תווים</string>
-    <string name="error_max_length">מותרים עד %1$d תווים לכל היותר</string>
-    <string name="error_no_gaps">אין להכניס רווחים</string>
-    <string name="error_no_special_chars">אין להשתמש בתווים מיוחדים</string>
-    <string name="error_no_capital_letters">אין להשתמש באותיות רישיות</string>
+    <string name="error_max_length">מותרים עד %1$d תווים</string>
+    <string name="error_no_gaps">אין רווחים מותרים</string>
+    <string name="error_no_special_chars">אין תווים מיוחדים מותרים</string>
+    <string name="error_no_capital_letters">אין אותיות גדולות מותרות</string>
     <string name="error_only_english_letters">מותרות רק אותיות באנגלית</string>
-    <string name="error_no_active_subscription">אין מנוי פעיל.</string>
-    <string name="no_item_found">לא נמצאו פריטים</string>
 
     <string-array name="onboarding_mottos">
-        <item>נוצר כדי לעורר השראה ברעיונות שלך</item>
+        <item>תוכנן כדי להעצים את הרעיונות שלך</item>
         <item>מצא את הניצוץ היצירתי הבא שלך</item>
-        <item>התחבר לקהילה של חדשנים</item>
-    </string-array>
-    <string-array name="home_mottos">
-        <item>שלום.</item>
-        <item>בואו נהיה יצירתיים.</item>
-    </string-array>
-    <string-array name="journal_mottos">
-        <item>אתה צריך לקרוא את זה</item>
-        <item>לפני שאתה מתחיל.</item>
+        <item>התחבר לקהילת חדשנים</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>שימו לב</item>
-        <item>עקוב אחר הכללים.</item>
+        <item>פעלו לפי הכללים.</item>
     </string-array>
 </resources>

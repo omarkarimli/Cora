@@ -1,9 +1,7 @@
 package com.omarkarimli.cora.domain.repository
 
-import com.omarkarimli.cora.domain.models.CategoryModel
 import com.omarkarimli.cora.domain.models.CreditConditions
 import com.omarkarimli.cora.domain.models.GuidelineModel
-import com.omarkarimli.cora.domain.models.JournalModel
 import com.omarkarimli.cora.domain.models.ReportIssueModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UsageDataModel
@@ -20,8 +18,6 @@ interface FirestoreRepository {
     suspend fun getSubscriptionTypes(): List<String>
     suspend fun addReportIssue(reportIssueModel: ReportIssueModel)
     suspend fun getGuidelines(): List<GuidelineModel>
-    suspend fun getJournals(): List<JournalModel>
-    suspend fun getCategories(gender: String): List<CategoryModel>
     suspend fun updateUsageData(newUsageData: UsageDataModel)
     suspend fun getCreditConditions(userModel: UserModel?): CreditConditions
     suspend fun renewSubscription(userModel: UserModel): UserModel?

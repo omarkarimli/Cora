@@ -10,7 +10,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import javax.inject.Inject
 

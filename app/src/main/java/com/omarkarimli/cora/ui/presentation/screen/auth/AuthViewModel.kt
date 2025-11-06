@@ -58,7 +58,7 @@ class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val credential = GoogleAuthProvider.getCredential(initialUserModel.idToken, null)
-                val authResult = authRepository.signInWithCredential(credential)
+                authRepository.signInWithCredential(credential)
 
                 val getUser = firestoreRepository.getUser()
 

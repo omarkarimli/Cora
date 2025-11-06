@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
+import androidx.paging.map // <--- Import the map extension for PagingData
 import com.omarkarimli.cora.domain.models.ChatHistoryItemModel
 import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
 import com.omarkarimli.cora.domain.repository.TranslateRepository
@@ -19,6 +20,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -39,7 +41,21 @@ class ChatHistoryViewModel @Inject constructor(
         searchQuery
             .debounce(300L)
             .distinctUntilChanged()
-            .flatMapLatest { query -> chatHistoryRepo.getPagination(query) }
+            .flatMapLatest { query ->
+                chatHistoryRepo.getPagination(query)
+            }
+            .map { pagingData ->
+                pagingData.map { item ->
+                    try {
+                        val translatedTitle = translateRepository.translate(item.title)
+                        item.copy(title = translatedTitle)
+                    } catch (e: Exception) {
+                        Log.e("ChatHistoryViewModel", "Error translating item title: ${e.message}")
+                        // Return the original item if translation fails
+                        item
+                    }
+                }
+            }
             .cachedIn(viewModelScope)
 
     fun resetUiState() {
@@ -60,18 +76,5 @@ class ChatHistoryViewModel @Inject constructor(
         viewModelScope.launch {
             chatHistoryRepo.deleteInstance(item.id)
         }
-    }
-
-    fun translate(text: String): String {
-        var translatedText = text
-        viewModelScope.launch {
-            try {
-                val result = translateRepository.translate(text)
-                translatedText = result
-            } catch (e: Exception) {
-                Log.e("ChatHistoryViewModel", "Error translating text: ${e.message}")
-            }
-        }
-        return translatedText
     }
 }

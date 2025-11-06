@@ -16,7 +16,6 @@ import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.ArrowUpward
 import androidx.compose.material.icons.rounded.AutoAwesome
-import androidx.compose.material.icons.rounded.Checkroom
 import androidx.compose.material.icons.rounded.Done
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -62,8 +61,7 @@ fun MyBottomBar(
     onAttach: () -> Unit,
     onRemoveAttach: (ImageModel) -> Unit,
     onLaunchCamera: () -> Unit,
-    onLaunchImagePicker: () -> Unit,
-    onPickVoux: () -> Unit
+    onLaunchImagePicker: () -> Unit
 ) {
     val sendEnable = !isLoading
             && messageModel.text.isNotBlank()
@@ -72,18 +70,12 @@ fun MyBottomBar(
     val topOptions = listOf(
         StandardListItemModel(
             id = 0,
-            title = stringResource(R.string.pick_voux),
-            leadingIcon = Icons.Rounded.Checkroom,
-            onClick = onPickVoux
-        ),
-        StandardListItemModel(
-            id = 1,
             title = stringResource(R.string.camera),
             leadingIcon = Icons.Outlined.CameraAlt,
             onClick = onLaunchCamera
         ),
         StandardListItemModel(
-            id = 2,
+            id = 1,
             title = stringResource(R.string.photos),
             leadingIcon = Icons.Outlined.Image,
             onClick = onLaunchImagePicker
@@ -92,14 +84,14 @@ fun MyBottomBar(
 
     val bottomOptions = listOf(
         StandardListItemModel(
-            id = 3,
+            id = 2,
             title = stringResource(R.string.image_generation),
             leadingIcon = Icons.Rounded.AutoAwesome,
             endingIcon = if (messageModel.imageGeneration) Icons.Rounded.Done else null,
             onClick = onToggleImageGeneration
         ),
         StandardListItemModel(
-            id = 4,
+            id = 3,
             title = stringResource(R.string.web_searches),
             leadingIcon = Icons.Outlined.Search,
             endingIcon = if (messageModel.webSearch) Icons.Rounded.Done else null,

@@ -8,13 +8,11 @@ import com.omarkarimli.cora.data.remote.SerperApiService
 import com.omarkarimli.cora.domain.models.SearchImageResponse
 import com.omarkarimli.cora.domain.models.WebpageResponse
 import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
-import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.domain.repository.SerperRepository
 
 @Singleton
 class SerperRepositoryImpl @Inject constructor(
-    private val serperApiService: SerperApiService,
-    private val firestoreRepository: FirestoreRepository
+    private val serperApiService: SerperApiService
 ) : SerperRepository {
 
     override suspend fun searchText(query: String): SearchTextResponse {

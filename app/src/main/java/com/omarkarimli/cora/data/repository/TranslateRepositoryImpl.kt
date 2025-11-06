@@ -122,7 +122,7 @@ class TranslateRepositoryImpl @Inject constructor(
                 sourceText
             } else {
                 // Only update the StateFlow if a successful, non-duplicate translation occurred
-                _translations.value = _translations.value + TranslateModel(sourceText, translatedText)
+                _translations.value += TranslateModel(sourceText, translatedText)
                 translatedText
             }
         } catch (e: Exception) {

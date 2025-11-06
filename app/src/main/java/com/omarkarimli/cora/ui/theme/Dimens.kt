@@ -17,9 +17,6 @@ object Dimens {
         surfaceContainerLight
     )
 
-    const val PAGE_ASPECT_RATIO_SMALL = 1f
-    const val PAGE_ASPECT_RATIO_MEDIUM = 0.75f
-
     // Zero
     val ZeroDp = 0.dp
 
@@ -41,7 +38,6 @@ object Dimens {
     val IconBackgroundSizeSmall = 20.dp
     val IconBackgroundSizeMedium = 40.dp
     val IconBackgroundSizeLarge = 56.dp
-    val IconBackgroundSizeExtraLarge = 80.dp
 
     // Corner Radius
     val CornerRadiusSmall = 4.dp
@@ -52,12 +48,6 @@ object Dimens {
     // Button Heights
     val ButtonHeight = 48.dp
 
-    // Dot Indicator
-    val DotIndicatorSizeSmall = 4.dp
-    val DotIndicatorSizeMedium = 8.dp
-    val DotIndicatorSizeLarge = 16.dp
-    val DotIndicatorPadding = 4.dp
-
     val LetterSpacingButton = 1.sp
 
     val ElevationSmall = 2.dp
@@ -65,9 +55,7 @@ object Dimens {
 
     // Dashed Stroke
     val StrokeWidthExtraSmall = 1.dp
-    val StrokeWidthSmall = 3.dp
     val StrokeWidthMedium = 8.dp
-    val StrokeWidthLarge = 16.dp
 
     val DashLength = 16.dp
     val GapLength = 16.dp
@@ -79,12 +67,6 @@ object Dimens {
     val LargeProfilePic = 108.dp
     val BannerHeight = 80.dp
 
-    // Corousel
-    val CarouselHeight = 160.dp
-    val WeightedCarouselHeightLarge = 256.dp
-
     // Progress indicator
     val ProgressIndicatorHeight = 6.dp
-
-    val MaxStaggeredHeight = 256.dp
 }

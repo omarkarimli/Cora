@@ -3,10 +3,8 @@ package com.omarkarimli.cora.data.repository
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.omarkarimli.cora.domain.models.CategoryModel
 import com.omarkarimli.cora.domain.models.CreditConditions
 import com.omarkarimli.cora.domain.models.GuidelineModel
-import com.omarkarimli.cora.domain.models.JournalModel
 import com.omarkarimli.cora.domain.models.ReportIssueModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UsageDataModel
@@ -16,7 +14,6 @@ import com.omarkarimli.cora.ui.theme.Durations
 import com.omarkarimli.cora.utils.Constants.MONTH_IN_MILLIS
 import com.omarkarimli.cora.utils.FirebaseConstants
 import com.omarkarimli.cora.utils.FirebaseConstants.MONTHLY
-import com.omarkarimli.cora.utils.convertDriveUrlToDirectDownload
 import com.omarkarimli.cora.utils.isEarlierThan
 import com.omarkarimli.cora.utils.toSubscriptionModelsList
 import kotlinx.coroutines.delay
@@ -38,8 +35,6 @@ class FirestoreRepositoryImpl @Inject constructor(
     private val reportsCollection = firestore.collection(FirebaseConstants.REPORT_ISSUES)
     private val subscriptionsCollection = firestore.collection(FirebaseConstants.SUBSCRIPTIONS)
     private val guidelinesCollection = firestore.collection(FirebaseConstants.GUIDELINES)
-    private val categoriesCollection = firestore.collection(FirebaseConstants.CATEGORIES)
-    private val journalsCollection = firestore.collection(FirebaseConstants.JOURNALS)
 
     override suspend fun saveUser(userModel: UserModel) {
         val firebaseUser = auth.currentUser ?: throw IllegalStateException("User not authenticated.")
@@ -49,7 +44,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             .set(userModel)
             .await()
     }
-
     override suspend fun getUser(): UserModel? {
         var result: UserModel? = null
         var retryCount = 0
@@ -77,7 +71,6 @@ class FirestoreRepositoryImpl @Inject constructor(
 
         return result
     }
-
     override suspend fun getFreeSubscriptionModels(): List<SubscriptionModel> {
         try {
             val querySnapshot = subscriptionsCollection
@@ -99,7 +92,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
     override suspend fun getSubscriptionModels(subscriptionType: String): List<SubscriptionModel> {
         try {
             val querySnapshot = subscriptionsCollection
@@ -113,7 +105,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
     override suspend fun getSubscriptionTypes(): List<String> {
         try {
             val querySnapshot = subscriptionsCollection
@@ -128,7 +119,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
     override suspend fun addReportIssue(reportIssueModel: ReportIssueModel) {
         try {
             reportsCollection
@@ -139,7 +129,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
     override suspend fun getGuidelines(): List<GuidelineModel> {
         try {
             val querySnapshot = guidelinesCollection.get().await()
@@ -149,50 +138,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
-    override suspend fun getJournals(): List<JournalModel> {
-        try {
-            val querySnapshot = journalsCollection.get().await()
-            val result = querySnapshot.toObjects(JournalModel::class.java)
-            return result.map { journalModel ->
-                journalModel.copy(
-                    images = journalModel.images.map { imageModel ->
-                        imageModel.copy(
-                            imageUrl = imageModel.imageUrl.convertDriveUrlToDirectDownload()
-                        )
-                    }
-                )
-            }
-        } catch (e: Exception) {
-            Log.e("FirestoreRepositoryImpl", "getJournals: ${e.message}")
-            throw e
-        }
-    }
-
-    override suspend fun getCategories(gender: String): List<CategoryModel> {
-        try {
-            val querySnapshot = categoriesCollection.get().await()
-            val originalList = querySnapshot.toObjects(CategoryModel::class.java)
-
-            val filteredList = originalList.map { categoryModel ->
-                val filteredImages = categoryModel.imageModels.filter { imageModel ->
-                    imageModel.gender.equals(gender, ignoreCase = true)
-                }
-                categoryModel.copy(
-                    imageModels = filteredImages.map { imageModel ->
-                        imageModel.copy(
-                            imageUrl = imageModel.imageUrl.convertDriveUrlToDirectDownload()
-                        )
-                    }
-                )
-            }
-            return filteredList
-        } catch (e: Exception) {
-            Log.e("FirestoreRepositoryImpl", "getCategories: ${e.message}")
-            throw e
-        }
-    }
-
     override suspend fun updateUsageData(newUsageData: UsageDataModel) {
         try {
             val userModel = getUser() ?: throw IllegalStateException("User not authenticated.")
@@ -206,7 +151,6 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
-
     override suspend fun getCreditConditions(userModel: UserModel?): CreditConditions {
         if (userModel == null) return CreditConditions()
 
@@ -237,7 +181,6 @@ class FirestoreRepositoryImpl @Inject constructor(
         _creditConditions.value = conditions
         return conditions
     }
-
     override suspend fun renewSubscription(userModel: UserModel): UserModel? {
         try {
             val latestSubscription = userModel.subscriptions.lastOrNull()

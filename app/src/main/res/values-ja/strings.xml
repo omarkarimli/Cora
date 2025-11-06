@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">アプリアイコン</string>
     <string name="general">一般</string>
-    <string name="support">サポート</string>
-    <string name="about">について</string>
-    <string name="help">ヘルプ</string>
     <string name="more">その他</string>
-    <string name="new_chat">新しいチャット</string>
-    <string name="chat_history">チャット履歴</string>
-
-    <string name="notification_text">インスピレーションが湧きましたか？新しいものを試しましょう。</string>
-
+    <string name="success">成功</string>
+    <string name="success_message">処理が正常に完了しました。</string>
     <string name="splash">スプラッシュ画面</string>
+    <string name="confirm">確認</string>
+    <string name="save">保存</string>
+    <string name="selected_title">選択済み</string>
+    <string name="no_item_found">アイテムが見つかりません</string>
+
+    <string name="settings">設定</string>
+    <string name="profile">プロフィール</string>
+    <string name="chat">チャット</string>
+    <string name="admin">管理者</string>
+    <string name="back_to_prev">前のページに戻る</string>
+    <string name="share">共有</string>
+    <string name="share_body">こちらをご覧ください。</string>
+    <string name="refresh_page">ページを更新</string>
+    <string name="download">ダウンロード</string>
+
     <string name="auth">認証</string>
     <string name="get_started">始める</string>
     <string name="continue_title">続行</string>
-    <string name="auth_legal_doc_agreement_prefix">続行することにより、当社の</string>
+    <string name="auth_legal_doc_agreement_prefix">続行することにより、お客様は当社の </string>
     <string name="legal_doc">法的文書</string>
     <string name="user_setup">ユーザー設定</string>
     <string name="username">ユーザー名</string>
@@ -23,183 +34,119 @@
     <string name="required">必須</string>
     <string name="optional">任意</string>
     <string name="sign_out">サインアウト</string>
-
-    <string name="datetime">日付と時刻</string>
-    <string name="success">成功</string>
-    <string name="success_message">プロセスは成功しました。</string>
-    <string name="home">ホーム</string>
-    <string name="journals">ジャーナル</string>
-    <string name="guidelines">ガイドライン</string>
-    <string name="settings">設定</string>
-    <string name="profile">プロフィール</string>
-    <string name="chat">チャット</string>
-    <string name="history">履歴</string>
-    <string name="favourites">お気に入り</string>
-    <string name="detail">詳細</string>
-    <string name="admin">管理者</string>
-    <string name="back_to_prev">前のページに戻る</string>
-    <string name="open_chat">チャットを開く</string>
-    <string name="open_history">履歴を開く</string>
-    <string name="open_favourites">お気に入りを開く</string>
-    <string name="open_subscriptions">サブスクリプションを開く</string>
-    <string name="search">検索</string>
-    <string name="clear_all">すべてクリア</string>
-    <string name="are_you_sure">よろしいですか？</string>
-    <string name="delete_item">アイテムを削除</string>
-
-    <string name="pick_voux">Voux を選択</string>
-    <string name="camera">カメラ</string>
-    <string name="attach">添付ファイル</string>
-    <string name="image_generation">画像生成</string>
-    <string name="ask_cora">Voux に質問</string>
-    <string name="send">送信</string>
-    <string name="remove_attachment">添付ファイルを削除</string>
-    <string name="image_from_web">ウェブからの画像</string>
-    <string name="image_from_device">デバイスからの画像</string>
-    <string name="paste_url">URL を貼り付け</string>
-    <string name="link_of_image">画像のリンク</string>
-    <string name="describe">説明</string>
-    <string name="found_items">見つかったアイテム</string>
-    <string name="part_attachment">パート %1$d 添付ファイル</string>
-    <string name="choose_photo_to_voux">Voux に送る写真を選択</string>
-
-    <string name="cloth_image">衣服画像 %1$d</string>
-    <string name="more_you_want">あなたが望むもの</string>
-    <string name="confirm">確認</string>
-    <string name="recommended_looks">おすすめのルック</string>
-    <string name="recommended_look_item">おすすめのルックアイテム</string>
-    <string name="analyzed_image">分析された画像</string>
-    <string name="web_searches">分析された画像</string>
-    <string name="item_analysis_parts_count">%1$d 個のパーツ</string>
-
-    <string name="discover">発見</string>
-    <string name="discover_subtitle">世界を掴む</string>
-    <string name="workflows">ワークフロー</string>
-    <string name="categories">カテゴリ</string>
-    <string name="category">カテゴリ</string>
-    <string name="category_item_count">%1$d アイテム</string>
-    <string name="category_detail_item_image">カテゴリ詳細アイテム画像 %1$d</string>
-    <string name="outfits">服装</string>
-    <string name="content_image_desc">コンテンツ画像</string>
-    <string name="add_bookmark">ブックマークに追加</string>
-    <string name="remove_bookmark">ブックマークから削除</string>
-    <string name="share">共有</string>
-    <string name="share_body">これを見てください。</string>
-    <string name="read_more">もっと読む</string>
-    <string name="show_less">少なく表示</string>
-    <string name="refresh_page">ページを更新</string>
-    <string name="link_to_source">情報源へのリンク</string>
-    <string name="download">ダウンロード</string>
-    <string name="full_screen_image_viewer">全画面画像ビューア</string>
-    <string name="background">背景</string>
-    <string name="enlarged_image">拡大画像 %1$d</string>
+    <string name="account">アカウント</string>
     <string name="gender">性別</string>
     <string name="gender_male">男性</string>
     <string name="gender_female">女性</string>
-    <string name="gender_unisex">ユニセックス</string>
+
+    <string name="new_chat">新しいチャット</string>
+    <string name="chat_history">チャット履歴</string>
+    <string name="open_history">履歴を開く</string>
+    <string name="ask_cora">Coraに質問</string>
+    <string name="send">送信</string>
+    <string name="search">検索</string>
+    <string name="clear_all">すべてクリア</string>
+    <string name="are_you_sure">これを実行してもよろしいですか？</string>
+    <string name="delete_item">アイテムを削除</string>
+
+    <string name="camera">カメラ</string>
+    <string name="attach">添付</string>
+    <string name="remove_attachment">添付ファイルを削除</string>
+    <string name="image_generation">画像生成</string>
+    <string name="image_from_web">ウェブからの画像</string>
+    <string name="image_from_device">デバイスからの画像</string>
+    <string name="describe">説明</string>
+    <string name="full_screen_image_viewer">フルスクリーン画像ビューア</string>
+    <string name="background">背景</string>
+    <string name="enlarged_image">拡大画像 %1$d</string>
+    <string name="saving_path">保存パス</string>
+    <string name="desc_saving_path">Vouxesは選択されたパスに保存されます。</string>
+    <string name="photos">写真</string>
+    <string name="downloads">ダウンロード</string>
 
     <string name="subscriptions">サブスクリプション</string>
+    <string name="desc_subscriptions">サブスクリプションのステータスを確認します。</string>
     <string name="subscription_history">サブスクリプション履歴</string>
     <string name="upgrade">アップグレード</string>
     <string name="current_plan">現在のプラン</string>
     <string name="select_plan">プランを選択</string>
     <string name="free">無料</string>
     <string name="not_available">利用できません。</string>
-    <string name="no_vouxes_left">Voux が残っていません。</string>
     <string name="ads_enabled">広告が有効</string>
-    <string name="subscription_feature_vouxes">%1$d Voux</string>
+    <string name="subscription_feature_vouxes">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d 添付ファイル</string>
-    <string name="subscription_feature_message_chars">%1$d メッセージ文字</string>
+    <string name="subscription_feature_message_chars">%1$d メッセージ文字数</string>
     <string name="subscription_feature_web_images">%1$d ウェブ画像</string>
-    <string name="usage">使用状況</string>
+    <string name="usage">利用状況</string>
+    <string name="desc_usage">利用状況を確認します。</string>
     <string name="attaches">添付ファイル</string>
     <string name="usage_item_attaches_desc">チャットでの添付ファイル</string>
-    <string name="usage_item_message_chars_title">メッセージ文字</string>
-    <string name="usage_item_message_chars_desc">チャット応答の文字数</string>
+    <string name="usage_item_message_chars_title">メッセージ文字数</string>
+    <string name="usage_item_message_chars_desc">チャットでの返信の文字数</string>
+    <string name="web_searches">ウェブ検索</string>
+    <string name="desc_web_searches">ウェブでの合計検索回数</string>
 
-    <string name="save">保存</string>
-    <string name="choose_one">一つ選択</string>
-    <string name="lets_go">行きましょう</string>
-    <string name="start_animation">アニメーションを開始</string>
-    <string name="stop_animation">アニメーションを停止</string>
-    <string name="default_option_title">オプション</string>
-    <string name="collapse">折りたたむ</string>
-    <string name="expand">展開</string>
     <string name="dark_mode">ダークモード</string>
+    <string name="desc_dark_mode">アプリの外観を変更します。</string>
     <string name="system">システム</string>
     <string name="light">ライト</string>
     <string name="dark">ダーク</string>
     <string name="dynamic_color">ダイナミックカラー</string>
+    <string name="desc_dynamic_color">アプリの色をダイナミックにします。</string>
     <string name="on">オン</string>
     <string name="off">オフ</string>
     <string name="notifications">通知</string>
-    <string name="selected_title">選択済み</string>
-    <string name="saving_path">保存先パス</string>
-    <string name="photos">写真</string>
-    <string name="downloads">ダウンロード</string>
+    <string name="desc_notifications">アラートとサウンドを管理します。</string>
     <string name="languages">言語</string>
-    <string name="report_issue">問題を報告</string>
-    <string name="reset_settings">設定をリセット</string>
-    <string name="enable_selecting">選択を有効にする</string>
-    <string name="disable_selecting">選択を無効にする</string>
-
-    <string name="desc_subscriptions">サブスクリプションのステータスを確認します。</string>
-    <string name="desc_favourites">すべてのお気に入りを表示します。</string>
-    <string name="desc_history">すべての履歴を表示します。</string>
-    <string name="desc_saving_path">Vouxe は選択したパスに保存されます。</string>
-    <string name="desc_notifications">通知とサウンドを管理します。</string>
     <string name="desc_lang">アプリの言語を変更します。</string>
-    <string name="desc_dark_mode">アプリの外観を変更します。</string>
-    <string name="desc_dynamic_color">アプリのカラーをダイナミックにします。</string>
+    <string name="live_translation">ライブ翻訳</string>
+    <string name="desc_live_translation">生成されたコンテンツのライブ翻訳。</string>
+
+    <string name="support">サポート</string>
+    <string name="help">ヘルプ</string>
+    <string name="guidelines">ガイドライン</string>
+    <string name="desc_guidelines">ガイドラインを表示して従います。</string>
+    <string name="report_issue">問題を報告</string>
     <string name="desc_report_issue">バグ報告または機能リクエストを送信します。</string>
-    <string name="desc_reset_settings">すべての設定をデフォルト値にリセットします。</string>
+    <string name="reset_settings">設定をリセット</string>
+    <string name="desc_reset_settings">すべての設定をデフォルト値に戻します。</string>
+    <string name="about">について</string>
     <string name="desc_about">アプリに関する情報を表示します。</string>
-    <string name="about_main_text">あなたのアイデアを刺激するために作成されました。あなたの情熱が私たちの目標です。私たちがあなたのために作成したものを心から気に入っていただけることを願っています。</string>
-    <string name="account">アカウント</string>
+    <string name="about_main_text">あなたのアイデアを強力に推進するために設計されました。あなたの情熱が私たちの目指すものです。私たちがあなたのために作成したものをお楽しみいただければ幸いです。</string>
+    <string name="link_to_source">ソースへのリンク</string>
 
-    <string name="error_storage_permission_denied">写真を選択するには、ストレージのアクセス許可が必要です。</string>
-    <string name="error_camera_permission_denied">写真を撮るには、カメラのアクセス許可が必要です。</string>
-    <string name="error_failed_persistent_access">画像への永続的なアクセスに失敗しました。</string>
+    <string name="notification_text">ひらめきを感じましたか？新しいものを試してみてください。</string>
 
+    <string name="error_storage_permission_denied">写真を選択するにはストレージの許可が必要です。</string>
+    <string name="error_camera_permission_denied">写真を撮るにはカメラの許可が必要です。</string>
+    <string name="error_failed_persistent_access">画像への永続的なアクセスを取得できませんでした。</string>
+    <string name="error_no_active_subscription">アクティブなサブスクリプションがありません。</string>
     <string name="error_google_sign_in_failed">Google サインインに失敗しました。もう一度お試しください。</string>
     <string name="error_sign_out">サインアウトに失敗しました。</string>
-    <string name="error_fill_required_fields">すべての必須フィールドに入力してください。</string>
-    <string name="error_something_went_wrong">何かがうまくいきませんでした。もう一度お試しください。</string>
+    <string name="error_something_went_wrong">問題が発生しました。もう一度お試しください。</string>
+    <string name="error_empty_chat">チャットが空です。</string>
     <string name="error_create_file">写真を保存するためのファイルを作成できませんでした。</string>
     <string name="error_take_photo">写真の撮影に失敗しました。</string>
-    <string name="error_url_processing">URL 処理に失敗しました。URL を確認して再試行してください。</string>
-    <string name="error_image_analysis">画像分析に失敗しました。別の画像を試すか、接続を確認してください。</string>
     <string name="error_image_already_added">画像はすでに追加されています。</string>
     <string name="error_max_images_reached">追加できる画像は 3 枚までです。</string>
-    <string name="error_attach_limit_reached">添付ファイルの上限に達しました。</string>
-    <string name="error_image_path_empty">画像パスが空です。画像を選択してください。</string>
+    <string name="error_attach_limit_reached">添付ファイルの制限に達しました。</string>
     <string name="error_load_image">画像の読み込みに失敗しました。</string>
-    <string name="error_load_journals">ジャーナルの読み込みに失敗しました。</string>
     <string name="error_load_subscriptions">サブスクリプションの読み込みに失敗しました。</string>
-    <string name="error_no_free_subscriptions">利用可能な無料サブスクリプションはありません。</string>
-    <string name="error_get_free_subscription">無料サブスクリプションの取得に失敗しました。</string>
+    <string name="error_no_free_subscriptions">無料のサブスクリプションはありません。</string>
+    <string name="error_get_free_subscription">無料のサブスクリプションの取得に失敗しました。</string>
     <string name="error_save_user_data">ユーザーデータの保存に失敗しました。</string>
-    <string name="error_min_length">最低 %1$d 文字が必要です</string>
-    <string name="error_max_length">最大 %1$d 文字まで入力できます</string>
-    <string name="error_no_gaps">空白は許可されていません</string>
-    <string name="error_no_special_chars">特殊文字は使用できません</string>
-    <string name="error_no_capital_letters">大文字は使用できません</string>
-    <string name="error_only_english_letters">英字のみ使用できます</string>
-    <string name="error_no_active_subscription">有効な定期購入がありません。</string>
-    <string name="no_item_found">アイテムが見つかりません</string>
+
+    <string name="error_min_length">少なくとも %1$d 文字が必要です</string>
+    <string name="error_max_length">最大 %1$d 文字まで許可されています</string>
+    <string name="error_no_gaps">スペースは許可されていません</string>
+    <string name="error_no_special_chars">特殊文字は許可されていません</string>
+    <string name="error_no_capital_letters">大文字は許可されていません</string>
+    <string name="error_only_english_letters">英字のみ許可されています</string>
 
     <string-array name="onboarding_mottos">
-        <item>あなたのアイデアを刺激するために作成</item>
-        <item>次なるクリエイティブのひらめきを見つける</item>
-        <item>イノベーターのコミュニティとつながる</item>
-    </string-array>
-    <string-array name="home_mottos">
-        <item>こんにちは。</item>
-        <item>クリエイティブになりましょう。</item>
-    </string-array>
-    <string-array name="journal_mottos">
-        <item>これを読むべきです</item>
-        <item>始める前に。</item>
+        <item>あなたのアイデアを強力に推進するために設計されました</item>
+        <item>次のクリエイティブなひらめきを見つけましょう</item>
+        <item>イノベーターのコミュニティとつながりましょう</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>注意</item>

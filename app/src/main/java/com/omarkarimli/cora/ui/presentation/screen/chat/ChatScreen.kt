@@ -321,8 +321,7 @@ fun ChatScreen(
                 onAttach = { onAttach() },
                 onRemoveAttach = { images.remove(it) },
                 onLaunchCamera = { onLaunchCamera() },
-                onLaunchImagePicker = { onLaunchImagePicker() },
-                onPickVoux = { showSheet(SheetContent.Parts) }
+                onLaunchImagePicker = { onLaunchImagePicker() }
             )
         }
     ) { innerPadding ->

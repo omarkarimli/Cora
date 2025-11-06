@@ -17,7 +17,5 @@ object FirebaseConstants {
     const val ADS_ENABLED = "adsEnabled"
     const val PURCHASED_TIME = "purchasedTime"
     const val GUIDELINES = "guidelines"
-    const val CATEGORIES = "categories"
-    const val JOURNALS = "journals"
     const val REPORT_ISSUES = "reportIssues"
 }

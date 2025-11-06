@@ -102,27 +102,24 @@ fun ChatHistoryScreen() {
         when (val currentState = uiState) {
             UiState.Loading -> { /* Handle loading if needed */ }
             is UiState.Success -> {
-                val successState = currentState
-                if (successState.canToast) {
-                    context.showToast(successState.message)
+                if (currentState.canToast) {
+                    context.showToast(currentState.message)
                 }
-                successState.route?.let {
+                currentState.route?.let {
                     navController.navigate(it) {
                         popUpTo(currentScreen) { inclusive = true }
                     }
                 }
-                Log.d(currentScreen, "Success: ${successState.message}")
+                Log.d(currentScreen, "Success: ${currentState.message}")
                 viewModel.resetUiState()
             }
             is UiState.Error -> {
-                val errorState = currentState
-                val log = errorState.log
-                val toastResId = errorState.toastResId
-                context.showToast(context.getString(toastResId)) // Updated to use getString()
+                val log = currentState.log
+                val toastResId = currentState.toastResId
+                context.showToast(context.getString(toastResId))
                 Log.e(currentScreen, log)
                 viewModel.resetUiState()
             }
-
             is UiState.ActionRequired -> {}
             UiState.Idle -> { /* Hide any loading indicators */ }
         }

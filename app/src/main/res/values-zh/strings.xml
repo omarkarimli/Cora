@@ -1,208 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">应用图标</string>
-    <string name="general">通用</string>
-    <string name="support">支持</string>
-    <string name="about">关于</string>
-    <string name="help">帮助</string>
+    <string name="general">一般</string>
     <string name="more">更多</string>
-    <string name="new_chat">新建聊天</string>
-    <string name="chat_history">聊天记录</string>
-
-    <string name="notification_text">有了灵感？试试新的。</string>
-
-    <string name="splash">启动屏幕</string>
-    <string name="auth">身份验证</string>
-    <string name="get_started">开始</string>
-    <string name="continue_title">继续</string>
-    <string name="auth_legal_doc_agreement_prefix">即表示您同意我们的</string>
-    <string name="legal_doc">法律文件</string>
-    <string name="user_setup">用户设置</string>
-    <string name="username">用户名</string>
-    <string name="bio">个人简介</string>
-    <string name="required">必填</string>
-    <string name="optional">可选</string>
-    <string name="sign_out">退出登录</string>
-
-    <string name="datetime">日期和时间</string>
     <string name="success">成功</string>
     <string name="success_message">流程已成功完成。</string>
-    <string name="home">主页</string>
-    <string name="journals">日记</string>
-    <string name="guidelines">指南</string>
+    <string name="splash">启动屏幕</string>
+    <string name="confirm">确认</string>
+    <string name="save">保存</string>
+    <string name="selected_title">已选择</string>
+    <string name="no_item_found">未找到任何项目</string>
+
     <string name="settings">设置</string>
     <string name="profile">个人资料</string>
     <string name="chat">聊天</string>
-    <string name="history">历史记录</string>
-    <string name="favourites">收藏夹</string>
-    <string name="detail">详情</string>
     <string name="admin">管理员</string>
     <string name="back_to_prev">返回上一页</string>
-    <string name="open_chat">打开聊天</string>
-    <string name="open_history">打开历史记录</string>
-    <string name="open_favourites">打开收藏夹</string>
-    <string name="open_subscriptions">打开订阅</string>
-    <string name="search">搜索</string>
-    <string name="clear_all">全部清除</string>
-    <string name="are_you_sure">您确定吗？</string>
-    <string name="delete_item">删除项目</string>
-
-    <string name="pick_voux">选择 Voux</string>
-    <string name="camera">相机</string>
-    <string name="attach">附件</string>
-    <string name="image_generation">图片生成</string>
-    <string name="ask_cora">询问 Voux</string>
-    <string name="send">发送</string>
-    <string name="remove_attachment">移除附件</string>
-    <string name="image_from_web">来自网络的图片</string>
-    <string name="image_from_device">来自设备的图片</string>
-    <string name="paste_url">粘贴 URL</string>
-    <string name="link_of_image">图片链接</string>
-    <string name="describe">描述</string>
-    <string name="found_items">找到的项目</string>
-    <string name="part_attachment">第 %1$d 部分附件</string>
-    <string name="choose_photo_to_voux">为 Voux 选择一张照片</string>
-
-    <string name="cloth_image">服装图片 %1$d</string>
-    <string name="more_you_want">您想要的更多</string>
-    <string name="confirm">确认</string>
-    <string name="recommended_looks">推荐穿搭</string>
-    <string name="recommended_look_item">推荐穿搭项目</string>
-    <string name="analyzed_image">已分析的图片</string>
-    <string name="web_searches">已分析的图片</string>
-    <string name="item_analysis_parts_count">%1$d 个部件</string>
-
-    <string name="discover">发现</string>
-    <string name="discover_subtitle">拥抱世界</string>
-    <string name="workflows">工作流程</string>
-    <string name="categories">类别</string>
-    <string name="category">类别</string>
-    <string name="category_item_count">%1$d 个项目</string>
-    <string name="category_detail_item_image">类别详情项目图片 %1$d</string>
-    <string name="outfits">穿搭</string>
-    <string name="content_image_desc">内容图片</string>
-    <string name="add_bookmark">添加到书签</string>
-    <string name="remove_bookmark">从书签中移除</string>
     <string name="share">分享</string>
     <string name="share_body">看看这个。</string>
-    <string name="read_more">阅读更多</string>
-    <string name="show_less">显示更少</string>
     <string name="refresh_page">刷新页面</string>
-    <string name="link_to_source">来源链接</string>
     <string name="download">下载</string>
+
+    <string name="auth">认证</string>
+    <string name="get_started">开始使用</string>
+    <string name="continue_title">继续</string>
+    <string name="auth_legal_doc_agreement_prefix">继续即表示您同意我们的 </string>
+    <string name="legal_doc">法律文件</string>
+    <string name="user_setup">用户设置</string>
+    <string name="username">用户名</string>
+    <string name="bio">简介</string>
+    <string name="required">必填</string>
+    <string name="optional">可选</string>
+    <string name="sign_out">退出登录</string>
+    <string name="account">账户</string>
+    <string name="gender">性别</string>
+    <string name="gender_male">男</string>
+    <string name="gender_female">女</string>
+
+    <string name="new_chat">新聊天</string>
+    <string name="chat_history">聊天记录</string>
+    <string name="open_history">打开记录</string>
+    <string name="ask_cora">询问 Cora</string>
+    <string name="send">发送</string>
+    <string name="search">搜索</string>
+    <string name="clear_all">全部清除</string>
+    <string name="are_you_sure">您确定要执行此操作吗？</string>
+    <string name="delete_item">删除项目</string>
+
+    <string name="camera">相机</string>
+    <string name="attach">附加</string>
+    <string name="remove_attachment">移除附件</string>
+    <string name="image_generation">图像生成</string>
+    <string name="image_from_web">来自网络的图片</string>
+    <string name="image_from_device">来自设备的图片</string>
+    <string name="describe">描述</string>
     <string name="full_screen_image_viewer">全屏图片查看器</string>
     <string name="background">背景</string>
     <string name="enlarged_image">放大图片 %1$d</string>
-    <string name="gender">性别</string>
-    <string name="gender_male">男性</string>
-    <string name="gender_female">女性</string>
-    <string name="gender_unisex">中性</string>
+    <string name="saving_path">保存路径</string>
+    <string name="desc_saving_path">Vouxes 将保存在选定的路径中。</string>
+    <string name="photos">照片</string>
+    <string name="downloads">下载</string>
 
     <string name="subscriptions">订阅</string>
+    <string name="desc_subscriptions">检查您的订阅状态。</string>
     <string name="subscription_history">订阅历史记录</string>
     <string name="upgrade">升级</string>
     <string name="current_plan">当前计划</string>
     <string name="select_plan">选择计划</string>
     <string name="free">免费</string>
     <string name="not_available">不可用。</string>
-    <string name="no_vouxes_left">没有剩余的 Vouxe。</string>
     <string name="ads_enabled">广告已启用</string>
-    <string name="subscription_feature_vouxes">%1$d 个 Vouxe</string>
-    <string name="subscription_feature_attaches">%1$d 个附件</string>
-    <string name="subscription_feature_message_chars">%1$d 个消息字符</string>
-    <string name="subscription_feature_web_images">%1$d 个网络图片</string>
+    <string name="subscription_feature_vouxes">%1$d vouxes</string>
+    <string name="subscription_feature_attaches">%1$d 附件</string>
+    <string name="subscription_feature_message_chars">%1$d 消息字符</string>
+    <string name="subscription_feature_web_images">%1$d 网络图片</string>
     <string name="usage">使用情况</string>
+    <string name="desc_usage">检查您的使用情况。</string>
     <string name="attaches">附件</string>
     <string name="usage_item_attaches_desc">聊天中的附件</string>
     <string name="usage_item_message_chars_title">消息字符</string>
-    <string name="usage_item_message_chars_desc">聊天回复中的字符</string>
+    <string name="usage_item_message_chars_desc">聊天回复中的字符数</string>
+    <string name="web_searches">网络搜索</string>
+    <string name="desc_web_searches">网络搜索总次数</string>
 
-    <string name="save">保存</string>
-    <string name="choose_one">选择一个</string>
-    <string name="lets_go">我们走吧</string>
-    <string name="start_animation">开始动画</string>
-    <string name="stop_animation">停止动画</string>
-    <string name="default_option_title">选项</string>
-    <string name="collapse">折叠</string>
-    <string name="expand">展开</string>
     <string name="dark_mode">深色模式</string>
+    <string name="desc_dark_mode">更改应用的外观。</string>
     <string name="system">系统</string>
     <string name="light">浅色</string>
     <string name="dark">深色</string>
     <string name="dynamic_color">动态颜色</string>
+    <string name="desc_dynamic_color">使应用颜色具有动态性。</string>
     <string name="on">开启</string>
     <string name="off">关闭</string>
     <string name="notifications">通知</string>
-    <string name="selected_title">已选择</string>
-    <string name="saving_path">保存路径</string>
-    <string name="photos">照片</string>
-    <string name="downloads">下载</string>
+    <string name="desc_notifications">管理您的提醒和声音。</string>
     <string name="languages">语言</string>
-    <string name="report_issue">报告问题</string>
-    <string name="reset_settings">重置设置</string>
-    <string name="enable_selecting">启用选择</string>
-    <string name="disable_selecting">禁用选择</string>
+    <string name="desc_lang">更改应用的语言。</string>
+    <string name="live_translation">实时翻译</string>
+    <string name="desc_live_translation">生成内容的实时翻译。</string>
 
-    <string name="desc_subscriptions">检查您的订阅状态。</string>
-    <string name="desc_favourites">查看您的所有收藏夹。</string>
-    <string name="desc_history">查看您的所有历史记录。</string>
-    <string name="desc_saving_path">Vouxe 将保存到所选路径。</string>
-    <string name="desc_notifications">管理通知和声音。</string>
-    <string name="desc_lang">更改应用程序语言。</string>
-    <string name="desc_dark_mode">更改应用程序外观。</string>
-    <string name="desc_dynamic_color">使应用程序颜色动态化。</string>
-    <string name="desc_report_issue">发送错误报告或功能请求。</string>
-    <string name="desc_reset_settings">将所有设置重置为默认值。</string>
-    <string name="desc_about">查看有关应用程序的信息。</string>
-    <string name="about_main_text">旨在激发您的想法。您的热情是我们的目标。我们真诚地希望您喜欢我们为您创造的一切。</string>
-    <string name="account">帐户</string>
+    <string name="support">支持</string>
+    <string name="help">帮助</string>
+    <string name="guidelines">指南</string>
+    <string name="desc_guidelines">查看并遵循指南。</string>
+    <string name="report_issue">报告问题</string>
+    <string name="desc_report_issue">提交错误报告或功能请求。</string>
+    <string name="reset_settings">重置设置</string>
+    <string name="desc_reset_settings">将所有设置恢复为默认值。</string>
+    <string name="about">关于</string>
+    <string name="desc_about">查看应用信息。</string>
+    <string name="about_main_text">旨在增强您的创意。您的热情是我们的宗旨。我们真诚地希望您喜欢我们为您创造的一切。</string>
+    <string name="link_to_source">源代码链接</string>
+
+    <string name="notification_text">感到灵感了吗？尝试一些新的东西。</string>
 
     <string name="error_storage_permission_denied">选择照片需要存储权限。</string>
     <string name="error_camera_permission_denied">拍照需要相机权限。</string>
-    <string name="error_failed_persistent_access">持续访问图片失败。</string>
-
-    <string name="error_google_sign_in_failed">Google 登录失败。请再试一次。</string>
+    <string name="error_failed_persistent_access">无法获取图片的持久访问权限。</string>
+    <string name="error_no_active_subscription">没有有效的订阅。</string>
+    <string name="error_google_sign_in_failed">Google 登录失败。请重试。</string>
     <string name="error_sign_out">退出登录失败。</string>
-    <string name="error_fill_required_fields">请填写所有必填字段。</string>
-    <string name="error_something_went_wrong">出了些问题。请再试一次。</string>
+    <string name="error_something_went_wrong">发生了一些错误。请重试。</string>
+    <string name="error_empty_chat">聊天内容为空。</string>
     <string name="error_create_file">无法创建文件来保存照片。</string>
     <string name="error_take_photo">拍照失败。</string>
-    <string name="error_url_processing">URL 处理失败。请检查 URL 并重试。</string>
-    <string name="error_image_analysis">图片分析失败。请尝试其他图片或检查您的连接。</string>
     <string name="error_image_already_added">图片已添加。</string>
     <string name="error_max_images_reached">您最多只能添加 3 张图片。</string>
     <string name="error_attach_limit_reached">您已达到附件限制。</string>
-    <string name="error_image_path_empty">图片路径为空。请选择一张图片。</string>
     <string name="error_load_image">加载图片失败。</string>
-    <string name="error_load_journals">加载日记失败。</string>
     <string name="error_load_subscriptions">加载订阅失败。</string>
     <string name="error_no_free_subscriptions">没有可用的免费订阅。</string>
     <string name="error_get_free_subscription">获取免费订阅失败。</string>
     <string name="error_save_user_data">保存用户数据失败。</string>
-    <string name="error_min_length">最少需要 %1$d 个字符</string>
+
+    <string name="error_min_length">至少需要 %1$d 个字符</string>
     <string name="error_max_length">最多允许 %1$d 个字符</string>
-    <string name="error_no_gaps">不允许使用空格</string>
-    <string name="error_no_special_chars">不允许使用特殊字符</string>
-    <string name="error_no_capital_letters">不允许使用大写字母</string>
-    <string name="error_only_english_letters">只允许使用英文字母</string>
-    <string name="error_no_active_subscription">没有有效的订阅。</string>
-    <string name="no_item_found">未找到项目</string>
+    <string name="error_no_gaps">不允许空格</string>
+    <string name="error_no_special_chars">不允许特殊字符</string>
+    <string name="error_no_capital_letters">不允许大写字母</string>
+    <string name="error_only_english_letters">只允许英文字母</string>
 
     <string-array name="onboarding_mottos">
-        <item>旨在激发您的想法</item>
+        <item>旨在增强您的创意</item>
         <item>找到您的下一个创意火花</item>
-        <item>与创新者社区建立联系</item>
-    </string-array>
-    <string-array name="home_mottos">
-        <item>您好。</item>
-        <item>让我们发挥创意。</item>
-    </string-array>
-    <string-array name="journal_mottos">
-        <item>您应该阅读此内容</item>
-        <item>在您开始之前。</item>
+        <item>与创新者社区联系</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>注意</item>
-        <item>遵守规则。</item>
+        <item>请遵守规则。</item>
     </string-array>
 </resources>

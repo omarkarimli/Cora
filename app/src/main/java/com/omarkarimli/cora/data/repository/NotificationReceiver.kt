@@ -9,6 +9,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.repository.NotificationRepository
+import com.omarkarimli.cora.utils.capitalize
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -17,6 +18,12 @@ class NotificationReceiver : BroadcastReceiver() {
 
     @Inject
     lateinit var notificationRepo: NotificationRepository
+
+    @Inject
+    lateinit var context: Context
+
+    val appName: String = context.applicationInfo.name
+    val ACTION_SHOW_NOTIFICATION = "${context.packageName}.notification.SHOW_NOTIFICATION"
 
     override fun onReceive(context: Context, intent: Intent) {
         when (intent.action) {
@@ -34,23 +41,19 @@ class NotificationReceiver : BroadcastReceiver() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
-                "voux_channel",
-                "Voux Notifications",
+                "${appName}_channel",
+                "${appName.capitalize()} Notifications",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
             notificationManager.createNotificationChannel(channel)
         }
 
-        val notification = NotificationCompat.Builder(context, "voux_channel")
-            .setContentTitle("Voux")
+        val notification = NotificationCompat.Builder(context, "${appName}_channel")
+            .setContentTitle(appName.capitalize())
             .setContentText(context.getString(R.string.notification_text))
             .setSmallIcon(R.drawable.app_icon_with_bg)
             .build()
 
         notificationManager.notify(1, notification)
-    }
-
-    companion object {
-        const val ACTION_SHOW_NOTIFICATION = "com.vouxglobal.voux.notification.SHOW_NOTIFICATION"
     }
 }

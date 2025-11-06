@@ -19,15 +19,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
-import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.dropShadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.drawOutline
-import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.shadow.Shadow
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
@@ -37,7 +32,6 @@ import androidx.core.net.toUri
 import com.google.firebase.firestore.DocumentSnapshot
 import com.omarkarimli.cora.BuildConfig.EMAIL
 import com.omarkarimli.cora.R
-import com.omarkarimli.cora.domain.models.ClothModel
 import com.omarkarimli.cora.domain.models.GuidelineModel
 import com.omarkarimli.cora.domain.models.ImageModel
 import com.omarkarimli.cora.domain.models.SearchImageResponse
@@ -245,27 +239,6 @@ fun Modifier.noRippleClickable(
     )
 }
 
-fun Modifier.dashedBorder(
-    brush: Brush,
-) = this.drawWithContent {
-    val outline = RoundedCornerShape(Dimens.CornerRadiusLarge)
-        .createOutline(size, layoutDirection, density = this)
-    val dashedStroke = Stroke(
-        cap = StrokeCap.Round,
-        width = Dimens.StrokeWidthMedium.value,
-        pathEffect = PathEffect.dashPathEffect(
-            intervals = floatArrayOf(Dimens.DashLength.value, Dimens.GapLength.value)
-        )
-    )
-
-    drawContent()
-    drawOutline(
-        outline = outline,
-        brush = brush,
-        style = dashedStroke,
-    )
-}
-
 fun Context.showToast(message: String) {
     if (message.trim().isNotBlank()) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
@@ -301,10 +274,6 @@ fun String.convertDriveUrlToDirectDownload(): String {
     } else {
         this
     }
-}
-
-fun ClothModel.toTitle(): String {
-    return "${this.material} ${this.type}".capitalize()
 }
 
 fun Double.formatPrice(): String {
