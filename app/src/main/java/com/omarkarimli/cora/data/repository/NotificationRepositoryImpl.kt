@@ -39,7 +39,7 @@ class NotificationRepositoryImpl @Inject constructor(
     override fun scheduleNotification(hour: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, NotificationReceiver::class.java).apply {
-            action = NotificationReceiver.ACTION_SHOW_NOTIFICATION
+            action = NotificationReceiver.actionShowNotification
         }
 
         val pendingIntent = PendingIntent.getBroadcast(

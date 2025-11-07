@@ -60,7 +60,7 @@ fun MyTopAppBar(
                 ),
                 StandardListItemModel(
                     id = 1,
-                    title = stringResource(R.string.history),
+                    title = stringResource(R.string.chat_history),
                     leadingIcon = Icons.Outlined.History,
                     onClick = { navController.navigate(Screen.ChatHistory.route) }
                 ),

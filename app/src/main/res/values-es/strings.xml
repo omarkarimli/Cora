@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">Icono de la aplicación</string>
     <string name="general">General</string>
     <string name="more">Más</string>

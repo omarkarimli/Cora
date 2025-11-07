@@ -57,9 +57,6 @@ object Dimens {
     val StrokeWidthExtraSmall = 1.dp
     val StrokeWidthMedium = 8.dp
 
-    val DashLength = 16.dp
-    val GapLength = 16.dp
-
     // Bubble
     val MaxBubbleWidth = 256.dp
 

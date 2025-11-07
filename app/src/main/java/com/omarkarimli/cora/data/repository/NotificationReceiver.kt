@@ -19,24 +19,23 @@ class NotificationReceiver : BroadcastReceiver() {
     @Inject
     lateinit var notificationRepo: NotificationRepository
 
-    @Inject
-    lateinit var context: Context
-
-    val appName: String = context.applicationInfo.name
-    val ACTION_SHOW_NOTIFICATION = "${context.packageName}.notification.SHOW_NOTIFICATION"
+    companion object {
+        const val actionShowNotification = "com.omarkarimli.cora.SHOW_NOTIFICATION"
+    }
 
     override fun onReceive(context: Context, intent: Intent) {
         when (intent.action) {
             Intent.ACTION_BOOT_COMPLETED -> {
                 notificationRepo.scheduleDailyNotifications()
             }
-            ACTION_SHOW_NOTIFICATION -> {
+            actionShowNotification -> {
                 showNotification(context)
             }
         }
     }
 
     private fun showNotification(context: Context) {
+        val appName: String = context.applicationInfo.loadLabel(context.packageManager).toString()
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

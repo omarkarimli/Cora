@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">Tətbiq nişanı</string>
     <string name="general">Ümumi</string>
     <string name="more">Daha çox</string>

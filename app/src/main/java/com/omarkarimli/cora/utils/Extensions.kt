@@ -267,15 +267,6 @@ fun Long.toDateTimeString(): String {
     return dateFormat.format(this)
 }
 
-fun String.convertDriveUrlToDirectDownload(): String {
-    return if (this.contains("drive.google.com/file/d/")) {
-        val fileId = this.split("/file/d/").getOrNull(1)?.split("/")?.getOrNull(0)
-        if (fileId != null) "https://drive.google.com/uc?export=download&id=$fileId" else this
-    } else {
-        this
-    }
-}
-
 fun Double.formatPrice(): String {
     val formatter = NumberFormat.getCurrencyInstance(Locale.getDefault()).apply {
         maximumFractionDigits = 2

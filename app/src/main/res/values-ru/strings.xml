@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">Значок приложения</string>
     <string name="general">Общие</string>
     <string name="more">Подробнее</string>

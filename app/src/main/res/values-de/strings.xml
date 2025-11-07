@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">App-Icon</string>
     <string name="general">Allgemein</string>
     <string name="more">Mehr</string>
@@ -24,7 +23,7 @@
     <string name="download">Herunterladen</string>
 
     <string name="auth">Authentifizierung</string>
-    <string name="get_started">Los geht's</string>
+    <string name="get_started">Los geht\'s</string>
     <string name="continue_title">Weiter</string>
     <string name="auth_legal_doc_agreement_prefix">Indem Sie fortfahren, stimmen Sie unseren </string>
     <string name="legal_doc">Rechtlichen Dokumenten</string>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name" translatable="false">Cora</string>
     <string name="app_icon">앱 아이콘</string>
     <string name="general">일반</string>
     <string name="more">더 보기</string>
