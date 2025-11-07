@@ -39,14 +39,13 @@ class AuthViewModel @Inject constructor(
         _uiState.value = UiState.Idle
     }
 
-    // Updated setError to take @StringRes Int for toastResId
     fun setError(@StringRes toastResId: Int, log: String) {
         _uiState.value = UiState.Error(toastResId = toastResId, log = log)
     }
 
     fun getGoogleSignInIntent(context: Context): Intent {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(context.getString(R.string.default_web_client_id)) // Assumes default_web_client_id is in strings.xml
+            .requestIdToken(context.getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         val googleSignInClient = GoogleSignIn.getClient(context, gso)
@@ -80,7 +79,6 @@ class AuthViewModel @Inject constructor(
                     )
                 }
             } catch (e: Exception) {
-                // Updated to use the new setError with a StringRes
                 setError(toastResId = R.string.error_google_sign_in_failed, log = e.message ?: "Google Sign-In failed")
             }
         }

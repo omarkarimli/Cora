@@ -65,7 +65,7 @@ fun UserSetupScreen(userModel: UserModel) {
     val navController = LocalNavController.current
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
-    val subscriptions by viewModel.subscriptions.collectAsState()
+    val freeSubscriptions by viewModel.freeSubscriptions.collectAsState()
 
     var usernameInput by remember { mutableStateOf(
         ValidatableField(
@@ -85,10 +85,12 @@ fun UserSetupScreen(userModel: UserModel) {
     val requiredFields = listOf(usernameInput, genderInput)
 
     val areRequiredFieldsValid = requiredFields.validateFields()
-    val isButtonEnabled = subscriptions.isNotEmpty() && areRequiredFieldsValid
+    val isButtonEnabled = freeSubscriptions.isNotEmpty() && areRequiredFieldsValid
 
     val onContinue = {
         if (isButtonEnabled) {
+            val currentSubscription = freeSubscriptions.first()
+
             viewModel.onContinue(
                 userModel.copy(
                     personalInfo = userModel.personalInfo.copy(
@@ -96,9 +98,10 @@ fun UserSetupScreen(userModel: UserModel) {
                         bio = bioInput.value,
                         gender = genderInput.value
                     ),
-                    subscriptions = subscriptions,
+                    currentSubscription = currentSubscription,
+                    subscriptions = freeSubscriptions,
                     usageData = UsageDataModel(
-                        webSearchResultCount = subscriptions.firstOrNull()?.maxUsageData?.webSearchResultCount ?: 1
+                        webSearchResultCount = freeSubscriptions.firstOrNull()?.maxUsageData?.webSearchResultCount ?: 1
                     )
                 )
             )

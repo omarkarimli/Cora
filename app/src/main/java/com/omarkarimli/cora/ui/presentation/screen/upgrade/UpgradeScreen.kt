@@ -203,7 +203,7 @@ private fun ScrollContent(
             }
         }
         items(subscriptionModels) { item ->
-            val currentSubscriptionTitle = userModel.subscriptions.firstOrNull()?.title
+            val currentSubscriptionTitle = userModel.currentSubscription.title
             SubscriptionItem(
                 subscriptionModel = item,
                 isCurrent = (item.title == currentSubscriptionTitle),

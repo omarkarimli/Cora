@@ -13,7 +13,7 @@ interface FirestoreRepository {
 
     suspend fun saveUser(userModel: UserModel)
     suspend fun getUser(): UserModel?
-    suspend fun getFreeSubscriptionModels(): List<SubscriptionModel>
+    suspend fun getFreeSubscriptions(): List<SubscriptionModel>
     suspend fun getSubscriptionModels(subscriptionType: String): List<SubscriptionModel>
     suspend fun getSubscriptionTypes(): List<String>
     suspend fun addReportIssue(reportIssueModel: ReportIssueModel)

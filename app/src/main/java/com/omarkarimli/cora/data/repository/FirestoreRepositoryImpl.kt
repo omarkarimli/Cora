@@ -71,7 +71,7 @@ class FirestoreRepositoryImpl @Inject constructor(
 
         return result
     }
-    override suspend fun getFreeSubscriptionModels(): List<SubscriptionModel> {
+    override suspend fun getFreeSubscriptions(): List<SubscriptionModel> {
         try {
             val querySnapshot = subscriptionsCollection
                 .document(MONTHLY)
@@ -155,9 +155,8 @@ class FirestoreRepositoryImpl @Inject constructor(
         if (userModel == null) return CreditConditions()
 
         var userToProcess = userModel
-        val latestSubscription = userToProcess.subscriptions.lastOrNull()
-        val isCreditActive: Boolean = latestSubscription?.purchasedTime
-            .isEarlierThan(latestSubscription?.expiredTime)
+        val currentSubscription = userToProcess.currentSubscription
+        val isCreditActive: Boolean = currentSubscription.purchasedTime.isEarlierThan(currentSubscription.expiredTime)
 
         if (!isCreditActive) {
             val renewedUser = renewSubscription(userToProcess)
@@ -166,11 +165,10 @@ class FirestoreRepositoryImpl @Inject constructor(
             }
         }
 
-        val finalSubscription = userToProcess.subscriptions.lastOrNull()
         val finalUsageData = userToProcess.usageData
-        val finalMaxUsageData = finalSubscription?.maxUsageData ?: UsageDataModel()
-        val finalIsCreditActive = finalSubscription?.purchasedTime
-            .isEarlierThan(finalSubscription?.expiredTime)
+        val finalMaxUsageData = currentSubscription.maxUsageData
+        val finalIsCreditActive = currentSubscription.purchasedTime
+            .isEarlierThan(currentSubscription.expiredTime)
 
         val conditions = CreditConditions(
             isCreditActive = finalIsCreditActive,
@@ -182,20 +180,18 @@ class FirestoreRepositoryImpl @Inject constructor(
     }
     override suspend fun renewSubscription(userModel: UserModel): UserModel? {
         try {
-            val latestSubscription = userModel.subscriptions.lastOrNull()
+            val currentSubscription = userModel.currentSubscription
 
-            if (latestSubscription != null) {
-                if (latestSubscription.price == 0.0) {
-                    val updatedSubscriptions = userModel.subscriptions
-                    val updatedUserModel = userModel.copy(
-                        subscriptions = updatedSubscriptions + latestSubscription.copy(
-                            purchasedTime = System.currentTimeMillis(),
-                            expiredTime = System.currentTimeMillis() + MONTH_IN_MILLIS
-                        )
+            if (currentSubscription.price == 0.0) {
+                val updatedSubscriptions = userModel.subscriptions
+                val updatedUserModel = userModel.copy(
+                    subscriptions = updatedSubscriptions + currentSubscription.copy(
+                        purchasedTime = System.currentTimeMillis(),
+                        expiredTime = System.currentTimeMillis() + MONTH_IN_MILLIS
                     )
-                    saveUser(updatedUserModel)
-                    return updatedUserModel
-                }
+                )
+                saveUser(updatedUserModel)
+                return updatedUserModel
             }
         } catch (e: Exception) {
             Log.e("FirestoreRepositoryImpl", "renewSubscription: ${e.message}")

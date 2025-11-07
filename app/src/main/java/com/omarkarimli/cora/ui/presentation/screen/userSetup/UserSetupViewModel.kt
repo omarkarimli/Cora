@@ -28,8 +28,8 @@ class UserSetupViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
-    private val _subscriptions = MutableStateFlow<List<SubscriptionModel>>(emptyList())
-    val subscriptions: StateFlow<List<SubscriptionModel>> = _subscriptions.asStateFlow()
+    private val _freeSubscriptions = MutableStateFlow<List<SubscriptionModel>>(emptyList())
+    val freeSubscriptions: StateFlow<List<SubscriptionModel>> = _freeSubscriptions.asStateFlow()
 
     init {
         getFreeSubscription()
@@ -48,10 +48,10 @@ class UserSetupViewModel @Inject constructor(
 
         viewModelScope.launch {
             try {
-                val freeSubscriptions = firestoreRepository.getFreeSubscriptionModels()
+                val freeSubscriptions = firestoreRepository.getFreeSubscriptions()
 
                 if (freeSubscriptions.isNotEmpty()) {
-                    _subscriptions.value = freeSubscriptions
+                    _freeSubscriptions.value = freeSubscriptions
                     resetUiState()
                 } else {
                     setError(

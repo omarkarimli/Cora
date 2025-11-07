@@ -98,7 +98,7 @@ fun UsageScreen() {
             MyTopAppBar(
                 scrollBehavior = scrollBehavior,
                 navController = navController,
-                currentSubscriptionModel = userModel?.subscriptions?.firstOrNull()
+                currentSubscriptionModel = userModel?.currentSubscription
             )
         }
     ) { innerPadding ->
@@ -124,7 +124,7 @@ private fun ScrollContent(
     userModel: UserModel?
 ) {
     val layoutDirection = LocalLayoutDirection.current
-    val currentSubscriptionModel = userModel?.subscriptions?.firstOrNull()
+    val currentSubscriptionModel = userModel?.currentSubscription
     val currentUsageData = userModel?.usageData
 
     PullToRefreshBox(

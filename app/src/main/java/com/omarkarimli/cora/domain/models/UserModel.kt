@@ -6,6 +6,7 @@ import kotlinx.serialization.Serializable
 data class UserModel (
     val idToken: String = "",
     val personalInfo: PersonalInfoModel = PersonalInfoModel(),
+    val currentSubscription: SubscriptionModel = SubscriptionModel(),
     val subscriptions: List<SubscriptionModel> = emptyList(),
     val usageData: UsageDataModel = UsageDataModel()
 )

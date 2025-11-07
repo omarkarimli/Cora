@@ -142,15 +142,14 @@ class UpgradeViewModel @Inject constructor(
             try {
                 userModel.value?.let {
                     // Update User
-                    val prevSubscriptions = it.subscriptions.toMutableList()
-                    val updatedSubscriptions = prevSubscriptions.apply {
-                        add(
-                            selectedSubscription.copy(
-                                purchasedTime = System.currentTimeMillis()
-                            )
-                        )
-                    }
+                    val prevSub = it.subscriptions.toMutableList()
+                    val newSub = selectedSubscription.copy(
+                        purchasedTime = System.currentTimeMillis()
+                    )
+
+                    val updatedSubscriptions = prevSub.apply { add(newSub) }
                     val updatedUserModel = it.copy(
+                        currentSubscription = newSub,
                         subscriptions = updatedSubscriptions
                     )
 
