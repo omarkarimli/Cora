@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d voux</string>
     <string name="subscription_feature_attaches">%1$d ek</string>
     <string name="subscription_feature_message_chars">%1$d mesaj karakteri</string>
-    <string name="subscription_feature_web_images">%1$d web görüntüsü</string>
+    <string name="subscription_feature_web_result">%1$d web görüntüsü</string>
     <string name="usage">Kullanım</string>
     <string name="desc_usage">Kullanımınızı kontrol edin.</string>
     <string name="attaches">Ekler</string>

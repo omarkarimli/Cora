@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d 添付ファイル</string>
     <string name="subscription_feature_message_chars">%1$d メッセージ文字数</string>
-    <string name="subscription_feature_web_images">%1$d ウェブ画像</string>
+    <string name="subscription_feature_web_result">%1$d ウェブ画像</string>
     <string name="usage">利用状況</string>
     <string name="desc_usage">利用状況を確認します。</string>
     <string name="attaches">添付ファイル</string>

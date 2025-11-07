@@ -59,7 +59,7 @@
     <string name="background">Background</string>
     <string name="enlarged_image">Enlarged image %1$d</string>
     <string name="saving_path">Saving Path</string>
-    <string name="desc_saving_path">Vouxes will be saved to selected path.</string>
+    <string name="desc_saving_path">Items will be saved to selected path.</string>
     <string name="photos">Photos</string>
     <string name="downloads">Downloads</string>
 
@@ -72,10 +72,10 @@
     <string name="free">Free</string>
     <string name="not_available">Not available.</string>
     <string name="ads_enabled">Ads enabled</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d searches</string>
     <string name="subscription_feature_attaches">%1$d attaches</string>
     <string name="subscription_feature_message_chars">%1$d message characters</string>
-    <string name="subscription_feature_web_images">%1$d web images</string>
+    <string name="subscription_feature_web_result">%1$d web results</string>
     <string name="usage">Usage</string>
     <string name="desc_usage">Check your usage.</string>
     <string name="attaches">Attaches</string>

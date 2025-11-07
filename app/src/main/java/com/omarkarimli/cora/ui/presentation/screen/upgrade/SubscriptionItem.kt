@@ -66,7 +66,7 @@ fun FeatureList(usageData: UsageDataModel, isAdsEnabled: Boolean) {
         FeatureRow(text = stringResource(R.string.subscription_feature_searches, usageData.webSearches))
         FeatureRow(text = stringResource(R.string.subscription_feature_attaches, usageData.attaches))
         FeatureRow(text = stringResource(R.string.subscription_feature_message_chars, usageData.messageChars))
-        FeatureRow(text = stringResource(R.string.subscription_feature_web_images, usageData.webSearchResultCount))
+        FeatureRow(text = stringResource(R.string.subscription_feature_web_result, usageData.webSearchResultCount))
         if (isAdsEnabled) FeatureRow(text = stringResource(R.string.ads_enabled))
     }
 }

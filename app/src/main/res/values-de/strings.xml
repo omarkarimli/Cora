@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d Vouxes</string>
     <string name="subscription_feature_attaches">%1$d Anhänge</string>
     <string name="subscription_feature_message_chars">%1$d Nachrichten-Zeichen</string>
-    <string name="subscription_feature_web_images">%1$d Web-Bilder</string>
+    <string name="subscription_feature_web_result">%1$d Web-Bilder</string>
     <string name="usage">Nutzung</string>
     <string name="desc_usage">Überprüfen Sie Ihre Nutzung.</string>
     <string name="attaches">Anhänge</string>

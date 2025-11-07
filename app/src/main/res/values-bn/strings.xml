@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d ভক্স</string>
     <string name="subscription_feature_attaches">%1$d সংযুক্তি</string>
     <string name="subscription_feature_message_chars">%1$d বার্তা অক্ষর</string>
-    <string name="subscription_feature_web_images">%1$d ওয়েব ছবি</string>
+    <string name="subscription_feature_web_result">%1$d ওয়েব ছবি</string>
     <string name="usage">ব্যবহার</string>
     <string name="desc_usage">আপনার ব্যবহার পরীক্ষা করুন।</string>
     <string name="attaches">সংযুক্তি</string>

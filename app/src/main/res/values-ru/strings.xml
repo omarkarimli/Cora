@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d вложений</string>
     <string name="subscription_feature_message_chars">%1$d символов сообщения</string>
-    <string name="subscription_feature_web_images">%1$d веб-изображений</string>
+    <string name="subscription_feature_web_result">%1$d веб-изображений</string>
     <string name="usage">Использование</string>
     <string name="desc_usage">Проверьте свое использование.</string>
     <string name="attaches">Вложения</string>

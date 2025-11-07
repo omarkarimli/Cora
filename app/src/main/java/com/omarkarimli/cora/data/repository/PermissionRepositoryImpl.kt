@@ -10,6 +10,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.ContextCompat
 import com.omarkarimli.cora.domain.repository.PermissionRepository
+import com.omarkarimli.cora.utils.capitalize
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -21,6 +22,8 @@ import javax.inject.Singleton
 class PermissionRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context
 ) : PermissionRepository {
+
+    val appName: String = context.applicationInfo.name
 
     override fun getStoragePermission(): String {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -75,19 +78,18 @@ class PermissionRepositoryImpl @Inject constructor(
         }
 
         val contentValues = ContentValues().apply {
-            val filename = "voux_image_${System.currentTimeMillis()}.jpg"
+            val filename = "${appName}_image_${System.currentTimeMillis()}.jpg"
             put(MediaStore.Images.Media.DISPLAY_NAME, filename)
-            put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg") // Change to jpeg if your images are JPEGs
+            put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg")
 
             // For Android 10 (API 29) and above, use RELATIVE_PATH
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                // This is the key change: specify the subdirectory "Voux"
-                put(MediaStore.Images.Media.RELATIVE_PATH, "${Environment.DIRECTORY_PICTURES}/Voux")
+                put(MediaStore.Images.Media.RELATIVE_PATH, "${Environment.DIRECTORY_PICTURES}/${appName.capitalize()}")
             } else {
                 // For older versions, this is the deprecated way
                 val directory = File(
                     Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
-                    "Voux"
+                    appName.capitalize()
                 )
                 if (!directory.exists()) {
                     directory.mkdirs()

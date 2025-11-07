@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d 첨부 파일</string>
     <string name="subscription_feature_message_chars">%1$d 메시지 문자 수</string>
-    <string name="subscription_feature_web_images">%1$d 웹 이미지</string>
+    <string name="subscription_feature_web_result">%1$d 웹 이미지</string>
     <string name="usage">사용량</string>
     <string name="desc_usage">사용량을 확인하십시오.</string>
     <string name="attaches">첨부 파일</string>

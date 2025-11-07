@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d 附件</string>
     <string name="subscription_feature_message_chars">%1$d 消息字符</string>
-    <string name="subscription_feature_web_images">%1$d 网络图片</string>
+    <string name="subscription_feature_web_result">%1$d 网络图片</string>
     <string name="usage">使用情况</string>
     <string name="desc_usage">检查您的使用情况。</string>
     <string name="attaches">附件</string>

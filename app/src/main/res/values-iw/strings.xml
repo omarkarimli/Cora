@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d קבצים מצורפים</string>
     <string name="subscription_feature_message_chars">%1$d תווים להודעה</string>
-    <string name="subscription_feature_web_images">%1$d תמונות אינטרנט</string>
+    <string name="subscription_feature_web_result">%1$d תמונות אינטרנט</string>
     <string name="usage">שימוש</string>
     <string name="desc_usage">בדוק את השימוש שלך.</string>
     <string name="attaches">קבצים מצורפים</string>

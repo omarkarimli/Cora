@@ -74,7 +74,7 @@ fun MyTopAppBar(
             IconButton(
                 onClick = {
                     context.onShare(
-                        body = context.getString(R.string.share_body), // Externalized string
+                        context = context,
                         imagePaths = listOf(currentItem.imageUrl)
                     )
                 },

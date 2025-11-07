@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d załączników</string>
     <string name="subscription_feature_message_chars">%1$d znaków wiadomości</string>
-    <string name="subscription_feature_web_images">%1$d obrazów z sieci</string>
+    <string name="subscription_feature_web_result">%1$d obrazów z sieci</string>
     <string name="usage">Użycie</string>
     <string name="desc_usage">Sprawdź swoje użycie.</string>
     <string name="attaches">Załączniki</string>

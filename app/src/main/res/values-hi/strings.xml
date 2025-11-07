@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d वौक्स</string>
     <string name="subscription_feature_attaches">%1$d अनुलग्नक</string>
     <string name="subscription_feature_message_chars">%1$d संदेश वर्ण</string>
-    <string name="subscription_feature_web_images">%1$d वेब छवियाँ</string>
+    <string name="subscription_feature_web_result">%1$d वेब छवियाँ</string>
     <string name="usage">उपयोग</string>
     <string name="desc_usage">अपना उपयोग जाँचें।</string>
     <string name="attaches">अनुलग्नक</string>

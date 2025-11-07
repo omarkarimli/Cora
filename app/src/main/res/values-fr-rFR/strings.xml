@@ -75,7 +75,7 @@
     <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d pièces jointes</string>
     <string name="subscription_feature_message_chars">%1$d caractères de message</string>
-    <string name="subscription_feature_web_images">%1$d images web</string>
+    <string name="subscription_feature_web_result">%1$d images web</string>
     <string name="usage">Utilisation</string>
     <string name="desc_usage">Vérifiez votre utilisation.</string>
     <string name="attaches">Pièces jointes</string>

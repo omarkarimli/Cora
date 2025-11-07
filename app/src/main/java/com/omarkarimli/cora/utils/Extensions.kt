@@ -175,7 +175,11 @@ fun Context.sendEmail(
     }
 }
 
-fun Context.onShare(body: String, imagePaths: List<String> = emptyList()) {
+fun Context.onShare(
+    context: Context,
+    body: String = context.getString(R.string.share_body),
+    imagePaths: List<String> = emptyList()
+) {
     val sendIntent = Intent().apply {
         action = Intent.ACTION_SEND
         if (imagePaths.isNotEmpty()) {
@@ -186,7 +190,7 @@ fun Context.onShare(body: String, imagePaths: List<String> = emptyList()) {
         flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
     }
 
-    val shareIntent = Intent.createChooser(sendIntent, "Voux")
+    val shareIntent = Intent.createChooser(sendIntent, context.getString(R.string.app_name))
     this.startActivity(shareIntent)
 }
 
