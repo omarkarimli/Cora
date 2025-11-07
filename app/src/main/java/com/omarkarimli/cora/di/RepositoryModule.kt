@@ -9,7 +9,6 @@ import com.omarkarimli.cora.data.repository.ChatRepositoryImpl
 import com.omarkarimli.cora.data.repository.DownloadRepositoryImpl
 import com.omarkarimli.cora.data.repository.FirestoreRepositoryImpl
 import com.omarkarimli.cora.data.repository.LangRepositoryImpl
-import com.omarkarimli.cora.data.repository.NotificationRepositoryImpl
 import com.omarkarimli.cora.data.repository.SerperRepositoryImpl
 import com.omarkarimli.cora.data.repository.SharedPreferenceRepositoryImpl
 import com.omarkarimli.cora.data.repository.ThemeRepositoryImpl
@@ -23,7 +22,6 @@ import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.DownloadRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.domain.repository.LangRepository
-import com.omarkarimli.cora.domain.repository.NotificationRepository
 import com.omarkarimli.cora.domain.repository.SerperRepository
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import com.omarkarimli.cora.domain.repository.ThemeRepository
@@ -115,10 +113,4 @@ abstract class RepositoryModule {
     abstract fun bindTranslateRepository(
         translateRepositoryImpl: TranslateRepositoryImpl
     ): TranslateRepository
-
-    @Binds
-    @Singleton
-    abstract fun bindNotificationRepository(
-        notificationRepositoryImpl: NotificationRepositoryImpl
-    ): NotificationRepository
 }

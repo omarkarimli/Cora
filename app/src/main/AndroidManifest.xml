@@ -46,7 +46,7 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <receiver android:name=".data.repository.NotificationReceiver"
+        <receiver android:name=".data.notification.NotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
@@ -85,7 +85,7 @@
 
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
-            android:enabled="false"
+            androidenabled="false"
             android:exported="false">
             <meta-data
                 android:name="autoStoreLocales"
