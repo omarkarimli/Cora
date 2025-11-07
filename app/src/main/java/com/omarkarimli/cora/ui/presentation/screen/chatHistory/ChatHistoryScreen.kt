@@ -98,33 +98,37 @@ fun ChatHistoryScreen() {
         }
     }
 
-    LaunchedEffect(uiState) {
-        when (val currentState = uiState) {
-            UiState.Loading -> { /* Handle loading if needed */ }
-            is UiState.Success -> {
-                if (currentState.canToast) {
-                    context.showToast(currentState.message)
-                }
-                currentState.route?.let {
-                    navController.navigate(it) {
-                        popUpTo(currentScreen) { inclusive = true }
+    @Composable
+    fun ObserveData() {
+        LaunchedEffect(uiState) {
+            when (val currentState = uiState) {
+                UiState.Loading -> { /* Handle loading if needed */ }
+                is UiState.Success -> {
+                    if (currentState.canToast) {
+                        context.showToast(currentState.message)
                     }
+                    currentState.route?.let {
+                        navController.navigate(it) {
+                            popUpTo(currentScreen) { inclusive = true }
+                        }
+                    }
+                    Log.d(currentScreen, "Success: ${currentState.message}")
+                    viewModel.resetUiState()
                 }
-                Log.d(currentScreen, "Success: ${currentState.message}")
-                viewModel.resetUiState()
+                is UiState.Error -> {
+                    val log = currentState.log
+                    val toastResId = currentState.toastResId
+                    context.showToast(context.getString(toastResId))
+                    Log.e(currentScreen, log)
+                    viewModel.resetUiState()
+                }
+                is UiState.ActionRequired -> {}
+                UiState.Idle -> { /* Hide any loading indicators */ }
             }
-            is UiState.Error -> {
-                val log = currentState.log
-                val toastResId = currentState.toastResId
-                context.showToast(context.getString(toastResId))
-                Log.e(currentScreen, log)
-                viewModel.resetUiState()
-            }
-            is UiState.ActionRequired -> {}
-            UiState.Idle -> { /* Hide any loading indicators */ }
         }
     }
 
+    ObserveData()
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {

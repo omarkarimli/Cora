@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
-import androidx.paging.map // <--- Import the map extension for PagingData
+import androidx.paging.map
 import com.omarkarimli.cora.domain.models.ChatHistoryItemModel
 import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
 import com.omarkarimli.cora.domain.repository.TranslateRepository
@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.transformLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -38,25 +38,27 @@ class ChatHistoryViewModel @Inject constructor(
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
 
     val paginatedItems: Flow<PagingData<ChatHistoryItemModel>> =
-        searchQuery
+        _searchQuery
             .debounce(300L)
             .distinctUntilChanged()
             .flatMapLatest { query ->
                 chatHistoryRepo.getPagination(query)
             }
-            .map { pagingData ->
-                pagingData.map { item ->
+            .transformLatest { pagingData ->
+                emit(pagingData) // Emit original items first
+                // Then, emit translated items
+                emit(pagingData.map { item ->
                     try {
                         val translatedTitle = translateRepository.translate(item.title)
                         item.copy(title = translatedTitle)
                     } catch (e: Exception) {
-                        Log.e("ChatHistoryViewModel", "Error translating item title: ${e.message}")
-                        // Return the original item if translation fails
-                        item
+                        Log.e("ChatHistoryViewModel", "Translation failed for item: ${item.title}", e)
+                        item // Return original item on error
                     }
-                }
+                })
             }
             .cachedIn(viewModelScope)
+
 
     fun resetUiState() {
         _uiState.value = UiState.Idle
