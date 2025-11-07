@@ -6,7 +6,7 @@ import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
-import com.omarkarimli.cora.ui.theme.Durations.SPLASH
+import com.omarkarimli.cora.utils.Durations.SPLASH
 import com.omarkarimli.cora.utils.SpConstant
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay

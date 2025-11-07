@@ -203,10 +203,12 @@ private fun ScrollContent(
             }
         }
         items(subscriptionModels) { item ->
-            val currentSubscriptionTitle = userModel.currentSubscription.title
+            val isCurrent = item.title == userModel.currentSubscription.title
+                    && item.price == userModel.currentSubscription.price
+
             SubscriptionItem(
                 subscriptionModel = item,
-                isCurrent = (item.title == currentSubscriptionTitle),
+                isCurrent = isCurrent,
                 onClick = { onSelectSubscription(item) }
             )
         }

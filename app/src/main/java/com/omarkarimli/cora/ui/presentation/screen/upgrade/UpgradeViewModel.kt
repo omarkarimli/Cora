@@ -8,18 +8,22 @@ import com.omarkarimli.cora.domain.repository.TranslateRepository
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.CreditConditions
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.TabModel
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
+import com.omarkarimli.cora.utils.Durations
+import com.omarkarimli.cora.utils.FirebaseConstants.ANNUAL
+import com.omarkarimli.cora.utils.FirebaseConstants.DAILY
+import com.omarkarimli.cora.utils.FirebaseConstants.MONTHLY
 import com.omarkarimli.cora.utils.capitalize
-import javax.inject.Inject
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class UpgradeViewModel @Inject constructor(
@@ -138,13 +142,23 @@ class UpgradeViewModel @Inject constructor(
 
     fun onSelectSubscription(selectedSubscription: SubscriptionModel) {
         _uiState.value = UiState.Loading
+
         viewModelScope.launch {
             try {
                 userModel.value?.let {
+                    val purchasedTime = System.currentTimeMillis()
+                    val expiredTime = purchasedTime + when (selectedTab.value?.key) {
+                        DAILY -> Durations.DAY_IN_MILLIS
+                        MONTHLY -> Durations.MONTH_IN_MILLIS
+                        ANNUAL -> Durations.YEAR_IN_MILLIS
+                        else -> 0
+                    }
+
                     // Update User
                     val prevSub = it.subscriptions.toMutableList()
                     val newSub = selectedSubscription.copy(
-                        purchasedTime = System.currentTimeMillis()
+                        purchasedTime = purchasedTime,
+                        expiredTime = expiredTime
                     )
 
                     val updatedSubscriptions = prevSub.apply { add(newSub) }
@@ -154,10 +168,6 @@ class UpgradeViewModel @Inject constructor(
                     )
 
                     updateUser(updatedUserModel)
-
-                    _uiState.value = UiState.Success(
-                        message = SuccessType.SELECT_SUBSCRIPTION
-                    )
                 } ?: run {
                     _uiState.value = UiState.Error(
                         toastResId = R.string.error_something_went_wrong,
@@ -180,7 +190,7 @@ class UpgradeViewModel @Inject constructor(
             _uiState.value = UiState.Loading
             try {
                 firestoreRepository.saveUser(userModel)
-
+                _userModel.value = userModel
                 _uiState.value = UiState.Success(
                     message = SuccessType.UPDATE_PROFILE,
                     canToast = true,

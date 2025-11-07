@@ -3,8 +3,10 @@ package com.omarkarimli.cora.utils
 object FirebaseConstants {
     const val MAX_RETRIES_GETTING_USER = 3
 
+    const val DAILY = "daily"
     const val MONTHLY = "monthly"
     const val ANNUAL = "annual"
+
     const val USERS = "users"
     const val SUBSCRIPTIONS = "subscriptions"
     const val MAX_USAGE_DATA = "maxUsageData"

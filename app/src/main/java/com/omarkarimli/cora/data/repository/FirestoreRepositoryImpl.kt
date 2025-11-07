@@ -10,8 +10,7 @@ import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UsageDataModel
 import com.omarkarimli.cora.domain.models.UserModel
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
-import com.omarkarimli.cora.ui.theme.Durations
-import com.omarkarimli.cora.utils.Constants.MONTH_IN_MILLIS
+import com.omarkarimli.cora.utils.Durations
 import com.omarkarimli.cora.utils.FirebaseConstants
 import com.omarkarimli.cora.utils.FirebaseConstants.MONTHLY
 import com.omarkarimli.cora.utils.isEarlierThan
@@ -43,6 +42,8 @@ class FirestoreRepositoryImpl @Inject constructor(
             .document(firebaseUser.uid)
             .set(userModel)
             .await()
+
+        _creditConditions.value = getCreditConditions(userModel)
     }
     override suspend fun getUser(): UserModel? {
         var result: UserModel? = null
@@ -83,7 +84,7 @@ class FirestoreRepositoryImpl @Inject constructor(
                 listOf(
                     it.copy(
                         purchasedTime = System.currentTimeMillis(),
-                        expiredTime = System.currentTimeMillis().plus(MONTH_IN_MILLIS)
+                        expiredTime = System.currentTimeMillis().plus(Durations.MONTH_IN_MILLIS)
                     )
                 )
             } ?: emptyList()
@@ -181,16 +182,20 @@ class FirestoreRepositoryImpl @Inject constructor(
     override suspend fun renewSubscription(userModel: UserModel): UserModel? {
         try {
             val currentSubscription = userModel.currentSubscription
+            val newSub = currentSubscription.copy(
+                purchasedTime = System.currentTimeMillis(),
+                expiredTime = System.currentTimeMillis() + Durations.MONTH_IN_MILLIS
+            )
 
             if (currentSubscription.price == 0.0) {
                 val updatedSubscriptions = userModel.subscriptions
                 val updatedUserModel = userModel.copy(
-                    subscriptions = updatedSubscriptions + currentSubscription.copy(
-                        purchasedTime = System.currentTimeMillis(),
-                        expiredTime = System.currentTimeMillis() + MONTH_IN_MILLIS
-                    )
+                    currentSubscription = newSub,
+                    subscriptions = updatedSubscriptions + newSub
                 )
                 saveUser(updatedUserModel)
+                _creditConditions.value = getCreditConditions(updatedUserModel)
+
                 return updatedUserModel
             }
         } catch (e: Exception) {

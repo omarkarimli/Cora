@@ -19,7 +19,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.ui.theme.AppTypography
-import com.omarkarimli.cora.ui.theme.Durations
+import com.omarkarimli.cora.utils.Durations
 import kotlinx.coroutines.delay
 
 @Composable

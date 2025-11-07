@@ -16,13 +16,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
+import com.omarkarimli.cora.ui.theme.onSurfaceLight
+import com.omarkarimli.cora.ui.theme.surfaceLight
 import com.omarkarimli.cora.utils.copyToClipboard
 import com.omarkarimli.cora.utils.noRippleClickable
 import com.omarkarimli.cora.utils.openUrl
@@ -40,7 +41,7 @@ fun MyBottomBar(
                 .padding(Dimens.PaddingMedium)
                 .padding(bottom = Dimens.PaddingSmall)
                 .background(
-                    color = Color.Black,
+                    color = onSurfaceLight,
                     shape = RoundedCornerShape(Dimens.CornerRadiusMedium)
                 ),
             verticalAlignment = Alignment.CenterVertically,
@@ -50,8 +51,8 @@ fun MyBottomBar(
                 onClick = { context.copyToClipboard(sourceText) },
                 shape = CircleShape,
                 colors = IconButtonDefaults.iconButtonColors(
-                    containerColor = Color.Black,
-                    contentColor = Color.White
+                    containerColor = onSurfaceLight,
+                    contentColor = surfaceLight
                 )
             ) {
                 Icon(
@@ -66,7 +67,7 @@ fun MyBottomBar(
                     ),
                 text = sourceText,
                 style = AppTypography.bodyMedium,
-                color = Color.White,
+                color = surfaceLight,
                 textAlign = TextAlign.Start,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis

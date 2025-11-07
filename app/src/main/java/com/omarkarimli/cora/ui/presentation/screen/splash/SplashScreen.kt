@@ -38,7 +38,7 @@ import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
-import com.omarkarimli.cora.ui.theme.Durations
+import com.omarkarimli.cora.utils.Durations
 import com.omarkarimli.cora.utils.showToast
 import kotlinx.coroutines.delay
 import java.util.Locale
