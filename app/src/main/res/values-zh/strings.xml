@@ -72,7 +72,7 @@
     <string name="free">免费</string>
     <string name="not_available">不可用。</string>
     <string name="ads_enabled">广告已启用</string>
-    <string name="subscription_feature_vouxes">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d 附件</string>
     <string name="subscription_feature_message_chars">%1$d 消息字符</string>
     <string name="subscription_feature_web_images">%1$d 网络图片</string>

@@ -72,7 +72,7 @@
     <string name="free">Gratuit</string>
     <string name="not_available">Non disponible.</string>
     <string name="ads_enabled">Annonces activées</string>
-    <string name="subscription_feature_vouxes">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d pièces jointes</string>
     <string name="subscription_feature_message_chars">%1$d caractères de message</string>
     <string name="subscription_feature_web_images">%1$d images web</string>

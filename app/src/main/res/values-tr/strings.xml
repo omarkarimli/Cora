@@ -72,7 +72,7 @@
     <string name="free">Ücretsiz</string>
     <string name="not_available">Mevcut değil.</string>
     <string name="ads_enabled">Reklamlar etkin</string>
-    <string name="subscription_feature_vouxes">%1$d voux</string>
+    <string name="subscription_feature_searches">%1$d voux</string>
     <string name="subscription_feature_attaches">%1$d ek</string>
     <string name="subscription_feature_message_chars">%1$d mesaj karakteri</string>
     <string name="subscription_feature_web_images">%1$d web görüntüsü</string>

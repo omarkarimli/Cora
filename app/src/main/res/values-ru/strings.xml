@@ -72,7 +72,7 @@
     <string name="free">Бесплатно</string>
     <string name="not_available">Недоступно.</string>
     <string name="ads_enabled">Реклама включена</string>
-    <string name="subscription_feature_vouxes">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d vouxes</string>
     <string name="subscription_feature_attaches">%1$d вложений</string>
     <string name="subscription_feature_message_chars">%1$d символов сообщения</string>
     <string name="subscription_feature_web_images">%1$d веб-изображений</string>
