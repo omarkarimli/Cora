@@ -310,7 +310,6 @@ fun DocumentSnapshot.toSubscriptionModelsList(): List<SubscriptionModel> {
     return subscriptionMaps.map { map ->
         val usageDataMap = map[FirebaseConstants.MAX_USAGE_DATA] as? Map<String, Any> ?: emptyMap()
         val usageData = UsageDataModel(
-            webSearches = (usageDataMap[FirebaseConstants.WEB_SEARCHES] as? Long)?.toInt() ?: 0,
             attaches = (usageDataMap[FirebaseConstants.ATTACHES] as? Long)?.toInt() ?: 0,
             messageChars = (usageDataMap[FirebaseConstants.MESSAGE_CHARS] as? Long)?.toInt() ?: 0,
             webSearchResultCount = (usageDataMap[FirebaseConstants.WEB_SEARCH_RESULT_COUNT] as? Long)?.toInt() ?: 0

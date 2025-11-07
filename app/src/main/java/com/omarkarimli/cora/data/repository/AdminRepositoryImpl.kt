@@ -21,36 +21,33 @@ class AdminRepositoryImpl @Inject constructor(
             SubscriptionModel(
                 title = "Basic",
                 price = 0.0,
-                subscriptionType = "monthly",
+                subscriptionType = FirebaseConstants.MONTHLY,
                 maxUsageData = UsageDataModel(
-                    webSearches = 10,
-                    attaches = 10,
-                    messageChars = 100,
-                    webSearchResultCount = 1
+                    attaches = 20,
+                    messageChars = 300,
+                    webSearchResultCount = 3
                 ),
                 adsEnabled = true
             ),
             SubscriptionModel(
                 title = "Plus",
                 price = 19.99,
-                subscriptionType = "monthly",
+                subscriptionType = FirebaseConstants.MONTHLY,
                 maxUsageData = UsageDataModel(
-                    webSearches = 30,
                     attaches = 30,
-                    messageChars = 300,
-                    webSearchResultCount = 2
+                    messageChars = 900,
+                    webSearchResultCount = 5
                 ),
                 adsEnabled = false
             ),
             SubscriptionModel(
                 title = "Pro",
                 price = 39.99,
-                subscriptionType = "monthly",
+                subscriptionType = FirebaseConstants.MONTHLY,
                 maxUsageData = UsageDataModel(
-                    webSearches = 100,
-                    attaches = 100,
-                    messageChars = 1000,
-                    webSearchResultCount = 5
+                    attaches = 40,
+                    messageChars = 1500,
+                    webSearchResultCount = 7
                 ),
                 adsEnabled = false
             )
@@ -59,24 +56,22 @@ class AdminRepositoryImpl @Inject constructor(
             SubscriptionModel(
                 title = "Plus",
                 price = 229.99,
-                subscriptionType = "annual",
+                subscriptionType = FirebaseConstants.ANNUAL,
                 maxUsageData = UsageDataModel(
-                    webSearches = 360,
                     attaches = 360,
-                    messageChars = 3600,
-                    webSearchResultCount = 2
+                    messageChars = 10800,
+                    webSearchResultCount = 5
                 ),
                 adsEnabled = false
             ),
             SubscriptionModel(
                 title = "Pro",
                 price = 459.99,
-                subscriptionType = "annual",
+                subscriptionType = FirebaseConstants.ANNUAL,
                 maxUsageData = UsageDataModel(
-                    webSearches = 1200,
-                    attaches = 1200,
-                    messageChars = 12000,
-                    webSearchResultCount = 5
+                    attaches = 480,
+                    messageChars = 18000,
+                    webSearchResultCount = 7
                 ),
                 adsEnabled = false
             )
@@ -84,22 +79,22 @@ class AdminRepositoryImpl @Inject constructor(
 
         // Create a Map to store the monthly subscriptions
         val monthlyData = hashMapOf(
-            "subscriptions" to subscriptionModelsM
+            FirebaseConstants.SUBSCRIPTIONS to subscriptionModelsM
         )
 
         // Create a Map to store the annual subscriptions
         val annualData = hashMapOf(
-            "subscriptions" to subscriptionModelsA
+            FirebaseConstants.SUBSCRIPTIONS to subscriptionModelsA
         )
 
         try {
             subscriptionsCollection
-                .document("monthly")
+                .document(FirebaseConstants.MONTHLY)
                 .set(monthlyData)
                 .await()
 
             subscriptionsCollection
-                .document("annual")
+                .document(FirebaseConstants.ANNUAL)
                 .set(annualData)
                 .await()
         } catch (e: Exception) {

@@ -4,10 +4,10 @@ object FirebaseConstants {
     const val MAX_RETRIES_GETTING_USER = 3
 
     const val MONTHLY = "monthly"
+    const val ANNUAL = "annual"
     const val USERS = "users"
     const val SUBSCRIPTIONS = "subscriptions"
     const val MAX_USAGE_DATA = "maxUsageData"
-    const val WEB_SEARCHES = "webSearches"
     const val ATTACHES = "attaches"
     const val MESSAGE_CHARS = "messageChars"
     const val WEB_SEARCH_RESULT_COUNT = "webSearchResultCount"

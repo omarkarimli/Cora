@@ -9,14 +9,14 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource // Added import
+import androidx.compose.ui.res.stringResource
 import coil.compose.AsyncImage
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.ImageModel
 import com.omarkarimli.cora.ui.theme.Dimens
+import com.omarkarimli.cora.ui.theme.onSurfaceLight
 import net.engawapg.lib.zoomable.rememberZoomState
 import net.engawapg.lib.zoomable.zoomable
 
@@ -27,23 +27,24 @@ fun ClothImagePager(
     pagerState: PagerState,
     imageModels: List<ImageModel>
 ) {
+    val zoomState = rememberZoomState()
+
     HorizontalPager(
         state = pagerState,
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .background(onSurfaceLight)
             .padding(top = innerPadding.calculateTopPadding()),
         pageSpacing = Dimens.PaddingMedium
     ) { pageIndex ->
         val currentImageModel = imageModels[pageIndex]
 
-        val zoomState = rememberZoomState()
         AsyncImage(
             modifier = Modifier
                 .fillMaxSize()
                 .zoomable(zoomState),
             model = currentImageModel.imageUrl,
-            contentDescription = stringResource(R.string.enlarged_image, pageIndex + 1), // Externalized string
+            contentDescription = stringResource(R.string.enlarged_image, pageIndex + 1),
             placeholder = painterResource(id = R.drawable.image_placeholder),
             error = painterResource(id = R.drawable.image_placeholder),
             contentScale = ContentScale.Fit

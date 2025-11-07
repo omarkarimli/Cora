@@ -174,7 +174,6 @@ class FirestoreRepositoryImpl @Inject constructor(
 
         val conditions = CreditConditions(
             isCreditActive = finalIsCreditActive,
-            webSearches = finalUsageData.webSearches < finalMaxUsageData.webSearches,
             attaches = finalUsageData.attaches < finalMaxUsageData.attaches,
             messageChars = finalUsageData.messageChars < finalMaxUsageData.messageChars
         )

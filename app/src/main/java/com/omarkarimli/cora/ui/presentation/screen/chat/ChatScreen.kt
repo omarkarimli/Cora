@@ -261,11 +261,11 @@ fun ChatScreen(
                     viewModel.resetUiState()
                 }
                 is UiState.Error -> {
-                    val errorState = uiState as UiState.Error // Cast for clarity
+                    val errorState = uiState as UiState.Error
                     val log = errorState.log
-                    val toastResId = errorState.toastResId // This should be an Int
+                    val toastResId = errorState.toastResId
 
-                    context.showToast(context.getString(toastResId)) // Use context.getString for Int res ID
+                    context.showToast(context.getString(toastResId))
 
                     Log.e(currentScreen, log)
                     viewModel.resetUiState()

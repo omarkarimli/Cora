@@ -13,9 +13,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.Bolt
+import androidx.compose.material.icons.outlined.BubbleChart
+import androidx.compose.material.icons.outlined.Done
 import androidx.compose.material.icons.rounded.Add
-import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.TopAppBarDefaults
@@ -80,7 +82,7 @@ fun UsageScreen() {
                 is UiState.Error -> {
                     val log = currentState.log
                     val toastResId = currentState.toastResId
-                    context.showToast(context.getString(toastResId)) // Correctly get string from resource ID
+                    context.showToast(context.getString(toastResId))
                     Log.e(currentScreen, log)
                     viewModel.resetUiState()
                 }
@@ -148,15 +150,6 @@ private fun ScrollContent(
                     hashMapOf(
                         StandardListItemModel(
                             id = 0,
-                            title = context.getString(R.string.web_searches),
-                            description = context.getString(R.string.desc_web_searches),
-                            leadingIcon = Icons.Rounded.Search,
-                            endingText = "${currentUsageData.webSearches}/${currentSubscriptionModel.maxUsageData.webSearches}"
-                        ) to (currentUsageData.webSearches.toFloat() / currentSubscriptionModel.maxUsageData.webSearches.toFloat())
-                    ),
-                    hashMapOf(
-                        StandardListItemModel(
-                            id = 1,
                             title = context.getString(R.string.attaches),
                             description = context.getString(R.string.usage_item_attaches_desc),
                             leadingIcon = Icons.Rounded.Add,
@@ -165,11 +158,19 @@ private fun ScrollContent(
                     ),
                     hashMapOf(
                         StandardListItemModel(
-                            id = 2,
+                            id = 1,
                             title = context.getString(R.string.usage_item_message_chars_title),
                             description = context.getString(R.string.usage_item_message_chars_desc),
                             leadingIcon = Icons.Outlined.Bolt,
                             endingText = "${currentUsageData.messageChars}/${currentSubscriptionModel.maxUsageData.messageChars}"
+                        ) to (currentUsageData.messageChars.toFloat() / currentSubscriptionModel.maxUsageData.messageChars.toFloat())
+                    ),
+                    hashMapOf(
+                        StandardListItemModel(
+                            id = 2,
+                            title = context.getString(R.string.ads_enabled),
+                            leadingIcon = Icons.Outlined.BubbleChart,
+                            endingIcon = if (currentSubscriptionModel.adsEnabled) Icons.Outlined.Done else Icons.Outlined.Block
                         ) to (currentUsageData.messageChars.toFloat() / currentSubscriptionModel.maxUsageData.messageChars.toFloat())
                     )
                 )

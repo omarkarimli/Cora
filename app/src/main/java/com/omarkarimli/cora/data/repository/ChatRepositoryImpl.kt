@@ -31,7 +31,9 @@ class ChatRepositoryImpl @Inject constructor(
             Log.d("ChatRepository", "Message: ${messageModel.text}")
 
             val newUsageData = userModel.usageData.copy(
-                attaches = userModel.usageData.attaches + messageModel.images.size,
+                attaches = userModel.usageData.attaches + messageModel.images.size
+                        + if (messageModel.webSearch) 1 else 0
+                        + if (messageModel.imageGeneration) 1 else 0,
                 messageChars = userModel.usageData.messageChars + result.text.length
             )
             firestoreRepository.updateUsageData(newUsageData)

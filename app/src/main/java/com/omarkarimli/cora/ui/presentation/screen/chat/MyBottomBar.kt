@@ -87,14 +87,18 @@ fun MyBottomBar(
             id = 2,
             title = stringResource(R.string.image_generation),
             leadingIcon = Icons.Rounded.AutoAwesome,
-            endingIcon = if (messageModel.imageGeneration) Icons.Rounded.Done else null,
+            endingIcon =
+                if (messageModel.imageGeneration) Icons.Rounded.Done
+                else null,
             onClick = onToggleImageGeneration
         ),
         StandardListItemModel(
             id = 3,
             title = stringResource(R.string.web_searches),
             leadingIcon = Icons.Outlined.Search,
-            endingIcon = if (messageModel.webSearch) Icons.Rounded.Done else null,
+            endingIcon =
+                if (messageModel.webSearch) Icons.Rounded.Done
+                else null,
             onClick = onToggleWebSearch
         )
     )

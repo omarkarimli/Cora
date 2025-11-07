@@ -26,15 +26,17 @@ fun UsageDataRow(item: HashMap<StandardListItemModel, Float>) {
         verticalArrangement = Arrangement.spacedBy(Dimens.PaddingSmall)
     ) {
         StandardListItemUi(item = standardListItemModel)
-        LinearProgressIndicator(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(Dimens.ProgressIndicatorHeight)
-                .padding(horizontal = Dimens.PaddingSmall),
-            progress = { progress },
-            strokeCap = ProgressIndicatorDefaults.LinearStrokeCap,
-            color = MaterialTheme.colorScheme.primary,
-            trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f),
-        )
+        if (item.values.last() != 0f) {
+            LinearProgressIndicator(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(Dimens.ProgressIndicatorHeight)
+                    .padding(horizontal = Dimens.PaddingSmall),
+                progress = { progress },
+                strokeCap = ProgressIndicatorDefaults.LinearStrokeCap,
+                color = MaterialTheme.colorScheme.primary,
+                trackColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f),
+            )
+        }
     }
 }
