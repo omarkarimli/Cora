@@ -24,6 +24,7 @@ import com.omarkarimli.cora.domain.models.UsageDataModel
 import com.omarkarimli.cora.ui.presentation.common.widget.component.WideButton
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
+import com.omarkarimli.cora.utils.toPriceString
 
 @Composable
 fun SubscriptionItem(
@@ -72,6 +73,8 @@ fun FeatureList(usageData: UsageDataModel, isAdsEnabled: Boolean) {
 
 @Composable
 private fun TopContent(subscriptionModel: SubscriptionModel) {
+    val textStyle = AppTypography.titleLarge
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -84,12 +87,12 @@ private fun TopContent(subscriptionModel: SubscriptionModel) {
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(
-            text = subscriptionModel.title, // Assuming title comes from backend and is already localized or fine as is
-            style = MaterialTheme.typography.titleLarge
+            text = subscriptionModel.title,
+            style = textStyle
         )
         Text(
-            text = if (subscriptionModel.price == 0.0) stringResource(R.string.free) else "$${subscriptionModel.price}",
-            style = MaterialTheme.typography.titleLarge
+            text = subscriptionModel.price.toPriceString(),
+            style = textStyle
         )
     }
 }

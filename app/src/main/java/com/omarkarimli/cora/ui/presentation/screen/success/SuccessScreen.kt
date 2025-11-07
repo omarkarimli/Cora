@@ -80,7 +80,7 @@ fun SuccessScreen() {
                     .padding(
                         start = Dimens.PaddingLarge,
                         end = Dimens.PaddingLarge,
-                        bottom = Dimens.PaddingExtraLarge
+                        bottom = Dimens.PaddingMedium
                     ),
                 onClick = { viewModel.onContinue(Screen.Chat.route) }
             )

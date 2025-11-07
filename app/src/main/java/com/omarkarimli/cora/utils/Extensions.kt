@@ -271,17 +271,9 @@ fun Long.toDateTimeString(): String {
     return dateFormat.format(this)
 }
 
-fun Double.formatPrice(): String {
-    val formatter = NumberFormat.getCurrencyInstance(Locale.getDefault()).apply {
-        maximumFractionDigits = 2
-        minimumFractionDigits = 2
-    }
-    return formatter.format(this)
-}
-
 @Composable
 fun Double.toPriceString(): String {
-    return if (this > 0.01) this.formatPrice() else stringResource(R.string.free)
+    return if (this == 0.0) stringResource(R.string.free) else "$$this"
 }
 
 fun GuidelineModel.toStandardListItemModel(): StandardListItemModel {

@@ -144,16 +144,20 @@ class UpgradeViewModel @Inject constructor(
                     // Update User
                     val prevSubscriptions = it.subscriptions.toMutableList()
                     val updatedSubscriptions = prevSubscriptions.apply {
-                        add(selectedSubscription)
+                        add(
+                            selectedSubscription.copy(
+                                purchasedTime = System.currentTimeMillis()
+                            )
+                        )
                     }
                     val updatedUserModel = it.copy(
                         subscriptions = updatedSubscriptions
                     )
+
                     updateUser(updatedUserModel)
 
                     _uiState.value = UiState.Success(
-                        message = SuccessType.SELECT_SUBSCRIPTION,
-                        route = Screen.Success.route
+                        message = SuccessType.SELECT_SUBSCRIPTION
                     )
                 } ?: run {
                     _uiState.value = UiState.Error(
@@ -177,10 +181,11 @@ class UpgradeViewModel @Inject constructor(
             _uiState.value = UiState.Loading
             try {
                 firestoreRepository.saveUser(userModel)
+
                 _uiState.value = UiState.Success(
                     message = SuccessType.UPDATE_PROFILE,
                     canToast = true,
-                    route = Screen.Settings.route
+                    route = Screen.Success.route
                 )
             } catch (e: Exception) {
                 _uiState.value = UiState.Error(
