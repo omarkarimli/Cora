@@ -38,7 +38,6 @@ import com.omarkarimli.cora.domain.models.SearchImageResponse
 import com.omarkarimli.cora.domain.models.StandardListItemModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.ui.theme.Dimens
-import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.Locale
 import androidx.compose.ui.text.AnnotatedString
@@ -340,14 +339,16 @@ fun String.returnIfAvailable(): String {
     else ""
 }
 
-fun SearchTextResponse.toMessageModel(): MessageModel {
+fun SearchTextResponse.toMessageModel(maxResult: Int = 1): MessageModel {
     val text = buildString {
         append("**${knowledgeGraph.title}**\n".returnIfAvailable())
         append("${knowledgeGraph.description}\n".returnIfAvailable())
 
         if (organic.isNotEmpty()) {
             append("\n\n**Explores:**\n")
-            organic.forEach { item ->
+            organic
+                .take(maxResult)
+                .forEach { item ->
                 append("\n")
                 append("**${item.title}**\n".returnIfAvailable())
                 append("${item.snippet}\n".returnIfAvailable())
@@ -358,21 +359,28 @@ fun SearchTextResponse.toMessageModel(): MessageModel {
 
         if (peopleAlsoAsk.isNotEmpty()) {
             append("\n\n**People also ask:**\n")
-            peopleAlsoAsk.forEach { item ->
+            peopleAlsoAsk
+                .take(maxResult)
+                .forEach { item ->
                 append("_[${item.question}](${item.link})_\n".returnIfAvailable())
             }
         }
 
         if (relatedSearches.isNotEmpty()) {
             append("\n\n**Related searches:**\n")
-            relatedSearches.forEach { item ->
+            relatedSearches
+                .take(maxResult)
+                .forEach { item ->
                 append("*${item.query}*\n".returnIfAvailable())
             }
         }
     }
 
-    val images = mutableListOf<ImageModel>()
-    if (knowledgeGraph.imageUrl.isNotBlank()) images.add(ImageModel(knowledgeGraph.imageUrl, knowledgeGraph.imageUrl))
+    var images = mutableListOf<ImageModel>()
+    if (knowledgeGraph.imageUrl.isNotBlank()) {
+        images.add(ImageModel(knowledgeGraph.imageUrl, knowledgeGraph.imageUrl))
+        images = images.take(maxResult).toMutableList()
+    }
 
     return MessageModel(
         text = text.trim(),

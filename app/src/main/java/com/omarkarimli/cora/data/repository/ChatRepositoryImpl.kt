@@ -19,7 +19,7 @@ class ChatRepositoryImpl @Inject constructor(
         try {
             val userModel = firestoreRepository.getUser() ?: throw IllegalStateException("User not authenticated.")
             val result = if (messageModel.webSearch) {
-                serperRepository.searchText(messageModel.text).toMessageModel()
+                serperRepository.searchText(messageModel.text).toMessageModel(userModel.usageData.webSearchResultCount)
             } else {
                 aiRepository.generateMessage(messageModel)
             }
