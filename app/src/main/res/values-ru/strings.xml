@@ -3,14 +3,14 @@
 
     <string name="app_icon">Значок приложения</string>
     <string name="general">Общие</string>
-    <string name="more">Подробнее</string>
+    <string name="more">Ещё</string>
     <string name="success">Успех</string>
-    <string name="success_message">Процесс прошел успешно.</string>
+    <string name="success_message">Процесс завершён успешно.</string>
     <string name="splash">Заставка</string>
     <string name="confirm">Подтвердить</string>
     <string name="save">Сохранить</string>
     <string name="selected_title">Выбрано</string>
-    <string name="no_item_found">Элемент не найден</string>
+    <string name="no_item_found">Элементы не найдены</string>
 
     <string name="settings">Настройки</string>
     <string name="profile">Профиль</string>
@@ -22,7 +22,7 @@
     <string name="refresh_page">Обновить страницу</string>
     <string name="download">Скачать</string>
 
-    <string name="auth">Аутентификация</string>
+    <string name="auth">Авторизация</string>
     <string name="get_started">Начать</string>
     <string name="continue_title">Продолжить</string>
     <string name="auth_legal_doc_agreement_prefix">Продолжая, вы соглашаетесь с нашими </string>
@@ -38,13 +38,13 @@
     <string name="gender_male">Мужской</string>
     <string name="gender_female">Женский</string>
 
-    <string name="new_chat">Новый Чат</string>
-    <string name="chat_history">История Чата</string>
+    <string name="new_chat">Новый чат</string>
+    <string name="chat_history">История чата</string>
     <string name="open_history">Открыть историю</string>
-    <string name="ask_cora">Спросить Coru</string>
+    <string name="ask_cora">Спросить Cora</string>
     <string name="send">Отправить</string>
     <string name="search">Поиск</string>
-    <string name="clear_all">Очистить все</string>
+    <string name="clear_all">Очистить всё</string>
     <string name="are_you_sure">Вы уверены, что хотите это сделать?</string>
     <string name="delete_item">Удалить элемент</string>
 
@@ -52,19 +52,19 @@
     <string name="attach">Прикрепить</string>
     <string name="remove_attachment">Удалить вложение</string>
     <string name="image_generation">Генерация изображений</string>
-    <string name="image_from_web">Изображение из Интернета</string>
+    <string name="image_from_web">Изображение из сети</string>
     <string name="image_from_device">Изображение с устройства</string>
     <string name="describe">Описать</string>
     <string name="full_screen_image_viewer">Полноэкранный просмотрщик изображений</string>
     <string name="background">Фон</string>
     <string name="enlarged_image">Увеличенное изображение %1$d</string>
     <string name="saving_path">Путь сохранения</string>
-    <string name="desc_saving_path">Vouxes будут сохранены в выбранном пути.</string>
+    <string name="desc_saving_path">Элементы будут сохранены по выбранному пути.</string>
     <string name="photos">Фотографии</string>
     <string name="downloads">Загрузки</string>
 
     <string name="subscriptions">Подписки</string>
-    <string name="desc_subscriptions">Проверьте свой статус подписки.</string>
+    <string name="desc_subscriptions">Проверьте статус вашей подписки.</string>
     <string name="subscription_history">История подписок</string>
     <string name="upgrade">Обновить</string>
     <string name="current_plan">Текущий план</string>
@@ -72,83 +72,83 @@
     <string name="free">Бесплатно</string>
     <string name="not_available">Недоступно.</string>
     <string name="ads_enabled">Реклама включена</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d поисковых запросов</string>
     <string name="subscription_feature_attaches">%1$d вложений</string>
     <string name="subscription_feature_message_chars">%1$d символов сообщения</string>
-    <string name="subscription_feature_web_result">%1$d веб-изображений</string>
+    <string name="subscription_feature_web_result">%1$d веб-результатов</string>
     <string name="usage">Использование</string>
-    <string name="desc_usage">Проверьте свое использование.</string>
+    <string name="desc_usage">Проверьте ваше использование.</string>
     <string name="attaches">Вложения</string>
     <string name="usage_item_attaches_desc">Вложения в чате</string>
     <string name="usage_item_message_chars_title">Символы сообщения</string>
     <string name="usage_item_message_chars_desc">Символы ответов в чате</string>
     <string name="web_searches">Веб-поиски</string>
-    <string name="desc_web_searches">Общее количество поисков в Интернете</string>
+    <string name="desc_web_searches">Общее количество поисковых запросов в сети</string>
 
-    <string name="dark_mode">Темный режим</string>
-    <string name="desc_dark_mode">Изменить внешний вид приложения.</string>
+    <string name="dark_mode">Тёмный режим</string>
+    <string name="desc_dark_mode">Измените внешний вид приложения.</string>
     <string name="system">Система</string>
     <string name="light">Светлый</string>
-    <string name="dark">Темный</string>
+    <string name="dark">Тёмный</string>
     <string name="dynamic_color">Динамический цвет</string>
-    <string name="desc_dynamic_color">Сделать цвета приложения динамическими.</string>
-    <string name="on">Вкл</string>
-    <string name="off">Выкл</string>
+    <string name="desc_dynamic_color">Сделайте цвета приложения динамическими.</string>
+    <string name="on">Вкл.</string>
+    <string name="off">Выкл.</string>
     <string name="notifications">Уведомления</string>
     <string name="desc_notifications">Управляйте своими оповещениями и звуками.</string>
     <string name="languages">Языки</string>
-    <string name="desc_lang">Изменить язык приложения.</string>
+    <string name="desc_lang">Измените язык приложения.</string>
     <string name="live_translation">Живой перевод</string>
-    <string name="desc_live_translation">Перевод сгенерированного контента в реальном времени.</string>
+    <string name="desc_live_translation">Живой перевод сгенерированного контента.</string>
 
     <string name="support">Поддержка</string>
     <string name="help">Помощь</string>
-    <string name="guidelines">Руководства</string>
-    <string name="desc_guidelines">Просмотреть и следовать руководствам.</string>
+    <string name="guidelines">Рекомендации</string>
+    <string name="desc_guidelines">Просмотреть и следовать рекомендациям.</string>
     <string name="report_issue">Сообщить о проблеме</string>
-    <string name="desc_report_issue">Отправить отчет об ошибке или запрос функции.</string>
+    <string name="desc_report_issue">Отправить отчёт об ошибке или запрос функции.</string>
     <string name="reset_settings">Сбросить настройки</string>
     <string name="desc_reset_settings">Вернуть все настройки к значениям по умолчанию.</string>
-    <string name="about">О программе</string>
-    <string name="desc_about">Просмотреть информацию о приложении.</string>
-    <string name="about_main_text">Разработано для усиления ваших идей. Ваша страсть - наша цель. Мы искренне надеемся, что вам понравится то, что мы для вас создали.</string>
+    <string name="about">О приложении</string>
+    <string name="desc_about">Посмотреть информацию о приложении.</string>
+    <string name="about_main_text">Создано для максимального развития ваших идей. Ваша страсть — наша цель. Мы искренне надеемся, что вам понравится то, что мы для вас создали.</string>
     <string name="link_to_source">Ссылка на источник</string>
 
     <string name="notification_text">Чувствуете вдохновение? Попробуйте что-то новое.</string>
 
-    <string name="error_storage_permission_denied">Требуется разрешение на хранение для выбора фотографий.</string>
-    <string name="error_camera_permission_denied">Требуется разрешение на камеру для съемки фотографий.</string>
+    <string name="error_storage_permission_denied">Для выбора фотографий требуется разрешение на хранение.</string>
+    <string name="error_camera_permission_denied">Для съёмки фотографий требуется разрешение на доступ к камере.</string>
     <string name="error_failed_persistent_access">Не удалось получить постоянный доступ к изображению.</string>
     <string name="error_no_active_subscription">Нет активной подписки.</string>
-    <string name="error_google_sign_in_failed">Сбой входа через Google. Повторите попытку.</string>
+    <string name="error_google_sign_in_failed">Сбой входа через Google. Пожалуйста, повторите попытку.</string>
     <string name="error_sign_out">Сбой выхода.</string>
-    <string name="error_something_went_wrong">Что-то пошло не так. Повторите попытку.</string>
+    <string name="error_something_went_wrong">Что-то пошло не так. Пожалуйста, повторите попытку.</string>
     <string name="error_empty_chat">Чат пуст.</string>
     <string name="error_create_file">Не удалось создать файл для сохранения фотографии.</string>
-    <string name="error_take_photo">Сбой при съемке фотографии.</string>
+    <string name="error_take_photo">Сбой при съёмке фотографии.</string>
     <string name="error_image_already_added">Изображение уже добавлено.</string>
     <string name="error_max_images_reached">Вы можете добавить только до 3 изображений.</string>
     <string name="error_attach_limit_reached">Вы достигли своего лимита вложений.</string>
     <string name="error_load_image">Не удалось загрузить изображение.</string>
     <string name="error_load_subscriptions">Не удалось загрузить подписки.</string>
-    <string name="error_no_free_subscriptions">Бесплатные подписки недоступны.</string>
+    <string name="error_no_free_subscriptions">Нет доступных бесплатных подписок.</string>
     <string name="error_get_free_subscription">Не удалось получить бесплатную подписку.</string>
     <string name="error_save_user_data">Не удалось сохранить данные пользователя.</string>
 
     <string name="error_min_length">Требуется не менее %1$d символов</string>
-    <string name="error_max_length">Разрешено не более %1$d символов</string>
-    <string name="error_no_gaps">Пробелы не допускаются</string>
-    <string name="error_no_special_chars">Специальные символы не допускаются</string>
-    <string name="error_no_capital_letters">Заглавные буквы не допускаются</string>
-    <string name="error_only_english_letters">Допускаются только английские буквы</string>
+    <string name="error_max_length">Разрешено максимум %1$d символов</string>
+    <string name="error_no_gaps">Пробелы не разрешены</string>
+    <string name="error_no_special_chars">Специальные символы не разрешены</string>
+    <string name="error_no_capital_letters">Заглавные буквы не разрешены</string>
+    <string name="error_only_english_letters">Разрешены только английские буквы</string>
 
     <string-array name="onboarding_mottos">
-        <item>Разработано для усиления ваших идей</item>
+        <item>Создано для максимального развития ваших идей</item>
         <item>Найдите свою следующую творческую искру</item>
-        <item>Присоединяйтесь к сообществу новаторов</item>
+        <item>Присоединяйтесь к сообществу инноваторов</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Внимание</item>
-        <item>Следуйте правилам.</item>
+        <item>Соблюдайте правила.</item>
     </string-array>
 </resources>

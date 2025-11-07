@@ -5,8 +5,8 @@
     <string name="general">一般</string>
     <string name="more">その他</string>
     <string name="success">成功</string>
-    <string name="success_message">処理が正常に完了しました。</string>
-    <string name="splash">スプラッシュ画面</string>
+    <string name="success_message">プロセスは成功しました。</string>
+    <string name="splash">スプラッシュ</string>
     <string name="confirm">確認</string>
     <string name="save">保存</string>
     <string name="selected_title">選択済み</string>
@@ -18,20 +18,20 @@
     <string name="admin">管理者</string>
     <string name="back_to_prev">前のページに戻る</string>
     <string name="share">共有</string>
-    <string name="share_body">こちらをご覧ください。</string>
+    <string name="share_body">こちらをチェックしてください。</string>
     <string name="refresh_page">ページを更新</string>
     <string name="download">ダウンロード</string>
 
     <string name="auth">認証</string>
     <string name="get_started">始める</string>
     <string name="continue_title">続行</string>
-    <string name="auth_legal_doc_agreement_prefix">続行することにより、お客様は当社の </string>
+    <string name="auth_legal_doc_agreement_prefix">続行することにより、お客様は当社の</string>
     <string name="legal_doc">法的文書</string>
     <string name="user_setup">ユーザー設定</string>
     <string name="username">ユーザー名</string>
     <string name="bio">自己紹介</string>
     <string name="required">必須</string>
-    <string name="optional">任意</string>
+    <string name="optional">オプション</string>
     <string name="sign_out">サインアウト</string>
     <string name="account">アカウント</string>
     <string name="gender">性別</string>
@@ -55,11 +55,11 @@
     <string name="image_from_web">ウェブからの画像</string>
     <string name="image_from_device">デバイスからの画像</string>
     <string name="describe">説明</string>
-    <string name="full_screen_image_viewer">フルスクリーン画像ビューア</string>
+    <string name="full_screen_image_viewer">全画面画像ビューア</string>
     <string name="background">背景</string>
     <string name="enlarged_image">拡大画像 %1$d</string>
-    <string name="saving_path">保存パス</string>
-    <string name="desc_saving_path">Vouxesは選択されたパスに保存されます。</string>
+    <string name="saving_path">保存先パス</string>
+    <string name="desc_saving_path">アイテムは選択されたパスに保存されます。</string>
     <string name="photos">写真</string>
     <string name="downloads">ダウンロード</string>
 
@@ -72,16 +72,16 @@
     <string name="free">無料</string>
     <string name="not_available">利用できません。</string>
     <string name="ads_enabled">広告が有効</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
-    <string name="subscription_feature_attaches">%1$d 添付ファイル</string>
-    <string name="subscription_feature_message_chars">%1$d メッセージ文字数</string>
-    <string name="subscription_feature_web_result">%1$d ウェブ画像</string>
-    <string name="usage">利用状況</string>
-    <string name="desc_usage">利用状況を確認します。</string>
+    <string name="subscription_feature_searches">%1$d 回の検索</string>
+    <string name="subscription_feature_attaches">%1$d 個の添付ファイル</string>
+    <string name="subscription_feature_message_chars">メッセージ文字数 %1$d 字</string>
+    <string name="subscription_feature_web_result">ウェブ結果 %1$d 件</string>
+    <string name="usage">使用状況</string>
+    <string name="desc_usage">使用状況を確認します。</string>
     <string name="attaches">添付ファイル</string>
     <string name="usage_item_attaches_desc">チャットでの添付ファイル</string>
     <string name="usage_item_message_chars_title">メッセージ文字数</string>
-    <string name="usage_item_message_chars_desc">チャットでの返信の文字数</string>
+    <string name="usage_item_message_chars_desc">チャットでの応答の文字数</string>
     <string name="web_searches">ウェブ検索</string>
     <string name="desc_web_searches">ウェブでの合計検索回数</string>
 
@@ -104,47 +104,47 @@
     <string name="support">サポート</string>
     <string name="help">ヘルプ</string>
     <string name="guidelines">ガイドライン</string>
-    <string name="desc_guidelines">ガイドラインを表示して従います。</string>
+    <string name="desc_guidelines">ガイドラインを表示し、従います。</string>
     <string name="report_issue">問題を報告</string>
     <string name="desc_report_issue">バグ報告または機能リクエストを送信します。</string>
     <string name="reset_settings">設定をリセット</string>
     <string name="desc_reset_settings">すべての設定をデフォルト値に戻します。</string>
-    <string name="about">について</string>
+    <string name="about">情報</string>
     <string name="desc_about">アプリに関する情報を表示します。</string>
-    <string name="about_main_text">あなたのアイデアを強力に推進するために設計されました。あなたの情熱が私たちの目指すものです。私たちがあなたのために作成したものをお楽しみいただければ幸いです。</string>
+    <string name="about_main_text">あなたのアイデアを最大限に活かすために設計されました。あなたの情熱は私たちの目的です。私たちがあなたのために作成したものを楽しんでいただければ幸いです。</string>
     <string name="link_to_source">ソースへのリンク</string>
 
-    <string name="notification_text">ひらめきを感じましたか？新しいものを試してみてください。</string>
+    <string name="notification_text">インスピレーションを感じましたか？新しいものを試してみてください。</string>
 
-    <string name="error_storage_permission_denied">写真を選択するにはストレージの許可が必要です。</string>
-    <string name="error_camera_permission_denied">写真を撮るにはカメラの許可が必要です。</string>
+    <string name="error_storage_permission_denied">写真を選択するには、ストレージの許可が必要です。</string>
+    <string name="error_camera_permission_denied">写真を撮るには、カメラの許可が必要です。</string>
     <string name="error_failed_persistent_access">画像への永続的なアクセスを取得できませんでした。</string>
-    <string name="error_no_active_subscription">アクティブなサブスクリプションがありません。</string>
-    <string name="error_google_sign_in_failed">Google サインインに失敗しました。もう一度お試しください。</string>
+    <string name="error_no_active_subscription">有効なサブスクリプションがありません。</string>
+    <string name="error_google_sign_in_failed">Googleサインインに失敗しました。もう一度お試しください。</string>
     <string name="error_sign_out">サインアウトに失敗しました。</string>
     <string name="error_something_went_wrong">問題が発生しました。もう一度お試しください。</string>
     <string name="error_empty_chat">チャットが空です。</string>
     <string name="error_create_file">写真を保存するためのファイルを作成できませんでした。</string>
     <string name="error_take_photo">写真の撮影に失敗しました。</string>
-    <string name="error_image_already_added">画像はすでに追加されています。</string>
-    <string name="error_max_images_reached">追加できる画像は 3 枚までです。</string>
+    <string name="error_image_already_added">画像は既に追加されています。</string>
+    <string name="error_max_images_reached">追加できる画像は最大3枚までです。</string>
     <string name="error_attach_limit_reached">添付ファイルの制限に達しました。</string>
     <string name="error_load_image">画像の読み込みに失敗しました。</string>
     <string name="error_load_subscriptions">サブスクリプションの読み込みに失敗しました。</string>
     <string name="error_no_free_subscriptions">無料のサブスクリプションはありません。</string>
-    <string name="error_get_free_subscription">無料のサブスクリプションの取得に失敗しました。</string>
+    <string name="error_get_free_subscription">無料サブスクリプションの取得に失敗しました。</string>
     <string name="error_save_user_data">ユーザーデータの保存に失敗しました。</string>
 
-    <string name="error_min_length">少なくとも %1$d 文字が必要です</string>
-    <string name="error_max_length">最大 %1$d 文字まで許可されています</string>
-    <string name="error_no_gaps">スペースは許可されていません</string>
-    <string name="error_no_special_chars">特殊文字は許可されていません</string>
-    <string name="error_no_capital_letters">大文字は許可されていません</string>
-    <string name="error_only_english_letters">英字のみ許可されています</string>
+    <string name="error_min_length">最低 %1$d 文字が必要です</string>
+    <string name="error_max_length">最大 %1$d 文字まで許可されます</string>
+    <string name="error_no_gaps">空白は許可されません</string>
+    <string name="error_no_special_chars">特殊文字は許可されません</string>
+    <string name="error_no_capital_letters">大文字は許可されません</string>
+    <string name="error_only_english_letters">英字のみ許可されます</string>
 
     <string-array name="onboarding_mottos">
-        <item>あなたのアイデアを強力に推進するために設計されました</item>
-        <item>次のクリエイティブなひらめきを見つけましょう</item>
+        <item>あなたのアイデアを最大限に活かすために設計されました</item>
+        <item>あなたの次の創造的なひらめきを見つけてください</item>
         <item>イノベーターのコミュニティとつながりましょう</item>
     </string-array>
     <string-array name="guideline_mottos">

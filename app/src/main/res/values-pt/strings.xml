@@ -14,7 +14,7 @@
 
     <string name="settings">Configurações</string>
     <string name="profile">Perfil</string>
-    <string name="chat">Bate-papo</string>
+    <string name="chat">Chat</string>
     <string name="admin">Administrador</string>
     <string name="back_to_prev">Voltar para a página anterior</string>
     <string name="share">Compartilhar</string>
@@ -25,9 +25,9 @@
     <string name="auth">Autenticação</string>
     <string name="get_started">Começar</string>
     <string name="continue_title">Continuar</string>
-    <string name="auth_legal_doc_agreement_prefix">Ao continuar, você concorda com os nossos </string>
+    <string name="auth_legal_doc_agreement_prefix">Ao continuar, você concorda com nossos </string>
     <string name="legal_doc">Documentos Legais</string>
-    <string name="user_setup">Configuração do usuário</string>
+    <string name="user_setup">Configuração do Usuário</string>
     <string name="username">Nome de usuário</string>
     <string name="bio">Biografia</string>
     <string name="required">Obrigatório</string>
@@ -38,8 +38,8 @@
     <string name="gender_male">Masculino</string>
     <string name="gender_female">Feminino</string>
 
-    <string name="new_chat">Novo Bate-papo</string>
-    <string name="chat_history">Histórico do Bate-papo</string>
+    <string name="new_chat">Novo Chat</string>
+    <string name="chat_history">Histórico do Chat</string>
     <string name="open_history">Abrir histórico</string>
     <string name="ask_cora">Pergunte à Cora</string>
     <string name="send">Enviar</string>
@@ -59,7 +59,7 @@
     <string name="background">Fundo</string>
     <string name="enlarged_image">Imagem ampliada %1$d</string>
     <string name="saving_path">Caminho de salvamento</string>
-    <string name="desc_saving_path">Os Vouxes serão salvos no caminho selecionado.</string>
+    <string name="desc_saving_path">Os itens serão salvos no caminho selecionado.</string>
     <string name="photos">Fotos</string>
     <string name="downloads">Downloads</string>
 
@@ -67,26 +67,26 @@
     <string name="desc_subscriptions">Verifique o status da sua assinatura.</string>
     <string name="subscription_history">Histórico de Assinaturas</string>
     <string name="upgrade">Atualizar</string>
-    <string name="current_plan">Plano atual</string>
+    <string name="current_plan">Plano Atual</string>
     <string name="select_plan">Selecionar plano</string>
-    <string name="free">Grátis</string>
+    <string name="free">Gratuito</string>
     <string name="not_available">Não disponível.</string>
     <string name="ads_enabled">Anúncios ativados</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
+    <string name="subscription_feature_searches">%1$d pesquisas</string>
     <string name="subscription_feature_attaches">%1$d anexos</string>
     <string name="subscription_feature_message_chars">%1$d caracteres de mensagem</string>
-    <string name="subscription_feature_web_result">%1$d imagens da web</string>
+    <string name="subscription_feature_web_result">%1$d resultados da web</string>
     <string name="usage">Uso</string>
-    <string name="desc_usage">Verifique o seu uso.</string>
+    <string name="desc_usage">Verifique seu uso.</string>
     <string name="attaches">Anexos</string>
-    <string name="usage_item_attaches_desc">Anexos no bate-papo</string>
+    <string name="usage_item_attaches_desc">Anexos no chat</string>
     <string name="usage_item_message_chars_title">Caracteres de Mensagem</string>
-    <string name="usage_item_message_chars_desc">Caracteres das respostas no bate-papo</string>
-    <string name="web_searches">Pesquisas na web</string>
+    <string name="usage_item_message_chars_desc">Caracteres das respostas no chat</string>
+    <string name="web_searches">Pesquisas na Web</string>
     <string name="desc_web_searches">Total de pesquisas na web</string>
 
     <string name="dark_mode">Modo escuro</string>
-    <string name="desc_dark_mode">Altere a aparência do aplicativo.</string>
+    <string name="desc_dark_mode">Mude a aparência do aplicativo.</string>
     <string name="system">Sistema</string>
     <string name="light">Claro</string>
     <string name="dark">Escuro</string>
@@ -97,45 +97,45 @@
     <string name="notifications">Notificações</string>
     <string name="desc_notifications">Gerencie seus alertas e sons.</string>
     <string name="languages">Idiomas</string>
-    <string name="desc_lang">Altere o idioma do aplicativo.</string>
+    <string name="desc_lang">Mude o idioma do aplicativo.</string>
     <string name="live_translation">Tradução ao vivo</string>
-    <string name="desc_live_translation">Tradução em tempo real do conteúdo gerado.</string>
+    <string name="desc_live_translation">Tradução ao vivo dos conteúdos gerados.</string>
 
     <string name="support">Suporte</string>
     <string name="help">Ajuda</string>
     <string name="guidelines">Diretrizes</string>
     <string name="desc_guidelines">Veja e siga as diretrizes.</string>
-    <string name="report_issue">Reportar problema</string>
-    <string name="desc_report_issue">Envie um relatório de erro ou uma solicitação de recurso.</string>
-    <string name="reset_settings">Redefinir configurações</string>
+    <string name="report_issue">Reportar um problema</string>
+    <string name="desc_report_issue">Envie um relatório de bug ou uma solicitação de recurso.</string>
+    <string name="reset_settings">Redefinir Configurações</string>
     <string name="desc_reset_settings">Reverter todas as configurações para seus valores padrão.</string>
     <string name="about">Sobre</string>
-    <string name="desc_about">Veja informações sobre o aplicativo.</string>
-    <string name="about_main_text">Projetado para potencializar suas ideias. Sua paixão é o nosso propósito. Esperamos sinceramente que você goste do que criamos para você.</string>
+    <string name="desc_about">Ver informações sobre o aplicativo.</string>
+    <string name="about_main_text">Projetado para impulsionar suas ideias. Sua paixão é o nosso propósito. Esperamos sinceramente que você goste do que criamos para você.</string>
     <string name="link_to_source">Link para a fonte</string>
 
-    <string name="notification_text">Se sentindo inspirado? Experimente algo novo.</string>
+    <string name="notification_text">Se sentiu inspirado? Tente um novo.</string>
 
-    <string name="error_storage_permission_denied">Permissão de armazenamento é necessária para selecionar fotos.</string>
-    <string name="error_camera_permission_denied">Permissão de câmera é necessária para tirar fotos.</string>
+    <string name="error_storage_permission_denied">É necessária permissão de armazenamento para selecionar fotos.</string>
+    <string name="error_camera_permission_denied">É necessária permissão da câmera para tirar fotos.</string>
     <string name="error_failed_persistent_access">Falha ao obter acesso persistente à imagem.</string>
     <string name="error_no_active_subscription">Nenhuma assinatura ativa.</string>
-    <string name="error_google_sign_in_failed">Falha no login do Google. Tente novamente.</string>
+    <string name="error_google_sign_in_failed">Falha no login com o Google. Tente novamente.</string>
     <string name="error_sign_out">Falha ao sair.</string>
     <string name="error_something_went_wrong">Algo deu errado. Tente novamente.</string>
-    <string name="error_empty_chat">O bate-papo está vazio.</string>
+    <string name="error_empty_chat">O chat está vazio.</string>
     <string name="error_create_file">Não foi possível criar um arquivo para salvar a foto.</string>
-    <string name="error_take_photo">Falha ao tirar a foto.</string>
-    <string name="error_image_already_added">Imagem já adicionada.</string>
+    <string name="error_take_photo">Falha ao tirar uma foto.</string>
+    <string name="error_image_already_added">A imagem já foi adicionada.</string>
     <string name="error_max_images_reached">Você só pode adicionar até 3 imagens.</string>
     <string name="error_attach_limit_reached">Você atingiu seu limite de anexos.</string>
     <string name="error_load_image">Falha ao carregar a imagem.</string>
-    <string name="error_load_subscriptions">Falha ao carregar assinaturas.</string>
+    <string name="error_load_subscriptions">Falha ao carregar as assinaturas.</string>
     <string name="error_no_free_subscriptions">Nenhuma assinatura gratuita disponível.</string>
-    <string name="error_get_free_subscription">Falha ao obter assinatura gratuita.</string>
-    <string name="error_save_user_data">Falha ao salvar dados do usuário.</string>
+    <string name="error_get_free_subscription">Falha ao obter a assinatura gratuita.</string>
+    <string name="error_save_user_data">Falha ao salvar os dados do usuário.</string>
 
-    <string name="error_min_length">Mínimo de %1$d caracteres necessários</string>
+    <string name="error_min_length">Mínimo de %1$d caracteres obrigatório</string>
     <string name="error_max_length">Máximo de %1$d caracteres permitidos</string>
     <string name="error_no_gaps">Não são permitidos espaços</string>
     <string name="error_no_special_chars">Não são permitidos caracteres especiais</string>
@@ -143,7 +143,7 @@
     <string name="error_only_english_letters">Apenas letras em inglês são permitidas</string>
 
     <string-array name="onboarding_mottos">
-        <item>Projetado para potencializar suas ideias</item>
+        <item>Projetado para impulsionar suas ideias</item>
         <item>Encontre sua próxima faísca criativa</item>
         <item>Conecte-se com uma comunidade de inovadores</item>
     </string-array>

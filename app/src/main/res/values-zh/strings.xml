@@ -2,15 +2,15 @@
 <resources>
 
     <string name="app_icon">应用图标</string>
-    <string name="general">一般</string>
+    <string name="general">通用</string>
     <string name="more">更多</string>
     <string name="success">成功</string>
     <string name="success_message">流程已成功完成。</string>
-    <string name="splash">启动屏幕</string>
+    <string name="splash">启动画面</string>
     <string name="confirm">确认</string>
     <string name="save">保存</string>
     <string name="selected_title">已选择</string>
-    <string name="no_item_found">未找到任何项目</string>
+    <string name="no_item_found">未找到项目</string>
 
     <string name="settings">设置</string>
     <string name="profile">个人资料</string>
@@ -22,7 +22,7 @@
     <string name="refresh_page">刷新页面</string>
     <string name="download">下载</string>
 
-    <string name="auth">认证</string>
+    <string name="auth">身份验证</string>
     <string name="get_started">开始使用</string>
     <string name="continue_title">继续</string>
     <string name="auth_legal_doc_agreement_prefix">继续即表示您同意我们的 </string>
@@ -40,28 +40,28 @@
 
     <string name="new_chat">新聊天</string>
     <string name="chat_history">聊天记录</string>
-    <string name="open_history">打开记录</string>
+    <string name="open_history">打开历史记录</string>
     <string name="ask_cora">询问 Cora</string>
     <string name="send">发送</string>
     <string name="search">搜索</string>
     <string name="clear_all">全部清除</string>
-    <string name="are_you_sure">您确定要执行此操作吗？</string>
+    <string name="are_you_sure">您确定要这样做吗？</string>
     <string name="delete_item">删除项目</string>
 
     <string name="camera">相机</string>
     <string name="attach">附加</string>
     <string name="remove_attachment">移除附件</string>
     <string name="image_generation">图像生成</string>
-    <string name="image_from_web">来自网络的图片</string>
-    <string name="image_from_device">来自设备的图片</string>
+    <string name="image_from_web">来自网络的图像</string>
+    <string name="image_from_device">来自设备的图像</string>
     <string name="describe">描述</string>
-    <string name="full_screen_image_viewer">全屏图片查看器</string>
+    <string name="full_screen_image_viewer">全屏图像查看器</string>
     <string name="background">背景</string>
-    <string name="enlarged_image">放大图片 %1$d</string>
+    <string name="enlarged_image">放大图像 %1$d</string>
     <string name="saving_path">保存路径</string>
-    <string name="desc_saving_path">Vouxes 将保存在选定的路径中。</string>
+    <string name="desc_saving_path">项目将保存到选定的路径。</string>
     <string name="photos">照片</string>
-    <string name="downloads">下载</string>
+    <string name="downloads">下载内容</string>
 
     <string name="subscriptions">订阅</string>
     <string name="desc_subscriptions">检查您的订阅状态。</string>
@@ -72,16 +72,16 @@
     <string name="free">免费</string>
     <string name="not_available">不可用。</string>
     <string name="ads_enabled">广告已启用</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
-    <string name="subscription_feature_attaches">%1$d 附件</string>
+    <string name="subscription_feature_searches">%1$d 次搜索</string>
+    <string name="subscription_feature_attaches">%1$d 个附件</string>
     <string name="subscription_feature_message_chars">%1$d 消息字符</string>
-    <string name="subscription_feature_web_result">%1$d 网络图片</string>
+    <string name="subscription_feature_web_result">%1$d 个网络结果</string>
     <string name="usage">使用情况</string>
     <string name="desc_usage">检查您的使用情况。</string>
     <string name="attaches">附件</string>
     <string name="usage_item_attaches_desc">聊天中的附件</string>
     <string name="usage_item_message_chars_title">消息字符</string>
-    <string name="usage_item_message_chars_desc">聊天回复中的字符数</string>
+    <string name="usage_item_message_chars_desc">聊天回复的字符数</string>
     <string name="web_searches">网络搜索</string>
     <string name="desc_web_searches">网络搜索总次数</string>
 
@@ -90,8 +90,8 @@
     <string name="system">系统</string>
     <string name="light">浅色</string>
     <string name="dark">深色</string>
-    <string name="dynamic_color">动态颜色</string>
-    <string name="desc_dynamic_color">使应用颜色具有动态性。</string>
+    <string name="dynamic_color">动态色彩</string>
+    <string name="desc_dynamic_color">使应用颜色动态化。</string>
     <string name="on">开启</string>
     <string name="off">关闭</string>
     <string name="notifications">通知</string>
@@ -110,26 +110,26 @@
     <string name="reset_settings">重置设置</string>
     <string name="desc_reset_settings">将所有设置恢复为默认值。</string>
     <string name="about">关于</string>
-    <string name="desc_about">查看应用信息。</string>
-    <string name="about_main_text">旨在增强您的创意。您的热情是我们的宗旨。我们真诚地希望您喜欢我们为您创造的一切。</string>
+    <string name="desc_about">查看有关应用的信息。</string>
+    <string name="about_main_text">旨在为您的想法提供强大支持。您的热情是我们的宗旨。我们衷心希望您喜欢我们为您创造的一切。</string>
     <string name="link_to_source">源代码链接</string>
 
-    <string name="notification_text">感到灵感了吗？尝试一些新的东西。</string>
+    <string name="notification_text">感觉有灵感吗？尝试一个新的。</string>
 
     <string name="error_storage_permission_denied">选择照片需要存储权限。</string>
     <string name="error_camera_permission_denied">拍照需要相机权限。</string>
-    <string name="error_failed_persistent_access">无法获取图片的持久访问权限。</string>
+    <string name="error_failed_persistent_access">无法获取对图像的持久访问权限。</string>
     <string name="error_no_active_subscription">没有有效的订阅。</string>
-    <string name="error_google_sign_in_failed">Google 登录失败。请重试。</string>
+    <string name="error_google_sign_in_failed">Google 登录失败。请再试一次。</string>
     <string name="error_sign_out">退出登录失败。</string>
-    <string name="error_something_went_wrong">发生了一些错误。请重试。</string>
-    <string name="error_empty_chat">聊天内容为空。</string>
+    <string name="error_something_went_wrong">出了些问题。请再试一次。</string>
+    <string name="error_empty_chat">聊天为空。</string>
     <string name="error_create_file">无法创建文件来保存照片。</string>
     <string name="error_take_photo">拍照失败。</string>
-    <string name="error_image_already_added">图片已添加。</string>
-    <string name="error_max_images_reached">您最多只能添加 3 张图片。</string>
+    <string name="error_image_already_added">图像已添加。</string>
+    <string name="error_max_images_reached">您最多只能添加 3 张图像。</string>
     <string name="error_attach_limit_reached">您已达到附件限制。</string>
-    <string name="error_load_image">加载图片失败。</string>
+    <string name="error_load_image">加载图像失败。</string>
     <string name="error_load_subscriptions">加载订阅失败。</string>
     <string name="error_no_free_subscriptions">没有可用的免费订阅。</string>
     <string name="error_get_free_subscription">获取免费订阅失败。</string>
@@ -137,15 +137,15 @@
 
     <string name="error_min_length">至少需要 %1$d 个字符</string>
     <string name="error_max_length">最多允许 %1$d 个字符</string>
-    <string name="error_no_gaps">不允许空格</string>
-    <string name="error_no_special_chars">不允许特殊字符</string>
-    <string name="error_no_capital_letters">不允许大写字母</string>
+    <string name="error_no_gaps">不允许有空格</string>
+    <string name="error_no_special_chars">不允许有特殊字符</string>
+    <string name="error_no_capital_letters">不允许有大写字母</string>
     <string name="error_only_english_letters">只允许英文字母</string>
 
     <string-array name="onboarding_mottos">
-        <item>旨在增强您的创意</item>
+        <item>旨在为您的想法提供强大支持</item>
         <item>找到您的下一个创意火花</item>
-        <item>与创新者社区联系</item>
+        <item>与创新者社区建立联系</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>注意</item>

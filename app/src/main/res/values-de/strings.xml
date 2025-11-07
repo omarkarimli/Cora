@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_icon">App-Icon</string>
+    <string name="app_icon">App-Symbol</string>
     <string name="general">Allgemein</string>
     <string name="more">Mehr</string>
     <string name="success">Erfolg</string>
     <string name="success_message">Der Vorgang war erfolgreich.</string>
-    <string name="splash">Startbildschirm</string>
+    <string name="splash">Startseite</string>
     <string name="confirm">Bestätigen</string>
     <string name="save">Speichern</string>
     <string name="selected_title">Ausgewählt</string>
@@ -18,12 +18,12 @@
     <string name="admin">Admin</string>
     <string name="back_to_prev">Zurück zur vorherigen Seite</string>
     <string name="share">Teilen</string>
-    <string name="share_body">Schau dir das an.</string>
+    <string name="share_body">Sieh dir das an.</string>
     <string name="refresh_page">Seite aktualisieren</string>
     <string name="download">Herunterladen</string>
 
     <string name="auth">Authentifizierung</string>
-    <string name="get_started">Los geht\'s</string>
+    <string name="get_started">Loslegen</string>
     <string name="continue_title">Weiter</string>
     <string name="auth_legal_doc_agreement_prefix">Indem Sie fortfahren, stimmen Sie unseren </string>
     <string name="legal_doc">Rechtlichen Dokumenten</string>
@@ -59,7 +59,7 @@
     <string name="background">Hintergrund</string>
     <string name="enlarged_image">Vergrößertes Bild %1$d</string>
     <string name="saving_path">Speicherpfad</string>
-    <string name="desc_saving_path">Vouxes werden im ausgewählten Pfad gespeichert.</string>
+    <string name="desc_saving_path">Elemente werden im ausgewählten Pfad gespeichert.</string>
     <string name="photos">Fotos</string>
     <string name="downloads">Downloads</string>
 
@@ -72,10 +72,10 @@
     <string name="free">Kostenlos</string>
     <string name="not_available">Nicht verfügbar.</string>
     <string name="ads_enabled">Anzeigen aktiviert</string>
-    <string name="subscription_feature_searches">%1$d Vouxes</string>
+    <string name="subscription_feature_searches">%1$d Suchvorgänge</string>
     <string name="subscription_feature_attaches">%1$d Anhänge</string>
     <string name="subscription_feature_message_chars">%1$d Nachrichten-Zeichen</string>
-    <string name="subscription_feature_web_result">%1$d Web-Bilder</string>
+    <string name="subscription_feature_web_result">%1$d Web-Ergebnisse</string>
     <string name="usage">Nutzung</string>
     <string name="desc_usage">Überprüfen Sie Ihre Nutzung.</string>
     <string name="attaches">Anhänge</string>
@@ -104,36 +104,36 @@
     <string name="support">Support</string>
     <string name="help">Hilfe</string>
     <string name="guidelines">Richtlinien</string>
-    <string name="desc_guidelines">Richtlinien anzeigen und befolgen.</string>
+    <string name="desc_guidelines">Richtlinien ansehen und befolgen.</string>
     <string name="report_issue">Problem melden</string>
     <string name="desc_report_issue">Senden Sie einen Fehlerbericht oder eine Funktionsanfrage.</string>
     <string name="reset_settings">Einstellungen zurücksetzen</string>
     <string name="desc_reset_settings">Alle Einstellungen auf ihre Standardwerte zurücksetzen.</string>
     <string name="about">Über</string>
     <string name="desc_about">Informationen zur App anzeigen.</string>
-    <string name="about_main_text">Entwickelt, um Ihre Ideen zu beflügeln. Ihre Leidenschaft ist unser Ziel. Wir hoffen sehr, dass Ihnen gefällt, was wir für Sie geschaffen haben.</string>
+    <string name="about_main_text">Entwickelt, um Ihre Ideen zu beschleunigen. Ihre Leidenschaft ist unser Ziel. Wir hoffen, dass Ihnen gefällt, was wir für Sie geschaffen haben.</string>
     <string name="link_to_source">Link zur Quelle</string>
 
-    <string name="notification_text">Fühlen Sie sich inspiriert? Probieren Sie eine neue aus.</string>
+    <string name="notification_text">Fühlen Sie sich inspiriert? Probieren Sie etwas Neues.</string>
 
     <string name="error_storage_permission_denied">Speicherberechtigung ist erforderlich, um Fotos auszuwählen.</string>
     <string name="error_camera_permission_denied">Kameraberechtigung ist erforderlich, um Fotos aufzunehmen.</string>
-    <string name="error_failed_persistent_access">Dauerhafter Zugriff auf das Bild konnte nicht abgerufen werden.</string>
+    <string name="error_failed_persistent_access">Dauerhafter Zugriff auf das Bild konnte nicht erhalten werden.</string>
     <string name="error_no_active_subscription">Kein aktives Abonnement.</string>
-    <string name="error_google_sign_in_failed">Google Sign-In fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
+    <string name="error_google_sign_in_failed">Google-Anmeldung fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
     <string name="error_sign_out">Abmeldung fehlgeschlagen.</string>
-    <string name="error_something_went_wrong">Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.</string>
+    <string name="error_something_went_wrong">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</string>
     <string name="error_empty_chat">Chat ist leer.</string>
     <string name="error_create_file">Datei zum Speichern des Fotos konnte nicht erstellt werden.</string>
-    <string name="error_take_photo">Fotoaufnahme fehlgeschlagen.</string>
-    <string name="error_image_already_added">Bild bereits hinzugefügt.</string>
+    <string name="error_take_photo">Aufnahme eines Fotos fehlgeschlagen.</string>
+    <string name="error_image_already_added">Bild wurde bereits hinzugefügt.</string>
     <string name="error_max_images_reached">Sie können nur bis zu 3 Bilder hinzufügen.</string>
-    <string name="error_attach_limit_reached">Sie haben Ihr Anhang-Limit erreicht.</string>
-    <string name="error_load_image">Bild konnte nicht geladen werden.</string>
-    <string name="error_load_subscriptions">Abonnements konnten nicht geladen werden.</string>
+    <string name="error_attach_limit_reached">Sie haben Ihr Anhangslimit erreicht.</string>
+    <string name="error_load_image">Laden des Bildes fehlgeschlagen.</string>
+    <string name="error_load_subscriptions">Laden der Abonnements fehlgeschlagen.</string>
     <string name="error_no_free_subscriptions">Keine kostenlosen Abonnements verfügbar.</string>
-    <string name="error_get_free_subscription">Kostenloses Abonnement konnte nicht bezogen werden.</string>
-    <string name="error_save_user_data">Benutzerdaten konnten nicht gespeichert werden.</string>
+    <string name="error_get_free_subscription">Abrufen des kostenlosen Abonnements fehlgeschlagen.</string>
+    <string name="error_save_user_data">Speichern der Benutzerdaten fehlgeschlagen.</string>
 
     <string name="error_min_length">Mindestens %1$d Zeichen erforderlich</string>
     <string name="error_max_length">Maximal %1$d Zeichen erlaubt</string>
@@ -143,9 +143,9 @@
     <string name="error_only_english_letters">Nur englische Buchstaben erlaubt</string>
 
     <string-array name="onboarding_mottos">
-        <item>Entwickelt, um Ihre Ideen zu beflügeln</item>
+        <item>Entwickelt, um Ihre Ideen zu beschleunigen</item>
         <item>Finden Sie Ihren nächsten kreativen Funken</item>
-        <item>Vernetzen Sie sich mit einer Community von Innovatoren</item>
+        <item>Vernetzen Sie sich mit einer Gemeinschaft von Innovatoren</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Achtung</item>

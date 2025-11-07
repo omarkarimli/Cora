@@ -6,11 +6,11 @@
     <string name="more">더 보기</string>
     <string name="success">성공</string>
     <string name="success_message">프로세스가 성공적으로 완료되었습니다.</string>
-    <string name="splash">스플래시 화면</string>
+    <string name="splash">시작 화면</string>
     <string name="confirm">확인</string>
     <string name="save">저장</string>
     <string name="selected_title">선택됨</string>
-    <string name="no_item_found">항목을 찾을 수 없음</string>
+    <string name="no_item_found">아이템을 찾을 수 없습니다</string>
 
     <string name="settings">설정</string>
     <string name="profile">프로필</string>
@@ -19,17 +19,17 @@
     <string name="back_to_prev">이전 페이지로 돌아가기</string>
     <string name="share">공유</string>
     <string name="share_body">이것을 확인해 보세요.</string>
-    <string name="refresh_page">페이지 새로고침</string>
+    <string name="refresh_page">페이지 새로 고침</string>
     <string name="download">다운로드</string>
 
     <string name="auth">인증</string>
     <string name="get_started">시작하기</string>
     <string name="continue_title">계속</string>
-    <string name="auth_legal_doc_agreement_prefix">계속 진행함으로써 귀하는 당사의 </string>
-    <string name="legal_doc">법적 문서</string>
+    <string name="auth_legal_doc_agreement_prefix">계속 진행하면 당사의 </string>
+    <string name="legal_doc">법률 문서</string>
     <string name="user_setup">사용자 설정</string>
     <string name="username">사용자 이름</string>
-    <string name="bio">자기소개</string>
+    <string name="bio">소개</string>
     <string name="required">필수</string>
     <string name="optional">선택 사항</string>
     <string name="sign_out">로그아웃</string>
@@ -41,57 +41,57 @@
     <string name="new_chat">새 채팅</string>
     <string name="chat_history">채팅 기록</string>
     <string name="open_history">기록 열기</string>
-    <string name="ask_cora">코라에게 물어보세요</string>
+    <string name="ask_cora">Cora에게 질문하기</string>
     <string name="send">보내기</string>
     <string name="search">검색</string>
     <string name="clear_all">모두 지우기</string>
-    <string name="are_you_sure">정말로 이것을 하시겠습니까?</string>
-    <string name="delete_item">항목 삭제</string>
+    <string name="are_you_sure">정말 이렇게 하시겠습니까?</string>
+    <string name="delete_item">아이템 삭제</string>
 
     <string name="camera">카메라</string>
     <string name="attach">첨부</string>
     <string name="remove_attachment">첨부 파일 제거</string>
     <string name="image_generation">이미지 생성</string>
-    <string name="image_from_web">웹에서 이미지</string>
-    <string name="image_from_device">장치에서 이미지</string>
+    <string name="image_from_web">웹의 이미지</string>
+    <string name="image_from_device">장치의 이미지</string>
     <string name="describe">설명</string>
     <string name="full_screen_image_viewer">전체 화면 이미지 뷰어</string>
     <string name="background">배경</string>
     <string name="enlarged_image">확대된 이미지 %1$d</string>
     <string name="saving_path">저장 경로</string>
-    <string name="desc_saving_path">Vouxes는 선택한 경로에 저장됩니다.</string>
+    <string name="desc_saving_path">아이템은 선택한 경로에 저장됩니다.</string>
     <string name="photos">사진</string>
     <string name="downloads">다운로드</string>
 
     <string name="subscriptions">구독</string>
-    <string name="desc_subscriptions">구독 상태를 확인하십시오.</string>
+    <string name="desc_subscriptions">구독 상태를 확인하세요.</string>
     <string name="subscription_history">구독 기록</string>
     <string name="upgrade">업그레이드</string>
     <string name="current_plan">현재 플랜</string>
     <string name="select_plan">플랜 선택</string>
     <string name="free">무료</string>
     <string name="not_available">사용할 수 없습니다.</string>
-    <string name="ads_enabled">광고 활성화됨</string>
-    <string name="subscription_feature_searches">%1$d vouxes</string>
-    <string name="subscription_feature_attaches">%1$d 첨부 파일</string>
-    <string name="subscription_feature_message_chars">%1$d 메시지 문자 수</string>
-    <string name="subscription_feature_web_result">%1$d 웹 이미지</string>
+    <string name="ads_enabled">광고 사용</string>
+    <string name="subscription_feature_searches">검색 %1$d회</string>
+    <string name="subscription_feature_attaches">첨부 %1$d개</string>
+    <string name="subscription_feature_message_chars">메시지 글자 수 %1$d자</string>
+    <string name="subscription_feature_web_result">웹 결과 %1$d개</string>
     <string name="usage">사용량</string>
-    <string name="desc_usage">사용량을 확인하십시오.</string>
+    <string name="desc_usage">사용량을 확인하세요.</string>
     <string name="attaches">첨부 파일</string>
     <string name="usage_item_attaches_desc">채팅의 첨부 파일</string>
-    <string name="usage_item_message_chars_title">메시지 문자 수</string>
-    <string name="usage_item_message_chars_desc">채팅 응답의 문자 수</string>
+    <string name="usage_item_message_chars_title">메시지 글자 수</string>
+    <string name="usage_item_message_chars_desc">채팅 응답의 글자 수</string>
     <string name="web_searches">웹 검색</string>
-    <string name="desc_web_searches">총 웹 검색 횟수</string>
+    <string name="desc_web_searches">웹에서의 총 검색 횟수</string>
 
     <string name="dark_mode">다크 모드</string>
     <string name="desc_dark_mode">앱의 모양을 변경합니다.</string>
     <string name="system">시스템</string>
     <string name="light">밝게</string>
     <string name="dark">어둡게</string>
-    <string name="dynamic_color">동적 색상</string>
-    <string name="desc_dynamic_color">앱의 색상을 동적으로 만듭니다.</string>
+    <string name="dynamic_color">다이나믹 컬러</string>
+    <string name="desc_dynamic_color">앱의 색상을 다이나믹하게 만듭니다.</string>
     <string name="on">켜짐</string>
     <string name="off">꺼짐</string>
     <string name="notifications">알림</string>
@@ -104,34 +104,34 @@
     <string name="support">지원</string>
     <string name="help">도움말</string>
     <string name="guidelines">가이드라인</string>
-    <string name="desc_guidelines">가이드라인을 보고 따르십시오.</string>
-    <string name="report_issue">문제 보고</string>
-    <string name="desc_report_issue">버그 보고서 또는 기능 요청을 제출합니다.</string>
+    <string name="desc_guidelines">가이드라인을 보고 따릅니다.</string>
+    <string name="report_issue">문제 신고</string>
+    <string name="desc_report_issue">버그 보고서 또는 기능 요청을 제출하세요.</string>
     <string name="reset_settings">설정 초기화</string>
     <string name="desc_reset_settings">모든 설정을 기본값으로 되돌립니다.</string>
     <string name="about">정보</string>
     <string name="desc_about">앱에 대한 정보를 봅니다.</string>
-    <string name="about_main_text">여러분의 아이디어를 강화하기 위해 설계되었습니다. 여러분의 열정이 우리의 목적입니다. 저희가 여러분을 위해 만든 것을 즐기시기 바랍니다.</string>
+    <string name="about_main_text">아이디어를 강화하도록 설계되었습니다. 여러분의 열정이 우리의 목적입니다. 저희가 만든 것을 즐겨주시기를 진심으로 바랍니다.</string>
     <string name="link_to_source">소스 링크</string>
 
     <string name="notification_text">영감을 느끼셨나요? 새로운 것을 시도해 보세요.</string>
 
     <string name="error_storage_permission_denied">사진을 선택하려면 저장소 권한이 필요합니다.</string>
-    <string name="error_camera_permission_denied">사진을 촬영하려면 카메라 권한이 필요합니다.</string>
-    <string name="error_failed_persistent_access">이미지에 대한 영구 액세스를 얻지 못했습니다.</string>
+    <string name="error_camera_permission_denied">사진을 찍으려면 카메라 권한이 필요합니다.</string>
+    <string name="error_failed_persistent_access">이미지에 대한 영구 액세스 권한을 얻지 못했습니다.</string>
     <string name="error_no_active_subscription">활성 구독이 없습니다.</string>
-    <string name="error_google_sign_in_failed">Google 로그인에 실패했습니다. 다시 시도해 주십시오.</string>
+    <string name="error_google_sign_in_failed">Google 로그인에 실패했습니다. 다시 시도해 주세요.</string>
     <string name="error_sign_out">로그아웃에 실패했습니다.</string>
-    <string name="error_something_went_wrong">문제가 발생했습니다. 다시 시도해 주십시오.</string>
+    <string name="error_something_went_wrong">문제가 발생했습니다. 다시 시도해 주세요.</string>
     <string name="error_empty_chat">채팅이 비어 있습니다.</string>
     <string name="error_create_file">사진을 저장할 파일을 만들 수 없습니다.</string>
     <string name="error_take_photo">사진 촬영에 실패했습니다.</string>
-    <string name="error_image_already_added">이미 이미지가 추가되었습니다.</string>
+    <string name="error_image_already_added">이미지가 이미 추가되었습니다.</string>
     <string name="error_max_images_reached">최대 3개의 이미지만 추가할 수 있습니다.</string>
     <string name="error_attach_limit_reached">첨부 파일 한도에 도달했습니다.</string>
     <string name="error_load_image">이미지 로드에 실패했습니다.</string>
     <string name="error_load_subscriptions">구독 로드에 실패했습니다.</string>
-    <string name="error_no_free_subscriptions">사용 가능한 무료 구독이 없습니다.</string>
+    <string name="error_no_free_subscriptions">무료 구독이 없습니다.</string>
     <string name="error_get_free_subscription">무료 구독을 얻는 데 실패했습니다.</string>
     <string name="error_save_user_data">사용자 데이터 저장에 실패했습니다.</string>
 
@@ -143,12 +143,12 @@
     <string name="error_only_english_letters">영어 문자만 허용됩니다</string>
 
     <string-array name="onboarding_mottos">
-        <item>여러분의 아이디어를 강화하기 위해 설계되었습니다</item>
-        <item>다음 창의적인 불꽃을 찾으십시오</item>
-        <item>혁신가 커뮤니티와 연결하십시오</item>
+        <item>아이디어를 강화하도록 설계되었습니다</item>
+        <item>다음 창의적인 영감을 찾아보세요</item>
+        <item>혁신가 커뮤니티와 연결하세요</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>주의</item>
-        <item>규칙을 따르십시오.</item>
+        <item>규칙을 따르세요.</item>
     </string-array>
 </resources>

@@ -3,10 +3,10 @@
 
     <string name="app_icon">ऐप आइकन</string>
     <string name="general">सामान्य</string>
-    <string name="more">अधिक</string>
+    <string name="more">और</string>
     <string name="success">सफलता</string>
     <string name="success_message">प्रक्रिया सफल रही।</string>
-    <string name="splash">स्प्लैश स्क्रीन</string>
+    <string name="splash">स्प्लैश</string>
     <string name="confirm">पुष्टि करें</string>
     <string name="save">सहेजें</string>
     <string name="selected_title">चयनित</string>
@@ -15,17 +15,17 @@
     <string name="settings">सेटिंग्स</string>
     <string name="profile">प्रोफ़ाइल</string>
     <string name="chat">चैट</string>
-    <string name="admin">एडमिन</string>
-    <string name="back_to_prev">पिछले पृष्ठ पर वापस जाएँ</string>
+    <string name="admin">व्यवस्थापक</string>
+    <string name="back_to_prev">पिछले पेज पर वापस जाएं</string>
     <string name="share">साझा करें</string>
     <string name="share_body">इसे देखें।</string>
-    <string name="refresh_page">पृष्ठ रीफ़्रेश करें</string>
+    <string name="refresh_page">पेज रीफ़्रेश करें</string>
     <string name="download">डाउनलोड करें</string>
 
     <string name="auth">प्रमाणीकरण</string>
     <string name="get_started">शुरू करें</string>
     <string name="continue_title">जारी रखें</string>
-    <string name="auth_legal_doc_agreement_prefix">जारी रखकर, आप हमारे </string>
+    <string name="auth_legal_doc_agreement_prefix">जारी रखने पर, आप हमारे </string>
     <string name="legal_doc">कानूनी दस्तावेज़ों</string>
     <string name="user_setup">उपयोगकर्ता सेटअप</string>
     <string name="username">उपयोगकर्ता नाम</string>
@@ -43,28 +43,28 @@
     <string name="open_history">इतिहास खोलें</string>
     <string name="ask_cora">कोरा से पूछें</string>
     <string name="send">भेजें</string>
-    <string name="search">खोज</string>
+    <string name="search">खोजें</string>
     <string name="clear_all">सभी साफ़ करें</string>
     <string name="are_you_sure">क्या आप वाकई ऐसा करना चाहते हैं?</string>
-    <string name="delete_item">आइटम हटाएँ</string>
+    <string name="delete_item">आइटम हटाएं</string>
 
     <string name="camera">कैमरा</string>
     <string name="attach">संलग्न करें</string>
-    <string name="remove_attachment">अनुलग्नक हटाएँ</string>
+    <string name="remove_attachment">संलग्नक हटाएं</string>
     <string name="image_generation">छवि निर्माण</string>
     <string name="image_from_web">वेब से छवि</string>
     <string name="image_from_device">डिवाइस से छवि</string>
     <string name="describe">वर्णन करें</string>
     <string name="full_screen_image_viewer">पूर्ण स्क्रीन छवि दर्शक</string>
     <string name="background">पृष्ठभूमि</string>
-    <string name="enlarged_image">विस्तारित छवि %1$d</string>
+    <string name="enlarged_image">बड़ी की गई छवि %1$d</string>
     <string name="saving_path">सहेजने का पथ</string>
-    <string name="desc_saving_path">Vouxes चयनित पथ में सहेजे जाएंगे।</string>
+    <string name="desc_saving_path">आइटम चयनित पथ में सहेजे जाएंगे।</string>
     <string name="photos">फ़ोटो</string>
     <string name="downloads">डाउनलोड</string>
 
     <string name="subscriptions">सदस्यताएँ</string>
-    <string name="desc_subscriptions">अपनी सदस्यता स्थिति जाँचें।</string>
+    <string name="desc_subscriptions">अपनी सदस्यता स्थिति जांचें।</string>
     <string name="subscription_history">सदस्यता इतिहास</string>
     <string name="upgrade">अपग्रेड करें</string>
     <string name="current_plan">वर्तमान प्लान</string>
@@ -72,14 +72,14 @@
     <string name="free">मुफ़्त</string>
     <string name="not_available">उपलब्ध नहीं है।</string>
     <string name="ads_enabled">विज्ञापन सक्षम</string>
-    <string name="subscription_feature_searches">%1$d वौक्स</string>
-    <string name="subscription_feature_attaches">%1$d अनुलग्नक</string>
+    <string name="subscription_feature_searches">%1$d खोजें</string>
+    <string name="subscription_feature_attaches">%1$d संलग्नक</string>
     <string name="subscription_feature_message_chars">%1$d संदेश वर्ण</string>
-    <string name="subscription_feature_web_result">%1$d वेब छवियाँ</string>
+    <string name="subscription_feature_web_result">%1$d वेब परिणाम</string>
     <string name="usage">उपयोग</string>
-    <string name="desc_usage">अपना उपयोग जाँचें।</string>
-    <string name="attaches">अनुलग्नक</string>
-    <string name="usage_item_attaches_desc">चैट में अनुलग्नक</string>
+    <string name="desc_usage">अपना उपयोग जांचें।</string>
+    <string name="attaches">संलग्नक</string>
+    <string name="usage_item_attaches_desc">चैट में संलग्नक</string>
     <string name="usage_item_message_chars_title">संदेश वर्ण</string>
     <string name="usage_item_message_chars_desc">चैट में उत्तरों के वर्ण</string>
     <string name="web_searches">वेब खोजें</string>
@@ -88,13 +88,13 @@
     <string name="dark_mode">डार्क मोड</string>
     <string name="desc_dark_mode">ऐप का स्वरूप बदलें।</string>
     <string name="system">सिस्टम</string>
-    <string name="light">हल्का</string>
-    <string name="dark">गहरा</string>
+    <string name="light">लाइट</string>
+    <string name="dark">डार्क</string>
     <string name="dynamic_color">गतिशील रंग</string>
-    <string name="desc_dynamic_color">ऐप के रंगों को गतिशील बनाएँ।</string>
+    <string name="desc_dynamic_color">ऐप के रंगों को गतिशील बनाएं।</string>
     <string name="on">चालू</string>
     <string name="off">बंद</string>
-    <string name="notifications">सूचनाएँ</string>
+    <string name="notifications">सूचनाएं</string>
     <string name="desc_notifications">अपने अलर्ट और ध्वनियों को प्रबंधित करें।</string>
     <string name="languages">भाषाएँ</string>
     <string name="desc_lang">ऐप की भाषा बदलें।</string>
@@ -106,46 +106,46 @@
     <string name="guidelines">दिशानिर्देश</string>
     <string name="desc_guidelines">दिशानिर्देश देखें और उनका पालन करें।</string>
     <string name="report_issue">समस्या की रिपोर्ट करें</string>
-    <string name="desc_report_issue">एक बग रिपोर्ट या सुविधा अनुरोध सबमिट करें।</string>
+    <string name="desc_report_issue">एक बग रिपोर्ट या एक सुविधा अनुरोध सबमिट करें।</string>
     <string name="reset_settings">सेटिंग्स रीसेट करें</string>
-    <string name="desc_reset_settings">सभी सेटिंग्स को उनके डिफ़ॉल्ट मानों पर वापस लाएँ।</string>
+    <string name="desc_reset_settings">सभी सेटिंग्स को उनके डिफ़ॉल्ट मानों पर वापस लाएं।</string>
     <string name="about">के बारे में</string>
     <string name="desc_about">ऐप के बारे में जानकारी देखें।</string>
-    <string name="about_main_text">आपके विचारों को सुपरचार्ज करने के लिए डिज़ाइन किया गया। आपका जुनून हमारा उद्देश्य है। हम सचमुच उम्मीद करते हैं कि आप हमारे द्वारा आपके लिए बनाई गई चीज़ों का आनंद लेंगे।</string>
+    <string name="about_main_text">आपके विचारों को सुपरचार्ज करने के लिए डिज़ाइन किया गया। आपका जुनून ही हमारा उद्देश्य है। हमें वास्तव में उम्मीद है कि आप हमारे द्वारा आपके लिए बनाई गई चीज़ों का आनंद लेंगे।</string>
     <string name="link_to_source">स्रोत से लिंक करें</string>
 
-    <string name="notification_text">प्रेरित महसूस कर रहे हैं? एक नया आज़माएँ।</string>
+    <string name="notification_text">प्रेरित महसूस कर रहे हैं? एक नया प्रयास करें।</string>
 
-    <string name="error_storage_permission_denied">फ़ोटो चुनने के लिए संग्रहण अनुमति आवश्यक है।</string>
+    <string name="error_storage_permission_denied">फ़ोटो चुनने के लिए स्टोरेज अनुमति आवश्यक है।</string>
     <string name="error_camera_permission_denied">फ़ोटो लेने के लिए कैमरा अनुमति आवश्यक है।</string>
-    <string name="error_failed_persistent_access">छवि तक लगातार पहुँच प्राप्त करने में विफल।</string>
-    <string name="error_no_active_subscription">कोई सक्रिय सदस्यता नहीं।</string>
-    <string name="error_google_sign_in_failed">Google साइन-इन विफल रहा। कृपया पुनः प्रयास करें।</string>
+    <string name="error_failed_persistent_access">छवि के लिए लगातार एक्सेस प्राप्त करने में विफल रहा।</string>
+    <string name="error_no_active_subscription">कोई सक्रिय सदस्यता नहीं है।</string>
+    <string name="error_google_sign_in_failed">Google साइन-इन विफल रहा। कृपया फिर से प्रयास करें।</string>
     <string name="error_sign_out">साइन आउट विफल रहा।</string>
-    <string name="error_something_went_wrong">कुछ गड़बड़ हो गई। कृपया पुनः प्रयास करें।</string>
+    <string name="error_something_went_wrong">कुछ गलत हुआ। कृपया फिर से प्रयास करें।</string>
     <string name="error_empty_chat">चैट खाली है।</string>
-    <string name="error_create_file">फ़ोटो सहेजने के लिए फ़ाइल नहीं बना सका।</string>
-    <string name="error_take_photo">फ़ोटो लेने में विफल।</string>
+    <string name="error_create_file">फ़ोटो सहेजने के लिए एक फ़ाइल नहीं बना सका।</string>
+    <string name="error_take_photo">फ़ोटो लेने में विफल रहा।</string>
     <string name="error_image_already_added">छवि पहले ही जोड़ दी गई है।</string>
-    <string name="error_max_images_reached">आप केवल 3 छवियाँ तक ही जोड़ सकते हैं।</string>
-    <string name="error_attach_limit_reached">आप अपनी अनुलग्नक सीमा तक पहुँच चुके हैं।</string>
-    <string name="error_load_image">छवि लोड करने में विफल।</string>
-    <string name="error_load_subscriptions">सदस्यता लोड करने में विफल।</string>
-    <string name="error_no_free_subscriptions">कोई निःशुल्क सदस्यताएँ उपलब्ध नहीं हैं।</string>
-    <string name="error_get_free_subscription">निःशुल्क सदस्यता प्राप्त करने में विफल।</string>
-    <string name="error_save_user_data">उपयोगकर्ता डेटा सहेजने में विफल।</string>
+    <string name="error_max_images_reached">आप केवल 3 छवियां तक जोड़ सकते हैं।</string>
+    <string name="error_attach_limit_reached">आप अपनी संलग्नक सीमा तक पहुँच चुके हैं।</string>
+    <string name="error_load_image">छवि लोड करने में विफल रहा।</string>
+    <string name="error_load_subscriptions">सदस्यताएँ लोड करने में विफल रहा।</string>
+    <string name="error_no_free_subscriptions">कोई मुफ्त सदस्यता उपलब्ध नहीं है।</string>
+    <string name="error_get_free_subscription">मुफ्त सदस्यता प्राप्त करने में विफल रहा।</string>
+    <string name="error_save_user_data">उपयोगकर्ता डेटा सहेजने में विफल रहा।</string>
 
     <string name="error_min_length">कम से कम %1$d वर्ण आवश्यक है</string>
     <string name="error_max_length">अधिकतम %1$d वर्णों की अनुमति है</string>
-    <string name="error_no_gaps">रिक्त स्थानों की अनुमति नहीं है</string>
-    <string name="error_no_special_chars">विशेष वर्णों की अनुमति नहीं है</string>
-    <string name="error_no_capital_letters">बड़े अक्षरों की अनुमति नहीं है</string>
-    <string name="error_only_english_letters">केवल अंग्रेज़ी अक्षरों की अनुमति है</string>
+    <string name="error_no_gaps">कोई रिक्त स्थान अनुमत नहीं है</string>
+    <string name="error_no_special_chars">कोई विशेष वर्ण अनुमत नहीं है</string>
+    <string name="error_no_capital_letters">कोई बड़े अक्षर अनुमत नहीं हैं</string>
+    <string name="error_only_english_letters">केवल अंग्रेजी अक्षरों की अनुमति है</string>
 
     <string-array name="onboarding_mottos">
         <item>आपके विचारों को सुपरचार्ज करने के लिए डिज़ाइन किया गया</item>
         <item>अपनी अगली रचनात्मक चिंगारी खोजें</item>
-        <item>नवीनतम आविष्कारकों के समुदाय से जुड़ें</item>
+        <item>नवोन्मेषकों के एक समुदाय से जुड़ें</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>ध्यान दें</item>
