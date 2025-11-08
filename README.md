@@ -1,4 +1,4 @@
-# 🤖 Welcome to Cora!
+# Cora
 
 This is a **Jetpack Compose** application built with **Kotlin**.
 It follows MVVM Architecture and implements Clean Code principles.
