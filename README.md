@@ -14,6 +14,14 @@ It follows MVVM Architecture and implements Clean Code principles.
 
 ---
 
+### 📱 Permissions
+
+- **Camera - take a camera pic**
+- **Photos - select photo from gallery**
+- **Storage - read/write photos to storage into Downloads**
+
+---
+
 ### 🧩 Dependency Injection
 
 - **Hilt**

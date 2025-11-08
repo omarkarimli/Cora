@@ -6,8 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.omarkarimli.cora.R // Import R class for string resources
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.repository.FirestoreRepository
-import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
+import com.omarkarimli.cora.domain.use_case.user_setup.UserSetupUseCases
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
@@ -21,8 +20,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class UserSetupViewModel @Inject constructor(
-    private val firestoreRepository: FirestoreRepository,
-    private val sharedPreferenceRepository: SharedPreferenceRepository
+    private val useCases: UserSetupUseCases
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
@@ -48,7 +46,7 @@ class UserSetupViewModel @Inject constructor(
 
         viewModelScope.launch {
             try {
-                val freeSubscriptions = firestoreRepository.getFreeSubscriptions()
+                val freeSubscriptions = useCases.getFreeSubscriptionsUseCase()
 
                 if (freeSubscriptions.isNotEmpty()) {
                     _freeSubscriptions.value = freeSubscriptions
@@ -72,7 +70,7 @@ class UserSetupViewModel @Inject constructor(
         _uiState.value = UiState.Loading
         viewModelScope.launch {
             try {
-                firestoreRepository.saveUser(userModel)
+                useCases.saveUserUseCase(userModel)
 
                 _uiState.value = UiState.Success(
                     message = SuccessType.SIGN_UP,
@@ -80,7 +78,7 @@ class UserSetupViewModel @Inject constructor(
                     canToast = true
                 )
 
-                sharedPreferenceRepository.saveBoolean(SpConstant.LOGIN_KEY, true)
+                useCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
             } catch (e: Exception) {
                 setError(
                     toastResId = R.string.error_save_user_data,

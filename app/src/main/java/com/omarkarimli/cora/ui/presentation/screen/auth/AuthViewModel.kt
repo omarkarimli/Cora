@@ -8,13 +8,11 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.GoogleAuthProvider
-import com.omarkarimli.cora.R // Ensured R is imported
+import com.omarkarimli.cora.R
 import com.omarkarimli.cora.data.local.Converters
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.repository.AuthRepository
-import com.omarkarimli.cora.domain.repository.FirestoreRepository
-import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
+import com.omarkarimli.cora.domain.use_case.auth.AuthUseCases
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.utils.SpConstant
@@ -27,9 +25,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
-    private val authRepository: AuthRepository,
-    private val firestoreRepository: FirestoreRepository,
-    private val sharedPreferenceRepository: SharedPreferenceRepository
+    private val authUseCases: AuthUseCases
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
@@ -57,9 +53,9 @@ class AuthViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val credential = GoogleAuthProvider.getCredential(initialUserModel.idToken, null)
-                authRepository.signInWithCredential(credential)
+                authUseCases.signInWithCredentialUseCase(credential)
 
-                val getUser = firestoreRepository.getUser()
+                val getUser = authUseCases.getUserUseCase()
 
                 if (getUser != null
                     && getUser.personalInfo.username.isNotEmpty()
@@ -71,7 +67,7 @@ class AuthViewModel @Inject constructor(
                         canToast = true
                     )
 
-                    sharedPreferenceRepository.saveBoolean(SpConstant.LOGIN_KEY, true)
+                    authUseCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
                 } else {
                     _uiState.value = UiState.Success(
                         message = SuccessType.SIGN_UP,
