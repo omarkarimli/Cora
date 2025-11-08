@@ -39,7 +39,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle("Cora")
-            .setContentText("It's time to practice your English!")
+            .setContentText("Supercharge your ideas!")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)

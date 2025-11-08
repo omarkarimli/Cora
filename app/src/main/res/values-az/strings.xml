@@ -72,7 +72,6 @@
     <string name="free">Pulsuz</string>
     <string name="not_available">Mövcud deyil.</string>
     <string name="ads_enabled">Reklamlar aktivdir</string>
-    <string name="subscription_feature_searches">%1$d axtarış</string>
     <string name="subscription_feature_attaches">%1$d əlavə</string>
     <string name="subscription_feature_message_chars">%1$d mesaj simvolu</string>
     <string name="subscription_feature_web_result">%1$d veb nəticə</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">Mesaj Simvolları</string>
     <string name="usage_item_message_chars_desc">Söhbətdəki cavabların simvolları</string>
     <string name="web_searches">Veb Axtarışları</string>
-    <string name="desc_web_searches">Vebdəki ümumi axtarışlar</string>
 
     <string name="dark_mode">Tünd rejim</string>
     <string name="desc_dark_mode">Tətbiqin görünüşünü dəyişdirin.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">Tətbiq haqqında məlumata baxın.</string>
     <string name="about_main_text">İdeyalarınızı gücləndirmək üçün hazırlanmışdır. Sizin ehtirasınız bizim məqsədimizdir. Ümid edirik ki, sizin üçün yaratdığımızdan həzz alacaqsınız.</string>
     <string name="link_to_source">Mənbəyə keçid</string>
-
-    <string name="notification_text">İlhamlandınız? Yenisini sınayın.</string>
 
     <string name="error_storage_permission_denied">Şəkilləri seçmək üçün yaddaş icazəsi tələb olunur.</string>
     <string name="error_camera_permission_denied">Şəkil çəkmək üçün kamera icazəsi tələb olunur.</string>

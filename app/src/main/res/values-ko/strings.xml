@@ -72,7 +72,6 @@
     <string name="free">무료</string>
     <string name="not_available">사용할 수 없습니다.</string>
     <string name="ads_enabled">광고 사용</string>
-    <string name="subscription_feature_searches">검색 %1$d회</string>
     <string name="subscription_feature_attaches">첨부 %1$d개</string>
     <string name="subscription_feature_message_chars">메시지 글자 수 %1$d자</string>
     <string name="subscription_feature_web_result">웹 결과 %1$d개</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">메시지 글자 수</string>
     <string name="usage_item_message_chars_desc">채팅 응답의 글자 수</string>
     <string name="web_searches">웹 검색</string>
-    <string name="desc_web_searches">웹에서의 총 검색 횟수</string>
 
     <string name="dark_mode">다크 모드</string>
     <string name="desc_dark_mode">앱의 모양을 변경합니다.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">앱에 대한 정보를 봅니다.</string>
     <string name="about_main_text">아이디어를 강화하도록 설계되었습니다. 여러분의 열정이 우리의 목적입니다. 저희가 만든 것을 즐겨주시기를 진심으로 바랍니다.</string>
     <string name="link_to_source">소스 링크</string>
-
-    <string name="notification_text">영감을 느끼셨나요? 새로운 것을 시도해 보세요.</string>
 
     <string name="error_storage_permission_denied">사진을 선택하려면 저장소 권한이 필요합니다.</string>
     <string name="error_camera_permission_denied">사진을 찍으려면 카메라 권한이 필요합니다.</string>

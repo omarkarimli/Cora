@@ -72,7 +72,6 @@
     <string name="free">Gratuit</string>
     <string name="not_available">Non disponible.</string>
     <string name="ads_enabled">Annonces activées</string>
-    <string name="subscription_feature_searches">%1$d recherches</string>
     <string name="subscription_feature_attaches">%1$d pièces jointes</string>
     <string name="subscription_feature_message_chars">%1$d caractères de message</string>
     <string name="subscription_feature_web_result">%1$d résultats web</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">Caractères de Message</string>
     <string name="usage_item_message_chars_desc">Caractères des réponses dans le chat</string>
     <string name="web_searches">Recherches Web</string>
-    <string name="desc_web_searches">Total des recherches sur le web</string>
 
     <string name="dark_mode">Mode sombre</string>
     <string name="desc_dark_mode">Changez l\'apparence de l\'application.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">Voir les informations sur l\'application.</string>
     <string name="about_main_text">Conçu pour suralimenter vos idées. Votre passion est notre objectif. Nous espérons sincèrement que vous apprécierez ce que nous avons créé pour vous.</string>
     <string name="link_to_source">Lien vers la source</string>
-
-    <string name="notification_text">Vous vous sentez inspiré ? Essayez-en un nouveau.</string>
 
     <string name="error_storage_permission_denied">L\'autorisation de stockage est requise pour choisir des photos.</string>
     <string name="error_camera_permission_denied">L\'autorisation de la caméra est requise pour prendre des photos.</string>

@@ -72,7 +72,6 @@
     <string name="free">Ücretsiz</string>
     <string name="not_available">Mevcut değil.</string>
     <string name="ads_enabled">Reklamlar etkin</string>
-    <string name="subscription_feature_searches">%1$d arama</string>
     <string name="subscription_feature_attaches">%1$d ek</string>
     <string name="subscription_feature_message_chars">%1$d mesaj karakteri</string>
     <string name="subscription_feature_web_result">%1$d web sonucu</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">Mesaj Karakterleri</string>
     <string name="usage_item_message_chars_desc">Sohbet yanıtlarının karakterleri</string>
     <string name="web_searches">Web Aramaları</string>
-    <string name="desc_web_searches">Web\'deki toplam arama sayısı</string>
 
     <string name="dark_mode">Koyu Mod</string>
     <string name="desc_dark_mode">Uygulamanın görünümünü değiştirin.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">Uygulama hakkındaki bilgileri görüntüleyin.</string>
     <string name="about_main_text">Fikirlerinizi güçlendirmek için tasarlandı. Sizin tutkunuz bizim amacımızdır. Sizin için yarattığımız şeyden keyif alacağınızı umuyoruz.</string>
     <string name="link_to_source">Kaynağa bağlantı</string>
-
-    <string name="notification_text">İlham mı geldi? Yeni bir şeyler deneyin.</string>
 
     <string name="error_storage_permission_denied">Fotoğraf seçmek için depolama izni gereklidir.</string>
     <string name="error_camera_permission_denied">Fotoğraf çekmek için kamera izni gereklidir.</string>

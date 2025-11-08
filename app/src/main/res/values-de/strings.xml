@@ -72,7 +72,6 @@
     <string name="free">Kostenlos</string>
     <string name="not_available">Nicht verfügbar.</string>
     <string name="ads_enabled">Anzeigen aktiviert</string>
-    <string name="subscription_feature_searches">%1$d Suchvorgänge</string>
     <string name="subscription_feature_attaches">%1$d Anhänge</string>
     <string name="subscription_feature_message_chars">%1$d Nachrichten-Zeichen</string>
     <string name="subscription_feature_web_result">%1$d Web-Ergebnisse</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">Nachrichten-Zeichen</string>
     <string name="usage_item_message_chars_desc">Zeichen der Antworten im Chat</string>
     <string name="web_searches">Web-Suchen</string>
-    <string name="desc_web_searches">Gesamtzahl der Suchen im Web</string>
 
     <string name="dark_mode">Dunkler Modus</string>
     <string name="desc_dark_mode">Ändern Sie das Erscheinungsbild der App.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">Informationen zur App anzeigen.</string>
     <string name="about_main_text">Entwickelt, um Ihre Ideen zu beschleunigen. Ihre Leidenschaft ist unser Ziel. Wir hoffen, dass Ihnen gefällt, was wir für Sie geschaffen haben.</string>
     <string name="link_to_source">Link zur Quelle</string>
-
-    <string name="notification_text">Fühlen Sie sich inspiriert? Probieren Sie etwas Neues.</string>
 
     <string name="error_storage_permission_denied">Speicherberechtigung ist erforderlich, um Fotos auszuwählen.</string>
     <string name="error_camera_permission_denied">Kameraberechtigung ist erforderlich, um Fotos aufzunehmen.</string>

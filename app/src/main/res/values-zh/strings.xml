@@ -72,7 +72,6 @@
     <string name="free">免费</string>
     <string name="not_available">不可用。</string>
     <string name="ads_enabled">广告已启用</string>
-    <string name="subscription_feature_searches">%1$d 次搜索</string>
     <string name="subscription_feature_attaches">%1$d 个附件</string>
     <string name="subscription_feature_message_chars">%1$d 消息字符</string>
     <string name="subscription_feature_web_result">%1$d 个网络结果</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">消息字符</string>
     <string name="usage_item_message_chars_desc">聊天回复的字符数</string>
     <string name="web_searches">网络搜索</string>
-    <string name="desc_web_searches">网络搜索总次数</string>
 
     <string name="dark_mode">深色模式</string>
     <string name="desc_dark_mode">更改应用的外观。</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">查看有关应用的信息。</string>
     <string name="about_main_text">旨在为您的想法提供强大支持。您的热情是我们的宗旨。我们衷心希望您喜欢我们为您创造的一切。</string>
     <string name="link_to_source">源代码链接</string>
-
-    <string name="notification_text">感觉有灵感吗？尝试一个新的。</string>
 
     <string name="error_storage_permission_denied">选择照片需要存储权限。</string>
     <string name="error_camera_permission_denied">拍照需要相机权限。</string>

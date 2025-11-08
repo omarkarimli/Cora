@@ -72,7 +72,6 @@
     <string name="free">Бесплатно</string>
     <string name="not_available">Недоступно.</string>
     <string name="ads_enabled">Реклама включена</string>
-    <string name="subscription_feature_searches">%1$d поисковых запросов</string>
     <string name="subscription_feature_attaches">%1$d вложений</string>
     <string name="subscription_feature_message_chars">%1$d символов сообщения</string>
     <string name="subscription_feature_web_result">%1$d веб-результатов</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">Символы сообщения</string>
     <string name="usage_item_message_chars_desc">Символы ответов в чате</string>
     <string name="web_searches">Веб-поиски</string>
-    <string name="desc_web_searches">Общее количество поисковых запросов в сети</string>
 
     <string name="dark_mode">Тёмный режим</string>
     <string name="desc_dark_mode">Измените внешний вид приложения.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">Посмотреть информацию о приложении.</string>
     <string name="about_main_text">Создано для максимального развития ваших идей. Ваша страсть — наша цель. Мы искренне надеемся, что вам понравится то, что мы для вас создали.</string>
     <string name="link_to_source">Ссылка на источник</string>
-
-    <string name="notification_text">Чувствуете вдохновение? Попробуйте что-то новое.</string>
 
     <string name="error_storage_permission_denied">Для выбора фотографий требуется разрешение на хранение.</string>
     <string name="error_camera_permission_denied">Для съёмки фотографий требуется разрешение на доступ к камере.</string>

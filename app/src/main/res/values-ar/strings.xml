@@ -72,7 +72,6 @@
     <string name="free">مجاني</string>
     <string name="not_available">غير متوفر.</string>
     <string name="ads_enabled">الإعلانات مُفعلة</string>
-    <string name="subscription_feature_searches">%1$d عمليات بحث</string>
     <string name="subscription_feature_attaches">%1$d مرفقات</string>
     <string name="subscription_feature_message_chars">%1$d حرف رسالة</string>
     <string name="subscription_feature_web_result">%1$d نتائج ويب</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">أحرف الرسائل</string>
     <string name="usage_item_message_chars_desc">أحرف الردود في الدردشة</string>
     <string name="web_searches">عمليات البحث على الويب</string>
-    <string name="desc_web_searches">إجمالي عمليات البحث في الويب</string>
 
     <string name="dark_mode">الوضع الداكن</string>
     <string name="desc_dark_mode">تغيير مظهر التطبيق.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">عرض معلومات حول التطبيق.</string>
     <string name="about_main_text">مصمم لتعزيز أفكارك شغفك هو هدفنا. نأمل حقًا أن تستمتع بما أنشأناه لك.</string>
     <string name="link_to_source">رابط المصدر</string>
-
-    <string name="notification_text">هل تشعر بالإلهام؟ جرب شيئًا جديدًا.</string>
 
     <string name="error_storage_permission_denied">إذن التخزين مطلوب لاختيار الصور.</string>
     <string name="error_camera_permission_denied">إذن الكاميرا مطلوب لالتقاط الصور.</string>

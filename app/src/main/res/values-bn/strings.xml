@@ -72,7 +72,6 @@
     <string name="free">ফ্রি</string>
     <string name="not_available">উপলব্ধ নেই।</string>
     <string name="ads_enabled">বিজ্ঞাপন সক্রিয়</string>
-    <string name="subscription_feature_searches">%1$d অনুসন্ধান</string>
     <string name="subscription_feature_attaches">%1$d সংযুক্তি</string>
     <string name="subscription_feature_message_chars">%1$d বার্তা অক্ষর</string>
     <string name="subscription_feature_web_result">%1$d ওয়েব ফলাফল</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">বার্তা অক্ষর</string>
     <string name="usage_item_message_chars_desc">চ্যাটে প্রতিক্রিয়ার অক্ষর</string>
     <string name="web_searches">ওয়েব অনুসন্ধান</string>
-    <string name="desc_web_searches">ওয়েবে মোট অনুসন্ধান</string>
 
     <string name="dark_mode">ডার্ক মোড</string>
     <string name="desc_dark_mode">অ্যাপের চেহারা পরিবর্তন করুন।</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">অ্যাপ সম্পর্কে তথ্য দেখুন।</string>
     <string name="about_main_text">আপনার ধারণাগুলিকে সুপারচার্জ করার জন্য ডিজাইন করা হয়েছে। আপনার আবেগই আমাদের উদ্দেশ্য। আমরা সত্যিই আশা করি আপনি আপনার জন্য আমরা যা তৈরি করেছি তা উপভোগ করবেন।</string>
     <string name="link_to_source">উৎস লিঙ্ক</string>
-
-    <string name="notification_text">অনুপ্রাণিত বোধ করছেন? নতুন একটি চেষ্টা করুন।</string>
 
     <string name="error_storage_permission_denied">ছবি বাছাই করার জন্য স্টোরেজ অনুমতি প্রয়োজন।</string>
     <string name="error_camera_permission_denied">ছবি তোলার জন্য ক্যামেরা অনুমতি প্রয়োজন।</string>

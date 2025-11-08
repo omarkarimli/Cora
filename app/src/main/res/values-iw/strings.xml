@@ -72,7 +72,6 @@
     <string name="free">חינם</string>
     <string name="not_available">לא זמין.</string>
     <string name="ads_enabled">מודעות מופעלות</string>
-    <string name="subscription_feature_searches">%1$d חיפושים</string>
     <string name="subscription_feature_attaches">%1$d קבצים מצורפים</string>
     <string name="subscription_feature_message_chars">%1$d תווים להודעה</string>
     <string name="subscription_feature_web_result">%1$d תוצאות אינטרנט</string>
@@ -83,7 +82,6 @@
     <string name="usage_item_message_chars_title">תווים להודעה</string>
     <string name="usage_item_message_chars_desc">תווי תגובות בצ\'אט</string>
     <string name="web_searches">חיפושי אינטרנט</string>
-    <string name="desc_web_searches">סה"כ חיפושים באינטרנט</string>
 
     <string name="dark_mode">מצב כהה</string>
     <string name="desc_dark_mode">שנה את מראה האפליקציה.</string>
@@ -113,8 +111,6 @@
     <string name="desc_about">צפה במידע על האפליקציה.</string>
     <string name="about_main_text">עוצב כדי להטעין את הרעיונות שלך. התשוקה שלך היא המטרה שלנו. אנו באמת מקווים שתיהנה ממה שיצרנו עבורך.</string>
     <string name="link_to_source">קישור למקור</string>
-
-    <string name="notification_text">מרגיש השראה? נסה משהו חדש.</string>
 
     <string name="error_storage_permission_denied">יש צורך באישור אחסון כדי לבחור תמונות.</string>
     <string name="error_camera_permission_denied">יש צורך באישור מצלמה כדי לצלם תמונות.</string>
