@@ -3,7 +3,7 @@ package com.omarkarimli.cora.di
 import com.omarkarimli.cora.data.repository.AdminRepositoryImpl
 import com.omarkarimli.cora.data.repository.AiRepositoryImpl
 import com.omarkarimli.cora.data.repository.AuthRepositoryImpl
-import com.omarkarimli.cora.data.repository.ChatHistoryRepoImpl
+import com.omarkarimli.cora.data.repository.ChatHistoryRepositoryImpl
 import com.omarkarimli.cora.data.repository.ChatRepositoryImpl
 import com.omarkarimli.cora.data.repository.DownloadRepositoryImpl
 import com.omarkarimli.cora.data.repository.FirestoreRepositoryImpl
@@ -15,7 +15,7 @@ import com.omarkarimli.cora.data.repository.TranslateRepositoryImpl
 import com.omarkarimli.cora.domain.repository.AdminRepository
 import com.omarkarimli.cora.domain.repository.AiRepository
 import com.omarkarimli.cora.domain.repository.AuthRepository
-import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
+import com.omarkarimli.cora.domain.repository.ChatHistoryRepository
 import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.DownloadRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
@@ -73,8 +73,8 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun bindChatHistoryRepository(
-        chatHistoryRepoImpl: ChatHistoryRepoImpl
-    ): ChatHistoryRepo
+        chatHistoryRepoImpl: ChatHistoryRepositoryImpl
+    ): ChatHistoryRepository
 
     @Binds
     @Singleton

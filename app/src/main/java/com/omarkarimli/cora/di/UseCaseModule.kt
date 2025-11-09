@@ -1,6 +1,7 @@
 package com.omarkarimli.cora.di
 
 import com.omarkarimli.cora.domain.repository.AuthRepository
+import com.omarkarimli.cora.domain.repository.ChatHistoryRepository
 import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
@@ -64,28 +65,24 @@ object UseCaseModule {
     @Provides
     @Singleton
     fun provideChatUseCases(
+        firestoreRepository: FirestoreRepository,
+        sharedPreferenceRepository: SharedPreferenceRepository,
         chatRepository: ChatRepository,
-        translateRepository: TranslateRepository,
-        getBooleanUseCase: GetBooleanUseCase,
-        getInstanceUseCase: GetInstanceUseCase,
-        insertInstanceUseCase: InsertInstanceUseCase,
-        getPaginationUseCase: GetPaginationUseCase,
-        getUserUseCase: GetUserUseCase,
-        addReportIssueUseCase: AddReportIssueUseCase,
-        getCreditConditionsUseCase: GetCreditConditionsUseCase
+        chatHistoryRepository: ChatHistoryRepository,
+        translateRepository: TranslateRepository
     ): ChatUseCases {
         return ChatUseCases(
             sendMessageUseCase = SendMessageUseCase(chatRepository),
             firestoreUseCases = FirestoreUseCases(
-                getUserUseCase = getUserUseCase,
-                addReportIssueUseCase = addReportIssueUseCase,
-                getCreditConditionsUseCase = getCreditConditionsUseCase
+                getUserUseCase = GetUserUseCase(firestoreRepository),
+                addReportIssueUseCase = AddReportIssueUseCase(firestoreRepository),
+                getCreditConditionsUseCase = GetCreditConditionsUseCase(firestoreRepository)
             ),
-            sharedPreferenceUseCases = SharedPreferenceUseCases(getBooleanUseCase),
+            sharedPreferenceUseCases = SharedPreferenceUseCases(GetBooleanUseCase(sharedPreferenceRepository)),
             chatHistoryUseCases = ChatHistoryUseCases(
-                getInstanceUseCase = getInstanceUseCase,
-                insertInstanceUseCase = insertInstanceUseCase,
-                getPaginationUseCase = getPaginationUseCase
+                getInstanceUseCase = GetInstanceUseCase(chatHistoryRepository),
+                insertInstanceUseCase = InsertInstanceUseCase(chatHistoryRepository),
+                getPaginationUseCase = GetPaginationUseCase(chatHistoryRepository)
             ),
             translateUseCase = TranslateUseCase(translateRepository)
         )

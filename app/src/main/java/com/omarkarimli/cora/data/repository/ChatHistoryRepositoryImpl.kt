@@ -5,16 +5,16 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.omarkarimli.cora.data.local.ChatHistoryDao
 import com.omarkarimli.cora.domain.models.ChatHistoryItemModel
-import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
+import com.omarkarimli.cora.domain.repository.ChatHistoryRepository
 import com.omarkarimli.cora.utils.Constants
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class ChatHistoryRepoImpl @Inject constructor(
+class ChatHistoryRepositoryImpl @Inject constructor(
     private val dao: ChatHistoryDao
-) : ChatHistoryRepo {
+) : ChatHistoryRepository {
 
     override suspend fun getInstance(id: Int): ChatHistoryItemModel? = dao.getInstance(id)
 

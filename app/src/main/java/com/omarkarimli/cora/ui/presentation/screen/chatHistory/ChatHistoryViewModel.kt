@@ -7,7 +7,7 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
 import com.omarkarimli.cora.domain.models.ChatHistoryItemModel
-import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
+import com.omarkarimli.cora.domain.repository.ChatHistoryRepository
 import com.omarkarimli.cora.domain.repository.TranslateRepository
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,7 +27,7 @@ import javax.inject.Inject
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class ChatHistoryViewModel @Inject constructor(
-    private val chatHistoryRepo: ChatHistoryRepo,
+    private val chatHistoryRepository: ChatHistoryRepository,
     private val translateRepository: TranslateRepository
 ) : ViewModel() {
 
@@ -42,7 +42,7 @@ class ChatHistoryViewModel @Inject constructor(
             .debounce(300L)
             .distinctUntilChanged()
             .flatMapLatest { query ->
-                chatHistoryRepo.getPagination(query)
+                chatHistoryRepository.getPagination(query)
             }
             .transformLatest { pagingData ->
                 emit(pagingData) // Emit original items first
@@ -70,13 +70,13 @@ class ChatHistoryViewModel @Inject constructor(
 
     fun clearAll() {
         viewModelScope.launch {
-            chatHistoryRepo.clearAll()
+            chatHistoryRepository.clearAll()
         }
     }
 
     fun deleteItem(item: ChatHistoryItemModel) {
         viewModelScope.launch {
-            chatHistoryRepo.deleteInstance(item.id)
+            chatHistoryRepository.deleteInstance(item.id)
         }
     }
 }

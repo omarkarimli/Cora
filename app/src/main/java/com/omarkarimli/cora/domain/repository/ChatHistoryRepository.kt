@@ -4,7 +4,7 @@ import androidx.paging.PagingData
 import com.omarkarimli.cora.domain.models.ChatHistoryItemModel
 import kotlinx.coroutines.flow.Flow
 
-interface ChatHistoryRepo {
+interface ChatHistoryRepository {
     suspend fun getInstance(id: Int): ChatHistoryItemModel?
 
     suspend fun deleteInstance(id: Int)
