@@ -123,7 +123,6 @@
     <string name="error_sign_out">সাইন আউট ব্যর্থ হয়েছে।</string>
     <string name="error_something_went_wrong">কিছু ভুল হয়েছে। দয়া করে আবার চেষ্টা করুন।</string>
     <string name="error_empty_chat">চ্যাট খালি।</string>
-    <string name="error_create_file">ছবি সংরক্ষণ করার জন্য একটি ফাইল তৈরি করা যায়নি।</string>
     <string name="error_take_photo">একটি ছবি তুলতে ব্যর্থ হয়েছে।</string>
     <string name="error_image_already_added">চিত্র ইতিমধ্যে যোগ করা হয়েছে।</string>
     <string name="error_max_images_reached">আপনি শুধুমাত্র 3টি পর্যন্ত চিত্র যোগ করতে পারেন।</string>

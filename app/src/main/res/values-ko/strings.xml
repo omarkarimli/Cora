@@ -123,7 +123,6 @@
     <string name="error_sign_out">로그아웃에 실패했습니다.</string>
     <string name="error_something_went_wrong">문제가 발생했습니다. 다시 시도해 주세요.</string>
     <string name="error_empty_chat">채팅이 비어 있습니다.</string>
-    <string name="error_create_file">사진을 저장할 파일을 만들 수 없습니다.</string>
     <string name="error_take_photo">사진 촬영에 실패했습니다.</string>
     <string name="error_image_already_added">이미 이미지가 추가되었습니다.</string>
     <string name="error_max_images_reached">최대 3개의 이미지만 추가할 수 있습니다.</string>

@@ -123,7 +123,6 @@
     <string name="error_sign_out">فشل تسجيل الخروج.</string>
     <string name="error_something_went_wrong">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
     <string name="error_empty_chat">الدردشة فارغة.</string>
-    <string name="error_create_file">تعذر إنشاء ملف لحفظ الصورة.</string>
     <string name="error_take_photo">فشل في التقاط صورة.</string>
     <string name="error_image_already_added">تمت إضافة الصورة بالفعل.</string>
     <string name="error_max_images_reached">يمكنك فقط إضافة ما يصل إلى 3 صور.</string>

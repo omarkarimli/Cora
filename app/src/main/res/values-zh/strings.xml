@@ -123,7 +123,6 @@
     <string name="error_sign_out">退出登录失败。</string>
     <string name="error_something_went_wrong">出了些问题。请重试。</string>
     <string name="error_empty_chat">聊天为空。</string>
-    <string name="error_create_file">无法创建文件来保存照片。</string>
     <string name="error_take_photo">拍照失败。</string>
     <string name="error_image_already_added">图片已添加。</string>
     <string name="error_max_images_reached">您最多只能添加 3 张图片。</string>

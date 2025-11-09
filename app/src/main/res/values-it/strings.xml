@@ -123,7 +123,6 @@
     <string name="error_sign_out">Uscita non riuscita.</string>
     <string name="error_something_went_wrong">Qualcosa è andato storto. Riprova.</string>
     <string name="error_empty_chat">La chat è vuota.</string>
-    <string name="error_create_file">Impossibile creare un file per salvare la foto.</string>
     <string name="error_take_photo">Scatto della foto non riuscito.</string>
     <string name="error_image_already_added">Immagine già aggiunta.</string>
     <string name="error_max_images_reached">Puoi aggiungere solo fino a 3 immagini.</string>

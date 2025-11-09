@@ -123,7 +123,6 @@
     <string name="error_sign_out">サインアウトに失敗しました。</string>
     <string name="error_something_went_wrong">何らかのエラーが発生しました。再試行してください。</string>
     <string name="error_empty_chat">チャットは空です。</string>
-    <string name="error_create_file">写真を保存するためのファイルを作成できませんでした。</string>
     <string name="error_take_photo">写真の撮影に失敗しました。</string>
     <string name="error_image_already_added">画像はすでに追加されています。</string>
     <string name="error_max_images_reached">追加できる画像は最大3枚までです。</string>

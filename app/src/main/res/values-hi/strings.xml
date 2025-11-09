@@ -123,7 +123,6 @@
     <string name="error_sign_out">साइन आउट विफल।</string>
     <string name="error_something_went_wrong">कुछ ग़लत हो गया। कृपया पुनः प्रयास करें।</string>
     <string name="error_empty_chat">चैट खाली है।</string>
-    <string name="error_create_file">फ़ोटो सहेजने के लिए एक फ़ाइल नहीं बनाई जा सकी।</string>
     <string name="error_take_photo">फ़ोटो लेने में विफल।</string>
     <string name="error_image_already_added">छवि पहले ही जोड़ी जा चुकी है।</string>
     <string name="error_max_images_reached">आप केवल 3 छवियां तक ही जोड़ सकते हैं।</string>

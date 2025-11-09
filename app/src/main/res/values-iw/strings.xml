@@ -123,7 +123,6 @@
     <string name="error_sign_out">ההתנתקות נכשלה.</string>
     <string name="error_something_went_wrong">משהו השתבש. אנא נסה שוב.</string>
     <string name="error_empty_chat">הצ\'אט ריק.</string>
-    <string name="error_create_file">לא ניתן היה ליצור קובץ לשמירת התמונה.</string>
     <string name="error_take_photo">נכשל בלקיחת תמונה.</string>
     <string name="error_image_already_added">התמונה כבר נוספה.</string>
     <string name="error_max_images_reached">אתה יכול להוסיף עד 3 תמונות בלבד.</string>

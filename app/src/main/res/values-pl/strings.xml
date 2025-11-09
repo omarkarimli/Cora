@@ -123,7 +123,6 @@
     <string name="error_sign_out">Wylogowanie nie powiodło się.</string>
     <string name="error_something_went_wrong">Coś poszło nie tak. Spróbuj ponownie.</string>
     <string name="error_empty_chat">Czat jest pusty.</string>
-    <string name="error_create_file">Nie udało się utworzyć pliku do zapisania zdjęcia.</string>
     <string name="error_take_photo">Nie udało się zrobić zdjęcia.</string>
     <string name="error_image_already_added">Obraz został już dodany.</string>
     <string name="error_max_images_reached">Możesz dodać maksymalnie 3 obrazy.</string>
