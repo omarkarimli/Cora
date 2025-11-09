@@ -10,12 +10,7 @@ import com.omarkarimli.cora.domain.models.CreditConditions
 import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.models.ReportIssueModel
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
-import com.omarkarimli.cora.domain.repository.ChatRepository
-import com.omarkarimli.cora.domain.repository.FirestoreRepository
-import com.omarkarimli.cora.domain.repository.PermissionRepository
-import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
-import com.omarkarimli.cora.domain.repository.TranslateRepository
+import com.omarkarimli.cora.domain.use_case.chat.ChatUseCases
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.utils.SpConstant
@@ -29,12 +24,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ChatViewModel @Inject constructor(
-    val sharedPreferenceRepository: SharedPreferenceRepository,
-    val permissionRepository: PermissionRepository,
-    val firestoreRepository: FirestoreRepository,
-    val chatRepository: ChatRepository,
-    val historyRepo: ChatHistoryRepo,
-    val translateRepository: TranslateRepository,
+    val useCases: ChatUseCases
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Idle)
@@ -47,10 +37,8 @@ class ChatViewModel @Inject constructor(
     private val _userModel = MutableStateFlow<UserModel?>(null)
     val userModel: StateFlow<UserModel?> = _userModel.asStateFlow()
 
-    val creditConditions: StateFlow<CreditConditions> = firestoreRepository.creditConditions
-
-    val hasCameraPermission: StateFlow<Boolean> = permissionRepository.cameraPermissionState
-    val hasStoragePermission: StateFlow<Boolean> = permissionRepository.storagePermissionState
+    val creditConditions: StateFlow<CreditConditions> =
+        useCases.firestoreUseCases.getCreditConditionsUseCase()
 
     private val _messages = MutableStateFlow<List<MessageModel>>(emptyList())
     val messages: StateFlow<List<MessageModel>> = _messages.asStateFlow()
@@ -67,7 +55,7 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             try {
-                val result = firestoreRepository.getUser()
+                val result = useCases.firestoreUseCases.getUserUseCase()
                 result?.let {
                     _userModel.value = it
                 } ?: run {
@@ -96,7 +84,7 @@ class ChatViewModel @Inject constructor(
                     currentMessages + messageModel
                 }
 
-                var responseMessage = chatRepository.sendMessage(messageModel)
+                var responseMessage = useCases.sendMessageUseCase(messageModel)
                 responseMessage = responseMessage.copy(
                     text = translate(responseMessage.text)
                 )
@@ -113,7 +101,7 @@ class ChatViewModel @Inject constructor(
                     messages = newMessages
                 )
 
-                historyRepo.insertInstance(updatedHistory)
+                useCases.chatHistoryUseCases.insertInstanceUseCase(updatedHistory)
                 _chatHistoryModel.value = updatedHistory
 
                 _uiState.value = UiState.Success(
@@ -134,7 +122,7 @@ class ChatViewModel @Inject constructor(
         _userModel.value?.let {
             viewModelScope.launch {
                 try {
-                    firestoreRepository.addReportIssue(reportIssueModel)
+                    useCases.firestoreUseCases.addReportIssueUseCase(reportIssueModel)
 
                     _uiState.value = UiState.Success(
                         message = SuccessType.REPORT_SEND,
@@ -159,7 +147,7 @@ class ChatViewModel @Inject constructor(
     private suspend fun translate(text: String): String {
         return if (_isLiveTranslationEnabled.value) {
             try {
-                translateRepository.translate(text)
+                useCases.translateUseCase(text)
             } catch (e: Exception) {
                 Log.e("ChatViewModel", "Error translating text: ${e.message}")
                 text
@@ -172,10 +160,11 @@ class ChatViewModel @Inject constructor(
 
         viewModelScope.launch {
             try {
-                _isLiveTranslationEnabled.value = sharedPreferenceRepository.getBoolean(
-                    SpConstant.LIVE_TRANSLATION_KEY,
-                    true
-                )
+                _isLiveTranslationEnabled.value =
+                    useCases.sharedPreferenceUseCases.getBooleanUseCase(
+                        SpConstant.LIVE_TRANSLATION_KEY,
+                        true
+                    )
 
                 resetUiState()
             } catch (e: Exception) {
@@ -191,7 +180,7 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = UiState.Loading
             try {
-                val result = historyRepo.getInstance(id)
+                val result = useCases.chatHistoryUseCases.getInstanceUseCase(id)
                 _chatHistoryModel.value = result
                 result?.let {
                     _messages.value = it.messages

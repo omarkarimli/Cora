@@ -4,7 +4,6 @@ import com.omarkarimli.cora.data.repository.AdminRepositoryImpl
 import com.omarkarimli.cora.data.repository.AiRepositoryImpl
 import com.omarkarimli.cora.data.repository.AuthRepositoryImpl
 import com.omarkarimli.cora.data.repository.ChatHistoryRepoImpl
-import com.omarkarimli.cora.data.repository.PermissionRepositoryImpl
 import com.omarkarimli.cora.data.repository.ChatRepositoryImpl
 import com.omarkarimli.cora.data.repository.DownloadRepositoryImpl
 import com.omarkarimli.cora.data.repository.FirestoreRepositoryImpl
@@ -17,7 +16,6 @@ import com.omarkarimli.cora.domain.repository.AdminRepository
 import com.omarkarimli.cora.domain.repository.AiRepository
 import com.omarkarimli.cora.domain.repository.AuthRepository
 import com.omarkarimli.cora.domain.repository.ChatHistoryRepo
-import com.omarkarimli.cora.domain.repository.PermissionRepository
 import com.omarkarimli.cora.domain.repository.ChatRepository
 import com.omarkarimli.cora.domain.repository.DownloadRepository
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
@@ -41,12 +39,6 @@ abstract class RepositoryModule {
     abstract fun bindAdminRepository(
         adminRepositoryImpl: AdminRepositoryImpl
     ): AdminRepository
-
-    @Binds
-    @Singleton
-    abstract fun bindPermissionRepository(
-        permissionRepositoryImpl: PermissionRepositoryImpl
-    ): PermissionRepository
 
     @Binds
     @Singleton

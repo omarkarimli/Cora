@@ -1,10 +1,13 @@
 package com.omarkarimli.cora.utils
 
+import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -390,4 +393,11 @@ fun SearchTextResponse.toMessageModel(maxResult: Int = 1): MessageModel {
 
 fun Long?.isEarlierThan(expiredTime: Long?): Boolean {
     return this != null && expiredTime != null && this < expiredTime
+}
+
+fun Activity.openAppSetting() {
+    Intent(
+        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
+        Uri.fromParts(Constants.PACKAGE, packageName, null)
+    ).also(::startActivity)
 }

@@ -15,7 +15,6 @@ sealed class UiState {
         val log: String,
         val route: String? = null
     ) : UiState()
-    data class ActionRequired(val action: Any) : UiState()
 
     // Add other common UI states as needed, e.g., Dialog, etc.
 }

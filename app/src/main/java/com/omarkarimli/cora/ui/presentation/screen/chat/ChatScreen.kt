@@ -1,7 +1,9 @@
 package com.omarkarimli.cora.ui.presentation.screen.chat
 
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -30,6 +32,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.core.content.FileProvider
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
@@ -45,10 +48,12 @@ import com.omarkarimli.cora.ui.presentation.common.widget.component.LoadingConte
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
 import com.omarkarimli.cora.ui.theme.Dimens
+import com.omarkarimli.cora.utils.PermissionManager
 import com.omarkarimli.cora.utils.showToast
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,9 +73,6 @@ fun ChatScreen(
 
     var expanded by remember { mutableStateOf(false) }
     var sendMessageModel by remember { mutableStateOf(MessageModel(text = "", isFromMe = true)) }
-
-    val hasStoragePermission by viewModel.hasStoragePermission.collectAsState()
-    val hasCameraPermission by viewModel.hasCameraPermission.collectAsState()
 
     // For Camera Temporary
     var tempImageUri by remember { mutableStateOf<Uri?>(null) }
@@ -152,34 +154,12 @@ fun ChatScreen(
         }
     }
 
-    val storagePermissionLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission()
+    val requestPermissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission(),
     ) { isGranted ->
-        viewModel.permissionRepository.notifyPermissionChanged(viewModel.permissionRepository.getStoragePermission())
-        if (isGranted) {
-            pickImageLauncher.launch("image/*")
-        } else {
-            viewModel.setError(R.string.error_storage_permission_denied, "Storage permission is required to add images.")
+        if (!isGranted) {
+            viewModel.setError(R.string.error_permission_denied, "Permission denied.")
         }
-        viewModel.resetUiState()
-    }
-
-    val cameraPermissionLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        viewModel.permissionRepository.notifyPermissionChanged(viewModel.permissionRepository.getCameraPermission())
-        if (isGranted) {
-            val newUri = viewModel.permissionRepository.getNewImageUri()
-            if (newUri != null) {
-                tempImageUri = newUri
-                cameraLauncher.launch(newUri)
-            } else {
-                viewModel.setError(R.string.error_create_file, "Could not create a file to save the photo.")
-            }
-        } else {
-            viewModel.setError(R.string.error_camera_permission_denied, "Camera permission is required to take a photo.")
-        }
-        viewModel.resetUiState()
     }
 
     fun onAttach() {
@@ -200,24 +180,29 @@ fun ChatScreen(
     }
 
     fun onLaunchCamera() {
-        if (hasCameraPermission) {
-            val newUri = viewModel.permissionRepository.getNewImageUri()
-            if (newUri != null) {
-                tempImageUri = newUri
-                cameraLauncher.launch(newUri)
-            } else {
-                viewModel.setError(R.string.error_create_file, "Could not create a file to save the photo.")
-            }
+        if (PermissionManager.hasCameraPermission(context)) {
+            val file = File(context.cacheDir, "temp_image.jpg")
+            val uri = FileProvider.getUriForFile(
+                context,
+                context.packageName + ".fileprovider",
+                file
+            )
+            tempImageUri = uri
+            cameraLauncher.launch(uri)
         } else {
-            cameraPermissionLauncher.launch(viewModel.permissionRepository.getCameraPermission())
+            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
         }
     }
 
     fun onLaunchImagePicker() {
-        if (hasStoragePermission) {
+        if (PermissionManager.hasStoragePermission(context)) {
             pickImageLauncher.launch("image/*")
         } else {
-            storagePermissionLauncher.launch(viewModel.permissionRepository.getStoragePermission())
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissionLauncher.launch(Manifest.permission.READ_MEDIA_IMAGES)
+            } else {
+                requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+            }
         }
     }
 
@@ -260,6 +245,7 @@ fun ChatScreen(
                     Log.d(currentScreen, "Success: ${successState.message}")
                     viewModel.resetUiState()
                 }
+
                 is UiState.Error -> {
                     val errorState = uiState as UiState.Error
                     val log = errorState.log
@@ -268,18 +254,6 @@ fun ChatScreen(
                     context.showToast(context.getString(toastResId))
 
                     Log.e(currentScreen, log)
-                    viewModel.resetUiState()
-                }
-                is UiState.ActionRequired -> {
-                    val permissionToRequest = (uiState as UiState.ActionRequired).action
-                    when (permissionToRequest) {
-                        viewModel.permissionRepository.getStoragePermission() -> storagePermissionLauncher.launch(
-                            viewModel.permissionRepository.getStoragePermission()
-                        )
-                        viewModel.permissionRepository.getCameraPermission() -> cameraPermissionLauncher.launch(
-                            viewModel.permissionRepository.getCameraPermission()
-                        )
-                    }
                     viewModel.resetUiState()
                 }
                 is UiState.Idle -> {}

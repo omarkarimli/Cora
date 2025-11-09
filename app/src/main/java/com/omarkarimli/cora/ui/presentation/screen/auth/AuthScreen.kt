@@ -117,7 +117,6 @@ fun AuthScreen() {
                 Log.e(currentScreen, log)
                 viewModel.resetUiState()
             }
-            is UiState.ActionRequired -> {}
             UiState.Idle -> { /* Hide any loading indicators */ }
         }
     }

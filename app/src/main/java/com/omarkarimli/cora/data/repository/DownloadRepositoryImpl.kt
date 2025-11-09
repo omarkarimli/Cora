@@ -11,7 +11,6 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.core.net.toUri
 import com.omarkarimli.cora.domain.repository.DownloadRepository
-import com.omarkarimli.cora.domain.repository.PermissionRepository
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import com.omarkarimli.cora.utils.SpConstant.SAVING_PATH_KEY
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -26,11 +25,10 @@ import javax.inject.Singleton
 @Singleton
 class DownloadRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val permissionRepository: PermissionRepository,
     private val sharedPreferenceRepository: SharedPreferenceRepository
 ) : DownloadRepository {
 
-    val appName: String = context.applicationInfo.name
+    private val appName: String = context.applicationInfo.loadLabel(context.packageManager).toString()
 
     override suspend fun downloadImage(imageUrl: String): Uri? {
         val savingPath = sharedPreferenceRepository.getString(SAVING_PATH_KEY, "photos")
@@ -44,10 +42,23 @@ class DownloadRepositoryImpl @Inject constructor(
         else saveBitmapToDownloads(bitmap)
     }
 
+    private fun getNewImageUri(): Uri? {
+        val filename = "${appName}_${System.currentTimeMillis()}.jpg"
+        val mimeType = "image/jpeg"
+        val contentValues = ContentValues().apply {
+            put(MediaStore.MediaColumns.DISPLAY_NAME, filename)
+            put(MediaStore.MediaColumns.MIME_TYPE, mimeType)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/" + appName)
+            }
+        }
+        return context.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+    }
+
     override suspend fun saveImageToPhotos(imageUrl: String): Uri? {
         return try {
             withContext(Dispatchers.IO) {
-                val imageUri = permissionRepository.getNewImageUri()
+                val imageUri = getNewImageUri()
 
                 imageUri?.let { uri ->
                     context.contentResolver.openOutputStream(uri).use { outputStream ->
@@ -55,9 +66,6 @@ class DownloadRepositoryImpl @Inject constructor(
 
                         val url = URL(imageUrl)
                         val connection = url.openConnection()
-                        // Optional: Set timeouts
-                        // connection.connectTimeout = 15000
-                        // connection.readTimeout = 15000
                         connection.connect()
 
                         connection.getInputStream().use { inputStream ->
@@ -82,9 +90,6 @@ class DownloadRepositoryImpl @Inject constructor(
 
                 val url = URL(imageUrl)
                 val connection = url.openConnection()
-                // Optional: Set timeouts
-                // connection.connectTimeout = 15000
-                // connection.readTimeout = 15000
                 connection.connect()
 
                 connection.getInputStream().use { inputStream -> // Ensures inputStream is closed
@@ -102,28 +107,23 @@ class DownloadRepositoryImpl @Inject constructor(
                             } ?: throw Exception("Failed to open output stream for URI: $uri (saveImageToDownloads Q+)")
                         } ?: throw Exception("MediaStore.Downloads.EXTERNAL_CONTENT_URI insert returned null (saveImageToDownloads Q+).")
                     } else {
-                        // Legacy approach: Requires WRITE_EXTERNAL_STORAGE
-                        if (permissionRepository.storagePermissionState.value) {
-                            val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                            val saveDir = File(downloadsDir, appName)
-                            if (!saveDir.exists() && !saveDir.mkdirs()) {
-                                throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveImageToDownloads legacy)")
-                            }
-
-                            val imageFile = File(saveDir, filename)
-                            FileOutputStream(imageFile).use { outputStream ->
-                                inputStream.copyTo(outputStream)
-                            }
-
-                            Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { intent ->
-                                intent.data = imageFile.toUri() // Consistent with saveBitmapToDownloads
-                                context.sendBroadcast(intent)
-                            }
-                            finalImageUri = imageFile.toUri() // Consistent with saveBitmapToDownloads
-                        } else {
-                            Log.w("DownloadRepositoryImpl", "saveImageToDownloads: Storage permission denied on older API. Cannot save image.")
-                            return@withContext null
+                        // Legacy approach: Assumes WRITE_EXTERNAL_STORAGE is granted
+                        val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                        val saveDir = File(downloadsDir, appName)
+                        if (!saveDir.exists() && !saveDir.mkdirs()) {
+                            throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveImageToDownloads legacy)")
                         }
+
+                        val imageFile = File(saveDir, filename)
+                        FileOutputStream(imageFile).use { outputStream ->
+                            inputStream.copyTo(outputStream)
+                        }
+
+                        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { intent ->
+                            intent.data = imageFile.toUri()
+                            context.sendBroadcast(intent)
+                        }
+                        finalImageUri = imageFile.toUri()
                     }
                 }
                 finalImageUri
@@ -137,7 +137,7 @@ class DownloadRepositoryImpl @Inject constructor(
     override suspend fun saveBitmapToPhotos(bitmap: Bitmap): Uri? {
         return try {
             withContext(Dispatchers.IO) {
-                val imageUri = permissionRepository.getNewImageUri()
+                val imageUri = getNewImageUri()
 
                 imageUri?.let { uri ->
                     context.contentResolver.openOutputStream(uri)?.use { outputStream ->
@@ -173,25 +173,21 @@ class DownloadRepositoryImpl @Inject constructor(
                         } ?: throw Exception("Failed to open output stream for URI: $uri (saveBitmapToDownloads Q+)")
                     } ?: throw Exception("MediaStore.Downloads.EXTERNAL_CONTENT_URI insert returned null (saveBitmapToDownloads Q+).")
                 } else {
-                    if (permissionRepository.storagePermissionState.value) {
-                        val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                        val saveDir = File(downloadsDir, appName)
-                        if (!saveDir.exists() && !saveDir.mkdirs()) {
-                            throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveBitmapToDownloads legacy)")
-                        }
-                        val imageFile = File(saveDir, filename)
-                        FileOutputStream(imageFile).use { outputStream ->
-                            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
-                        }
-                        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { intent ->
-                            intent.data = imageFile.toUri()
-                            context.sendBroadcast(intent)
-                        }
-                        finalImageUri = imageFile.toUri()
-                    } else {
-                        Log.w("DownloadRepositoryImpl", "saveBitmapToDownloads: Storage permission denied on older API. Cannot save bitmap.")
-                        return@withContext null
+                    // Legacy approach: Assumes WRITE_EXTERNAL_STORAGE is granted
+                    val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                    val saveDir = File(downloadsDir, appName)
+                    if (!saveDir.exists() && !saveDir.mkdirs()) {
+                        throw Exception("Failed to create directory: ${saveDir.absolutePath} (saveBitmapToDownloads legacy)")
                     }
+                    val imageFile = File(saveDir, filename)
+                    FileOutputStream(imageFile).use { outputStream ->
+                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+                    }
+                    Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { intent ->
+                        intent.data = imageFile.toUri()
+                        context.sendBroadcast(intent)
+                    }
+                    finalImageUri = imageFile.toUri()
                 }
                 finalImageUri
             }

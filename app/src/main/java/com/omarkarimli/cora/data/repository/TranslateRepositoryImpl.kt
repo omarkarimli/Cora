@@ -19,7 +19,7 @@ import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 import javax.inject.Singleton // Added for better scoping if this is a singleton repo
 
-@Singleton // Good practice for a repository managing shared resources like ML models
+@Singleton
 class TranslateRepositoryImpl @Inject constructor(
     private val langRepository: LangRepository
 ) : TranslateRepository {
