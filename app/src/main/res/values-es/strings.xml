@@ -6,7 +6,7 @@
     <string name="more">Más</string>
     <string name="success">Éxito</string>
     <string name="success_message">El proceso fue exitoso.</string>
-    <string name="splash">Splash</string>
+    <string name="splash">Pantalla de inicio</string>
     <string name="confirm">Confirmar</string>
     <string name="save">Guardar</string>
     <string name="selected_title">Seleccionado</string>
@@ -19,24 +19,24 @@
     <string name="back_to_prev">Volver a la página anterior</string>
     <string name="share">Compartir</string>
     <string name="share_body">Echa un vistazo a esto.</string>
-    <string name="refresh_page">Actualizar página</string>
+    <string name="refresh_page">Recargar página</string>
     <string name="download">Descargar</string>
 
     <string name="auth">Autenticación</string>
-    <string name="get_started">Comenzar</string>
+    <string name="get_started">Empezar</string>
     <string name="continue_title">Continuar</string>
     <string name="auth_legal_doc_agreement_prefix">Al continuar, aceptas nuestros </string>
     <string name="legal_doc">Documentos Legales</string>
-    <string name="user_setup">Configuración de Usuario</string>
+    <string name="user_setup">Configuración de usuario</string>
     <string name="username">Nombre de usuario</string>
     <string name="bio">Biografía</string>
-    <string name="required">Requerido</string>
+    <string name="required">Obligatorio</string>
     <string name="optional">Opcional</string>
     <string name="sign_out">Cerrar sesión</string>
     <string name="account">Cuenta</string>
     <string name="gender">Género</string>
-    <string name="gender_male">Masculino</string>
-    <string name="gender_female">Femenino</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
 
     <string name="new_chat">Nuevo Chat</string>
     <string name="chat_history">Historial de Chat</string>
@@ -47,10 +47,11 @@
     <string name="clear_all">Borrar todo</string>
     <string name="are_you_sure">¿Estás seguro de hacer esto?</string>
     <string name="delete_item">Eliminar elemento</string>
+    <string name="cancel">Cancelar</string>
 
     <string name="camera">Cámara</string>
     <string name="attach">Adjuntar</string>
-    <string name="remove_attachment">Eliminar adjunto</string>
+    <string name="remove_attachment">Quitar adjunto</string>
     <string name="image_generation">Generación de Imágenes</string>
     <string name="image_from_web">Imagen de la web</string>
     <string name="image_from_device">Imagen del dispositivo</string>
@@ -71,7 +72,7 @@
     <string name="select_plan">Seleccionar Plan</string>
     <string name="free">Gratis</string>
     <string name="not_available">No disponible.</string>
-    <string name="ads_enabled">Anuncios activados</string>
+    <string name="ads_enabled">Anuncios habilitados</string>
     <string name="subscription_feature_attaches">%1$d archivos adjuntos</string>
     <string name="subscription_feature_message_chars">%1$d caracteres de mensaje</string>
     <string name="subscription_feature_web_result">%1$d resultados web</string>
@@ -80,7 +81,7 @@
     <string name="attaches">Archivos adjuntos</string>
     <string name="usage_item_attaches_desc">Archivos adjuntos en el chat</string>
     <string name="usage_item_message_chars_title">Caracteres de Mensaje</string>
-    <string name="usage_item_message_chars_desc">Caracteres de respuestas en el chat</string>
+    <string name="usage_item_message_chars_desc">Caracteres de las respuestas en el chat</string>
     <string name="web_searches">Búsquedas Web</string>
 
     <string name="dark_mode">Modo oscuro</string>
@@ -93,31 +94,33 @@
     <string name="on">Activado</string>
     <string name="off">Desactivado</string>
     <string name="notifications">Notificaciones</string>
-    <string name="desc_notifications">Gestiona tus alertas y sonidos.</string>
+    <string name="desc_notifications">Administra tus alertas y sonidos.</string>
     <string name="languages">Idiomas</string>
     <string name="desc_lang">Cambia el idioma de la aplicación.</string>
     <string name="live_translation">Traducción en vivo</string>
-    <string name="desc_live_translation">Traducción en vivo de los contenidos generados.</string>
+    <string name="desc_live_translation">Traducción en vivo de contenidos generados.</string>
 
     <string name="support">Soporte</string>
     <string name="help">Ayuda</string>
-    <string name="guidelines">Pautas</string>
-    <string name="desc_guidelines">Ver y seguir las pautas.</string>
+    <string name="guidelines">Directrices</string>
+    <string name="desc_guidelines">Ver y seguir las directrices.</string>
     <string name="report_issue">Informar de un problema</string>
     <string name="desc_report_issue">Envía un informe de error o una solicitud de función.</string>
     <string name="reset_settings">Restablecer Ajustes</string>
-    <string name="desc_reset_settings">Revertir todos los ajustes a sus valores predeterminados.</string>
+    <string name="desc_reset_settings">Restablecer todos los ajustes a sus valores predeterminados.</string>
     <string name="about">Acerca de</string>
     <string name="desc_about">Ver información sobre la aplicación.</string>
-    <string name="about_main_text">Diseñada para potenciar tus ideas. Tu pasión es nuestro propósito. Realmente esperamos que disfrutes de lo que hemos creado para ti.</string>
+    <string name="about_main_text">Diseñado para potenciar tus ideas. Tu pasión es nuestro propósito. Esperamos de verdad que disfrutes lo que hemos creado para ti.</string>
     <string name="link_to_source">Enlace a la fuente</string>
 
-    <string name="error_storage_permission_denied">Se requiere permiso de almacenamiento para seleccionar fotos.</string>
-    <string name="error_camera_permission_denied">Se requiere permiso de cámara para tomar fotos.</string>
-    <string name="error_failed_persistent_access">No se pudo obtener acceso persistente a la imagen.</string>
-    <string name="error_no_active_subscription">No hay una suscripción activa.</string>
-    <string name="error_google_sign_in_failed">Error en el inicio de sesión con Google. Por favor, inténtalo de nuevo.</string>
-    <string name="error_sign_out">Error al cerrar la sesión.</string>
+    <string name="permission_denied">Permiso Denegado</string>
+    <string name="permission_denied_message">Este permiso es necesario para continuar. Por favor, otorga el permiso en los ajustes de la aplicación.</string>
+    <string name="grant_permission">Otorgar Permiso</string>
+
+    <string name="error_failed_persistent_access">Error al obtener acceso persistente a la imagen.</string>
+    <string name="error_no_active_subscription">No hay suscripción activa.</string>
+    <string name="error_google_sign_in_failed">Error al iniciar sesión con Google. Por favor, inténtalo de nuevo.</string>
+    <string name="error_sign_out">Error al cerrar sesión.</string>
     <string name="error_something_went_wrong">Algo salió mal. Por favor, inténtalo de nuevo.</string>
     <string name="error_empty_chat">El chat está vacío.</string>
     <string name="error_create_file">No se pudo crear un archivo para guardar la foto.</string>
@@ -139,7 +142,7 @@
     <string name="error_only_english_letters">Solo se permiten letras en inglés</string>
 
     <string-array name="onboarding_mottos">
-        <item>Diseñada para potenciar tus ideas</item>
+        <item>Diseñado para potenciar tus ideas</item>
         <item>Encuentra tu próxima chispa creativa</item>
         <item>Conéctate con una comunidad de innovadores</item>
     </string-array>

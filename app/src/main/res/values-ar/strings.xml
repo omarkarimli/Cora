@@ -9,27 +9,27 @@
     <string name="splash">شاشة البداية</string>
     <string name="confirm">تأكيد</string>
     <string name="save">حفظ</string>
-    <string name="selected_title">مُحدد</string>
+    <string name="selected_title">المحدد</string>
     <string name="no_item_found">لم يتم العثور على أي عنصر</string>
 
     <string name="settings">الإعدادات</string>
     <string name="profile">الملف الشخصي</string>
     <string name="chat">الدردشة</string>
-    <string name="admin">إدارة</string>
+    <string name="admin">المسؤول</string>
     <string name="back_to_prev">العودة إلى الصفحة السابقة</string>
     <string name="share">مشاركة</string>
     <string name="share_body">تحقق من هذا.</string>
     <string name="refresh_page">تحديث الصفحة</string>
-    <string name="download">تنزيل</string>
+    <string name="download">تحميل</string>
 
     <string name="auth">المصادقة</string>
     <string name="get_started">ابدأ</string>
     <string name="continue_title">متابعة</string>
     <string name="auth_legal_doc_agreement_prefix">بالمتابعة، أنت توافق على </string>
-    <string name="legal_doc">الوثائق القانونية</string>
+    <string name="legal_doc">وثائقنا القانونية</string>
     <string name="user_setup">إعداد المستخدم</string>
     <string name="username">اسم المستخدم</string>
-    <string name="bio">السيرة الذاتية</string>
+    <string name="bio">نبذة</string>
     <string name="required">مطلوب</string>
     <string name="optional">اختياري</string>
     <string name="sign_out">تسجيل الخروج</string>
@@ -38,7 +38,7 @@
     <string name="gender_male">ذكر</string>
     <string name="gender_female">أنثى</string>
 
-    <string name="new_chat">دردشة جديدة</string>
+    <string name="new_chat">محادثة جديدة</string>
     <string name="chat_history">سجل الدردشة</string>
     <string name="open_history">فتح السجل</string>
     <string name="ask_cora">اسأل كورا</string>
@@ -47,17 +47,18 @@
     <string name="clear_all">مسح الكل</string>
     <string name="are_you_sure">هل أنت متأكد من القيام بذلك؟</string>
     <string name="delete_item">حذف العنصر</string>
+    <string name="cancel">إلغاء</string>
 
     <string name="camera">الكاميرا</string>
     <string name="attach">إرفاق</string>
     <string name="remove_attachment">إزالة المرفق</string>
-    <string name="image_generation">توليد الصور</string>
+    <string name="image_generation">إنشاء الصور</string>
     <string name="image_from_web">صورة من الويب</string>
     <string name="image_from_device">صورة من الجهاز</string>
     <string name="describe">وصف</string>
     <string name="full_screen_image_viewer">عارض الصور بملء الشاشة</string>
     <string name="background">الخلفية</string>
-    <string name="enlarged_image">صورة مكبرة %1$d</string>
+    <string name="enlarged_image">الصورة المكبرة %1$d</string>
     <string name="saving_path">مسار الحفظ</string>
     <string name="desc_saving_path">سيتم حفظ العناصر في المسار المحدد.</string>
     <string name="photos">الصور</string>
@@ -70,21 +71,21 @@
     <string name="current_plan">الخطة الحالية</string>
     <string name="select_plan">حدد الخطة</string>
     <string name="free">مجاني</string>
-    <string name="not_available">غير متوفر.</string>
-    <string name="ads_enabled">الإعلانات مُفعلة</string>
-    <string name="subscription_feature_attaches">%1$d مرفقات</string>
+    <string name="not_available">غير متاح.</string>
+    <string name="ads_enabled">الإعلانات مفعلة</string>
+    <string name="subscription_feature_attaches">%1$d مرفق</string>
     <string name="subscription_feature_message_chars">%1$d حرف رسالة</string>
-    <string name="subscription_feature_web_result">%1$d نتائج ويب</string>
+    <string name="subscription_feature_web_result">%1$d نتيجة ويب</string>
     <string name="usage">الاستخدام</string>
     <string name="desc_usage">تحقق من استخدامك.</string>
     <string name="attaches">المرفقات</string>
     <string name="usage_item_attaches_desc">المرفقات في الدردشة</string>
     <string name="usage_item_message_chars_title">أحرف الرسائل</string>
     <string name="usage_item_message_chars_desc">أحرف الردود في الدردشة</string>
-    <string name="web_searches">عمليات البحث على الويب</string>
+    <string name="web_searches">عمليات البحث عبر الويب</string>
 
     <string name="dark_mode">الوضع الداكن</string>
-    <string name="desc_dark_mode">تغيير مظهر التطبيق.</string>
+    <string name="desc_dark_mode">غيّر مظهر التطبيق.</string>
     <string name="system">النظام</string>
     <string name="light">فاتح</string>
     <string name="dark">داكن</string>
@@ -95,52 +96,54 @@
     <string name="notifications">الإشعارات</string>
     <string name="desc_notifications">إدارة التنبيهات والأصوات الخاصة بك.</string>
     <string name="languages">اللغات</string>
-    <string name="desc_lang">تغيير لغة التطبيق.</string>
+    <string name="desc_lang">غيّر لغة التطبيق.</string>
     <string name="live_translation">الترجمة المباشرة</string>
-    <string name="desc_live_translation">الترجمة المباشرة للمحتويات المولدة.</string>
+    <string name="desc_live_translation">الترجمة المباشرة للمحتويات التي تم إنشاؤها.</string>
 
     <string name="support">الدعم</string>
-    <string name="help">المساعدة</string>
+    <string name="help">مساعدة</string>
     <string name="guidelines">الإرشادات</string>
     <string name="desc_guidelines">عرض واتباع الإرشادات.</string>
     <string name="report_issue">الإبلاغ عن مشكلة</string>
     <string name="desc_report_issue">إرسال تقرير خطأ أو طلب ميزة.</string>
-    <string name="reset_settings">إعادة ضبط الإعدادات</string>
+    <string name="reset_settings">إعادة تعيين الإعدادات</string>
     <string name="desc_reset_settings">إعادة جميع الإعدادات إلى قيمها الافتراضية.</string>
     <string name="about">حول</string>
     <string name="desc_about">عرض معلومات حول التطبيق.</string>
     <string name="about_main_text">مصمم لتعزيز أفكارك شغفك هو هدفنا. نأمل حقًا أن تستمتع بما أنشأناه لك.</string>
     <string name="link_to_source">رابط المصدر</string>
 
-    <string name="error_storage_permission_denied">إذن التخزين مطلوب لاختيار الصور.</string>
-    <string name="error_camera_permission_denied">إذن الكاميرا مطلوب لالتقاط الصور.</string>
-    <string name="error_failed_persistent_access">فشل الحصول على وصول دائم للصورة.</string>
+    <string name="permission_denied">تم رفض الإذن</string>
+    <string name="permission_denied_message">هذا الإذن مطلوب للمتابعة. يرجى منح الإذن في إعدادات التطبيق.</string>
+    <string name="grant_permission">منح الإذن</string>
+
+    <string name="error_failed_persistent_access">فشل في الحصول على وصول دائم للصورة.</string>
     <string name="error_no_active_subscription">لا يوجد اشتراك نشط.</string>
-    <string name="error_google_sign_in_failed">فشل تسجيل الدخول باستخدام Google. الرجاء المحاولة مرة أخرى.</string>
+    <string name="error_google_sign_in_failed">فشل تسجيل الدخول باستخدام جوجل. يرجى المحاولة مرة أخرى.</string>
     <string name="error_sign_out">فشل تسجيل الخروج.</string>
-    <string name="error_something_went_wrong">حدث خطأ ما. الرجاء المحاولة مرة أخرى.</string>
+    <string name="error_something_went_wrong">حدث خطأ ما. يرجى المحاولة مرة أخرى.</string>
     <string name="error_empty_chat">الدردشة فارغة.</string>
     <string name="error_create_file">تعذر إنشاء ملف لحفظ الصورة.</string>
-    <string name="error_take_photo">فشل التقاط صورة.</string>
+    <string name="error_take_photo">فشل في التقاط صورة.</string>
     <string name="error_image_already_added">تمت إضافة الصورة بالفعل.</string>
-    <string name="error_max_images_reached">يمكنك إضافة ما يصل إلى 3 صور فقط.</string>
-    <string name="error_attach_limit_reached">لقد وصلت إلى حد المرفقات المسموح به.</string>
-    <string name="error_load_image">فشل تحميل الصورة.</string>
-    <string name="error_load_subscriptions">فشل تحميل الاشتراكات.</string>
-    <string name="error_no_free_subscriptions">لا توجد اشتراكات مجانية متاحة.</string>
-    <string name="error_get_free_subscription">فشل الحصول على اشتراك مجاني.</string>
-    <string name="error_save_user_data">فشل حفظ بيانات المستخدم.</string>
+    <string name="error_max_images_reached">يمكنك فقط إضافة ما يصل إلى 3 صور.</string>
+    <string name="error_attach_limit_reached">لقد وصلت إلى حد المرفقات.</string>
+    <string name="error_load_image">فشل في تحميل الصورة.</string>
+    <string name="error_load_subscriptions">فشل في تحميل الاشتراكات.</string>
+    <string name="error_no_free_subscriptions">لا تتوفر اشتراكات مجانية.</string>
+    <string name="error_get_free_subscription">فشل في الحصول على اشتراك مجاني.</string>
+    <string name="error_save_user_data">فشل في حفظ بيانات المستخدم.</string>
 
     <string name="error_min_length">مطلوب %1$d أحرف على الأقل</string>
     <string name="error_max_length">الحد الأقصى المسموح به هو %1$d أحرف</string>
-    <string name="error_no_gaps">غير مسموح بالمسافات</string>
-    <string name="error_no_special_chars">غير مسموح بالأحرف الخاصة</string>
-    <string name="error_no_capital_letters">غير مسموح بالأحرف الكبيرة</string>
-    <string name="error_only_english_letters">مسموح فقط بالأحرف الإنجليزية</string>
+    <string name="error_no_gaps">لا يُسمح بالمسافات</string>
+    <string name="error_no_special_chars">لا يُسمح بالأحرف الخاصة</string>
+    <string name="error_no_capital_letters">لا يُسمح بالأحرف الكبيرة</string>
+    <string name="error_only_english_letters">يُسمح بالأحرف الإنجليزية فقط</string>
 
     <string-array name="onboarding_mottos">
         <item>مصمم لتعزيز أفكارك</item>
-        <item>ابحث عن شرارة إبداعك القادمة</item>
+        <item>ابحث عن شرارة الإبداع التالية لديك</item>
         <item>تواصل مع مجتمع من المبتكرين</item>
     </string-array>
     <string-array name="guideline_mottos">

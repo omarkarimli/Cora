@@ -104,7 +104,7 @@ sc
     <string name="support">Support</string>
     <string name="help">Help</string>
     <string name="guidelines">Guidelines</string>
-    <string name="desc_guidelines">View and follow guidelines.</string>d
+    <string name="desc_guidelines">View and follow guidelines.</string>
     <string name="report_issue">Report issue</string>
     <string name="desc_report_issue">Submit a bug report or a feature request.</string>
     <string name="reset_settings">Reset Settings</string>
@@ -117,7 +117,7 @@ sc
     <string name="permission_denied">Permission Denied</string>
     <string name="permission_denied_message">This permission is required to proceed. Please grant the permission in the app settings.</string>
     <string name="grant_permission">Grant Permission</string>
-    <string name="error_permission_denied">Permission denied.</string>
+
     <string name="error_failed_persistent_access">Failed to get persistent access to the image.</string>
     <string name="error_no_active_subscription">No active subscription.</string>
     <string name="error_google_sign_in_failed">Google Sign-In failed. Please try again.</string>

@@ -20,19 +20,19 @@
     <string name="share">שתף</string>
     <string name="share_body">תבדוק את זה.</string>
     <string name="refresh_page">רענן דף</string>
-    <string name="download">הורדה</string>
+    <string name="download">הורד</string>
 
     <string name="auth">אימות</string>
     <string name="get_started">התחל</string>
     <string name="continue_title">המשך</string>
-    <string name="auth_legal_doc_agreement_prefix">בהמשך, אתה מסכים ל</string>
+    <string name="auth_legal_doc_agreement_prefix">על ידי המשך, אתה מסכים ל</string>
     <string name="legal_doc">מסמכים המשפטיים</string>
     <string name="user_setup">הגדרת משתמש</string>
     <string name="username">שם משתמש</string>
     <string name="bio">ביוגרפיה</string>
-    <string name="required">חובה</string>
+    <string name="required">נדרש</string>
     <string name="optional">אופציונלי</string>
-    <string name="sign_out">יציאה</string>
+    <string name="sign_out">התנתק</string>
     <string name="account">חשבון</string>
     <string name="gender">מגדר</string>
     <string name="gender_male">זכר</string>
@@ -43,29 +43,30 @@
     <string name="open_history">פתח היסטוריה</string>
     <string name="ask_cora">שאל את קורה</string>
     <string name="send">שלח</string>
-    <string name="search">חיפוש</string>
+    <string name="search">חפש</string>
     <string name="clear_all">נקה הכל</string>
-    <string name="are_you_sure">האם אתה בטוח שברצונך לבצע זאת?</string>
+    <string name="are_you_sure">האם אתה בטוח שברצונך לעשות זאת?</string>
     <string name="delete_item">מחק פריט</string>
+    <string name="cancel">בטל</string>
 
     <string name="camera">מצלמה</string>
     <string name="attach">צרף</string>
     <string name="remove_attachment">הסר קובץ מצורף</string>
-    <string name="image_generation">יצירת תמונה</string>
+    <string name="image_generation">יצירת תמונות</string>
     <string name="image_from_web">תמונה מהאינטרנט</string>
     <string name="image_from_device">תמונה מהמכשיר</string>
-    <string name="describe">תיאור</string>
-    <string name="full_screen_image_viewer">צפייה בתמונה במסך מלא</string>
+    <string name="describe">תאר</string>
+    <string name="full_screen_image_viewer">מציג תמונות במסך מלא</string>
     <string name="background">רקע</string>
     <string name="enlarged_image">תמונה מוגדלת %1$d</string>
     <string name="saving_path">נתיב שמירה</string>
-    <string name="desc_saving_path">פריטים יישמרו בנתיב הנבחר.</string>
+    <string name="desc_saving_path">הפריטים יישמרו בנתיב הנבחר.</string>
     <string name="photos">תמונות</string>
     <string name="downloads">הורדות</string>
 
-    <string name="subscriptions">מינויים</string>
-    <string name="desc_subscriptions">בדוק את מצב המינוי שלך.</string>
-    <string name="subscription_history">היסטוריית מינויים</string>
+    <string name="subscriptions">מנויים</string>
+    <string name="desc_subscriptions">בדוק את סטטוס המנוי שלך.</string>
+    <string name="subscription_history">היסטוריית מנויים</string>
     <string name="upgrade">שדרוג</string>
     <string name="current_plan">תוכנית נוכחית</string>
     <string name="select_plan">בחר תוכנית</string>
@@ -79,9 +80,9 @@
     <string name="desc_usage">בדוק את השימוש שלך.</string>
     <string name="attaches">קבצים מצורפים</string>
     <string name="usage_item_attaches_desc">קבצים מצורפים בצ\'אט</string>
-    <string name="usage_item_message_chars_title">תווים להודעה</string>
+    <string name="usage_item_message_chars_title">תווי הודעה</string>
     <string name="usage_item_message_chars_desc">תווי תגובות בצ\'אט</string>
-    <string name="web_searches">חיפושי אינטרנט</string>
+    <string name="web_searches">חיפושים באינטרנט</string>
 
     <string name="dark_mode">מצב כהה</string>
     <string name="desc_dark_mode">שנה את מראה האפליקציה.</string>
@@ -104,32 +105,34 @@
     <string name="guidelines">הנחיות</string>
     <string name="desc_guidelines">צפה ופעל לפי ההנחיות.</string>
     <string name="report_issue">דווח על בעיה</string>
-    <string name="desc_report_issue">שלח דיווח על באג או בקשת תכונה.</string>
-    <string name="reset_settings">אפס הגדרות</string>
+    <string name="desc_report_issue">שלח דוח באג או בקשת תכונה.</string>
+    <string name="reset_settings">איפוס הגדרות</string>
     <string name="desc_reset_settings">החזר את כל ההגדרות לערכי ברירת המחדל שלהן.</string>
     <string name="about">אודות</string>
-    <string name="desc_about">צפה במידע על האפליקציה.</string>
-    <string name="about_main_text">עוצב כדי להטעין את הרעיונות שלך. התשוקה שלך היא המטרה שלנו. אנו באמת מקווים שתיהנה ממה שיצרנו עבורך.</string>
+    <string name="desc_about">הצג מידע על האפליקציה.</string>
+    <string name="about_main_text">תוכנן כדי להעצים את הרעיונות שלך. התשוקה שלך היא המטרה שלנו. אנו מקווים שתיהנה ממה שיצרנו עבורך.</string>
     <string name="link_to_source">קישור למקור</string>
 
-    <string name="error_storage_permission_denied">יש צורך באישור אחסון כדי לבחור תמונות.</string>
-    <string name="error_camera_permission_denied">יש צורך באישור מצלמה כדי לצלם תמונות.</string>
-    <string name="error_failed_persistent_access">הגישה הקבועה לתמונה נכשלה.</string>
-    <string name="error_no_active_subscription">אין מינוי פעיל.</string>
-    <string name="error_google_sign_in_failed">הכניסה באמצעות Google נכשלה. אנא נסה שוב.</string>
-    <string name="error_sign_out">היציאה נכשלה.</string>
+    <string name="permission_denied">הרשאה נדחתה</string>
+    <string name="permission_denied_message">הרשאה זו נדרשת כדי להמשיך. אנא אשר את ההרשאה בהגדרות האפליקציה.</string>
+    <string name="grant_permission">הענק הרשאה</string>
+
+    <string name="error_failed_persistent_access">נכשל בקבלת גישה מתמשכת לתמונה.</string>
+    <string name="error_no_active_subscription">אין מנוי פעיל.</string>
+    <string name="error_google_sign_in_failed">התחברות באמצעות גוגל נכשלה. אנא נסה שוב.</string>
+    <string name="error_sign_out">ההתנתקות נכשלה.</string>
     <string name="error_something_went_wrong">משהו השתבש. אנא נסה שוב.</string>
     <string name="error_empty_chat">הצ\'אט ריק.</string>
-    <string name="error_create_file">לא ניתן ליצור קובץ לשמירת התמונה.</string>
-    <string name="error_take_photo">צילום התמונה נכשל.</string>
+    <string name="error_create_file">לא ניתן היה ליצור קובץ לשמירת התמונה.</string>
+    <string name="error_take_photo">נכשל בלקיחת תמונה.</string>
     <string name="error_image_already_added">התמונה כבר נוספה.</string>
     <string name="error_max_images_reached">אתה יכול להוסיף עד 3 תמונות בלבד.</string>
     <string name="error_attach_limit_reached">הגעת למגבלת הקבצים המצורפים שלך.</string>
-    <string name="error_load_image">טעינת התמונה נכשלה.</string>
-    <string name="error_load_subscriptions">טעינת המינויים נכשלה.</string>
-    <string name="error_no_free_subscriptions">אין מינויים חינמיים זמינים.</string>
-    <string name="error_get_free_subscription">קבלת המינוי החינמי נכשלה.</string>
-    <string name="error_save_user_data">שמירת נתוני המשתמש נכשלה.</string>
+    <string name="error_load_image">נכשל בטעינת תמונה.</string>
+    <string name="error_load_subscriptions">נכשל בטעינת מנויים.</string>
+    <string name="error_no_free_subscriptions">אין מנויים חינם זמינים.</string>
+    <string name="error_get_free_subscription">נכשל בקבלת מנוי חינם.</string>
+    <string name="error_save_user_data">נכשל בשמירת נתוני משתמש.</string>
 
     <string name="error_min_length">נדרשים לפחות %1$d תווים</string>
     <string name="error_max_length">מותרים מקסימום %1$d תווים</string>
@@ -139,9 +142,9 @@
     <string name="error_only_english_letters">מותרות רק אותיות באנגלית</string>
 
     <string-array name="onboarding_mottos">
-        <item>עוצב כדי להטעין את הרעיונות שלך</item>
+        <item>תוכנן כדי להעצים את הרעיונות שלך</item>
         <item>מצא את הניצוץ היצירתי הבא שלך</item>
-        <item>התחבר לקהילת חדשנים</item>
+        <item>התחבר לקהילה של חדשנים</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>תשומת לב</item>

@@ -1,6 +1,5 @@
 package com.omarkarimli.cora.utils
 
-import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -30,31 +29,31 @@ import androidx.compose.ui.graphics.shadow.Shadow
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.core.net.toUri
 import com.google.firebase.firestore.DocumentSnapshot
 import com.omarkarimli.cora.BuildConfig.EMAIL
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.GuidelineModel
 import com.omarkarimli.cora.domain.models.ImageModel
+import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.models.SearchImageResponse
 import com.omarkarimli.cora.domain.models.StandardListItemModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
-import com.omarkarimli.cora.ui.theme.Dimens
-import java.text.SimpleDateFormat
-import java.util.Locale
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontWeight
 import com.omarkarimli.cora.domain.models.UsageDataModel
 import com.omarkarimli.cora.domain.models.ValidatableField
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.style.TextDecoration
-import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
+import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.ui.theme.outlineLight
 import com.omarkarimli.cora.ui.theme.primaryLight
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 fun String.isWebUrl(): Boolean {
     return this.contains("http") || this.contains("www")
@@ -395,9 +394,9 @@ fun Long?.isEarlierThan(expiredTime: Long?): Boolean {
     return this != null && expiredTime != null && this < expiredTime
 }
 
-fun Activity.openAppSetting() {
-    Intent(
-        Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
-        Uri.fromParts(Constants.PACKAGE, packageName, null)
-    ).also(::startActivity)
+fun Context.openAppSettings() {
+    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+    val uri = Uri.fromParts(Constants.PACKAGE, this.packageName, null)
+    intent.data = uri
+    this.startActivity(intent)
 }
