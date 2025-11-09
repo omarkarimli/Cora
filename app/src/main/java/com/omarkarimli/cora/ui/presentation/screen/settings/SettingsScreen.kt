@@ -1,6 +1,10 @@
 package com.omarkarimli.cora.ui.presentation.screen.settings
 
+import android.Manifest
+import android.os.Build
 import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -40,7 +44,9 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.navigation.NavController
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.ReportIssueModel
@@ -51,6 +57,7 @@ import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.ui.presentation.common.widget.component.LoadingContent
 import com.omarkarimli.cora.ui.presentation.common.widget.component.StandardListItemUi
+import com.omarkarimli.cora.ui.presentation.common.widget.dialog.PermissionAlertDialog
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ConfirmSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
@@ -61,6 +68,7 @@ import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.SavingPathShee
 import com.omarkarimli.cora.ui.presentation.screen.settings.sheet.ToggleSheetContent
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
+import com.omarkarimli.cora.utils.PermissionManager
 import com.omarkarimli.cora.utils.showToast
 import kotlinx.coroutines.launch
 
@@ -85,6 +93,7 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
     var sheetContent by remember { mutableStateOf<SheetContent>(SheetContent.None) }
+    var showPermissionDialog by remember { mutableStateOf(false) }
 
     fun showSheet(content: SheetContent) {
         sheetContent = content
@@ -95,6 +104,26 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
         coroutineScope.launch { sheetState.hide() }.invokeOnCompletion {
             if (!sheetState.isVisible) {
                 sheetContent = SheetContent.None
+            }
+        }
+    }
+
+    val requestPermissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestPermission(),
+    ) { isGranted ->
+        viewModel.onNotificationsToggle(isGranted)
+        if (isGranted) {
+            hideSheet()
+        } else {
+            showPermissionDialog = true
+        }
+    }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_START) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val hasPermission = PermissionManager.hasNotificationPermission(context)
+            if (isNotificationsEnabled != hasPermission) {
+                viewModel.onNotificationsToggle(hasPermission)
             }
         }
     }
@@ -167,7 +196,8 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                         }
                     )
                     SheetContent.LiveTranslation -> ToggleSheetContent(
-                        stringId = R.string.live_translation,
+                        titleStringId = R.string.live_translation,
+                        descStringId = R.string.desc_live_translation,
                         enabled = isLiveTranslationEnabled,
                         onToggle = { isEnabled ->
                             viewModel.onLiveTranslationToggle(isEnabled)
@@ -177,8 +207,22 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                     SheetContent.Notifications -> ToggleSheetContent(
                         enabled = isNotificationsEnabled,
                         onToggle = { isEnabled ->
-                            viewModel.onNotificationsToggle(isEnabled)
-                            hideSheet()
+                            if (isEnabled) {
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                                    if (PermissionManager.hasNotificationPermission(context)) {
+                                        viewModel.onNotificationsToggle(true)
+                                        hideSheet()
+                                    } else {
+                                        requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                                    }
+                                } else {
+                                    viewModel.onNotificationsToggle(true)
+                                    hideSheet()
+                                }
+                            } else {
+                                viewModel.onNotificationsToggle(false)
+                                hideSheet()
+                            }
                         }
                     )
                     SheetContent.DarkMode -> DarkModeSheetContent(
@@ -189,7 +233,8 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                         }
                     )
                     SheetContent.DynamicColor -> ToggleSheetContent(
-                        stringId = R.string.dynamic_color,
+                        titleStringId = R.string.dynamic_color,
+                        descStringId = R.string.desc_dynamic_color,
                         enabled = isDynamicColorEnabled,
                         onToggle = { isEnabled ->
                             mainViewModel.onDynamicColorToggle(isEnabled)
@@ -226,6 +271,12 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                     else -> {}
                 }
             }
+        }
+
+        if (showPermissionDialog) {
+            PermissionAlertDialog(
+                onDismissRequest = { showPermissionDialog = false }
+            )
         }
 
         if (uiState is UiState.Loading) LoadingContent()

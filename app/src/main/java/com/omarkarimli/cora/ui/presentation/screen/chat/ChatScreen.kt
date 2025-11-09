@@ -223,6 +223,13 @@ fun ChatScreen(
             }
             handleInitialShare(initialShare)
         }
+        LaunchedEffect(key1 = true) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                if (!PermissionManager.hasNotificationPermission(context)) {
+                    requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                }
+            }
+        }
 
         LaunchedEffect(chatHistoryId) {
             chatHistoryId?.let {

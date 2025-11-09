@@ -13,12 +13,13 @@ import com.omarkarimli.cora.utils.openAppSettings
 
 @Composable
 fun PermissionAlertDialog(
+    titleStringId: Int = R.string.permission_denied,
     onDismissRequest: () -> Unit
 ) {
     val context = LocalContext.current
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        title = { Text(stringResource(R.string.permission_denied)) },
+        title = { Text(stringResource(titleStringId)) },
         text = { Text(stringResource(R.string.permission_denied_message)) },
         confirmButton = {
             TextButton(

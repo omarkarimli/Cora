@@ -1,6 +1,10 @@
 package com.omarkarimli.cora.ui.presentation.screen.settings
 
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
 import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.omarkarimli.cora.R
@@ -15,6 +19,7 @@ import com.omarkarimli.cora.ui.presentation.main.MainViewModel
 import com.omarkarimli.cora.ui.theme.AppTheme
 import com.omarkarimli.cora.utils.SpConstant
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,6 +28,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val sharedPreferenceRepository: SharedPreferenceRepository,
     private val firestoreRepository: FirestoreRepository,
     private val translateRepository: TranslateRepository
@@ -129,11 +135,25 @@ class SettingsViewModel @Inject constructor(
 
     fun onNotificationsToggle(isEnabled: Boolean) {
         viewModelScope.launch {
-            _isNotificationsEnabled.value = isEnabled
-            sharedPreferenceRepository.saveBoolean(SpConstant.NOTIFICATION_KEY, isEnabled)
-            _uiState.value = UiState.Success(
-                message = SuccessType.SETTINGS_UPDATE,
-            )
+            val isPermissionGranted = ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+
+            if (isPermissionGranted) {
+                _isNotificationsEnabled.value = isEnabled
+                sharedPreferenceRepository.saveBoolean(SpConstant.NOTIFICATION_KEY, isEnabled)
+                _uiState.value = UiState.Success(
+                    message = SuccessType.SETTINGS_UPDATE,
+                )
+            } else {
+                _isNotificationsEnabled.value = false
+                sharedPreferenceRepository.saveBoolean(SpConstant.NOTIFICATION_KEY, false)
+                _uiState.value = UiState.Error(
+                    toastResId = R.string.permission_denied,
+                    log = "Notification permission denied"
+                )
+            }
         }
     }
 
