@@ -10,7 +10,7 @@ import com.omarkarimli.cora.domain.models.CreditConditions
 import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.models.ReportIssueModel
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.use_case.chat.ChatUseCases
+import com.omarkarimli.cora.domain.useCase.chat.ChatUseCases
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.utils.SpConstant

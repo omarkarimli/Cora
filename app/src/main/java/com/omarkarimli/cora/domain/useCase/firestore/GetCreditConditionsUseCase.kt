@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.firestore
+package com.omarkarimli.cora.domain.useCase.firestore
 
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import javax.inject.Inject

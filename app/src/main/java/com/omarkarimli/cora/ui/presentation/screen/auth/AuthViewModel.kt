@@ -12,7 +12,7 @@ import com.omarkarimli.cora.R
 import com.omarkarimli.cora.data.local.Converters
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.use_case.auth.AuthUseCases
+import com.omarkarimli.cora.domain.useCase.auth.AuthUseCases
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.utils.SpConstant

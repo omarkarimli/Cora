@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.firestore
+package com.omarkarimli.cora.domain.useCase.firestore
 
 data class FirestoreUseCases(
     val getUserUseCase: GetUserUseCase,

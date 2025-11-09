@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.chat_history
+package com.omarkarimli.cora.domain.useCase.chatHistory
 
 data class ChatHistoryUseCases(
     val getInstanceUseCase: GetInstanceUseCase,

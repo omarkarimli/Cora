@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.chat
+package com.omarkarimli.cora.domain.useCase.chat
 
 import com.omarkarimli.cora.domain.models.MessageModel
 import com.omarkarimli.cora.domain.repository.ChatRepository

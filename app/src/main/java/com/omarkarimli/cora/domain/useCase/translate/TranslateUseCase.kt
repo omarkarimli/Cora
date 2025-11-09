@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.translate
+package com.omarkarimli.cora.domain.useCase.translate
 
 import com.omarkarimli.cora.domain.repository.TranslateRepository
 import javax.inject.Inject

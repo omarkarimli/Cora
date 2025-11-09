@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.omarkarimli.cora.R // Import R class for string resources
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.use_case.user_setup.UserSetupUseCases
+import com.omarkarimli.cora.domain.useCase.userSetup.UserSetupUseCases
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.SuccessType
 import com.omarkarimli.cora.ui.presentation.common.state.UiState

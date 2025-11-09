@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.auth
+package com.omarkarimli.cora.domain.useCase.auth
 
 import com.omarkarimli.cora.domain.repository.AuthRepository
 import javax.inject.Inject

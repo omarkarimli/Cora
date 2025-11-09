@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.use_case.sp
+package com.omarkarimli.cora.domain.useCase.sp
 
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import javax.inject.Inject
