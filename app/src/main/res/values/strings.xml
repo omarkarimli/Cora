@@ -47,6 +47,7 @@
     <string name="clear_all">Clear all</string>
     <string name="are_you_sure">Are you sure to do this?</string>
     <string name="delete_item">Delete item</string>
+    <string name="cancel">Cancel</string>
 
     <string name="camera">Camera</string>
     <string name="attach">Attach</string>
@@ -81,6 +82,7 @@
     <string name="usage_item_attaches_desc">Attaches in chat</string>
     <string name="usage_item_message_chars_title">Message Characters</string>
     <string name="usage_item_message_chars_desc">Characters of responses in chat</string>
+sc
     <string name="web_searches">Web Searches</string>
 
     <string name="dark_mode">Dark mode</string>
@@ -102,7 +104,7 @@
     <string name="support">Support</string>
     <string name="help">Help</string>
     <string name="guidelines">Guidelines</string>
-    <string name="desc_guidelines">View and follow guidelines.</string>
+    <string name="desc_guidelines">View and follow guidelines.</string>d
     <string name="report_issue">Report issue</string>
     <string name="desc_report_issue">Submit a bug report or a feature request.</string>
     <string name="reset_settings">Reset Settings</string>
@@ -112,12 +114,15 @@
     <string name="about_main_text">Designed to supercharge your ideas Your passion is our purpose. We truly hope you enjoy what we\'ve created for you.</string>
     <string name="link_to_source">Link to source</string>
 
+    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_denied_message">This permission is required to proceed. Please grant the permission in the app settings.</string>
+    <string name="grant_permission">Grant Permission</string>
     <string name="error_permission_denied">Permission denied.</string>
     <string name="error_failed_persistent_access">Failed to get persistent access to the image.</string>
     <string name="error_no_active_subscription">No active subscription.</string>
     <string name="error_google_sign_in_failed">Google Sign-In failed. Please try again.</string>
     <string name="error_sign_out">Sign out failed.</string>
-    <string name="error_something_went_wrong">Something went wrong. Please try again.</string>s
+    <string name="error_something_went_wrong">Something went wrong. Please try again.</string>
     <string name="error_empty_chat">Chat is empty.</string>
     <string name="error_create_file">Could not create a file to save the photo.</string>
     <string name="error_take_photo">Failed to take a photo.</string>
@@ -126,7 +131,7 @@
     <string name="error_attach_limit_reached">You have reached your attach limit.</string>
     <string name="error_load_image">Failed to load image.</string>
     <string name="error_load_subscriptions">Failed to load subscriptions.</string>
-    <string name="error_no_free_subscriptions">No free subscriptions available.</string>
+    <string name="error_no_free_subscriptions">No free subscriptions available.</string>est
     <string name="error_get_free_subscription">Failed to get free subscription.</string>
     <string name="error_save_user_data">Failed to save user data.</string>
 
@@ -134,7 +139,7 @@
     <string name="error_max_length">Maximum %1$d characters allowed</string>
     <string name="error_no_gaps">No gaps allowed</string>
     <string name="error_no_special_chars">No special characters allowed</string>
-    <string name="error_no_capital_letters">No capital letters allowed</string>
+    <string name="error_no_capital_letters">No capital letters allowed</string>d
     <string name="error_only_english_letters">Only English letters allowed</string>
 
     <string-array name="onboarding_mottos">

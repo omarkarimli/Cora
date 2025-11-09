@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
+import android.provider.Settings
 import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -15,9 +16,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ChatBubbleOutline
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -80,6 +84,34 @@ fun ChatScreen(
 
     val sheetState = rememberModalBottomSheetState()
     var sheetContent by remember { mutableStateOf<SheetContent>(SheetContent.None) }
+    var showPermissionDialog by remember { mutableStateOf(false) }
+
+    @Composable
+    fun PermissionAlertDialog() {
+        AlertDialog(
+            onDismissRequest = { showPermissionDialog = false },
+            title = { Text(stringResource(R.string.permission_denied)) },
+            text = { Text(stringResource(R.string.permission_denied_message)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showPermissionDialog = false
+                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                        val uri = Uri.fromParts("package", context.packageName, null)
+                        intent.data = uri
+                        context.startActivity(intent)
+                    }
+                ) {
+                    Text(stringResource(R.string.grant_permission))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showPermissionDialog = false }) {
+                    Text(stringResource(R.string.cancel))
+                }
+            }
+        )
+    }
 
     fun showSheet(content: SheetContent) {
         sheetContent = content
@@ -158,7 +190,7 @@ fun ChatScreen(
         contract = ActivityResultContracts.RequestPermission(),
     ) { isGranted ->
         if (!isGranted) {
-            viewModel.setError(R.string.error_permission_denied, "Permission denied.")
+            showPermissionDialog = true
         }
     }
 
@@ -262,6 +294,9 @@ fun ChatScreen(
     }
 
     ObserveData()
+    if (showPermissionDialog) {
+        PermissionAlertDialog()
+    }
     Scaffold(
         containerColor = Color.Transparent,
         topBar = {
