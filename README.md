@@ -1,5 +1,7 @@
 # Cora
 
+![cora](https://github.com/user-attachments/assets/ece67df9-85b1-4968-b86f-d75cf3f38820)
+
 This is a **Jetpack Compose** application built with **Kotlin**.
 It follows MVVM Architecture and implements Clean Code principles.
 
