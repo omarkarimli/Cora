@@ -6,15 +6,15 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.ui.presentation.main.MainActivity
+import com.omarkarimli.cora.utils.NotificationConstants
 
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action == ACTION_SHOW_NOTIFICATION) {
+        if (intent.action == NotificationConstants.ACTION_SHOW_NOTIFICATION) {
             showNotification(context)
         }
     }
@@ -23,7 +23,7 @@ class NotificationReceiver : BroadcastReceiver() {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         val channel = NotificationChannel(
-            CHANNEL_ID,
+            NotificationConstants.CHANNEL_ID,
             "Cora Notification Channel",
             NotificationManager.IMPORTANCE_DEFAULT
         )
@@ -35,7 +35,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
-        val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+        val notification = NotificationCompat.Builder(context, NotificationConstants.CHANNEL_ID)
             .setContentTitle("Cora")
             .setContentText("Supercharge your ideas!")
             .setSmallIcon(R.drawable.ic_launcher_foreground)
@@ -43,12 +43,6 @@ class NotificationReceiver : BroadcastReceiver() {
             .setAutoCancel(true)
             .build()
 
-        notificationManager.notify(NOTIFICATION_ID, notification)
-    }
-
-    companion object {
-        const val ACTION_SHOW_NOTIFICATION = "com.omarkarimli.cora.SHOW_NOTIFICATION"
-        private const val CHANNEL_ID = "cora_notification_channel"
-        private const val NOTIFICATION_ID = 1
+        notificationManager.notify(NotificationConstants.NOTIFICATION_ID, notification)
     }
 }
