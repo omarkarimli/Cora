@@ -15,10 +15,9 @@ It follows MVVM Architecture and implements Clean Code principles.
 - **History Saving**
 - **Issue Reporting System**
 - **Dynamic Look**
+- **Custom Splash Screen**
   
 ### 🛠 Built With:
-
-### 🎨 UI & Design
 
 - **Jetpack Compose**
 - **Material Design 3**
@@ -86,5 +85,5 @@ It follows MVVM Architecture and implements Clean Code principles.
 - **Live Translate**
 - **Zoomable** image component
 
-By installing this repo, you will agree [LICENSE](https://github.com/omarkarimli/Cora/blob/master/LICENSE.md)nly Non-Commercial Use
-2025
+- By installing this repo, you will agree [LICENSE](https://github.com/omarkarimli/Cora/blob/master/LICENSE.md).
+- Only Non-Commercial Use
