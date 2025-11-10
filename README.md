@@ -16,6 +16,8 @@ It follows MVVM Architecture and implements Clean Code principles.
 - **Issue Reporting System**
 - **Dynamic Look**
 - **Custom Splash Screen**
+- **Permission System**
+- **Notification scheduling**
   
 ### 🛠 Built With:
 
