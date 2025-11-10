@@ -85,5 +85,10 @@ It follows MVVM Architecture and implements Clean Code principles.
 - **Live Translate**
 - **Zoomable** image component
 
-- By installing this repo, you will agree [LICENSE](https://github.com/omarkarimli/Cora/blob/master/LICENSE.md).
-- Only Non-Commercial Use
+---
+
+By installing this repo, you will agree [LICENSE](https://github.com/omarkarimli/Cora/blob/master/LICENSE.md).
+
+---
+
+Only Non-Commercial Use
