@@ -48,4 +48,4 @@ It follows **MVVM Architecture** and implements **Clean Code principles**.
 
 By installing this repository, you agree to the [LICENSE](https://github.com/omarkarimli/Cora/blob/master/LICENSE.md) terms.
 
-**Note: This application is restricted to Non-Commercial Use Only.**
+**Note: This app is restricted to Non-Commercial Use Only.**
