@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_icon">Ícone da Aplicação</string>
+    <string name="app_icon">Ícone do aplicativo</string>
     <string name="general">Geral</string>
     <string name="more">Mais</string>
     <string name="success">Sucesso</string>
     <string name="success_message">O processo foi bem-sucedido.</string>
-    <string name="splash">Ecrã inicial</string>
+    <string name="splash">Tela inicial</string>
     <string name="confirm">Confirmar</string>
-    <string name="save">Guardar</string>
+    <string name="save">Salvar</string>
     <string name="selected_title">Selecionado</string>
     <string name="no_item_found">Nenhum item encontrado</string>
 
-    <string name="settings">Definições</string>
+    <string name="settings">Configurações</string>
     <string name="profile">Perfil</string>
     <string name="chat">Chat</string>
     <string name="admin">Administrador</string>
     <string name="back_to_prev">Voltar à página anterior</string>
-    <string name="share">Partilhar</string>
-    <string name="share_body">Dê uma olhada nisto.</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_body">Confira isto.</string>
     <string name="refresh_page">Atualizar página</string>
-    <string name="download">Transferir</string>
+    <string name="download">Baixar</string>
 
     <string name="auth">Autenticação</string>
     <string name="get_started">Começar</string>
     <string name="continue_title">Continuar</string>
-    <string name="auth_legal_doc_agreement_prefix">Ao continuar, concorda com os nossos </string>
+    <string name="auth_legal_doc_agreement_prefix">Ao continuar, você concorda com nossos </string>
     <string name="legal_doc">Documentos Legais</string>
-    <string name="user_setup">Configuração do Utilizador</string>
-    <string name="username">Nome de utilizador</string>
+    <string name="user_setup">Configuração do Usuário</string>
+    <string name="username">Nome de usuário</string>
     <string name="bio">Biografia</string>
     <string name="required">Obrigatório</string>
     <string name="optional">Opcional</string>
-    <string name="sign_out">Terminar sessão</string>
+    <string name="sign_out">Sair</string>
     <string name="account">Conta</string>
-    <string name="gender">Género</string>
+    <string name="gender">Gênero</string>
     <string name="gender_male">Masculino</string>
     <string name="gender_female">Feminino</string>
 
     <string name="new_chat">Novo Chat</string>
     <string name="chat_history">Histórico do Chat</string>
     <string name="open_history">Abrir histórico</string>
-    <string name="ask_cora">Perguntar a Cora</string>
+    <string name="ask_cora">Perguntar à Cora</string>
     <string name="send">Enviar</string>
-    <string name="search">Procurar</string>
+    <string name="search">Pesquisar</string>
     <string name="clear_all">Limpar tudo</string>
-    <string name="are_you_sure">Tem certeza de que quer fazer isto?</string>
-    <string name="delete_item">Eliminar item</string>
+    <string name="are_you_sure">Tem certeza de que deseja fazer isso?</string>
+    <string name="delete_item">Excluir item</string>
     <string name="cancel">Cancelar</string>
 
-    <string name="camera">Câmara</string>
+    <string name="camera">Câmera</string>
     <string name="attach">Anexar</string>
     <string name="remove_attachment">Remover anexo</string>
-    <string name="image_generation">Geração de Imagens</string>
+    <string name="image_generation">Geração de Imagem</string>
     <string name="image_from_web">Imagem da web</string>
     <string name="image_from_device">Imagem do dispositivo</string>
     <string name="describe">Descrever</string>
-    <string name="full_screen_image_viewer">Visualizador de imagem em ecrã inteiro</string>
+    <string name="full_screen_image_viewer">Visualizador de imagem em tela cheia</string>
     <string name="background">Fundo</string>
     <string name="enlarged_image">Imagem ampliada %1$d</string>
-    <string name="saving_path">Caminho de Guardar</string>
-    <string name="desc_saving_path">Os itens serão guardados no caminho selecionado.</string>
+    <string name="saving_path">Caminho de Salvamento</string>
+    <string name="desc_saving_path">Os itens serão salvos no caminho selecionado.</string>
     <string name="photos">Fotos</string>
-    <string name="downloads">Transferências</string>
+    <string name="downloads">Downloads</string>
 
-    <string name="subscriptions">Subscrições</string>
-    <string name="desc_subscriptions">Verifique o seu estado de subscrição.</string>
-    <string name="subscription_history">Histórico de Subscrições</string>
+    <string name="subscriptions">Assinaturas</string>
+    <string name="desc_subscriptions">Verifique o status da sua assinatura.</string>
+    <string name="subscription_history">Histórico de Assinaturas</string>
     <string name="upgrade">Atualizar</string>
     <string name="current_plan">Plano Atual</string>
     <string name="select_plan">Selecionar Plano</string>
-    <string name="free">Grátis</string>
+    <string name="free">Gratuito</string>
     <string name="not_available">Não disponível.</string>
     <string name="ads_enabled">Anúncios ativados</string>
     <string name="subscription_feature_attaches">%1$d anexos</string>
     <string name="subscription_feature_message_chars">%1$d caracteres de mensagem</string>
-    <string name="subscription_feature_web_result">%1$d resultados da web</string>
-    <string name="usage">Utilização</string>
-    <string name="desc_usage">Verifique a sua utilização.</string>
+    <string name="subscription_feature_web_result">%1$d resultados web</string>
+    <string name="usage">Uso</string>
+    <string name="desc_usage">Verifique o seu uso.</string>
     <string name="attaches">Anexos</string>
     <string name="usage_item_attaches_desc">Anexos no chat</string>
     <string name="usage_item_message_chars_title">Caracteres de Mensagem</string>
-    <string name="usage_item_message_chars_desc">Caracteres das respostas no chat</string>
+    <string name="usage_item_message_chars_desc">Caracteres de respostas no chat</string>
     <string name="web_searches">Pesquisas na Web</string>
 
-    <string name="dark_mode">Modo escuro</string>
-    <string name="desc_dark_mode">Altere a aparência da aplicação.</string>
+    <string name="dark_mode">Modo Escuro</string>
+    <string name="desc_dark_mode">Altere a aparência do aplicativo.</string>
     <string name="system">Sistema</string>
     <string name="light">Claro</string>
     <string name="dark">Escuro</string>
-    <string name="dynamic_color">Cor dinâmica</string>
-    <string name="desc_dynamic_color">Torne as cores da aplicação dinâmicas.</string>
+    <string name="dynamic_color">Cor Dinâmica</string>
+    <string name="desc_dynamic_color">Torne as cores do aplicativo dinâmicas.</string>
     <string name="notifications">Notificações</string>
-    <string name="desc_notifications">Gerencie os seus alertas e sons.</string>
+    <string name="desc_notifications">Gerencie seus alertas e sons.</string>
     <string name="languages">Idiomas</string>
-    <string name="desc_lang">Altere o idioma da aplicação.</string>
-    <string name="live_translation">Tradução ao vivo</string>
-    <string name="desc_live_translation">Tradução ao vivo de conteúdo gerado.</string>
+    <string name="desc_lang">Altere o idioma do aplicativo.</string>
+    <string name="live_translation">Tradução ao Vivo</string>
+    <string name="desc_live_translation">Tradução ao vivo de conteúdos gerados.</string>
 
     <string name="support">Suporte</string>
     <string name="help">Ajuda</string>
     <string name="guidelines">Diretrizes</string>
     <string name="desc_guidelines">Visualizar e seguir as diretrizes.</string>
-    <string name="report_issue">Reportar problema</string>
-    <string name="desc_report_issue">Enviar um relatório de erro ou um pedido de funcionalidade.</string>
-    <string name="reset_settings">Redefinir Definições</string>
-    <string name="desc_reset_settings">Restaurar todas as definições para os seus valores padrão.</string>
+    <string name="report_issue">Reportar Problema</string>
+    <string name="desc_report_issue">Enviar um relatório de bug ou solicitação de recurso.</string>
+    <string name="reset_settings">Redefinir Configurações</string>
+    <string name="desc_reset_settings">Reverter todas as configurações para seus valores padrão.</string>
     <string name="about">Sobre</string>
-    <string name="desc_about">Visualizar informações sobre a aplicação.</string>
-    <string name="about_main_text">Projetado para turbinar as suas ideias. A sua paixão é o nosso propósito. Esperamos sinceramente que goste do que criamos para si.</string>
+    <string name="desc_about">Ver informações sobre o aplicativo.</string>
+    <string name="about_main_text">Projetado para turbinar suas ideias. Sua paixão é o nosso propósito. Esperamos sinceramente que você goste do que criamos para você.</string>
     <string name="link_to_source">Link para a fonte</string>
 
     <string name="permission_denied">Permissão Negada</string>
-    <string name="permission_denied_message">Esta permissão é necessária para continuar. Por favor, conceda a permissão nas definições da aplicação.</string>
-    <string name="allow">Conceder Permissão</string>
+    <string name="permission_denied_message">Esta permissão é necessária para continuar. Por favor, conceda a permissão nas configurações do aplicativo.</string>
+    <string name="allow">Permitir</string>
 
     <string name="error_failed_persistent_access">Falha ao obter acesso persistente à imagem.</string>
-    <string name="error_no_active_subscription">Nenhuma subscrição ativa.</string>
-    <string name="error_google_sign_in_failed">Falha na entrada com o Google. Por favor, tente novamente.</string>
-    <string name="error_sign_out">Falha ao terminar sessão.</string>
-    <string name="error_something_went_wrong">Algo correu mal. Por favor, tente novamente.</string>
+    <string name="error_no_active_subscription">Nenhuma assinatura ativa.</string>
+    <string name="error_google_sign_in_failed">Falha no Login com Google. Por favor, tente novamente.</string>
+    <string name="error_sign_out">Falha ao sair.</string>
+    <string name="error_something_went_wrong">Algo deu errado. Por favor, tente novamente.</string>
     <string name="error_empty_chat">O chat está vazio.</string>
     <string name="error_take_photo">Falha ao tirar foto.</string>
     <string name="error_image_already_added">Imagem já adicionada.</string>
-    <string name="error_max_images_reached">Só pode adicionar até 3 imagens.</string>
-    <string name="error_attach_limit_reached">Atingiu o seu limite de anexos.</string>
-    <string name="error_load_image">Falha ao carregar imagem.</string>
-    <string name="error_load_subscriptions">Falha ao carregar subscrições.</string>
-    <string name="error_no_free_subscriptions">Nenhuma subscrição gratuita disponível.</string>
-    <string name="error_get_free_subscription">Falha ao obter subscrição gratuita.</string>
-    <string name="error_save_user_data">Falha ao guardar dados do utilizador.</string>
+    <string name="error_max_images_reached">Você só pode adicionar até 3 imagens.</string>
+    <string name="error_attach_limit_reached">Você atingiu seu limite de anexos.</string>
+    <string name="error_load_image">Falha ao carregar a imagem.</string>
+    <string name="error_load_subscriptions">Falha ao carregar as assinaturas.</string>
+    <string name="error_no_free_subscriptions">Nenhuma assinatura gratuita disponível.</string>
+    <string name="error_get_free_subscription">Falha ao obter assinatura gratuita.</string>
+    <string name="error_save_user_data">Falha ao salvar dados do usuário.</string>
 
-    <string name="error_min_length">Mínimo de %1$d caracteres obrigatórios</string>
+    <string name="error_min_length">Mínimo de %1$d caracteres necessários</string>
     <string name="error_max_length">Máximo de %1$d caracteres permitidos</string>
     <string name="error_no_gaps">Não são permitidos espaços</string>
     <string name="error_no_special_chars">Não são permitidos caracteres especiais</string>
@@ -139,9 +139,9 @@
     <string name="error_only_english_letters">Apenas letras em inglês são permitidas</string>
 
     <string-array name="onboarding_mottos">
-        <item>Projetado para turbinar as suas ideias</item>
+        <item>Projetado para turbinar suas ideias</item>
         <item>Encontre a sua próxima faísca criativa</item>
-        <item>Conecte-se com uma comunidade de inovadores</item>
+        <item>Conecte-se a uma comunidade de inovadores</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Atenção</item>

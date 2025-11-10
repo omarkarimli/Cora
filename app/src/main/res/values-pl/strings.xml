@@ -5,12 +5,12 @@
     <string name="general">Ogólne</string>
     <string name="more">Więcej</string>
     <string name="success">Sukces</string>
-    <string name="success_message">Proces zakończony pomyślnie.</string>
+    <string name="success_message">Operacja zakończona sukcesem.</string>
     <string name="splash">Ekran powitalny</string>
     <string name="confirm">Potwierdź</string>
     <string name="save">Zapisz</string>
     <string name="selected_title">Wybrano</string>
-    <string name="no_item_found">Nie znaleziono żadnego elementu</string>
+    <string name="no_item_found">Nie znaleziono elementu</string>
 
     <string name="settings">Ustawienia</string>
     <string name="profile">Profil</string>
@@ -25,11 +25,11 @@
     <string name="auth">Uwierzytelnianie</string>
     <string name="get_started">Rozpocznij</string>
     <string name="continue_title">Kontynuuj</string>
-    <string name="auth_legal_doc_agreement_prefix">Kontynuując, zgadzasz się na nasze </string>
-    <string name="legal_doc">Dokumenty Prawne</string>
-    <string name="user_setup">Konfiguracja Użytkownika</string>
+    <string name="auth_legal_doc_agreement_prefix">Kontynuując, akceptujesz nasze </string>
+    <string name="legal_doc">Dokumenty prawne</string>
+    <string name="user_setup">Konfiguracja użytkownika</string>
     <string name="username">Nazwa użytkownika</string>
-    <string name="bio">Bio</string>
+    <string name="bio">Biogram</string>
     <string name="required">Wymagane</string>
     <string name="optional">Opcjonalne</string>
     <string name="sign_out">Wyloguj się</string>
@@ -38,8 +38,8 @@
     <string name="gender_male">Mężczyzna</string>
     <string name="gender_female">Kobieta</string>
 
-    <string name="new_chat">Nowy Czat</string>
-    <string name="chat_history">Historia Czatu</string>
+    <string name="new_chat">Nowy czat</string>
+    <string name="chat_history">Historia czatu</string>
     <string name="open_history">Otwórz historię</string>
     <string name="ask_cora">Zapytaj Corę</string>
     <string name="send">Wyślij</string>
@@ -49,40 +49,40 @@
     <string name="delete_item">Usuń element</string>
     <string name="cancel">Anuluj</string>
 
-    <string name="camera">Kamera</string>
+    <string name="camera">Aparat</string>
     <string name="attach">Dołącz</string>
     <string name="remove_attachment">Usuń załącznik</string>
-    <string name="image_generation">Generowanie Obrazów</string>
-    <string name="image_from_web">Obraz z sieci</string>
+    <string name="image_generation">Generowanie obrazu</string>
+    <string name="image_from_web">Obraz z Internetu</string>
     <string name="image_from_device">Obraz z urządzenia</string>
     <string name="describe">Opisz</string>
     <string name="full_screen_image_viewer">Przeglądarka obrazów pełnoekranowa</string>
     <string name="background">Tło</string>
     <string name="enlarged_image">Powiększony obraz %1$d</string>
-    <string name="saving_path">Ścieżka Zapisywania</string>
+    <string name="saving_path">Ścieżka zapisu</string>
     <string name="desc_saving_path">Elementy zostaną zapisane w wybranej ścieżce.</string>
     <string name="photos">Zdjęcia</string>
     <string name="downloads">Pobrane</string>
 
     <string name="subscriptions">Subskrypcje</string>
     <string name="desc_subscriptions">Sprawdź status swojej subskrypcji.</string>
-    <string name="subscription_history">Historia Subskrypcji</string>
+    <string name="subscription_history">Historia subskrypcji</string>
     <string name="upgrade">Uaktualnij</string>
-    <string name="current_plan">Obecny Plan</string>
-    <string name="select_plan">Wybierz Plan</string>
-    <string name="free">Darmowy</string>
+    <string name="current_plan">Obecny plan</string>
+    <string name="select_plan">Wybierz plan</string>
+    <string name="free">Bezpłatnie</string>
     <string name="not_available">Niedostępne.</string>
     <string name="ads_enabled">Reklamy włączone</string>
     <string name="subscription_feature_attaches">%1$d załączników</string>
     <string name="subscription_feature_message_chars">%1$d znaków wiadomości</string>
-    <string name="subscription_feature_web_result">%1$d wyników sieci web</string>
-    <string name="usage">Użycie</string>
-    <string name="desc_usage">Sprawdź swoje użycie.</string>
+    <string name="subscription_feature_web_result">%1$d wyników sieci Web</string>
+    <string name="usage">Wykorzystanie</string>
+    <string name="desc_usage">Sprawdź swoje wykorzystanie.</string>
     <string name="attaches">Załączniki</string>
     <string name="usage_item_attaches_desc">Załączniki w czacie</string>
-    <string name="usage_item_message_chars_title">Znaki Wiadomości</string>
+    <string name="usage_item_message_chars_title">Znaki wiadomości</string>
     <string name="usage_item_message_chars_desc">Znaki odpowiedzi w czacie</string>
-    <string name="web_searches">Wyszukiwania w Sieci Web</string>
+    <string name="web_searches">Wyszukiwania w sieci Web</string>
 
     <string name="dark_mode">Tryb ciemny</string>
     <string name="desc_dark_mode">Zmień wygląd aplikacji.</string>
@@ -90,30 +90,30 @@
     <string name="light">Jasny</string>
     <string name="dark">Ciemny</string>
     <string name="dynamic_color">Dynamiczny kolor</string>
-    <string name="desc_dynamic_color">Ustaw dynamiczne kolory aplikacji.</string>
+    <string name="desc_dynamic_color">Uczyń kolory aplikacji dynamicznymi.</string>
     <string name="notifications">Powiadomienia</string>
-    <string name="desc_notifications">Zarządzaj swoimi alertami i dźwiękami.</string>
+    <string name="desc_notifications">Zarządzaj alertami i dźwiękami.</string>
     <string name="languages">Języki</string>
     <string name="desc_lang">Zmień język aplikacji.</string>
     <string name="live_translation">Tłumaczenie na żywo</string>
-    <string name="desc_live_translation">Tłumaczenie na żywo generowanej treści.</string>
+    <string name="desc_live_translation">Tłumaczenie na żywo wygenerowanej treści.</string>
 
     <string name="support">Wsparcie</string>
     <string name="help">Pomoc</string>
     <string name="guidelines">Wytyczne</string>
-    <string name="desc_guidelines">Wyświetl i postępuj zgodnie z wytycznymi.</string>
+    <string name="desc_guidelines">Wyświetl i przestrzegaj wytycznych.</string>
     <string name="report_issue">Zgłoś problem</string>
     <string name="desc_report_issue">Prześlij raport o błędzie lub prośbę o funkcję.</string>
-    <string name="reset_settings">Zresetuj Ustawienia</string>
+    <string name="reset_settings">Zresetuj ustawienia</string>
     <string name="desc_reset_settings">Przywróć wszystkie ustawienia do ich domyślnych wartości.</string>
-    <string name="about">O Aplikacji</string>
+    <string name="about">Informacje</string>
     <string name="desc_about">Wyświetl informacje o aplikacji.</string>
-    <string name="about_main_text">Zaprojektowana, aby wzmocnić Twoje pomysły. Twoja pasja jest naszym celem. Mamy szczerą nadzieję, że spodoba Ci się to, co dla Ciebie stworzyliśmy.</string>
+    <string name="about_main_text">Zaprojektowany, aby wzmocnić Twoje pomysły. Twoja pasja jest naszym celem. Mamy szczerą nadzieję, że spodoba Ci się to, co dla Ciebie stworzyliśmy.</string>
     <string name="link_to_source">Link do źródła</string>
 
-    <string name="permission_denied">Odmowa Dostępu</string>
+    <string name="permission_denied">Odmowa uprawnień</string>
     <string name="permission_denied_message">To uprawnienie jest wymagane, aby kontynuować. Udziel uprawnień w ustawieniach aplikacji.</string>
-    <string name="allow">Udziel uprawnień</string>
+    <string name="allow">Zezwól</string>
 
     <string name="error_failed_persistent_access">Nie udało się uzyskać trwałego dostępu do obrazu.</string>
     <string name="error_no_active_subscription">Brak aktywnej subskrypcji.</string>
@@ -123,15 +123,15 @@
     <string name="error_empty_chat">Czat jest pusty.</string>
     <string name="error_take_photo">Nie udało się zrobić zdjęcia.</string>
     <string name="error_image_already_added">Obraz został już dodany.</string>
-    <string name="error_max_images_reached">Możesz dodać maksymalnie 3 obrazy.</string>
+    <string name="error_max_images_reached">Możesz dodać tylko do 3 obrazów.</string>
     <string name="error_attach_limit_reached">Osiągnięto limit załączników.</string>
     <string name="error_load_image">Nie udało się załadować obrazu.</string>
     <string name="error_load_subscriptions">Nie udało się załadować subskrypcji.</string>
-    <string name="error_no_free_subscriptions">Brak dostępnych darmowych subskrypcji.</string>
-    <string name="error_get_free_subscription">Nie udało się uzyskać darmowej subskrypcji.</string>
+    <string name="error_no_free_subscriptions">Brak dostępnych bezpłatnych subskrypcji.</string>
+    <string name="error_get_free_subscription">Nie udało się uzyskać bezpłatnej subskrypcji.</string>
     <string name="error_save_user_data">Nie udało się zapisać danych użytkownika.</string>
 
-    <string name="error_min_length">Wymagane co najmniej %1$d znaków</string>
+    <string name="error_min_length">Wymagane minimum %1$d znaków</string>
     <string name="error_max_length">Dozwolone maksymalnie %1$d znaków</string>
     <string name="error_no_gaps">Spacje niedozwolone</string>
     <string name="error_no_special_chars">Znaki specjalne niedozwolone</string>
@@ -139,12 +139,12 @@
     <string name="error_only_english_letters">Dozwolone tylko litery angielskie</string>
 
     <string-array name="onboarding_mottos">
-        <item>Zaprojektowana, aby wzmocnić Twoje pomysły</item>
-        <item>Znajdź swoją następną iskrę twórczą</item>
+        <item>Zaprojektowany, aby wzmocnić Twoje pomysły</item>
+        <item>Znajdź swoją kolejną twórczą iskrę</item>
         <item>Połącz się ze społecznością innowatorów</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Uwaga</item>
-        <item>Postępuj zgodnie z zasadami.</item>
+        <item>Przestrzegaj zasad.</item>
     </string-array>
 </resources>

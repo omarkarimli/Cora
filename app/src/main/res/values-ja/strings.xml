@@ -5,12 +5,12 @@
     <string name="general">一般</string>
     <string name="more">その他</string>
     <string name="success">成功</string>
-    <string name="success_message">プロセスは成功しました。</string>
-    <string name="splash">スプラッシュ画面</string>
+    <string name="success_message">プロセスは正常に完了しました。</string>
+    <string name="splash">スプラッシュ</string>
     <string name="confirm">確認</string>
     <string name="save">保存</string>
     <string name="selected_title">選択済み</string>
-    <string name="no_item_found">アイテムが見つかりませんでした</string>
+    <string name="no_item_found">アイテムが見つかりません</string>
 
     <string name="settings">設定</string>
     <string name="profile">プロフィール</string>
@@ -18,30 +18,30 @@
     <string name="admin">管理者</string>
     <string name="back_to_prev">前のページに戻る</string>
     <string name="share">共有</string>
-    <string name="share_body">これを確認してください。</string>
+    <string name="share_body">こちらをチェックしてください。</string>
     <string name="refresh_page">ページを更新</string>
     <string name="download">ダウンロード</string>
 
     <string name="auth">認証</string>
     <string name="get_started">始める</string>
     <string name="continue_title">続行</string>
-    <string name="auth_legal_doc_agreement_prefix">続行することで、お客様は弊社の </string>
+    <string name="auth_legal_doc_agreement_prefix">続行することにより、お客様は弊社の</string>
     <string name="legal_doc">法的文書</string>
     <string name="user_setup">ユーザー設定</string>
     <string name="username">ユーザー名</string>
     <string name="bio">自己紹介</string>
     <string name="required">必須</string>
-    <string name="optional">オプション</string>
+    <string name="optional">任意</string>
     <string name="sign_out">サインアウト</string>
     <string name="account">アカウント</string>
     <string name="gender">性別</string>
     <string name="gender_male">男性</string>
     <string name="gender_female">女性</string>
 
-    <string name="new_chat">新しいチャット</string>
+    <string name="new_chat">新規チャット</string>
     <string name="chat_history">チャット履歴</string>
     <string name="open_history">履歴を開く</string>
-    <string name="ask_cora">Coraに質問する</string>
+    <string name="ask_cora">Coraに質問</string>
     <string name="send">送信</string>
     <string name="search">検索</string>
     <string name="clear_all">すべてクリア</string>
@@ -53,19 +53,19 @@
     <string name="attach">添付</string>
     <string name="remove_attachment">添付ファイルを削除</string>
     <string name="image_generation">画像生成</string>
-    <string name="image_from_web">ウェブからの画像</string>
+    <string name="image_from_web">Webからの画像</string>
     <string name="image_from_device">デバイスからの画像</string>
     <string name="describe">説明</string>
     <string name="full_screen_image_viewer">フルスクリーン画像ビューア</string>
     <string name="background">背景</string>
     <string name="enlarged_image">拡大画像 %1$d</string>
-    <string name="saving_path">保存パス</string>
+    <string name="saving_path">保存先パス</string>
     <string name="desc_saving_path">アイテムは選択したパスに保存されます。</string>
     <string name="photos">写真</string>
     <string name="downloads">ダウンロード</string>
 
     <string name="subscriptions">サブスクリプション</string>
-    <string name="desc_subscriptions">サブスクリプションのステータスを確認してください。</string>
+    <string name="desc_subscriptions">サブスクリプションのステータスを確認します。</string>
     <string name="subscription_history">サブスクリプション履歴</string>
     <string name="upgrade">アップグレード</string>
     <string name="current_plan">現在のプラン</string>
@@ -73,16 +73,16 @@
     <string name="free">無料</string>
     <string name="not_available">利用できません。</string>
     <string name="ads_enabled">広告が有効</string>
-    <string name="subscription_feature_attaches">%1$d の添付ファイル</string>
-    <string name="subscription_feature_message_chars">%1$d のメッセージ文字数</string>
-    <string name="subscription_feature_web_result">%1$d のウェブ検索結果</string>
+    <string name="subscription_feature_attaches">%1$d 件の添付</string>
+    <string name="subscription_feature_message_chars">%1$d 文字のメッセージ</string>
+    <string name="subscription_feature_web_result">%1$d 件のWeb検索結果</string>
     <string name="usage">利用状況</string>
-    <string name="desc_usage">利用状況を確認してください。</string>
+    <string name="desc_usage">利用状況を確認します。</string>
     <string name="attaches">添付ファイル</string>
-    <string name="usage_item_attaches_desc">チャット内の添付ファイル</string>
-    <string name="usage_item_message_chars_title">メッセージ文字数</string>
+    <string name="usage_item_attaches_desc">チャットでの添付ファイル</string>
+    <string name="usage_item_message_chars_title">メッセージの文字数</string>
     <string name="usage_item_message_chars_desc">チャットでの応答の文字数</string>
-    <string name="web_searches">ウェブ検索</string>
+    <string name="web_searches">Web検索</string>
 
     <string name="dark_mode">ダークモード</string>
     <string name="desc_dark_mode">アプリの外観を変更します。</string>
@@ -108,18 +108,18 @@
     <string name="desc_reset_settings">すべての設定をデフォルト値に戻します。</string>
     <string name="about">このアプリについて</string>
     <string name="desc_about">アプリに関する情報を表示します。</string>
-    <string name="about_main_text">あなたのアイデアを後押しするために設計されました。あなたの情熱が私たちの目的です。私たちがあなたのために作成したものを楽しんでいただければ幸いです。</string>
+    <string name="about_main_text">あなたのアイデアを強化するために設計されました。あなたの情熱が私たちの目的です。私たちがあなたのために作成したものを心から楽しんでいただければ幸いです。</string>
     <string name="link_to_source">ソースへのリンク</string>
 
     <string name="permission_denied">権限が拒否されました</string>
     <string name="permission_denied_message">続行するにはこの権限が必要です。アプリの設定で権限を付与してください。</string>
-    <string name="allow">権限を付与</string>
+    <string name="allow">許可</string>
 
     <string name="error_failed_persistent_access">画像への永続的なアクセス権の取得に失敗しました。</string>
-    <string name="error_no_active_subscription">アクティブなサブスクリプションがありません。</string>
-    <string name="error_google_sign_in_failed">Googleサインインに失敗しました。再試行してください。</string>
+    <string name="error_no_active_subscription">有効なサブスクリプションがありません。</string>
+    <string name="error_google_sign_in_failed">Googleサインインに失敗しました。もう一度お試しください。</string>
     <string name="error_sign_out">サインアウトに失敗しました。</string>
-    <string name="error_something_went_wrong">何らかのエラーが発生しました。再試行してください。</string>
+    <string name="error_something_went_wrong">問題が発生しました。もう一度お試しください。</string>
     <string name="error_empty_chat">チャットは空です。</string>
     <string name="error_take_photo">写真の撮影に失敗しました。</string>
     <string name="error_image_already_added">画像はすでに追加されています。</string>
@@ -127,7 +127,7 @@
     <string name="error_attach_limit_reached">添付ファイルの制限に達しました。</string>
     <string name="error_load_image">画像の読み込みに失敗しました。</string>
     <string name="error_load_subscriptions">サブスクリプションの読み込みに失敗しました。</string>
-    <string name="error_no_free_subscriptions">無料のサブスクリプションは利用できません。</string>
+    <string name="error_no_free_subscriptions">無料のサブスクリプションはありません。</string>
     <string name="error_get_free_subscription">無料サブスクリプションの取得に失敗しました。</string>
     <string name="error_save_user_data">ユーザーデータの保存に失敗しました。</string>
 
@@ -139,8 +139,8 @@
     <string name="error_only_english_letters">英字のみ許可されています</string>
 
     <string-array name="onboarding_mottos">
-        <item>あなたのアイデアを後押しするために設計されました</item>
-        <item>あなたの次の創造的なひらめきを見つけましょう</item>
+        <item>あなたのアイデアを強化するために設計されました</item>
+        <item>次の創造的なひらめきを見つけましょう</item>
         <item>イノベーターのコミュニティとつながりましょう</item>
     </string-array>
     <string-array name="guideline_mottos">

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_icon">App-Icon</string>
+    <string name="app_icon">App-Symbol</string>
     <string name="general">Allgemein</string>
     <string name="more">Mehr</string>
     <string name="success">Erfolg</string>
     <string name="success_message">Der Vorgang war erfolgreich.</string>
-    <string name="splash">Splash-Screen</string>
+    <string name="splash">Startbildschirm</string>
     <string name="confirm">Bestätigen</string>
     <string name="save">Speichern</string>
     <string name="selected_title">Ausgewählt</string>
@@ -23,7 +23,7 @@
     <string name="download">Herunterladen</string>
 
     <string name="auth">Authentifizierung</string>
-    <string name="get_started">Los geht\'s</string>
+    <string name="get_started">Loslegen</string>
     <string name="continue_title">Weiter</string>
     <string name="auth_legal_doc_agreement_prefix">Indem Sie fortfahren, stimmen Sie unseren </string>
     <string name="legal_doc">Rechtlichen Dokumenten</string>
@@ -44,7 +44,7 @@
     <string name="ask_cora">Cora fragen</string>
     <string name="send">Senden</string>
     <string name="search">Suchen</string>
-    <string name="clear_all">Alle löschen</string>
+    <string name="clear_all">Alles löschen</string>
     <string name="are_you_sure">Sind Sie sicher, dass Sie dies tun möchten?</string>
     <string name="delete_item">Element löschen</string>
     <string name="cancel">Abbrechen</string>
@@ -75,7 +75,7 @@
     <string name="ads_enabled">Anzeigen aktiviert</string>
     <string name="subscription_feature_attaches">%1$d Anhänge</string>
     <string name="subscription_feature_message_chars">%1$d Nachrichten-Zeichen</string>
-    <string name="subscription_feature_web_result">%1$d Webergebnisse</string>
+    <string name="subscription_feature_web_result">%1$d Web-Ergebnisse</string>
     <string name="usage">Nutzung</string>
     <string name="desc_usage">Überprüfen Sie Ihre Nutzung.</string>
     <string name="attaches">Anhänge</string>
@@ -84,7 +84,7 @@
     <string name="usage_item_message_chars_desc">Zeichen von Antworten im Chat</string>
     <string name="web_searches">Web-Suchen</string>
 
-    <string name="dark_mode">Dunkelmodus</string>
+    <string name="dark_mode">Dunkler Modus</string>
     <string name="desc_dark_mode">Ändern Sie das Erscheinungsbild der App.</string>
     <string name="system">System</string>
     <string name="light">Hell</string>
@@ -96,7 +96,7 @@
     <string name="languages">Sprachen</string>
     <string name="desc_lang">Ändern Sie die Sprache der App.</string>
     <string name="live_translation">Live-Übersetzung</string>
-    <string name="desc_live_translation">Live-Übersetzung generierter Inhalte.</string>
+    <string name="desc_live_translation">Live-Übersetzung von generierten Inhalten.</string>
 
     <string name="support">Support</string>
     <string name="help">Hilfe</string>
@@ -108,23 +108,23 @@
     <string name="desc_reset_settings">Alle Einstellungen auf ihre Standardwerte zurücksetzen.</string>
     <string name="about">Über</string>
     <string name="desc_about">Informationen zur App anzeigen.</string>
-    <string name="about_main_text">Entwickelt, um Ihre Ideen zu beschleunigen. Ihre Leidenschaft ist unser Ziel. Wir hoffen sehr, dass Ihnen gefällt, was wir für Sie geschaffen haben.</string>
+    <string name="about_main_text">Entwickelt, um Ihre Ideen zu beschleunigen. Ihre Leidenschaft ist unser Ziel. Wir hoffen wirklich, dass Ihnen gefällt, was wir für Sie geschaffen haben.</string>
     <string name="link_to_source">Link zur Quelle</string>
 
     <string name="permission_denied">Berechtigung verweigert</string>
     <string name="permission_denied_message">Diese Berechtigung ist erforderlich, um fortzufahren. Bitte erteilen Sie die Berechtigung in den App-Einstellungen.</string>
-    <string name="allow">Berechtigung erteilen</string>
+    <string name="allow">Zulassen</string>
 
-    <string name="error_failed_persistent_access">Dauerhafter Zugriff auf das Bild konnte nicht abgerufen werden.</string>
+    <string name="error_failed_persistent_access">Dauerhafter Zugriff auf das Bild konnte nicht hergestellt werden.</string>
     <string name="error_no_active_subscription">Kein aktives Abonnement.</string>
     <string name="error_google_sign_in_failed">Google Sign-In fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
-    <string name="error_sign_out">Abmelden fehlgeschlagen.</string>
-    <string name="error_something_went_wrong">Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.</string>
+    <string name="error_sign_out">Abmeldung fehlgeschlagen.</string>
+    <string name="error_something_went_wrong">Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</string>
     <string name="error_empty_chat">Chat ist leer.</string>
     <string name="error_take_photo">Fotoaufnahme fehlgeschlagen.</string>
-    <string name="error_image_already_added">Bild bereits hinzugefügt.</string>
+    <string name="error_image_already_added">Bild wurde bereits hinzugefügt.</string>
     <string name="error_max_images_reached">Sie können nur bis zu 3 Bilder hinzufügen.</string>
-    <string name="error_attach_limit_reached">Sie haben Ihr Anhangslimit erreicht.</string>
+    <string name="error_attach_limit_reached">Sie haben Ihr Anhang-Limit erreicht.</string>
     <string name="error_load_image">Laden des Bildes fehlgeschlagen.</string>
     <string name="error_load_subscriptions">Laden der Abonnements fehlgeschlagen.</string>
     <string name="error_no_free_subscriptions">Keine kostenlosen Abonnements verfügbar.</string>
@@ -141,10 +141,10 @@
     <string-array name="onboarding_mottos">
         <item>Entwickelt, um Ihre Ideen zu beschleunigen</item>
         <item>Finden Sie Ihren nächsten kreativen Funken</item>
-        <item>Vernetzen Sie sich mit einer Community von Innovatoren</item>
+        <item>Vernetzen Sie sich mit einer Gemeinschaft von Innovatoren</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Achtung</item>
-        <item>Regeln befolgen.</item>
+        <item>Befolgen Sie die Regeln.</item>
     </string-array>
 </resources>
