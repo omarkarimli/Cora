@@ -14,4 +14,5 @@ sealed class SheetContent {
     object ResetSettings : SheetContent()
     object Confirm : SheetContent()
     data class DeleteChatHistoryItem(val item: ChatHistoryItemModel) : SheetContent()
+    object Permission : SheetContent()
 }

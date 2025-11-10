@@ -91,8 +91,6 @@
     <string name="dark">داكن</string>
     <string name="dynamic_color">اللون الديناميكي</string>
     <string name="desc_dynamic_color">اجعل ألوان التطبيق ديناميكية.</string>
-    <string name="on">تشغيل</string>
-    <string name="off">إيقاف</string>
     <string name="notifications">الإشعارات</string>
     <string name="desc_notifications">إدارة التنبيهات والأصوات الخاصة بك.</string>
     <string name="languages">اللغات</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">تم رفض الإذن</string>
     <string name="permission_denied_message">هذا الإذن مطلوب للمتابعة. يرجى منح الإذن في إعدادات التطبيق.</string>
-    <string name="grant_permission">منح الإذن</string>
+    <string name="allow">منح الإذن</string>
 
     <string name="error_failed_persistent_access">فشل في الحصول على وصول دائم للصورة.</string>
     <string name="error_no_active_subscription">لا يوجد اشتراك نشط.</string>

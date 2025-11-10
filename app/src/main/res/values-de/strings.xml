@@ -91,8 +91,6 @@
     <string name="dark">Dunkel</string>
     <string name="dynamic_color">Dynamische Farbe</string>
     <string name="desc_dynamic_color">Machen Sie die Farben der App dynamisch.</string>
-    <string name="on">Ein</string>
-    <string name="off">Aus</string>
     <string name="notifications">Benachrichtigungen</string>
     <string name="desc_notifications">Verwalten Sie Ihre Benachrichtigungen und Töne.</string>
     <string name="languages">Sprachen</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">Berechtigung verweigert</string>
     <string name="permission_denied_message">Diese Berechtigung ist erforderlich, um fortzufahren. Bitte erteilen Sie die Berechtigung in den App-Einstellungen.</string>
-    <string name="grant_permission">Berechtigung erteilen</string>
+    <string name="allow">Berechtigung erteilen</string>
 
     <string name="error_failed_persistent_access">Dauerhafter Zugriff auf das Bild konnte nicht abgerufen werden.</string>
     <string name="error_no_active_subscription">Kein aktives Abonnement.</string>

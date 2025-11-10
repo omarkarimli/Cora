@@ -91,8 +91,6 @@
     <string name="dark">Oscuro</string>
     <string name="dynamic_color">Color dinámico</string>
     <string name="desc_dynamic_color">Haz que los colores de la aplicación sean dinámicos.</string>
-    <string name="on">Activado</string>
-    <string name="off">Desactivado</string>
     <string name="notifications">Notificaciones</string>
     <string name="desc_notifications">Administra tus alertas y sonidos.</string>
     <string name="languages">Idiomas</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">Permiso Denegado</string>
     <string name="permission_denied_message">Este permiso es necesario para continuar. Por favor, otorga el permiso en los ajustes de la aplicación.</string>
-    <string name="grant_permission">Otorgar Permiso</string>
+    <string name="allow">Otorgar Permiso</string>
 
     <string name="error_failed_persistent_access">Error al obtener acceso persistente a la imagen.</string>
     <string name="error_no_active_subscription">No hay suscripción activa.</string>

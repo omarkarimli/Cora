@@ -45,7 +45,7 @@ import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.ui.presentation.common.widget.component.EmptyWidget
 import com.omarkarimli.cora.ui.presentation.common.widget.component.LoadingContent
-import com.omarkarimli.cora.ui.presentation.common.widget.dialog.PermissionAlertDialog
+import com.omarkarimli.cora.ui.presentation.common.widget.sheet.PermissionSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
 import com.omarkarimli.cora.ui.theme.Dimens
@@ -81,7 +81,6 @@ fun ChatScreen(
 
     val sheetState = rememberModalBottomSheetState()
     var sheetContent by remember { mutableStateOf<SheetContent>(SheetContent.None) }
-    var showPermissionDialog by remember { mutableStateOf(false) }
 
     fun showSheet(content: SheetContent) {
         sheetContent = content
@@ -160,7 +159,7 @@ fun ChatScreen(
         contract = ActivityResultContracts.RequestPermission(),
     ) { isGranted ->
         if (!isGranted) {
-            showPermissionDialog = true
+            showSheet(SheetContent.Permission)
         }
     }
 
@@ -357,16 +356,12 @@ fun ChatScreen(
                             }
                         }
                     )
-
+                    is SheetContent.Permission -> PermissionSheetContent(
+                        onHide = { hideSheet() }
+                    )
                     else -> {}
                 }
             }
-        }
-
-        if (showPermissionDialog) {
-            PermissionAlertDialog(
-                onDismissRequest = { showPermissionDialog = false }
-            )
         }
 
         if (uiState is UiState.Loading) LoadingContent()

@@ -91,8 +91,6 @@
     <string name="dark">Tünd</string>
     <string name="dynamic_color">Dinamik rəng</string>
     <string name="desc_dynamic_color">Proqramın rənglərini dinamik edin.</string>
-    <string name="on">Açıq</string>
-    <string name="off">Qapalı</string>
     <string name="notifications">Bildirişlər</string>
     <string name="desc_notifications">Siqnalları və səsləri idarə edin.</string>
     <string name="languages">Dillər</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">İcazə Rədd Edildi</string>
     <string name="permission_denied_message">Davam etmək üçün bu icazə tələb olunur. Zəhmət olmasa, proqram parametrlərində icazəni verin.</string>
-    <string name="grant_permission">İcazə Ver</string>
+    <string name="allow">İcazə Ver</string>
 
     <string name="error_failed_persistent_access">Şəkilə daimi giriş əldə etmək mümkün olmadı.</string>
     <string name="error_no_active_subscription">Aktiv abunəliyiniz yoxdur.</string>

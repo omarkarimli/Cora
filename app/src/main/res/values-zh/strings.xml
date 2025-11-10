@@ -91,8 +91,6 @@
     <string name="dark">深色</string>
     <string name="dynamic_color">动态颜色</string>
     <string name="desc_dynamic_color">使应用颜色动态化。</string>
-    <string name="on">开启</string>
-    <string name="off">关闭</string>
     <string name="notifications">通知</string>
     <string name="desc_notifications">管理您的提醒和声音。</string>
     <string name="languages">语言</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">权限被拒绝</string>
     <string name="permission_denied_message">继续需要此权限。请在应用设置中授予权限。</string>
-    <string name="grant_permission">授予权限</string>
+    <string name="allow">授予权限</string>
 
     <string name="error_failed_persistent_access">未能获取图片的持久访问权限。</string>
     <string name="error_no_active_subscription">没有有效的订阅。</string>

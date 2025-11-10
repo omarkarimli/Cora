@@ -91,8 +91,6 @@
     <string name="dark">어둡게</string>
     <string name="dynamic_color">동적 색상</string>
     <string name="desc_dynamic_color">앱의 색상을 동적으로 만듭니다.</string>
-    <string name="on">켜짐</string>
-    <string name="off">꺼짐</string>
     <string name="notifications">알림</string>
     <string name="desc_notifications">경고 및 소리를 관리합니다.</string>
     <string name="languages">언어</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">권한 거부됨</string>
     <string name="permission_denied_message">계속하려면 이 권한이 필요합니다. 앱 설정에서 권한을 부여해 주세요.</string>
-    <string name="grant_permission">권한 부여</string>
+    <string name="allow">권한 부여</string>
 
     <string name="error_failed_persistent_access">이미지에 대한 영구 액세스 권한을 얻지 못했습니다.</string>
     <string name="error_no_active_subscription">활성 구독이 없습니다.</string>

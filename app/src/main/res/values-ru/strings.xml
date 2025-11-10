@@ -91,8 +91,6 @@
     <string name="dark">Темный</string>
     <string name="dynamic_color">Динамический цвет</string>
     <string name="desc_dynamic_color">Сделайте цвета приложения динамичными.</string>
-    <string name="on">Включено</string>
-    <string name="off">Выключено</string>
     <string name="notifications">Уведомления</string>
     <string name="desc_notifications">Управляйте своими оповещениями и звуками.</string>
     <string name="languages">Языки</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">Разрешение Отклонено</string>
     <string name="permission_denied_message">Это разрешение необходимо для продолжения. Пожалуйста, предоставьте разрешение в настройках приложения.</string>
-    <string name="grant_permission">Предоставить Разрешение</string>
+    <string name="allow">Предоставить Разрешение</string>
 
     <string name="error_failed_persistent_access">Не удалось получить постоянный доступ к изображению.</string>
     <string name="error_no_active_subscription">Нет активной подписки.</string>

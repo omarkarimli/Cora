@@ -91,8 +91,6 @@
     <string name="dark">गहरा</string>
     <string name="dynamic_color">गतिशील रंग</string>
     <string name="desc_dynamic_color">ऐप के रंगों को गतिशील बनाएं।</string>
-    <string name="on">चालू</string>
-    <string name="off">बंद</string>
     <string name="notifications">सूचनाएँ</string>
     <string name="desc_notifications">अपने अलर्ट और ध्वनियों को प्रबंधित करें।</string>
     <string name="languages">भाषाएँ</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">अनुमति अस्वीकृत</string>
     <string name="permission_denied_message">जारी रखने के लिए यह अनुमति आवश्यक है। कृपया ऐप सेटिंग्स में अनुमति प्रदान करें।</string>
-    <string name="grant_permission">अनुमति दें</string>
+    <string name="allow">अनुमति दें</string>
 
     <string name="error_failed_persistent_access">छवि तक स्थायी पहुँच प्राप्त करने में विफल।</string>
     <string name="error_no_active_subscription">कोई सक्रिय सदस्यता नहीं।</string>

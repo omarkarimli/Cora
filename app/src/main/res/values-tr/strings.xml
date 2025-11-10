@@ -91,8 +91,6 @@
     <string name="dark">Koyu</string>
     <string name="dynamic_color">Dinamik Renk</string>
     <string name="desc_dynamic_color">Uygulamanın renklerini dinamikleştirin.</string>
-    <string name="on">Açık</string>
-    <string name="off">Kapalı</string>
     <string name="notifications">Bildirimler</string>
     <string name="desc_notifications">Uyarılarınızı ve seslerinizi yönetin.</string>
     <string name="languages">Diller</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">İzin Reddedildi</string>
     <string name="permission_denied_message">Devam etmek için bu izin gereklidir. Lütfen uygulama ayarlarından izin verin.</string>
-    <string name="grant_permission">İzin Ver</string>
+    <string name="allow">İzin Ver</string>
 
     <string name="error_failed_persistent_access">Görüntüye kalıcı erişim sağlanamadı.</string>
     <string name="error_no_active_subscription">Aktif abonelik yok.</string>

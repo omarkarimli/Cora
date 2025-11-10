@@ -91,8 +91,6 @@
     <string name="dark">অন্ধকার</string>
     <string name="dynamic_color">ডায়নামিক রঙ</string>
     <string name="desc_dynamic_color">অ্যাপের রঙগুলিকে ডায়নামিক করুন।</string>
-    <string name="on">চালু</string>
-    <string name="off">বন্ধ</string>
     <string name="notifications">বিজ্ঞপ্তিগুলি</string>
     <string name="desc_notifications">আপনার সতর্কতা এবং শব্দগুলি পরিচালনা করুন।</string>
     <string name="languages">ভাষাগুলি</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">অনুমতি অস্বীকার করা হয়েছে</string>
     <string name="permission_denied_message">এগিয়ে যাওয়ার জন্য এই অনুমতি প্রয়োজন। অ্যাপ সেটিংসে অনুমতি প্রদান করুন।</string>
-    <string name="grant_permission">অনুমতি দিন</string>
+    <string name="allow">অনুমতি দিন</string>
 
     <string name="error_failed_persistent_access">চিত্রের স্থায়ী অ্যাক্সেস পেতে ব্যর্থ হয়েছে।</string>
     <string name="error_no_active_subscription">কোন সক্রিয় সাবস্ক্রিপশন নেই।</string>

@@ -57,8 +57,8 @@ import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState
 import com.omarkarimli.cora.ui.presentation.common.widget.component.LoadingContent
 import com.omarkarimli.cora.ui.presentation.common.widget.component.StandardListItemUi
-import com.omarkarimli.cora.ui.presentation.common.widget.dialog.PermissionAlertDialog
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ConfirmSheetContent
+import com.omarkarimli.cora.ui.presentation.common.widget.sheet.PermissionSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.ReportIssueSheetContent
 import com.omarkarimli.cora.ui.presentation.common.widget.sheet.SheetContent
 import com.omarkarimli.cora.ui.presentation.main.MainViewModel
@@ -93,7 +93,6 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
     var sheetContent by remember { mutableStateOf<SheetContent>(SheetContent.None) }
-    var showPermissionDialog by remember { mutableStateOf(false) }
 
     fun showSheet(content: SheetContent) {
         sheetContent = content
@@ -115,7 +114,7 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
         if (isGranted) {
             hideSheet()
         } else {
-            showPermissionDialog = true
+            showSheet(SheetContent.Permission)
         }
     }
 
@@ -268,15 +267,12 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                             }
                         }
                     )
+                    is SheetContent.Permission -> PermissionSheetContent(
+                        onHide = { hideSheet() }
+                    )
                     else -> {}
                 }
             }
-        }
-
-        if (showPermissionDialog) {
-            PermissionAlertDialog(
-                onDismissRequest = { showPermissionDialog = false }
-            )
         }
 
         if (uiState is UiState.Loading) LoadingContent()

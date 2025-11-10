@@ -8,7 +8,6 @@ object SuccessType {
     const val SIGN_OUT = "Signed out"
     const val GET_USER = "Got user"
     const val UPDATE_PROFILE = "Updated profile"
-    const val SELECT_SUBSCRIPTION = "Selected subscription"
     const val SET_SUBSCRIPTIONS = "Set subscriptions"
     const val GET_SUBSCRIPTIONS = "Got subscriptions"
     const val GET_GUIDELINES = "Got guidelines"

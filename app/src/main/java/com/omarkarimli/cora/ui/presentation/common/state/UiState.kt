@@ -12,8 +12,7 @@ sealed class UiState {
     ) : UiState()
     data class Error(
         @StringRes val toastResId: Int,
-        val log: String,
-        val route: String? = null
+        val log: String
     ) : UiState()
 
     // Add other common UI states as needed, e.g., Dialog, etc.

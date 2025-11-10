@@ -3,6 +3,7 @@ package com.omarkarimli.cora.ui.presentation.screen.settings
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Build
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModel
@@ -135,10 +136,14 @@ class SettingsViewModel @Inject constructor(
 
     fun onNotificationsToggle(isEnabled: Boolean) {
         viewModelScope.launch {
-            val isPermissionGranted = ContextCompat.checkSelfPermission(
-                context,
-                Manifest.permission.POST_NOTIFICATIONS
-            ) == PackageManager.PERMISSION_GRANTED
+            var isPermissionGranted = true
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                isPermissionGranted = ContextCompat.checkSelfPermission(
+                    context,
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) == PackageManager.PERMISSION_GRANTED
+            }
 
             if (isPermissionGranted) {
                 _isNotificationsEnabled.value = isEnabled

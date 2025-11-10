@@ -91,8 +91,6 @@
     <string name="dark">ダーク</string>
     <string name="dynamic_color">ダイナミックカラー</string>
     <string name="desc_dynamic_color">アプリの色をダイナミックにします。</string>
-    <string name="on">オン</string>
-    <string name="off">オフ</string>
     <string name="notifications">通知</string>
     <string name="desc_notifications">アラートとサウンドを管理します。</string>
     <string name="languages">言語</string>
@@ -115,7 +113,7 @@
 
     <string name="permission_denied">権限が拒否されました</string>
     <string name="permission_denied_message">続行するにはこの権限が必要です。アプリの設定で権限を付与してください。</string>
-    <string name="grant_permission">権限を付与</string>
+    <string name="allow">権限を付与</string>
 
     <string name="error_failed_persistent_access">画像への永続的なアクセス権の取得に失敗しました。</string>
     <string name="error_no_active_subscription">アクティブなサブスクリプションがありません。</string>

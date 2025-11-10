@@ -38,6 +38,8 @@ fun MyTopAppBar(
     onShowSheet: (SheetContent) -> Unit,
     onNewChat: () -> Unit
 ) {
+    var expanded by remember { mutableStateOf(false) }
+
     CenterAlignedTopAppBar(
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = Color.Transparent
@@ -50,7 +52,6 @@ fun MyTopAppBar(
             )
         },
         navigationIcon = {
-            var expanded by remember { mutableStateOf(false) }
             val options = listOf(
                 StandardListItemModel(
                     id = 0,
