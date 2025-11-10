@@ -5,6 +5,17 @@
 AI app built with **Jetpack Compose** in **Kotlin**.
 It follows MVVM Architecture and implements Clean Code principles.
 
+### ✨ Features
+
+- **Web Searching**
+- **Image Generation**
+- **Subscription & Usage system**
+- **Live Translation**
+- **17 Languages**
+- **History Saving**
+- **Issue Reporting System**
+- **Dynamic Look**
+  
 ### 🛠 Built With:
 
 ### 🎨 UI & Design
