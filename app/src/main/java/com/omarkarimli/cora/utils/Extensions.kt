@@ -112,15 +112,11 @@ fun String.toAnnotatedString(): AnnotatedString {
                         pushStringAnnotation("URL", url)
                         pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
 
-                        // FIX: Ensure only the display text (or URL if display text is missing) is appended.
-                        // This prevents the raw [Title](Link) string from being output.
                         append(displayText.takeIf { it.isNotEmpty() } ?: url)
 
-                        pop() // style
-                        pop() // annotation
+                        pop()
+                        pop()
                     } else {
-                        // If the URL is empty, append the display text as plain text.
-                        // If that's also empty, append the whole raw match.
                         append(displayText.takeIf { it.isNotEmpty() } ?: matchResult.value)
                     }
                 }
@@ -129,7 +125,7 @@ fun String.toAnnotatedString(): AnnotatedString {
 
                     if (text.isWebUrl()) {
                         pushStringAnnotation("URL", text)
-                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
 
                         val displayedText = if (text.length > 50) {
                             text.take(47) + "..."
