@@ -91,4 +91,4 @@ By installing this repo, you will agree [LICENSE](https://github.com/omarkarimli
 
 ---
 
-Only Non-Commercial Use, 2025
+Only Non-Commercial Use
