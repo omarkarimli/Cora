@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.Intent
 import com.omarkarimli.cora.domain.notification.NotificationService
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
-import com.omarkarimli.cora.utils.NotificationConstants
 import com.omarkarimli.cora.utils.SpConstant
+import com.omarkarimli.cora.utils.getActionShowNotification
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.Calendar
 import javax.inject.Inject
@@ -30,7 +30,7 @@ class NotificationServiceImpl @Inject constructor(
     private fun scheduleNotification(hour: Int) {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, NotificationReceiver::class.java).apply {
-            action = NotificationConstants.ACTION_SHOW_NOTIFICATION
+            action = context.getActionShowNotification()
         }
 
         val pendingIntent = PendingIntent.getBroadcast(

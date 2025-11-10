@@ -52,6 +52,7 @@ import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
 import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.ui.theme.outlineLight
 import com.omarkarimli.cora.ui.theme.primaryLight
+import com.omarkarimli.cora.utils.NotificationConstants.ACTION_SHOW_NOTIFICATION
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -399,4 +400,8 @@ fun Context.openAppSettings() {
     val uri = Uri.fromParts(Constants.PACKAGE, this.packageName, null)
     intent.data = uri
     this.startActivity(intent)
+}
+
+fun Context.getActionShowNotification(): String {
+    return this.packageName + ".$ACTION_SHOW_NOTIFICATION"
 }

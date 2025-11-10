@@ -93,6 +93,7 @@ sc
     <string name="dynamic_color">Dynamic color</string>
     <string name="desc_dynamic_color">Make the app\'s colors dynamic.</string>
     <string name="notifications">Notifications</string>
+    <string name="notifications_text">Supercharge your ideas!</string>
     <string name="desc_notifications">Manage your alerts and sounds.</string>
     <string name="languages">Languages</string>
     <string name="desc_lang">Change the app\'s language.</string>

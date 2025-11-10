@@ -10,11 +10,12 @@ import androidx.core.app.NotificationCompat
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.ui.presentation.main.MainActivity
 import com.omarkarimli.cora.utils.NotificationConstants
+import com.omarkarimli.cora.utils.getActionShowNotification
 
 class NotificationReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action == NotificationConstants.ACTION_SHOW_NOTIFICATION) {
+        if (intent.action == context.getActionShowNotification()) {
             showNotification(context)
         }
     }
@@ -24,7 +25,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
         val channel = NotificationChannel(
             NotificationConstants.CHANNEL_ID,
-            "Cora Notification Channel",
+            NotificationConstants.CHANNEL_NAME,
             NotificationManager.IMPORTANCE_DEFAULT
         )
         notificationManager.createNotificationChannel(channel)
@@ -36,8 +37,8 @@ class NotificationReceiver : BroadcastReceiver() {
         val pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(context, NotificationConstants.CHANNEL_ID)
-            .setContentTitle("Cora")
-            .setContentText("Supercharge your ideas!")
+            .setContentTitle(context.getString(R.string.app_name))
+            .setContentText(context.getString(R.string.notifications_text))
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
