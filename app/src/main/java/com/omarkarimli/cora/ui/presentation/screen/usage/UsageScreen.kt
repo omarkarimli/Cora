@@ -170,7 +170,7 @@ private fun ScrollContent(
                             title = context.getString(R.string.ads_enabled),
                             leadingIcon = Icons.Outlined.BubbleChart,
                             endingIcon = if (currentSubscriptionModel.adsEnabled) Icons.Outlined.Done else Icons.Outlined.Block
-                        ) to (currentUsageData.messageChars.toFloat() / currentSubscriptionModel.maxUsageData.messageChars.toFloat())
+                        ) to 0f
                     )
                 )
 

@@ -26,7 +26,7 @@ fun UsageDataRow(item: HashMap<StandardListItemModel, Float>) {
         verticalArrangement = Arrangement.spacedBy(Dimens.PaddingSmall)
     ) {
         StandardListItemUi(item = standardListItemModel)
-        if (item.values.last() != 0f) {
+        if (standardListItemModel.endingIcon == null) {
             LinearProgressIndicator(
                 modifier = Modifier
                     .fillMaxWidth()
