@@ -85,3 +85,7 @@ It follows MVVM Architecture and implements Clean Code principles.
 - **Kotlinx Serialization**
 - **Live Translate**
 - **Zoomable** image component
+
+By installing this repo, you will agree LICENSE.md
+Only Non-Commercial Use
+2025
