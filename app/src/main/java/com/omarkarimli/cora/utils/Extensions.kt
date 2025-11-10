@@ -23,19 +23,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.dropShadow
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.shadow.Shadow
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.core.net.toUri
 import com.google.firebase.firestore.DocumentSnapshot
 import com.omarkarimli.cora.BuildConfig.EMAIL
@@ -55,74 +49,113 @@ import com.omarkarimli.cora.ui.theme.primaryLight
 import com.omarkarimli.cora.utils.NotificationConstants.ACTION_SHOW_NOTIFICATION
 import java.text.SimpleDateFormat
 import java.util.Locale
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.graphics.Color
 
 fun String.isWebUrl(): Boolean {
-    return this.contains("http") || this.contains("www")
+    // A check for a web URL
+    return this.startsWith("http://", ignoreCase = true) ||
+            this.startsWith("https://", ignoreCase = true) ||
+            this.contains("www.")
 }
 
 fun String.toAnnotatedString(): AnnotatedString {
-    // **...** content is group 2 bold
-    // *...* content is group 4 italic
-    // _[...](...)_ content is group 6 underline with link
-    val regex = Regex("(?<BOLD>\\*\\*(.*?)\\*\\*)|(?<ITALIC>\\*(.*?)\\*)|(?<UNDERLINE>_(.*?)_)")
-    val linkRegex = Regex("\\[(.*?)]\\((.*?)\\)")
+
+    // **...** (Group 2) -> BOLD
+    // *...* (Group 4) -> ITALIC
+    // [text](url) (Groups 6 and 7) -> TOP-LEVEL LINK (Tolerates spaces/newlines between ] and ( )
+    // _..._ (Group 9) -> UNDERLINE/RAW URL
+
+    val regex = Regex(
+        "(?<BOLD>\\*\\*(.*?)\\*\\*)|" +
+                "(?<ITALIC>\\*(.*?)\\*)|" +
+                "(?<LINK>\\[(.*?)]\\s*?\\((.*?)\\))|" + // Robust link pattern (Groups 6 and 7)
+                "(?<UNDERLINE>_(.*?)_)"
+        , RegexOption.MULTILINE)
 
     return buildAnnotatedString {
         var currentIndex = 0
 
         regex.findAll(this@toAnnotatedString).forEach { matchResult ->
+            // Append text before the match
             append(this@toAnnotatedString.substring(currentIndex, matchResult.range.first))
 
             val (formatType, content) = when {
                 matchResult.groups["BOLD"] != null -> "BOLD" to matchResult.groups[2]?.value
                 matchResult.groups["ITALIC"] != null -> "ITALIC" to matchResult.groups[4]?.value
-                matchResult.groups["UNDERLINE"] != null -> "UNDERLINE" to matchResult.groups[6]?.value
+                matchResult.groups["LINK"] != null -> "LINK" to null
+                matchResult.groups["UNDERLINE"] != null -> "UNDERLINE" to matchResult.groups[9]?.value
                 else -> null to null
             }
 
-            content?.let { text ->
-                when (formatType) {
-                    "BOLD" -> {
-                        pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
-                        append(text)
-                        pop()
-                    }
-                    "ITALIC" -> {
-                        pushStyle(SpanStyle(fontStyle = FontStyle.Italic, color = outlineLight))
-                        append(text)
-                        pop()
-                    }
-                    "UNDERLINE" -> {
-                        val linkMatch = linkRegex.find(text)
-                        if (linkMatch?.groups?.size == 3) { // Markdown link: _[text](url)_
-                            val displayText = linkMatch.groups[1]?.value ?: ""
-                            val url = linkMatch.groups[2]?.value ?: ""
-                            if (url.isNotEmpty()) {
-                                pushStringAnnotation("URL", url)
-                                pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
-                                append(displayText.takeIf { it.isNotEmpty() } ?: url)
-                                pop() // style
-                                pop() // annotation
-                            }
-                        } else if (text.isWebUrl()) { // Raw URL: _http://..._
-                            pushStringAnnotation("URL\n", text)
-                            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
-                            append(if (text.length > 30) "Link\n" else text)
-                            pop() // style
-                            pop() // annotation
-                        } else { // Just underlined text
-                            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
-                            append(text)
-                            pop()
-                        }
-                    }
-                    else -> append(text)
+            // --- Format Application ---
+            when (formatType) {
+                "BOLD" -> {
+                    pushStyle(SpanStyle(fontWeight = FontWeight.Bold))
+                    append(content ?: "")
+                    pop()
                 }
+                "ITALIC" -> {
+                    pushStyle(SpanStyle(fontStyle = FontStyle.Italic, color = outlineLight))
+                    append(content ?: "")
+                    pop()
+                }
+                "LINK" -> { // Handles [text](url) - Groups 6 (text) and 7 (url)
+                    val displayText = matchResult.groups[6]?.value ?: ""
+                    val url = matchResult.groups[7]?.value ?: ""
+
+                    if (url.isNotEmpty()) {
+                        pushStringAnnotation("URL", url)
+                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+
+                        // FIX: Ensure only the display text (or URL if display text is missing) is appended.
+                        // This prevents the raw [Title](Link) string from being output.
+                        append(displayText.takeIf { it.isNotEmpty() } ?: url)
+
+                        pop() // style
+                        pop() // annotation
+                    } else {
+                        // If the URL is empty, append the display text as plain text.
+                        // If that's also empty, append the whole raw match.
+                        append(displayText.takeIf { it.isNotEmpty() } ?: matchResult.value)
+                    }
+                }
+                "UNDERLINE" -> { // Handles raw URLs or simple underlined text (content is group 9)
+                    val text = content ?: ""
+
+                    if (text.isWebUrl()) {
+                        pushStringAnnotation("URL", text)
+                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline, color = primaryLight))
+
+                        val displayedText = if (text.length > 50) {
+                            text.take(47) + "..."
+                        } else {
+                            text
+                        }
+
+                        append(displayedText)
+
+                        pop() // style
+                        pop() // annotation
+                    } else { // Just underlined text
+                        pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
+                        append(text)
+                        pop()
+                    }
+                }
+                // Fallback for BOLD, ITALIC, and UNDERLINE (when content is not null)
+                else -> content?.let { append(it) }
             }
 
+            // Update the index to after the full match
             currentIndex = matchResult.range.last + 1
         }
 
+        // Append remaining text after the last match
         if (currentIndex < this@toAnnotatedString.length) {
             append(this@toAnnotatedString.substring(currentIndex))
         }
