@@ -60,10 +60,6 @@ fun String.isWebUrl(): Boolean {
     return this.contains("http") || this.contains("www")
 }
 
-fun String.capitalize(): String {
-    return this.replaceFirstChar { it.uppercase() }
-}
-
 fun String.toAnnotatedString(): AnnotatedString {
     // **...** content is group 2 bold
     // *...* content is group 4 italic
@@ -133,6 +129,9 @@ fun String.toAnnotatedString(): AnnotatedString {
     }
 }
 
+fun String.capitalize(): String {
+    return this.replaceFirstChar { it.uppercase() }
+}
 
 @Composable
 fun (() -> Unit).performHaptic(
