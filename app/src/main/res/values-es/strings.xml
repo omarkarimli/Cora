@@ -12,7 +12,7 @@
     <string name="selected_title">Seleccionado</string>
     <string name="no_item_found">No se encontró ningún elemento</string>
 
-    <string name="settings">Ajustes</string>
+    <string name="settings">Configuración</string>
     <string name="profile">Perfil</string>
     <string name="chat">Chat</string>
     <string name="admin">Administrador</string>
@@ -32,7 +32,7 @@
     <string name="bio">Biografía</string>
     <string name="required">Requerido</string>
     <string name="optional">Opcional</string>
-    <string name="sign_out">Cerrar Sesión</string>
+    <string name="sign_out">Cerrar sesión</string>
     <string name="account">Cuenta</string>
     <string name="gender">Género</string>
     <string name="gender_male">Masculino</string>
@@ -45,7 +45,7 @@
     <string name="send">Enviar</string>
     <string name="search">Buscar</string>
     <string name="clear_all">Borrar todo</string>
-    <string name="are_you_sure">¿Está seguro de hacer esto?</string>
+    <string name="are_you_sure">¿Está seguro de querer hacer esto?</string>
     <string name="delete_item">Eliminar elemento</string>
     <string name="cancel">Cancelar</string>
 
@@ -56,7 +56,7 @@
     <string name="image_from_web">Imagen de la web</string>
     <string name="image_from_device">Imagen del dispositivo</string>
     <string name="describe">Describir</string>
-    <string name="full_screen_image_viewer">Visor de imágenes a pantalla completa</string>
+    <string name="full_screen_image_viewer">Visor de Imágenes en Pantalla Completa</string>
     <string name="background">Fondo</string>
     <string name="enlarged_image">Imagen ampliada %1$d</string>
     <string name="saving_path">Ruta de Guardado</string>
@@ -65,9 +65,9 @@
     <string name="downloads">Descargas</string>
 
     <string name="subscriptions">Suscripciones</string>
-    <string name="desc_subscriptions">Comprueba el estado de tu suscripción.</string>
+    <string name="desc_subscriptions">Verifique el estado de su suscripción.</string>
     <string name="subscription_history">Historial de Suscripciones</string>
-    <string name="upgrade">Mejorar plan</string>
+    <string name="upgrade">Actualizar</string>
     <string name="current_plan">Plan Actual</string>
     <string name="select_plan">Seleccionar Plan</string>
     <string name="free">Gratis</string>
@@ -77,7 +77,7 @@
     <string name="subscription_feature_message_chars">%1$d caracteres de mensaje</string>
     <string name="subscription_feature_web_result">%1$d resultados web</string>
     <string name="usage">Uso</string>
-    <string name="desc_usage">Comprueba tu uso.</string>
+    <string name="desc_usage">Verifique su uso.</string>
     <string name="attaches">Archivos adjuntos</string>
     <string name="usage_item_attaches_desc">Archivos adjuntos en el chat</string>
     <string name="usage_item_message_chars_title">Caracteres de Mensaje</string>
@@ -85,54 +85,55 @@
     <string name="web_searches">Búsquedas Web</string>
 
     <string name="dark_mode">Modo oscuro</string>
-    <string name="desc_dark_mode">Cambia la apariencia de la aplicación.</string>
+    <string name="desc_dark_mode">Cambiar la apariencia de la aplicación.</string>
     <string name="system">Sistema</string>
     <string name="light">Claro</string>
     <string name="dark">Oscuro</string>
     <string name="dynamic_color">Color dinámico</string>
-    <string name="desc_dynamic_color">Haz que los colores de la aplicación sean dinámicos.</string>
+    <string name="desc_dynamic_color">Hacer que los colores de la aplicación sean dinámicos.</string>
     <string name="notifications">Notificaciones</string>
-    <string name="desc_notifications">Gestiona tus alertas y sonidos.</string>
+    <string name="notifications_text">¡Potencia tus ideas!</string>
+    <string name="desc_notifications">Administra tus alertas y sonidos.</string>
     <string name="languages">Idiomas</string>
-    <string name="desc_lang">Cambia el idioma de la aplicación.</string>
-    <string name="live_translation">Traducción en vivo</string>
+    <string name="desc_lang">Cambiar el idioma de la aplicación.</string>
+    <string name="live_translation">Traducción en Vivo</string>
     <string name="desc_live_translation">Traducción en vivo de contenidos generados.</string>
 
     <string name="support">Soporte</string>
     <string name="help">Ayuda</string>
-    <string name="guidelines">Directrices</string>
-    <string name="desc_guidelines">Ver y seguir las directrices.</string>
-    <string name="report_issue">Informar de un problema</string>
+    <string name="guidelines">Pautas</string>
+    <string name="desc_guidelines">Ver y seguir las pautas.</string>
+    <string name="report_issue">Informar un problema</string>
     <string name="desc_report_issue">Enviar un informe de error o una solicitud de función.</string>
-    <string name="reset_settings">Restablecer Ajustes</string>
-    <string name="desc_reset_settings">Revertir todos los ajustes a sus valores predeterminados.</string>
+    <string name="reset_settings">Restablecer Configuración</string>
+    <string name="desc_reset_settings">Revertir toda la configuración a sus valores predeterminados.</string>
     <string name="about">Acerca de</string>
     <string name="desc_about">Ver información sobre la aplicación.</string>
     <string name="about_main_text">Diseñado para potenciar tus ideas. Tu pasión es nuestro propósito. Esperamos sinceramente que disfrutes de lo que hemos creado para ti.</string>
     <string name="link_to_source">Enlace a la fuente</string>
 
     <string name="permission_denied">Permiso Denegado</string>
-    <string name="permission_denied_message">Se requiere este permiso para continuar. Por favor, otorga el permiso en los ajustes de la aplicación.</string>
+    <string name="permission_denied_message">Este permiso es necesario para continuar. Por favor, otórguelo en la configuración de la aplicación.</string>
     <string name="allow">Permitir</string>
 
-    <string name="error_failed_persistent_access">Fallo al obtener acceso persistente a la imagen.</string>
-    <string name="error_no_active_subscription">No hay suscripción activa.</string>
-    <string name="error_google_sign_in_failed">Fallo al iniciar sesión con Google. Por favor, inténtalo de nuevo.</string>
-    <string name="error_sign_out">Fallo al cerrar sesión.</string>
-    <string name="error_something_went_wrong">Algo salió mal. Por favor, inténtalo de nuevo.</string>
+    <string name="error_failed_persistent_access">No se pudo obtener acceso persistente a la imagen.</string>
+    <string name="error_no_active_subscription">Sin suscripción activa.</string>
+    <string name="error_google_sign_in_failed">Error al iniciar sesión con Google. Por favor, inténtelo de nuevo.</string>
+    <string name="error_sign_out">Error al cerrar sesión.</string>
+    <string name="error_something_went_wrong">Algo salió mal. Por favor, inténtelo de nuevo.</string>
     <string name="error_empty_chat">El chat está vacío.</string>
-    <string name="error_take_photo">Fallo al tomar una foto.</string>
+    <string name="error_take_photo">Error al tomar una foto.</string>
     <string name="error_image_already_added">Imagen ya añadida.</string>
-    <string name="error_max_images_reached">Solo puedes añadir hasta 3 imágenes.</string>
-    <string name="error_attach_limit_reached">Has alcanzado tu límite de archivos adjuntos.</string>
-    <string name="error_load_image">Fallo al cargar la imagen.</string>
-    <string name="error_load_subscriptions">Fallo al cargar las suscripciones.</string>
+    <string name="error_max_images_reached">Solo puede añadir hasta 3 imágenes.</string>
+    <string name="error_attach_limit_reached">Ha alcanzado su límite de archivos adjuntos.</string>
+    <string name="error_load_image">Error al cargar la imagen.</string>
+    <string name="error_load_subscriptions">Error al cargar las suscripciones.</string>
     <string name="error_no_free_subscriptions">No hay suscripciones gratuitas disponibles.</string>
-    <string name="error_get_free_subscription">Fallo al obtener la suscripción gratuita.</string>
-    <string name="error_save_user_data">Fallo al guardar los datos del usuario.</string>
+    <string name="error_get_free_subscription">Error al obtener la suscripción gratuita.</string>
+    <string name="error_save_user_data">Error al guardar los datos del usuario.</string>
 
     <string name="error_min_length">Se requieren al menos %1$d caracteres</string>
-    <string name="error_max_length">Se permite un máximo de %1$d caracteres</string>
+    <string name="error_max_length">Máximo %1$d caracteres permitidos</string>
     <string name="error_no_gaps">No se permiten espacios</string>
     <string name="error_no_special_chars">No se permiten caracteres especiales</string>
     <string name="error_no_capital_letters">No se permiten letras mayúsculas</string>

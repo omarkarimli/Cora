@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_icon">Icône de l\'application</string>
+    <string name="app_icon">Icône d\'application</string>
     <string name="general">Général</string>
     <string name="more">Plus</string>
     <string name="success">Succès</string>
-    <string name="success_message">Le processus a été effectué avec succès.</string>
+    <string name="success_message">Le processus a réussi.</string>
     <string name="splash">Écran de démarrage</string>
     <string name="confirm">Confirmer</string>
     <string name="save">Enregistrer</string>
@@ -18,25 +18,25 @@
     <string name="admin">Administrateur</string>
     <string name="back_to_prev">Retour à la page précédente</string>
     <string name="share">Partager</string>
-    <string name="share_body">Jetez un œil à ceci.</string>
+    <string name="share_body">Jetez un coup d\'œil à ceci.</string>
     <string name="refresh_page">Actualiser la page</string>
     <string name="download">Télécharger</string>
 
     <string name="auth">Authentification</string>
-    <string name="get_started">Démarrer</string>
+    <string name="get_started">Commencer</string>
     <string name="continue_title">Continuer</string>
     <string name="auth_legal_doc_agreement_prefix">En continuant, vous acceptez nos </string>
     <string name="legal_doc">Documents Légaux</string>
-    <string name="user_setup">Configuration utilisateur</string>
+    <string name="user_setup">Configuration Utilisateur</string>
     <string name="username">Nom d\'utilisateur</string>
-    <string name="bio">Bio</string>
-    <string name="required">Requis</string>
-    <string name="optional">Optionnel</string>
+    <string name="bio">Biographie</string>
+    <string name="required">Obligatoire</string>
+    <string name="optional">Facultatif</string>
     <string name="sign_out">Se déconnecter</string>
     <string name="account">Compte</string>
     <string name="gender">Genre</string>
-    <string name="gender_male">Homme</string>
-    <string name="gender_female">Femme</string>
+    <string name="gender_male">Masculin</string>
+    <string name="gender_female">Féminin</string>
 
     <string name="new_chat">Nouvelle discussion</string>
     <string name="chat_history">Historique des discussions</string>
@@ -45,7 +45,7 @@
     <string name="send">Envoyer</string>
     <string name="search">Rechercher</string>
     <string name="clear_all">Tout effacer</string>
-    <string name="are_you_sure">Êtes-vous sûr de vouloir faire cela ?</string>
+    <string name="are_you_sure">Êtes-vous sûr de vouloir faire ceci ?</string>
     <string name="delete_item">Supprimer l\'élément</string>
     <string name="cancel">Annuler</string>
 
@@ -59,13 +59,13 @@
     <string name="full_screen_image_viewer">Visionneuse d\'images plein écran</string>
     <string name="background">Arrière-plan</string>
     <string name="enlarged_image">Image agrandie %1$d</string>
-    <string name="saving_path">Chemin de sauvegarde</string>
+    <string name="saving_path">Chemin d\'enregistrement</string>
     <string name="desc_saving_path">Les éléments seront enregistrés dans le chemin sélectionné.</string>
     <string name="photos">Photos</string>
     <string name="downloads">Téléchargements</string>
 
     <string name="subscriptions">Abonnements</string>
-    <string name="desc_subscriptions">Vérifiez le statut de votre abonnement.</string>
+    <string name="desc_subscriptions">Vérifiez l\'état de votre abonnement.</string>
     <string name="subscription_history">Historique des abonnements</string>
     <string name="upgrade">Mettre à niveau</string>
     <string name="current_plan">Plan actuel</string>
@@ -92,6 +92,7 @@
     <string name="dynamic_color">Couleur dynamique</string>
     <string name="desc_dynamic_color">Rendre les couleurs de l\'application dynamiques.</string>
     <string name="notifications">Notifications</string>
+    <string name="notifications_text">Surboostez vos idées !</string>
     <string name="desc_notifications">Gérez vos alertes et sons.</string>
     <string name="languages">Langues</string>
     <string name="desc_lang">Changer la langue de l\'application.</string>
@@ -101,26 +102,26 @@
     <string name="support">Support</string>
     <string name="help">Aide</string>
     <string name="guidelines">Lignes directrices</string>
-    <string name="desc_guidelines">Consulter et suivre les lignes directrices.</string>
+    <string name="desc_guidelines">Voir et suivre les lignes directrices.</string>
     <string name="report_issue">Signaler un problème</string>
     <string name="desc_report_issue">Soumettre un rapport de bogue ou une demande de fonctionnalité.</string>
     <string name="reset_settings">Réinitialiser les paramètres</string>
     <string name="desc_reset_settings">Rétablir tous les paramètres à leurs valeurs par défaut.</string>
     <string name="about">À propos</string>
     <string name="desc_about">Voir les informations sur l\'application.</string>
-    <string name="about_main_text">Conçu pour surcharger vos idées. Votre passion est notre but. Nous espérons sincèrement que vous apprécierez ce que nous avons créé pour vous.</string>
+    <string name="about_main_text">Conçu pour surbooster vos idées. Votre passion est notre objectif. Nous espérons sincèrement que vous apprécierez ce que nous avons créé pour vous.</string>
     <string name="link_to_source">Lien vers la source</string>
 
-    <string name="permission_denied">Autorisation refusée</string>
+    <string name="permission_denied">Autorisation Refusée</string>
     <string name="permission_denied_message">Cette autorisation est requise pour continuer. Veuillez accorder l\'autorisation dans les paramètres de l\'application.</string>
     <string name="allow">Autoriser</string>
 
-    <string name="error_failed_persistent_access">Échec de l\'obtention d\'un accès persistant à l\'image.</string>
+    <string name="error_failed_persistent_access">Échec de l\'obtention de l\'accès persistant à l\'image.</string>
     <string name="error_no_active_subscription">Aucun abonnement actif.</string>
     <string name="error_google_sign_in_failed">Échec de la connexion Google. Veuillez réessayer.</string>
     <string name="error_sign_out">Échec de la déconnexion.</string>
     <string name="error_something_went_wrong">Quelque chose s\'est mal passé. Veuillez réessayer.</string>
-    <string name="error_empty_chat">La discussion est vide.</string>
+    <string name="error_empty_chat">Le chat est vide.</string>
     <string name="error_take_photo">Échec de la prise de photo.</string>
     <string name="error_image_already_added">Image déjà ajoutée.</string>
     <string name="error_max_images_reached">Vous ne pouvez ajouter que jusqu\'à 3 images.</string>
@@ -135,13 +136,13 @@
     <string name="error_max_length">Maximum %1$d caractères autorisés</string>
     <string name="error_no_gaps">Aucun espace autorisé</string>
     <string name="error_no_special_chars">Aucun caractère spécial autorisé</string>
-    <string name="error_no_capital_letters">Aucune majuscule autorisée</string>
-    <string name="error_only_english_letters">Seules les lettres anglaises sont autorisées</string>
+    <string name="error_no_capital_letters">Aucune lettre majuscule autorisée</string>
+    <string name="error_only_english_letters">Seules les lettres anglaises autorisées</string>
 
     <string-array name="onboarding_mottos">
-        <item>Conçu pour surcharger vos idées</item>
+        <item>Conçu pour surbooster vos idées</item>
         <item>Trouvez votre prochaine étincelle créative</item>
-        <item>Connectez-vous à une communauté d\'innovateurs</item>
+        <item>Connectez-vous avec une communauté d\'innovateurs</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Attention</item>

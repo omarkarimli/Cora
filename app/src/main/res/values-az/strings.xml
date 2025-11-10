@@ -5,31 +5,31 @@
     <string name="general">Ümumi</string>
     <string name="more">Daha çox</string>
     <string name="success">Uğurlu</string>
-    <string name="success_message">Əməliyyat uğurla başa çatdı.</string>
+    <string name="success_message">Proses uğurla tamamlandı.</string>
     <string name="splash">Giriş ekranı</string>
     <string name="confirm">Təsdiqlə</string>
     <string name="save">Yadda saxla</string>
     <string name="selected_title">Seçilmiş</string>
     <string name="no_item_found">Heç bir element tapılmadı</string>
 
-    <string name="settings">Parametrlər</string>
+    <string name="settings">Ayarlar</string>
     <string name="profile">Profil</string>
     <string name="chat">Söhbət</string>
-    <string name="admin">Admin</string>
+    <string name="admin">İnzibatçı</string>
     <string name="back_to_prev">Əvvəlki səhifəyə qayıt</string>
     <string name="share">Paylaş</string>
-    <string name="share_body">Buna nəzər yetirin.</string>
+    <string name="share_body">Buna nəzər yetir.</string>
     <string name="refresh_page">Səhifəni yenilə</string>
     <string name="download">Yüklə</string>
 
-    <string name="auth">Avtorizasiya</string>
+    <string name="auth">Autentifikasiya</string>
     <string name="get_started">Başla</string>
     <string name="continue_title">Davam et</string>
-    <string name="auth_legal_doc_agreement_prefix">Davam etməklə, siz bizim </string>
-    <string name="legal_doc">Hüquqi Sənədlərimizlə</string>
-    <string name="user_setup">İstifadəçi Tənzimləməsi</string>
+    <string name="auth_legal_doc_agreement_prefix">Davam edərək, aşağıdakıları qəbul edirsiniz: </string>
+    <string name="legal_doc">Hüquqi Sənədlərimiz</string>
+    <string name="user_setup">İstifadəçi Quraşdırması</string>
     <string name="username">İstifadəçi adı</string>
-    <string name="bio">Bio</string>
+    <string name="bio">Bioqrafiya</string>
     <string name="required">Tələb olunur</string>
     <string name="optional">Könüllü</string>
     <string name="sign_out">Çıxış et</string>
@@ -41,7 +41,7 @@
     <string name="new_chat">Yeni Söhbət</string>
     <string name="chat_history">Söhbət Tarixçəsi</string>
     <string name="open_history">Tarixçəni aç</string>
-    <string name="ask_cora">Cora-dan soruş</string>
+    <string name="ask_cora">Kora\'dan soruş</string>
     <string name="send">Göndər</string>
     <string name="search">Axtar</string>
     <string name="clear_all">Hamısını təmizlə</string>
@@ -52,36 +52,36 @@
     <string name="camera">Kamera</string>
     <string name="attach">Əlavə et</string>
     <string name="remove_attachment">Əlavəni sil</string>
-    <string name="image_generation">Şəkil Yaratma</string>
+    <string name="image_generation">Şəkil Yaradılması</string>
     <string name="image_from_web">Vebdən şəkil</string>
     <string name="image_from_device">Cihazdan şəkil</string>
     <string name="describe">Təsvir et</string>
-    <string name="full_screen_image_viewer">Tam Ekran Şəkil İzləyicisi</string>
+    <string name="full_screen_image_viewer">Tam Ekran Şəkil Görüntüləyicisi</string>
     <string name="background">Fon</string>
     <string name="enlarged_image">Böyüdülmüş şəkil %1$d</string>
     <string name="saving_path">Yaddaş Yolu</string>
-    <string name="desc_saving_path">Elementlər seçilmiş yola yaddaşda saxlanılacaq.</string>
+    <string name="desc_saving_path">Elementlər seçilmiş yaddaş yoluna saxlanılacaq.</string>
     <string name="photos">Şəkillər</string>
     <string name="downloads">Yükləmələr</string>
 
     <string name="subscriptions">Abunəliklər</string>
-    <string name="desc_subscriptions">Abunəlik statusunuzu yoxlayın.</string>
+    <string name="desc_subscriptions">Abunəliyinizin statusunu yoxlayın.</string>
     <string name="subscription_history">Abunəlik Tarixçəsi</string>
-    <string name="upgrade">Yüksəlt</string>
+    <string name="upgrade">Təkmilləşdir</string>
     <string name="current_plan">Cari Plan</string>
     <string name="select_plan">Plan seç</string>
     <string name="free">Pulsuz</string>
     <string name="not_available">Mövcud deyil.</string>
     <string name="ads_enabled">Reklamlar aktivdir</string>
     <string name="subscription_feature_attaches">%1$d əlavə</string>
-    <string name="subscription_feature_message_chars">%1$d ismarıc simvolu</string>
-    <string name="subscription_feature_web_result">%1$d veb nəticə</string>
+    <string name="subscription_feature_message_chars">%1$d mesaj simvolu</string>
+    <string name="subscription_feature_web_result">%1$d veb nəticəsi</string>
     <string name="usage">İstifadə</string>
-    <string name="desc_usage">İstifadənizi yoxlayın.</string>
+    <string name="desc_usage">İstifadə səviyyənizi yoxlayın.</string>
     <string name="attaches">Əlavələr</string>
-    <string name="usage_item_attaches_desc">Söhbətdə əlavələr</string>
-    <string name="usage_item_message_chars_title">İsmarıc Simvolları</string>
-    <string name="usage_item_message_chars_desc">Söhbətdə cavabların simvolları</string>
+    <string name="usage_item_attaches_desc">Söhbətdəki əlavələr</string>
+    <string name="usage_item_message_chars_title">Mesaj Simvolları</string>
+    <string name="usage_item_message_chars_desc">Söhbətdəki cavabların simvolları</string>
     <string name="web_searches">Veb Axtarışları</string>
 
     <string name="dark_mode">Tünd rejim</string>
@@ -90,8 +90,9 @@
     <string name="light">İşıqlı</string>
     <string name="dark">Tünd</string>
     <string name="dynamic_color">Dinamik rəng</string>
-    <string name="desc_dynamic_color">Tətbiq rənglərini dinamik edin.</string>
+    <string name="desc_dynamic_color">Tətbiqin rənglərini dinamik edin.</string>
     <string name="notifications">Bildirişlər</string>
+    <string name="notifications_text">İdeyalarınızı gücləndirin!</string>
     <string name="desc_notifications">Siqnallarınızı və səslərinizi idarə edin.</string>
     <string name="languages">Dillər</string>
     <string name="desc_lang">Tətbiqin dilini dəyişdirin.</string>
@@ -102,44 +103,44 @@
     <string name="help">Kömək</string>
     <string name="guidelines">Təlimatlar</string>
     <string name="desc_guidelines">Təlimatları nəzərdən keçirin və əməl edin.</string>
-    <string name="report_issue">Problem barədə məlumat ver</string>
-    <string name="desc_report_issue">Bir səhv hesabatı və ya funksiya tələbi göndərin.</string>
-    <string name="reset_settings">Parametrləri Sıfırla</string>
-    <string name="desc_reset_settings">Bütün parametrləri ilkin dəyərlərinə qaytarın.</string>
+    <string name="report_issue">Problemi bildir</string>
+    <string name="desc_report_issue">Xəta hesabatı və ya funksiya tələbi göndərin.</string>
+    <string name="reset_settings">Ayarları Sıfırla</string>
+    <string name="desc_reset_settings">Bütün ayarları ilkin dəyərlərinə qaytarın.</string>
     <string name="about">Haqqında</string>
-    <string name="desc_about">Tətbiq haqqında məlumata baxın.</string>
-    <string name="about_main_text">İdeyalarınızı sürətləndirmək üçün nəzərdə tutulub. Sizin ehtirasınız bizim məqsədimizdir. Ümid edirik ki, sizin üçün yaratdığımızdan zövq alacaqsınız.</string>
+    <string name="desc_about">Tətbiq haqqında məlumatı nəzərdən keçirin.</string>
+    <string name="about_main_text">İdeyalarınızı gücləndirmək üçün hazırlanmışdır. Sizin ehtirasınız bizim məqsədimizdir. Ümid edirik ki, sizin üçün yaratdığımızdan həzz alacaqsınız.</string>
     <string name="link_to_source">Mənbəyə keçid</string>
 
-    <string name="permission_denied">İcazə Rədd edildi</string>
-    <string name="permission_denied_message">Davam etmək üçün bu icazə tələb olunur. Zəhmət olmasa, tətbiq parametrlərində icazə verin.</string>
+    <string name="permission_denied">İcazə Rədd Edildi</string>
+    <string name="permission_denied_message">Davam etmək üçün bu icazə tələb olunur. Zəhmət olmasa, tətbiq ayarlarında icazə verin.</string>
     <string name="allow">İcazə ver</string>
 
-    <string name="error_failed_persistent_access">Şəkilə daimi giriş əldə etmək mümkün olmadı.</string>
+    <string name="error_failed_persistent_access">Şəkilə daimi giriş əldə etmək alınmadı.</string>
     <string name="error_no_active_subscription">Aktiv abunəlik yoxdur.</string>
     <string name="error_google_sign_in_failed">Google ilə daxil olma uğursuz oldu. Zəhmət olmasa, yenidən cəhd edin.</string>
     <string name="error_sign_out">Çıxış uğursuz oldu.</string>
     <string name="error_something_went_wrong">Nəsə səhv getdi. Zəhmət olmasa, yenidən cəhd edin.</string>
     <string name="error_empty_chat">Söhbət boşdur.</string>
-    <string name="error_take_photo">Şəkil çəkmək mümkün olmadı.</string>
+    <string name="error_take_photo">Şəkil çəkmək uğursuz oldu.</string>
     <string name="error_image_already_added">Şəkil artıq əlavə edilib.</string>
     <string name="error_max_images_reached">Yalnız 3-ə qədər şəkil əlavə edə bilərsiniz.</string>
-    <string name="error_attach_limit_reached">Siz əlavə limitinizə çatmısınız.</string>
-    <string name="error_load_image">Şəkli yükləmək mümkün olmadı.</string>
-    <string name="error_load_subscriptions">Abunəlikləri yükləmək mümkün olmadı.</string>
+    <string name="error_attach_limit_reached">Siz əlavə limitinizə çatmışsınız.</string>
+    <string name="error_load_image">Şəkli yükləmək uğursuz oldu.</string>
+    <string name="error_load_subscriptions">Abunəlikləri yükləmək uğursuz oldu.</string>
     <string name="error_no_free_subscriptions">Pulsuz abunəliklər mövcud deyil.</string>
-    <string name="error_get_free_subscription">Pulsuz abunəlik əldə etmək mümkün olmadı.</string>
-    <string name="error_save_user_data">İstifadəçi məlumatlarını yadda saxlamaq mümkün olmadı.</string>
+    <string name="error_get_free_subscription">Pulsuz abunəliyi əldə etmək uğursuz oldu.</string>
+    <string name="error_save_user_data">İstifadəçi məlumatlarını yadda saxlamaq uğursuz oldu.</string>
 
     <string name="error_min_length">Ən az %1$d simvol tələb olunur</string>
     <string name="error_max_length">Maksimum %1$d simvol icazə verilir</string>
     <string name="error_no_gaps">Boşluqlara icazə verilmir</string>
     <string name="error_no_special_chars">Xüsusi simvollara icazə verilmir</string>
     <string name="error_no_capital_letters">Böyük hərflərə icazə verilmir</string>
-    <string name="error_only_english_letters">Yalnız İngilis hərflərinə icazə verilir</string>
+    <string name="error_only_english_letters">Yalnız ingilis hərflərinə icazə verilir</string>
 
     <string-array name="onboarding_mottos">
-        <item>İdeyalarınızı sürətləndirmək üçün nəzərdə tutulub</item>
+        <item>İdeyalarınızı gücləndirmək üçün hazırlanmışdır</item>
         <item>Növbəti yaradıcı qığılcımınızı tapın</item>
         <item>İnnovatorlar icması ilə əlaqə qurun</item>
     </string-array>

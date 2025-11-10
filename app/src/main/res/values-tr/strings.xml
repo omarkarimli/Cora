@@ -4,7 +4,7 @@
     <string name="app_icon">Uygulama Simgesi</string>
     <string name="general">Genel</string>
     <string name="more">Daha Fazla</string>
-    <string name="success">Başarı</string>
+    <string name="success">Başarılı</string>
     <string name="success_message">İşlem başarıyla tamamlandı.</string>
     <string name="splash">Açılış Ekranı</string>
     <string name="confirm">Onayla</string>
@@ -16,23 +16,23 @@
     <string name="profile">Profil</string>
     <string name="chat">Sohbet</string>
     <string name="admin">Yönetici</string>
-    <string name="back_to_prev">Önceki sayfaya dön</string>
+    <string name="back_to_prev">Önceki sayfaya geri dön</string>
     <string name="share">Paylaş</string>
     <string name="share_body">Buna bir göz atın.</string>
     <string name="refresh_page">Sayfayı yenile</string>
     <string name="download">İndir</string>
 
     <string name="auth">Kimlik Doğrulama</string>
-    <string name="get_started">Başla</string>
+    <string name="get_started">Başlayın</string>
     <string name="continue_title">Devam Et</string>
     <string name="auth_legal_doc_agreement_prefix">Devam ederek </string>
     <string name="legal_doc">Yasal Belgelerimizi</string>
     <string name="user_setup">Kullanıcı Kurulumu</string>
-    <string name="username">Kullanıcı adı</string>
-    <string name="bio">Biyografi</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="bio">Biyo</string>
     <string name="required">Gerekli</string>
     <string name="optional">İsteğe Bağlı</string>
-    <string name="sign_out">Oturumu Kapat</string>
+    <string name="sign_out">Çıkış Yap</string>
     <string name="account">Hesap</string>
     <string name="gender">Cinsiyet</string>
     <string name="gender_male">Erkek</string>
@@ -55,8 +55,8 @@
     <string name="image_generation">Görüntü Oluşturma</string>
     <string name="image_from_web">Web\'den görüntü</string>
     <string name="image_from_device">Cihazdan görüntü</string>
-    <string name="describe">Tanımla</string>
-    <string name="full_screen_image_viewer">Tam ekran görüntüleyici</string>
+    <string name="describe">Açıkla</string>
+    <string name="full_screen_image_viewer">Tam Ekran Görüntüleyici</string>
     <string name="background">Arka Plan</string>
     <string name="enlarged_image">Büyütülmüş görüntü %1$d</string>
     <string name="saving_path">Kaydetme Yolu</string>
@@ -90,44 +90,45 @@
     <string name="light">Açık</string>
     <string name="dark">Koyu</string>
     <string name="dynamic_color">Dinamik Renk</string>
-    <string name="desc_dynamic_color">Uygulama renklerini dinamik hale getirin.</string>
+    <string name="desc_dynamic_color">Uygulama renklerini dinamik yapın.</string>
     <string name="notifications">Bildirimler</string>
+    <string name="notifications_text">Fikirlerinize güç katın!</string>
     <string name="desc_notifications">Uyarılarınızı ve seslerinizi yönetin.</string>
     <string name="languages">Diller</string>
     <string name="desc_lang">Uygulamanın dilini değiştirin.</string>
     <string name="live_translation">Canlı Çeviri</string>
-    <string name="desc_live_translation">Oluşturulan içeriğin canlı çevirisi.</string>
+    <string name="desc_live_translation">Oluşturulan içeriklerin canlı çevirisi.</string>
 
     <string name="support">Destek</string>
     <string name="help">Yardım</string>
     <string name="guidelines">Yönergeler</string>
     <string name="desc_guidelines">Yönergeleri görüntüleyin ve uygulayın.</string>
-    <string name="report_issue">Sorun Bildir</string>
+    <string name="report_issue">Sorun bildir</string>
     <string name="desc_report_issue">Bir hata raporu veya özellik isteği gönderin.</string>
     <string name="reset_settings">Ayarları Sıfırla</string>
     <string name="desc_reset_settings">Tüm ayarları varsayılan değerlerine geri döndürün.</string>
     <string name="about">Hakkında</string>
     <string name="desc_about">Uygulama hakkındaki bilgileri görüntüleyin.</string>
-    <string name="about_main_text">Fikirlerinize güç katmak için tasarlandı. Sizin tutkunuz bizim amacımızdır. Sizin için oluşturduğumuz şeyden keyif alacağınızı içtenlikle umuyoruz.</string>
+    <string name="about_main_text">Fikirlerinize güç katmak için tasarlandı. Tutkunuz bizim amacımızdır. Sizin için yarattığımız şeyden keyif alacağınızı içtenlikle umuyoruz.</string>
     <string name="link_to_source">Kaynağa bağlantı</string>
 
     <string name="permission_denied">İzin Reddedildi</string>
-    <string name="permission_denied_message">Devam etmek için bu izin gereklidir. Lütfen uygulama ayarlarından izin verin.</string>
-    <string name="allow">İzin Ver</string>
+    <string name="permission_denied_message">Devam etmek için bu izin gereklidir. Lütfen uygulama ayarlarında izni verin.</string>
+    <string name="allow">İzin ver</string>
 
-    <string name="error_failed_persistent_access">Görüntüye kalıcı erişim sağlanamadı.</string>
-    <string name="error_no_active_subscription">Etkin abonelik yok.</string>
+    <string name="error_failed_persistent_access">Görüntüye kalıcı erişim elde edilemedi.</string>
+    <string name="error_no_active_subscription">Aktif abonelik yok.</string>
     <string name="error_google_sign_in_failed">Google ile oturum açma başarısız oldu. Lütfen tekrar deneyin.</string>
     <string name="error_sign_out">Oturum kapatma başarısız oldu.</string>
     <string name="error_something_went_wrong">Bir şeyler ters gitti. Lütfen tekrar deneyin.</string>
     <string name="error_empty_chat">Sohbet boş.</string>
     <string name="error_take_photo">Fotoğraf çekilemedi.</string>
-    <string name="error_image_already_added">Görüntü zaten eklendi.</string>
-    <string name="error_max_images_reached">Yalnızca en fazla 3 görüntü ekleyebilirsiniz.</string>
+    <string name="error_image_already_added">Görüntü zaten eklenmiş.</string>
+    <string name="error_max_images_reached">Yalnızca 3 görüntüye kadar ekleyebilirsiniz.</string>
     <string name="error_attach_limit_reached">Ek sınırınıza ulaştınız.</string>
     <string name="error_load_image">Görüntü yüklenemedi.</string>
     <string name="error_load_subscriptions">Abonelikler yüklenemedi.</string>
-    <string name="error_no_free_subscriptions">Ücretsiz abonelik yok.</string>
+    <string name="error_no_free_subscriptions">Ücretsiz abonelik mevcut değil.</string>
     <string name="error_get_free_subscription">Ücretsiz abonelik alınamadı.</string>
     <string name="error_save_user_data">Kullanıcı verileri kaydedilemedi.</string>
 
@@ -141,7 +142,7 @@
     <string-array name="onboarding_mottos">
         <item>Fikirlerinize güç katmak için tasarlandı</item>
         <item>Bir sonraki yaratıcı kıvılcımınızı bulun</item>
-        <item>Yenilikçilerden oluşan bir topluluğa bağlanın</item>
+        <item>Yenilikçilerden oluşan bir toplulukla bağlantı kurun</item>
     </string-array>
     <string-array name="guideline_mottos">
         <item>Dikkat</item>
