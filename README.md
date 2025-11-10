@@ -7,7 +7,7 @@ It follows MVVM Architecture and implements Clean Code principles.
 
 ### ✨ Features
 
-- **Web Searching**
+- **[Web Searching](https://www.google.com/aclk?sa=L&ai=DChsSEwiRsbjgteiQAxWoV5EFHXnRAwsYACICCAEQABoCbHI&co=1&ase=2&gclid=CjwKCAiAt8bIBhBpEiwAzH1w6eHryQw_sRcqtGsR4fWiw4HGrZRuraoZ7SOYdW_Vq6Dk9DPJNqL1KxoCazAQAvD_BwE&cid=CAAShgHkaCmEX7DGeCrcO7y0katApa7FhXy9CMLD1mTubgVoCpidx2WIF_nACuLi7341RLBRzP7aHGghoXA7rym6l9kn34zkvi4ABTdnNYlgqjdis1PJT7TxzmyVefIyLRf37QKVKHP0j3qvkweRMa4TdinCIhgLXwVPl1rqA1FCJ5CL9yVA91rW6w&cce=2&category=acrcp_v1_32&sig=AOD64_3-lEt2bLmBrj2Wbidjv_8B4-zQ_A&q&nis=4&adurl&ved=2ahUKEwiqs7HgteiQAxV2JxAIHbC0MFwQ0Qx6BAgOEAE)** via Seper API
 - **Image Generation**
 - **Subscription & Usage system**
 - **Live Translation**
