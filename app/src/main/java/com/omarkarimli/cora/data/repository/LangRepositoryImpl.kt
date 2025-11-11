@@ -14,7 +14,7 @@ import javax.inject.Singleton
 
 @Singleton
 class LangRepositoryImpl @Inject constructor(
-    @ApplicationContext private val context: Context
+    @param:ApplicationContext private val context: Context
 ): LangRepository {
 
     override fun getDefaultLanguageCode(): String {

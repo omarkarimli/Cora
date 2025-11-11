@@ -11,7 +11,7 @@ sealed class UiState {
         val canToast: Boolean = false
     ) : UiState()
     data class Error(
-        @StringRes val toastResId: Int,
+        @param:StringRes val toastResId: Int,
         val log: String
     ) : UiState()
 

@@ -37,7 +37,10 @@ import com.omarkarimli.cora.ui.presentation.screen.usage.UsageScreen
 import com.omarkarimli.cora.ui.presentation.screen.userSetup.UserSetupScreen
 import com.omarkarimli.cora.ui.presentation.screen.upgrade.UpgradeScreen
 
-sealed class Screen(val route: String, @StringRes val titleResId: Int) {
+sealed class Screen(
+    val route: String,
+    @param:StringRes val titleResId: Int
+) {
     data object Admin: Screen("admin", R.string.admin)
     data object Splash: Screen("splash", R.string.splash)
     data object Settings : Screen("settings", R.string.settings)

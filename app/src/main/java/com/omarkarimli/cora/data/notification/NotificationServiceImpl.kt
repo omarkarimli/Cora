@@ -13,7 +13,7 @@ import java.util.Calendar
 import javax.inject.Inject
 
 class NotificationServiceImpl @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
     private val sharedPreferenceRepository: SharedPreferenceRepository,
 ) : NotificationService {
     override suspend fun scheduleDailyNotifications() {

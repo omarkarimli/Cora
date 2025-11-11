@@ -31,7 +31,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AiRepositoryImpl @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @param:ApplicationContext private val context: Context,
     private val firebaseAI: FirebaseAI,
     private val serperRepository: SerperRepository,
     private val downloadRepository: DownloadRepository
