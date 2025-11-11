@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import com.omarkarimli.cora.R
-import com.omarkarimli.cora.domain.models.ValidatableField
+import com.omarkarimli.cora.domain.models.validation.ValidatableField
 import com.omarkarimli.cora.ui.presentation.common.widget.component.MyFilledTextField
 import com.omarkarimli.cora.ui.presentation.common.widget.component.WideButton
 import com.omarkarimli.cora.ui.theme.AppTypography

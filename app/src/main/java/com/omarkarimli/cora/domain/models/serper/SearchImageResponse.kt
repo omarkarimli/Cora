@@ -1,16 +1,9 @@
-package com.omarkarimli.cora.domain.models
+package com.omarkarimli.cora.domain.models.serper
 
 data class SearchImageResponse(
     val searchParameters: SearchParameters = SearchParameters(),
     val images: List<ImageResult> = emptyList(),
     val credits: Int = 0
-)
-
-data class SearchParameters(
-    val q: String = "",
-    val type: String = "",
-    val engine: String = "",
-    val num: Int = 0
 )
 
 data class ImageResult(

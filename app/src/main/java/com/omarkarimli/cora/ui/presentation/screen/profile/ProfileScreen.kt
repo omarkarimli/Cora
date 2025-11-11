@@ -45,7 +45,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.UserModel
-import com.omarkarimli.cora.domain.models.ValidatableField
+import com.omarkarimli.cora.domain.models.validation.ValidatableField
 import com.omarkarimli.cora.ui.navigation.LocalNavController
 import com.omarkarimli.cora.ui.navigation.Screen
 import com.omarkarimli.cora.ui.presentation.common.state.UiState

@@ -1,4 +1,4 @@
-package com.omarkarimli.cora.domain.models
+package com.omarkarimli.cora.domain.models.serper
 
 data class WebpageResponse(
     val text: String = "",

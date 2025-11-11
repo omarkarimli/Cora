@@ -37,11 +37,11 @@ import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.models.GuidelineModel
 import com.omarkarimli.cora.domain.models.ImageModel
 import com.omarkarimli.cora.domain.models.MessageModel
-import com.omarkarimli.cora.domain.models.SearchImageResponse
+import com.omarkarimli.cora.domain.models.serper.SearchImageResponse
 import com.omarkarimli.cora.domain.models.StandardListItemModel
 import com.omarkarimli.cora.domain.models.SubscriptionModel
 import com.omarkarimli.cora.domain.models.UsageDataModel
-import com.omarkarimli.cora.domain.models.ValidatableField
+import com.omarkarimli.cora.domain.models.validation.ValidatableField
 import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
 import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.ui.theme.outlineLight

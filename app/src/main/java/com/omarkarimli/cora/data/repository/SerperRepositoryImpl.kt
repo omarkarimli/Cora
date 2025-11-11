@@ -5,8 +5,8 @@ import com.omarkarimli.cora.BuildConfig.SERPER_API_KEY
 import javax.inject.Inject
 import javax.inject.Singleton
 import com.omarkarimli.cora.data.remote.SerperApiService
-import com.omarkarimli.cora.domain.models.SearchImageResponse
-import com.omarkarimli.cora.domain.models.WebpageResponse
+import com.omarkarimli.cora.domain.models.serper.SearchImageResponse
+import com.omarkarimli.cora.domain.models.serper.WebpageResponse
 import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
 import com.omarkarimli.cora.domain.repository.SerperRepository
 

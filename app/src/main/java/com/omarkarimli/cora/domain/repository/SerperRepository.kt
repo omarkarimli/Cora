@@ -1,7 +1,7 @@
 package com.omarkarimli.cora.domain.repository
 
-import com.omarkarimli.cora.domain.models.SearchImageResponse
-import com.omarkarimli.cora.domain.models.WebpageResponse
+import com.omarkarimli.cora.domain.models.serper.SearchImageResponse
+import com.omarkarimli.cora.domain.models.serper.WebpageResponse
 import com.omarkarimli.cora.domain.models.serper.SearchTextResponse
 
 interface SerperRepository {

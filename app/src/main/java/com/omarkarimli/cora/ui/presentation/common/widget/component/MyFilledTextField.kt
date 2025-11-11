@@ -32,8 +32,8 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
-import com.omarkarimli.cora.domain.models.ValidatableField
-import com.omarkarimli.cora.domain.models.ValidationResult
+import com.omarkarimli.cora.domain.models.validation.ValidatableField
+import com.omarkarimli.cora.domain.models.validation.ValidationResult
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
 import com.omarkarimli.cora.utils.noRippleClickable

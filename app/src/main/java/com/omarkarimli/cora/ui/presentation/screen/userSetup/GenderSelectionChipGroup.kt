@@ -19,8 +19,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import com.omarkarimli.cora.R // Import R class for string resources
 import com.omarkarimli.cora.domain.models.StandardListItemModel
-import com.omarkarimli.cora.domain.models.ValidatableField
-import com.omarkarimli.cora.domain.models.ValidationResult
+import com.omarkarimli.cora.domain.models.validation.ValidatableField
+import com.omarkarimli.cora.domain.models.validation.ValidationResult
 import com.omarkarimli.cora.ui.theme.AppTypography
 import com.omarkarimli.cora.ui.theme.Dimens
 
