@@ -21,6 +21,7 @@ It follows **MVVM Architecture** and implements **Clean Code principles**.
 - **Permission System**
 - **Notification Scheduling**
 - **Google Sign in**
+- **Admin Page**
 
 ---
 
