@@ -32,7 +32,7 @@ It follows **MVVM Architecture** and implements **Clean Code principles**.
 | **UI & Design** | **Jetpack Compose**, **Material Design 3**, **Coil** (Image Loading), **Lottie** (Animations) |
 | **Networking** | **Retrofit**, **OkHttp**, **Gson** / **Kotlinx Serialization** |
 | **Database** | **Room** (Local Database), **Paging 3** (Pagination) |
-| **Backend** | **Firebase Authentication**, **Firebase Firestore**, **Firebase AI**, **Google Sign-In** |
+| **Backend** | **Firebase Authentication**, **Firebase Firestore**, **Firebase AI**, **Google Sign-In**, **Serper API** |
 | **Architecture** | **Hilt** (Dependency Injection), **Kotlin Coroutines** (Asynchronous Programming) |
 | **System** | **CameraX**, **Live Translate**, **Splash Screen**, **Zoomable** Image Component |
 
