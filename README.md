@@ -20,6 +20,7 @@ It follows **MVVM Architecture** and implements **Clean Code principles**.
 - **Custom Splash Screen**
 - **Permission System**
 - **Notification Scheduling**
+- **Google Sign in**
 
 ---
 
