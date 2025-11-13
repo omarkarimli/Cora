@@ -10,6 +10,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import androidx.core.net.toUri
+import com.omarkarimli.cora.R
 import com.omarkarimli.cora.domain.repository.DownloadRepository
 import com.omarkarimli.cora.domain.repository.SharedPreferenceRepository
 import com.omarkarimli.cora.utils.SpConstant.SAVING_PATH_KEY
@@ -27,8 +28,7 @@ class DownloadRepositoryImpl @Inject constructor(
     @param:ApplicationContext private val context: Context,
     private val sharedPreferenceRepository: SharedPreferenceRepository
 ) : DownloadRepository {
-
-    private val appName: String = context.applicationInfo.loadLabel(context.packageManager).toString()
+    private val appName: String = context.getString(R.string.app_name)
 
     override suspend fun downloadImage(imageUrl: String): Uri? {
         val savingPath = sharedPreferenceRepository.getString(SAVING_PATH_KEY, "photos")
