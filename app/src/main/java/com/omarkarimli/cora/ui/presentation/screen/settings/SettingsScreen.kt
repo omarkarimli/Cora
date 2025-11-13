@@ -267,7 +267,7 @@ fun SettingsScreen(mainViewModel: MainViewModel) {
                             }
                         }
                     )
-                    is SheetContent.Permission -> PermissionSheetContent(
+                    SheetContent.Permission -> PermissionSheetContent(
                         onHide = { hideSheet() }
                     )
                     else -> {}
