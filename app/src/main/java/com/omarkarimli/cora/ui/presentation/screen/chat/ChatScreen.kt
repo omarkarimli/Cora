@@ -73,6 +73,8 @@ fun ChatScreen(
     val messages by viewModel.messages.collectAsState()
 
     var expanded by remember { mutableStateOf(false) }
+
+    var initialShareHandled by remember { mutableStateOf(false) }
     var sendMessageModel by remember { mutableStateOf(MessageModel(text = "", isFromMe = true)) }
 
     // For Camera Temporary
@@ -208,7 +210,8 @@ fun ChatScreen(
     }
 
     fun handleInitialShare(initialShare: String?) {
-        if (initialShare != null) {
+        val condition = initialShare != null && !initialShareHandled
+        if (condition) {
             sendMessageModel = sendMessageModel.copy(text = "Give me details about this link: $initialShare")
         }
     }
