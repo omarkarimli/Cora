@@ -212,6 +212,7 @@ fun ChatScreen(
     fun handleInitialShare(initialShare: String?) {
         val condition = initialShare != null && !initialShareHandled
         if (condition) {
+            initialShareHandled = true
             sendMessageModel = sendMessageModel.copy(text = "Give me details about this link: $initialShare")
         }
     }
