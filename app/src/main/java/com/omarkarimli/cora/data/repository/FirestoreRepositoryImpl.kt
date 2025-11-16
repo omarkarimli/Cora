@@ -12,7 +12,6 @@ import com.omarkarimli.cora.domain.models.UserModel
 import com.omarkarimli.cora.domain.repository.FirestoreRepository
 import com.omarkarimli.cora.utils.Durations
 import com.omarkarimli.cora.utils.FirebaseConstants
-import com.omarkarimli.cora.utils.FirebaseConstants.MONTHLY
 import com.omarkarimli.cora.utils.isEarlierThan
 import com.omarkarimli.cora.utils.toSubscriptionModelsList
 import kotlinx.coroutines.delay
@@ -74,11 +73,7 @@ class FirestoreRepositoryImpl @Inject constructor(
     }
     override suspend fun getFreeSubscriptions(): List<SubscriptionModel> {
         try {
-            val querySnapshot = subscriptionsCollection
-                .document(MONTHLY)
-                .get()
-                .await()
-            val result = querySnapshot.toSubscriptionModelsList()
+            val result = getSubscriptionModels(FirebaseConstants.MONTHLY)
 
             return result.firstOrNull { it.price == 0.0 }?.let {
                 listOf(
@@ -152,6 +147,31 @@ class FirestoreRepositoryImpl @Inject constructor(
             throw e
         }
     }
+    override suspend fun renewSubscription(userModel: UserModel): UserModel? {
+        try {
+            val currentSubscription = userModel.currentSubscription
+            val newSub = currentSubscription.copy(
+                purchasedTime = System.currentTimeMillis(),
+                expiredTime = System.currentTimeMillis() + Durations.MONTH_IN_MILLIS
+            )
+
+            if (currentSubscription.price == 0.0) {
+                val updatedSubscriptions = userModel.subscriptions
+                val updatedUserModel = userModel.copy(
+                    currentSubscription = newSub,
+                    subscriptions = updatedSubscriptions + newSub
+                )
+                saveUser(updatedUserModel)
+                _creditConditions.value = getCreditConditions(updatedUserModel)
+
+                return updatedUserModel
+            }
+        } catch (e: Exception) {
+            Log.e("FirestoreRepositoryImpl", "renewSubscription: ${e.message}")
+            throw e
+        }
+        return null
+    }
     override suspend fun getCreditConditions(userModel: UserModel?): CreditConditions {
         if (userModel == null) return CreditConditions()
 
@@ -178,30 +198,5 @@ class FirestoreRepositoryImpl @Inject constructor(
         )
         _creditConditions.value = conditions
         return conditions
-    }
-    override suspend fun renewSubscription(userModel: UserModel): UserModel? {
-        try {
-            val currentSubscription = userModel.currentSubscription
-            val newSub = currentSubscription.copy(
-                purchasedTime = System.currentTimeMillis(),
-                expiredTime = System.currentTimeMillis() + Durations.MONTH_IN_MILLIS
-            )
-
-            if (currentSubscription.price == 0.0) {
-                val updatedSubscriptions = userModel.subscriptions
-                val updatedUserModel = userModel.copy(
-                    currentSubscription = newSub,
-                    subscriptions = updatedSubscriptions + newSub
-                )
-                saveUser(updatedUserModel)
-                _creditConditions.value = getCreditConditions(updatedUserModel)
-
-                return updatedUserModel
-            }
-        } catch (e: Exception) {
-            Log.e("FirestoreRepositoryImpl", "renewSubscription: ${e.message}")
-            throw e
-        }
-        return null
     }
 }
