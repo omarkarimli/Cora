@@ -61,13 +61,13 @@ class AuthViewModel @Inject constructor(
                     && getUser.personalInfo.username.isNotEmpty()
                     && getUser.personalInfo.gender.isNotEmpty())
                 {
+                    authUseCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
+
                     _uiState.value = UiState.Success(
                         message = SuccessType.SIGN_IN,
                         route = Screen.Chat.route,
                         canToast = true
                     )
-
-                    authUseCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
                 } else {
                     _uiState.value = UiState.Success(
                         message = SuccessType.SIGN_UP,

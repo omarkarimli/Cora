@@ -71,14 +71,13 @@ class UserSetupViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 useCases.saveUserUseCase(userModel)
+                useCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
 
                 _uiState.value = UiState.Success(
                     message = SuccessType.SIGN_UP,
                     route = Screen.Chat.route,
                     canToast = true
                 )
-
-                useCases.saveBooleanUseCase(SpConstant.LOGIN_KEY, true)
             } catch (e: Exception) {
                 setError(
                     toastResId = R.string.error_save_user_data,

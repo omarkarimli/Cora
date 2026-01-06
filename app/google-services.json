@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1073640105099-l0enffg247v83m8lnpi7rgf7t9vfpps7.apps.googleusercontent.com",
+          "client_id": "1073640105099-mjfi4ppp9n4jkvuv5q1r77astu7fi8dr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.omarkarimli.cora",
-            "certificate_hash": "69df586a6037fc040baca1f7919eab031c3c17bf"
+            "certificate_hash": "e68e887df284bd3fa55db91830ce78a522e068a4"
           }
         },
         {
